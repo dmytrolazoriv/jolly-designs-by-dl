@@ -1,0 +1,321 @@
+// @import "vars";
+
+// footer stylization start
+
+.footer {
+	background-color: $pink;
+	padding: 80px 0 40px 0;
+	color: $white;
+	position: relative;
+
+	&::after {
+		content: "";
+		position: absolute;
+		bottom: 100px;
+		// left: 0;
+		// bottom: 0;
+		// right: 0;
+		height: 2px;
+		width: 100%;
+		border-top: 2px solid #f6adad;
+	}
+
+	// .footer__inner
+
+	&__inner {}
+
+	// .footer__top
+
+	&__top {
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
+		// column-gap: 32px;
+		// margin-bottom: 100px;
+		margin-bottom: 90px;
+	}
+
+	// .footer__top-company
+
+	&__top-company {
+		flex-grow: 1;
+	}
+
+	// .footer__title
+
+	&__title {
+		font-family: $main-font-family;
+		@extend %heading-4;
+		margin-bottom: 16px;
+
+		span {
+			text-transform: uppercase;
+		}
+	}
+
+	// .footer__top-info
+
+	&__top-info {
+		flex-grow: 4;
+		flex-shrink: 1;
+		flex-basis: auto;
+	}
+
+	// .footer__top-about
+
+	&__top-about {
+		flex-grow: 6;
+		flex-shrink: 1;
+		flex-basis: auto;
+	}
+
+	// .footer__top-letter
+
+	&__top-letter {}
+
+	// .footer__bottom
+
+	&__bottom {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	// .footer__payment-icons
+
+	&__payment-icons {}
+
+	// .footer__copyright
+
+	&__copyright {
+		flex-grow: 0;
+		flex-shrink: 0;
+		flex-basis: 296px;
+	}
+
+	// .footer__socials
+
+	&__socials {}
+}
+
+.container {}
+
+.top-company {
+
+	// .top-company__title
+
+	&__title {}
+
+	// .top-company__description
+
+	&__description {
+		@extend %tabs;
+		font-weight: 400;
+		letter-spacing: normal;
+		text-transform: none;
+		max-width: 296px;
+		margin: 0;
+	}
+}
+
+.top-info {
+
+	// .top-info__title
+
+	&__title {}
+
+	// .top-info__list
+
+	&__list {}
+
+	// .top-info__item
+
+	&__item {
+		// margin-bottom: 8px;
+		margin-bottom: 5px;
+	}
+
+	// .top-info__link
+
+	&__link {
+		@extend %tabs;
+		font-weight: 400;
+		letter-spacing: normal;
+		text-transform: none;
+		text-decoration: none;
+		color: inherit;
+	}
+}
+
+.top-about {
+
+	// .top-about__title
+
+	&__title {}
+
+	// .top-about__list
+
+	&__list {}
+
+	// .top-about__item
+
+	&__item {
+		margin-bottom: 5px;
+	}
+
+	// .top-about__link
+
+	&__link {
+		@extend %tabs;
+		font-weight: 400;
+		letter-spacing: normal;
+		text-transform: none;
+		text-decoration: none;
+		color: inherit;
+	}
+}
+
+.top-letter {
+
+	// .top-letter__title
+
+	&__title {}
+
+	// .top-letter__form
+
+	&__form {
+		display: flex;
+		flex-direction: column;
+	}
+
+	// .top-letter__email
+
+	&__email {
+		// width: 100%;
+		height: 100%;
+		background-color: $white;
+		border-radius: 24px;
+		/* Сверху | Справа | Снизу | Слева */
+		padding: 12px 78px 12px 16px;
+		border: none;
+		margin-bottom: 16px;
+
+		&::placeholder {
+			font: inherit;
+			line-height: 24px;
+			color: $grey;
+		}
+	}
+
+	// .top-letter__submit
+
+	&__submit {
+		padding: 12px 16px;
+		// width: 100%;
+		height: 100%;
+		background-color: $yellow;
+		color: $dark-pink;
+		border-radius: 24px;
+		border: none;
+		@extend %tabs;
+		font-size: $base-font-size;
+		line-height: $base-line-height;
+		margin-bottom: 16px;
+	}
+
+	// .top-letter__links-wrapper
+
+	&__links-wrapper {}
+
+	// .top-letter__link
+
+	&__link {
+		@extend %tabs;
+		font-weight: 400;
+		letter-spacing: normal;
+		text-transform: none;
+		text-decoration: none;
+		color: inherit;
+		margin-right: 24px;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}
+
+.visually-hidden {}
+
+.payment-icons {
+
+	// .payment-icons__list
+
+	&__list {
+		display: flex;
+	}
+
+	// .payment-icons__item
+
+	&__item {
+		// margin-right: 5px;
+		margin-right: 3px;
+		margin-left: 5px;
+		line-height: 0;
+
+		&:first-child {
+			margin-left: 0;
+		}
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}
+
+.copyright {
+
+	// .copyright__content
+
+	&__content {
+		@extend %tabs;
+		font-weight: 400;
+		letter-spacing: normal;
+		text-transform: none;
+		text-decoration: none;
+
+		a {
+			color: inherit;
+			text-decoration: none;
+		}
+	}
+}
+
+.socials {
+
+	// .socials__icons-list
+
+	&__icons-list {
+		display: flex;
+	}
+
+	// .socials__icons-item
+
+	&__icons-item {
+		margin-right: 24px;
+		line-height: 0;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+
+	// .socials__icons-link
+
+	&__icons-link {}
+
+	// .socials__fallback-text
+
+	&__fallback-text {}
+}
+
+// footer stylization end

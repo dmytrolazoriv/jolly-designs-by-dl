@@ -1,0 +1,96 @@
+// colors variables
+$white: #ffffff;
+$pink: #ff8f8f;
+$dark-pink: #e86e6e;
+$yellow: #ffe4bb;
+$dark-grey: #414249;
+$dark-blue: #105393;
+$light-blue: #cee8ff;
+$dirty-blue: #6f92b4;
+$light-grey: #e2e2e2;
+$grey: #a8aab7;
+// colors variables
+
+// fonts variables
+$main-font-family: 'Poppins', sans-serif;
+$secondary-font-family: 'DM Serif Display', serif;
+$base-font-size: 16px;
+$base-font-weight: 400;
+$base-line-height: 24px;
+
+%heading-1 {
+	font-family: 'DM Serif Display',
+		serif;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 64px;
+	line-height: 88px;
+}
+
+%heading-2 {
+	font-family: 'DM Serif Display',
+		serif;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 48px;
+	line-height: 56px;
+}
+
+%heading-3 {
+	font-family: 'DM Serif Display',
+		serif;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 32px;
+	line-height: 48px;
+}
+
+%heading-4 {
+	font-family: 'DM Serif Display',
+		serif;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 20px;
+	line-height: 30px;
+}
+
+%heading-5 {
+	font-family: 'DM Serif Display',
+		serif;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 30px;
+}
+
+%heading-6 {
+	font-family: 'DM Serif Display',
+		serif;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 24px;
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+}
+
+%tabs {
+	font-family: 'Poppins',
+		sans-serif;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 14px;
+	line-height: 21px;
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+}
+
+%paragraph {
+	font-family: 'Poppins',
+		sans-serif;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 24px;
+}
+
+// fonts variables

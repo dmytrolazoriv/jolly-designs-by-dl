@@ -1,0 +1,635 @@
+<!-- <header class="header">
+	<div class="container">
+		I am a header
+	</div>
+</header> -->
+<div class="header__announcement-slider announcement-slider">
+	<div class="container">
+		<!-- <div class="announcement-slider__inner"> -->
+		<div class="announcement-slider__controls">
+			<button class="announcement-slider__button announcement-slider__control_prev" type="button">
+				<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M14 7L9 12L14 17" stroke="#414249" stroke-width="1.4" stroke-linecap="round"
+						stroke-linejoin="round" />
+				</svg>
+			</button>
+			<button class="announcement-slider__button announcement-slider__control_next" type="button">
+				<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M10 7L15 12L10 17" stroke="#414249" stroke-width="1.4" stroke-linecap="round"
+						stroke-linejoin="round" />
+				</svg>
+			</button>
+		</div>
+		<ul class="announcement-slider__list">
+			<li class="announcement-slider__item">
+				<span class="icon-car"></span>
+				<a class="announcement-slider__link announcement-slider__link-1" href="#">Free shipping from 60€
+					(DE)
+				</a>
+			</li>
+			<li class="announcement-slider__item">
+				<span class="icon-hand-made"></span>
+				<a class="announcement-slider__link announcement-slider__link-2" href="#">High quality hand-mand
+					& ethical products</a>
+			</li>
+			<li class="announcement-slider__item">
+				<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path
+						d="M24.058 7.58026C23.7775 7.1709 23.3759 6.84604 22.8866 6.65492C22.7754 6.612 22.6587 6.56591 22.5384 6.51712C18.322 4.81103 13.678 4.81103 9.4624 6.51712C9.34167 6.56636 9.22457 6.612 9.11428 6.65492C8.13618 7.03626 7.50439 7.95753 7.50439 9.00169V12.4627C7.50439 14.5727 7.99457 16.6913 8.92138 18.5903C9.84819 20.4884 11.2189 22.1814 12.8855 23.4854L14.4359 24.6972C14.8966 25.0577 15.4485 25.2375 16 25.2375C16.5523 25.2375 17.1038 25.0573 17.564 24.6972L19.1144 23.4854C20.7815 22.1814 22.1527 20.488 23.0795 18.5903C24.0063 16.6918 24.4955 14.5731 24.4955 12.4627V9.00169C24.4955 8.48029 24.3376 7.9878 24.058 7.58026ZM11.4762 13.4391C11.6478 13.2683 11.8729 13.1838 12.098 13.1838C12.3231 13.1838 12.5483 13.2683 12.7198 13.4391L14.8753 15.5848C15.0577 15.7669 15.3537 15.7669 15.5361 15.5848L19.6949 11.4456C19.8615 11.2798 20.0825 11.1885 20.3167 11.1885C20.5523 11.1885 20.7729 11.2798 20.9386 11.4456C21.1051 11.6105 21.1959 11.8306 21.1959 12.0646C21.1959 12.2982 21.1051 12.5178 20.9386 12.6836L15.8275 17.7716C15.6618 17.9365 15.4408 18.0278 15.2057 18.0278C14.971 18.0278 14.7505 17.9365 14.5839 17.7716L11.4762 14.6771C11.3097 14.5121 11.2189 14.2921 11.2189 14.0581C11.2189 13.8245 11.3101 13.6044 11.4762 13.4391Z"
+						fill="#414249" />
+				</svg>
+				<a class="announcement-slider__link announcement-slider__link-3" href="#">6 Months guarantee</a>
+			</li>
+			<li class="announcement-slider__item">
+				<span class="icon-heart"></span>
+				<a class="announcement-slider__link announcement-slider__link-4" href="#">The favourite of XXXX
+					partners</a>
+			</li>
+			<li class="announcement-slider__item">
+				<svg width="33" height="32" viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path
+						d="M24.3351 14.9353H8.66497C8.11259 14.9353 7.59413 14.667 7.27564 14.2155C6.9567 13.7645 6.8771 13.1863 7.06167 12.6656C8.47451 8.67864 12.2678 6 16.5009 6C20.7335 6 24.5264 8.67864 25.9393 12.6656C26.1238 13.1863 26.0442 13.7645 25.7253 14.2155C25.4059 14.667 24.8879 14.9353 24.3351 14.9353ZM11.6399 11.5328H21.3601C20.1327 10.205 18.3824 9.40293 16.5005 9.40293C14.6181 9.40293 12.8673 10.205 11.6399 11.5328Z"
+						fill="#414249" />
+					<path
+						d="M24.3443 20.4671H8.6561C7.93407 20.4671 7.29032 20.0111 7.05101 19.3298C6.67687 18.2653 6.4873 17.1492 6.4873 16.0123C6.4873 14.8624 6.68093 13.7359 7.0623 12.6637C7.30343 11.9856 7.94539 11.5327 8.66515 11.5327H24.3353C25.0555 11.5327 25.6979 11.9865 25.9386 12.6651C26.3195 13.739 26.5131 14.8651 26.5131 16.0123C26.5131 17.1492 26.3235 18.2653 25.9494 19.3298C25.7101 20.0115 25.0668 20.4671 24.3443 20.4671ZM9.97347 17.0646H23.0274C23.0826 16.7185 23.1106 16.3675 23.1106 16.0123C23.1106 15.6491 23.0812 15.2894 23.0233 14.9352H9.97755C9.91965 15.289 9.89069 15.6486 9.89069 16.0123C9.89023 16.3675 9.91782 16.7185 9.97347 17.0646Z"
+						fill="#414249" />
+					<path
+						d="M17.1556 25.9999H15.8459C15.802 25.9999 15.7577 25.9981 15.7138 25.995C11.763 25.6878 8.36279 23.0711 7.05084 19.3289C6.86852 18.8082 6.94951 18.2318 7.26845 17.7817C7.58739 17.3316 8.10493 17.0642 8.6564 17.0642H24.3446C24.8961 17.0642 25.4136 17.3316 25.7325 17.7817C26.0515 18.2314 26.1329 18.8082 25.9501 19.3289C24.6382 23.0711 21.238 25.6873 17.2877 25.995C17.2438 25.9981 17.1999 25.9999 17.1556 25.9999ZM15.916 22.597H17.0859C18.7656 22.4504 20.2907 21.6701 21.3877 20.4671H11.6137C12.7103 21.6705 14.2358 22.4504 15.916 22.597Z"
+						fill="#414249" />
+					<path
+						d="M24.3351 13.2342H8.66504C9.80734 10.0104 12.8836 7.70142 16.5005 7.70142C20.1166 7.70142 23.1928 10.0104 24.3351 13.2342Z"
+						fill="#414249" />
+					<path
+						d="M24.8113 16.0125C24.8113 16.9779 24.6467 17.904 24.344 18.7658H8.65581C8.35316 17.904 8.18848 16.9775 8.18848 16.0125C8.18848 15.038 8.35588 14.1029 8.66487 13.2339H24.335C24.6435 14.1029 24.8113 15.0385 24.8113 16.0125Z"
+						fill="#F21616" />
+					<path
+						d="M24.3444 18.7661C23.2786 21.8062 20.4936 24.0388 17.1554 24.2989H15.8457C12.5071 24.0393 9.7221 21.8067 8.65625 18.7661H24.3444Z"
+						fill="#FAE41D" />
+				</svg>
+				<a class="announcement-slider__link announcement-slider__link-5" href="#">Made in Germany</a>
+			</li>
+			<li class="announcement-slider__item">
+				<span class="icon-replacement"></span>
+				<a class="announcement-slider__link announcement-slider__link-6" href="#">
+					Free parts replacement
+					service
+				</a>
+			</li>
+		</ul>
+		<!-- </div> -->
+	</div>
+</div>
+
+<header class="header">
+	<div class="container">
+		<div class="header__wrapper">
+			<div class="header__service service">
+				<p class="service__phone">
+					<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path
+							d="M13 18.675C14.93 19.505 17.242 20 20 20V16L16 15L13 18.675ZM13 18.675C9.159 17.023 6.824 14.045 5.5 11L13 18.675ZM5.5 11C4.4 8.472 4 5.898 4 4H8L9 8L5.5 11Z"
+							stroke="#414249" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+					</svg>
+					<!-- <i class="icon-phone"></i> -->
+					<a href="tel:+4961729452910">
+						+49&nbsp;61729452910
+					</a>
+				</p>
+				<ul class="service__lang-list">
+					<!-- <li class="service__lang-item">
+						<a class="service__lang-link" href="#"></a>
+					</li> -->
+					<li class='dropdown service__lang-item' id='language-dropdown'>
+						<button class='dropdown-button service__lang-link' type="button">EN</button>
+						<ul class='dropdown-selection'>
+							<li><a href="">FR</a></li>
+							<li><a href="">DE</a></li>
+						</ul>
+					</li>
+				</ul>
+				<h1 class="service__logo">
+					<a class="service__logo-image" href="/">
+						<img src="img/logo.png" alt="jolly designs logo">
+					</a>
+				</h1>
+				<ul class="service__actions">
+					<li class="service__actions-item">
+						<button class="service__button" type="button">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" fill="currentColor"
+								xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M19.9999 20.0001L15.9499 15.9501M15.9499 15.9501C16.5999 15.3001 17.1156 14.5284 17.4674 13.679C17.8192 12.8297 18.0002 11.9194 18.0002 11.0001C18.0002 10.0808 17.8192 9.17051 17.4674 8.32119C17.1156 7.47187 16.5999 6.70016 15.9499 6.05011C15.2998 5.40007 14.5281 4.88443 13.6788 4.53263C12.8295 4.18083 11.9192 3.99976 10.9999 3.99976C10.0806 3.99976 9.17027 4.18083 8.32095 4.53263C7.47163 4.88443 6.69991 5.40007 6.04987 6.05011C4.73705 7.36293 3.99951 9.1435 3.99951 11.0001C3.99951 12.8567 4.73705 14.6373 6.04987 15.9501C7.36269 17.2629 9.14326 18.0005 10.9999 18.0005C12.8565 18.0005 14.637 17.2629 15.9499 15.9501V15.9501Z"
+									stroke="currentColor" stroke-width="1.4" stroke-linecap="round"
+									stroke-linejoin="round" />
+							</svg>
+							<span class="service__fallback-text">Seek</span>
+							<span class="service__counter"></span>
+						</button>
+					</li>
+					<li class="service__actions-item">
+						<a class="service__link" href="#">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M12 13C14.7614 13 17 10.7614 17 8C17 5.23858 14.7614 3 12 3C9.23858 3 7 5.23858 7 8C7 10.7614 9.23858 13 12 13Z"
+									stroke="currentColor" stroke-width="1.4" stroke-linecap="round"
+									stroke-linejoin="round" />
+								<path
+									d="M20 21C20 18.8783 19.1571 16.8434 17.6569 15.3431C16.1566 13.8429 14.1217 13 12 13C9.87827 13 7.84344 13.8429 6.34315 15.3431C4.84285 16.8434 4 18.8783 4 21M20 21C20 18.8783 19.1571 16.8434 17.6569 15.3431C16.1566 13.8429 14.1217 13 12 13C9.87827 13 7.84344 13.8429 6.34315 15.3431C4.84285 16.8434 4 18.8783 4 21"
+									stroke="currentColor" stroke-width="1.4" stroke-linecap="round"
+									stroke-linejoin="round" />
+							</svg>
+							<span class="service__fallback-text">log in</span>
+							<span class="service__counter"></span>
+						</a>
+					</li>
+					<li class="service__actions-item">
+						<a class="service__link" href="#">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M17 4C13.8 4 12 6.667 12 8C12 6.667 10.2 4 7 4C3.8 4 3 6.667 3 8C3 15 12 20 12 20C12 20 21 15 21 8C21 6.667 20.2 4 17 4Z"
+									stroke="currentColor" stroke-width="1.4" stroke-linecap="round"
+									stroke-linejoin="round" />
+							</svg>
+							<span class="service__fallback-text">Favorite</span>
+							<span class="service__counter">6</span>
+						</a>
+					</li>
+					<li class="service__actions-item">
+						<a class="service__link" href="#">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path d="M3 4H5L5.5 7M5.5 7L7 16H18L21 7H5.5Z" stroke="currentColor" stroke-width="1.4"
+									stroke-linecap="round" stroke-linejoin="round" />
+								<path
+									d="M9 21.7C9.93888 21.7 10.7 20.9389 10.7 20C10.7 19.0611 9.93888 18.3 9 18.3C8.06112 18.3 7.3 19.0611 7.3 20C7.3 20.9389 8.06112 21.7 9 21.7Z"
+									stroke="currentColor" stroke-width="1.4" stroke-linecap="round"
+									stroke-linejoin="round" />
+								<path
+									d="M16 21.7C16.9389 21.7 17.7 20.9389 17.7 20C17.7 19.0611 16.9389 18.3 16 18.3C15.0611 18.3 14.3 19.0611 14.3 20C14.3 20.9389 15.0611 21.7 16 21.7Z"
+									stroke="currentColor" stroke-width="1.4" stroke-linecap="round"
+									stroke-linejoin="round" />
+							</svg>
+							<span class="service__fallback-text">Shopping cart</span>
+							<span class="service__counter">2</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<nav class="header__main-nav main-nav">
+				<ul class="main-nav__list">
+					<!-- <li class="main-nav__item">
+						<button id="main-nav__button-1" class="main-nav__button" type="button">
+							<span>Products</span>
+							<svg width="8" height="5" viewBox="0 0 8 5" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd"
+									d="M7.94625 0.462988C8.0555 0.743244 7.99511 1.06583 7.79323 1.28033L4.49913 4.78033C4.22347 5.07322 3.77653 5.07322 3.50087 4.78033L0.206768 1.28033C0.00488768 1.06583 -0.055504 0.743243 0.0537524 0.462987C0.163009 0.182732 0.420399 -1.32597e-08 0.7059 0L7.2941 3.0598e-07C7.5796 3.19239e-07 7.83699 0.182732 7.94625 0.462988Z"
+									fill="#FF8F8F" />
+							</svg>
+						</button>
+						<div>
+							<ul>
+								<li><a href="">Quiet Books</a></li>
+								<li><a href="">Mini Quiet Books</a></li>
+								<li><a href="">Booklets</a></li>
+								<li><a href="">Wooden Toys</a></li>
+								<li><a href="">Wall decorations</a></li>
+							</ul>
+						</div>
+					</li> -->
+					<!-- <button onclick="myFunction()" class="main-nav__button" type="button"> -->
+					<!-- <li class="main-nav__item">
+						<button class="main-nav__button" type="button">
+							Products
+							<svg width="8" height="5" viewBox="0 0 8 5" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd"
+									d="M7.94625 0.462988C8.0555 0.743244 7.99511 1.06583 7.79323 1.28033L4.49913 4.78033C4.22347 5.07322 3.77653 5.07322 3.50087 4.78033L0.206768 1.28033C0.00488768 1.06583 -0.055504 0.743243 0.0537524 0.462987C0.163009 0.182732 0.420399 -1.32597e-08 0.7059 0L7.2941 3.0598e-07C7.5796 3.19239e-07 7.83699 0.182732 7.94625 0.462988Z"
+									fill="#FF8F8F" />
+							</svg>
+						</button>
+						<div id="my-dropdown" class="main-nav__dropdown-content">
+							<ul>
+								<li><a href="">Quiet Books</a></li>
+								<li><a href="">Mini Quiet Books</a></li>
+								<li><a href="">Booklets</a></li>
+								<li><a href="">Wooden Toys</a></li>
+								<li><a href="">Wall decorations</a></li>
+							</ul>
+						</div>
+					</li> -->
+					<li class='dropdown' id='products-dropdown'>
+						<button class='dropdown-button' type="button">Products</button>
+						<svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path fill-rule="evenodd" clip-rule="evenodd"
+								d="M7.94625 0.462988C8.0555 0.743244 7.99511 1.06583 7.79323 1.28033L4.49913 4.78033C4.22347 5.07322 3.77653 5.07322 3.50087 4.78033L0.206768 1.28033C0.00488768 1.06583 -0.055504 0.743243 0.0537524 0.462987C0.163009 0.182732 0.420399 -1.32597e-08 0.7059 0L7.2941 3.0598e-07C7.5796 3.19239e-07 7.83699 0.182732 7.94625 0.462988Z"
+								fill="#FF8F8F" />
+						</svg>
+						<ul class='dropdown-selection'>
+							<li><a href="">Quiet Books</a></li>
+							<li><a href="">Mini Quiet Books</a></li>
+							<li><a href="">Booklets</a></li>
+							<li><a href="">Wooden Toys</a></li>
+							<li><a href="">Wall decorations</a></li>
+						</ul>
+					</li>
+					<li class="main-nav__item">
+						<a class="main-nav__link" href="#">
+							<span>Child Development
+							</span>
+						</a>
+					</li>
+					<li class="main-nav__item">
+						<a class="main-nav__link" href="#">
+							<span>What are Quiet Books
+							</span>
+						</a>
+					</li>
+					<li class="main-nav__item">
+						<a class="main-nav__link" href="#">
+							<span>Blog
+							</span>
+						</a>
+					</li>
+					<!-- <li class="main-nav__item">
+						<button class="main-nav__button" type="button">
+							About Us
+							<svg width="8" height="5" viewBox="0 0 8 5" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd"
+									d="M7.94625 0.462988C8.0555 0.743244 7.99511 1.06583 7.79323 1.28033L4.49913 4.78033C4.22347 5.07322 3.77653 5.07322 3.50087 4.78033L0.206768 1.28033C0.00488768 1.06583 -0.055504 0.743243 0.0537524 0.462987C0.163009 0.182732 0.420399 -1.32597e-08 0.7059 0L7.2941 3.0598e-07C7.5796 3.19239e-07 7.83699 0.182732 7.94625 0.462988Z"
+									fill="#FF8F8F" />
+							</svg>
+						</button>
+						<div id="my-dropdown" class="main-nav__dropdown-content">
+							<ul>
+								<li><a href="">Quiet Books</a></li>
+								<li><a href="">Mini Quiet Books</a></li>
+								<li><a href="">Booklets</a></li>
+								<li><a href="">Wooden Toys</a></li>
+								<li><a href="">Wall decorations</a></li>
+							</ul>
+						</div>
+					</li> -->
+					<li class='dropdown' id='about-dropdown'>
+						<button class='dropdown-button' type="button">About Us</button>
+						<svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path fill-rule="evenodd" clip-rule="evenodd"
+								d="M7.94625 0.462988C8.0555 0.743244 7.99511 1.06583 7.79323 1.28033L4.49913 4.78033C4.22347 5.07322 3.77653 5.07322 3.50087 4.78033L0.206768 1.28033C0.00488768 1.06583 -0.055504 0.743243 0.0537524 0.462987C0.163009 0.182732 0.420399 -1.32597e-08 0.7059 0L7.2941 3.0598e-07C7.5796 3.19239e-07 7.83699 0.182732 7.94625 0.462988Z"
+								fill="#FF8F8F" />
+						</svg>
+						<ul class='dropdown-selection'>
+							<li><a href="">Quiet Books</a></li>
+							<li><a href="">Mini Quiet Books</a></li>
+							<li><a href="">Booklets</a></li>
+							<li><a href="">Wooden Toys</a></li>
+							<li><a href="">Wall decorations</a></li>
+						</ul>
+					</li>
+					<!-- <li class="main-nav__item">
+						<button class="main-nav__button" type="button">
+							Support
+							<svg width="8" height="5" viewBox="0 0 8 5" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd"
+									d="M7.94625 0.462988C8.0555 0.743244 7.99511 1.06583 7.79323 1.28033L4.49913 4.78033C4.22347 5.07322 3.77653 5.07322 3.50087 4.78033L0.206768 1.28033C0.00488768 1.06583 -0.055504 0.743243 0.0537524 0.462987C0.163009 0.182732 0.420399 -1.32597e-08 0.7059 0L7.2941 3.0598e-07C7.5796 3.19239e-07 7.83699 0.182732 7.94625 0.462988Z"
+									fill="#FF8F8F" />
+							</svg>
+						</button>
+						<div id="my-dropdown" class="main-nav__dropdown-content">
+							<ul>
+								<li><a href="">Quiet Books</a></li>
+								<li><a href="">Mini Quiet Books</a></li>
+								<li><a href="">Booklets</a></li>
+								<li><a href="">Wooden Toys</a></li>
+								<li><a href="">Wall decorations</a></li>
+							</ul>
+						</div>
+					</li> -->
+					<li class='dropdown' id='support-dropdown'>
+						<button class='dropdown-button' type="button">Support</button>
+						<svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path fill-rule="evenodd" clip-rule="evenodd"
+								d="M7.94625 0.462988C8.0555 0.743244 7.99511 1.06583 7.79323 1.28033L4.49913 4.78033C4.22347 5.07322 3.77653 5.07322 3.50087 4.78033L0.206768 1.28033C0.00488768 1.06583 -0.055504 0.743243 0.0537524 0.462987C0.163009 0.182732 0.420399 -1.32597e-08 0.7059 0L7.2941 3.0598e-07C7.5796 3.19239e-07 7.83699 0.182732 7.94625 0.462988Z"
+								fill="#FF8F8F" />
+						</svg>
+						<ul class='dropdown-selection'>
+							<li><a href="">Quiet Books</a></li>
+							<li><a href="">Mini Quiet Books</a></li>
+							<li><a href="">Booklets</a></li>
+							<li><a href="">Wooden Toys</a></li>
+							<li><a href="">Wall decorations</a></li>
+						</ul>
+					</li>
+					<li class="main-nav__item">
+						<a class="main-nav__link" href="#">
+							<span>Where to Find Us
+							</span>
+						</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+		<!-- Mobile menu -->
+		<div class="header__service-mobile">
+			<div class="header__button-wrapper">
+				<button class="header__burger-button">
+					<span></span>
+				</button>
+				<button class="header__button-search" type="button">
+					<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path
+							d="M19.9999 20.0001L15.9499 15.9501M15.9499 15.9501C16.5999 15.3001 17.1156 14.5284 17.4674 13.679C17.8192 12.8297 18.0002 11.9194 18.0002 11.0001C18.0002 10.0808 17.8192 9.17051 17.4674 8.32119C17.1156 7.47187 16.5999 6.70016 15.9499 6.05011C15.2998 5.40007 14.5281 4.88443 13.6788 4.53263C12.8295 4.18083 11.9192 3.99976 10.9999 3.99976C10.0806 3.99976 9.17027 4.18083 8.32095 4.53263C7.47163 4.88443 6.69991 5.40007 6.04987 6.05011C4.73705 7.36293 3.99951 9.1435 3.99951 11.0001C3.99951 12.8567 4.73705 14.6373 6.04987 15.9501C7.36269 17.2629 9.14326 18.0005 10.9999 18.0005C12.8565 18.0005 14.637 17.2629 15.9499 15.9501V15.9501Z"
+							stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+						</path>
+					</svg>
+					<span class="service__fallback-text">Seek</span>
+					<span class="service__counter"></span>
+				</button>
+			</div>
+			<h1 class="service__mobile-logo">
+				<a class="service__mobile-image" href="/">
+					<img src="img/logo.png" alt="jolly designs logo">
+				</a>
+			</h1>
+			<ul class="header__mobile-actions mobile-actions">
+				<li class="mobile-actions__item">
+					<a class="mobile-actions__link" href="#">
+						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path
+								d="M17 4C13.8 4 12 6.667 12 8C12 6.667 10.2 4 7 4C3.8 4 3 6.667 3 8C3 15 12 20 12 20C12 20 21 15 21 8C21 6.667 20.2 4 17 4Z"
+								stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+							</path>
+						</svg>
+						<span class="mobile-actions__fallback-text">Favorite</span>
+						<span class="mobile-actions__counter">6</span>
+					</a>
+				</li>
+				<li class="mobile-actions__item">
+					<a class="mobile-actions__link" href="#">
+						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M3 4H5L5.5 7M5.5 7L7 16H18L21 7H5.5Z" stroke="currentColor" stroke-width="1.4"
+								stroke-linecap="round" stroke-linejoin="round"></path>
+							<path
+								d="M9 21.7C9.93888 21.7 10.7 20.9389 10.7 20C10.7 19.0611 9.93888 18.3 9 18.3C8.06112 18.3 7.3 19.0611 7.3 20C7.3 20.9389 8.06112 21.7 9 21.7Z"
+								stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+							</path>
+							<path
+								d="M16 21.7C16.9389 21.7 17.7 20.9389 17.7 20C17.7 19.0611 16.9389 18.3 16 18.3C15.0611 18.3 14.3 19.0611 14.3 20C14.3 20.9389 15.0611 21.7 16 21.7Z"
+								stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+							</path>
+						</svg>
+						<span class="mobile-actions__fallback-text">Shopping cart</span>
+						<span class="mobile-actions__counter">2</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<nav class="header__mobile-nav mobile-nav">
+			<div class="mobile-nav__topbar">
+				<ul class="mobile-nav__actions-list">
+					<li class="mobile-nav__actions-item">
+						<a class="mobile-nav__actions-link" href="">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M12 13C14.7614 13 17 10.7614 17 8C17 5.23858 14.7614 3 12 3C9.23858 3 7 5.23858 7 8C7 10.7614 9.23858 13 12 13Z"
+									stroke="currentColor" stroke-width="1.4" stroke-linecap="round"
+									stroke-linejoin="round"></path>
+								<path
+									d="M20 21C20 18.8783 19.1571 16.8434 17.6569 15.3431C16.1566 13.8429 14.1217 13 12 13C9.87827 13 7.84344 13.8429 6.34315 15.3431C4.84285 16.8434 4 18.8783 4 21M20 21C20 18.8783 19.1571 16.8434 17.6569 15.3431C16.1566 13.8429 14.1217 13 12 13C9.87827 13 7.84344 13.8429 6.34315 15.3431C4.84285 16.8434 4 18.8783 4 21"
+									stroke="currentColor" stroke-width="1.4" stroke-linecap="round"
+									stroke-linejoin="round"></path>
+							</svg>
+						</a>
+					</li>
+					<li class="mobile-nav__actions-item">
+						<a class="mobile-nav__actions-link" href="">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M13 18.675C14.93 19.505 17.242 20 20 20V16L16 15L13 18.675ZM13 18.675C9.159 17.023 6.824 14.045 5.5 11L13 18.675ZM5.5 11C4.4 8.472 4 5.898 4 4H8L9 8L5.5 11Z"
+									stroke="currentColor" stroke-width="1.4" stroke-linecap="round"
+									stroke-linejoin="round" />
+							</svg>
+						</a>
+					</li>
+					<!-- <li class="mobile-nav__actions-item"> service__lang-list -it's ul class -->
+					<li class="mobile-nav__actions-item dropdown" id="mobile-language-dropdown">
+						<button class="service__lang-link dropdown-button" type="button">EN
+						</button>
+						<ul class="dropdown-selection">
+							<li>
+								<a href="">
+									FR
+								</a>
+							</li>
+							<li>
+								<a href="">
+									DE
+								</a>
+							</li>
+						</ul>
+					</li>
+					<!-- </li> -->
+				</ul>
+			</div>
+			<div class="mobile-nav__primary-list">
+				<ul class="mobile-nav__list">
+					<li class="dropdown" id="mobile-products-dropdown">
+						<button class="dropdown-button" type="button">Products
+							<svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd"
+									d="M7.94625 0.462988C8.0555 0.743244 7.99511 1.06583 7.79323 1.28033L4.49913 4.78033C4.22347 5.07322 3.77653 5.07322 3.50087 4.78033L0.206768 1.28033C0.00488768 1.06583 -0.055504 0.743243 0.0537524 0.462987C0.163009 0.182732 0.420399 -1.32597e-08 0.7059 0L7.2941 3.0598e-07C7.5796 3.19239e-07 7.83699 0.182732 7.94625 0.462988Z"
+									fill="#FF8F8F"></path>
+							</svg>
+						</button>
+						<ul class="dropdown-selection">
+							<li><a href="">Quiet Books</a></li>
+							<li><a href="">Mini Quiet Books</a></li>
+							<li><a href="">Booklets</a></li>
+							<li><a href="">Wooden Toys</a></li>
+							<li><a href="">Wall decorations</a></li>
+							<li><a href="">Felt Masks</a></li>
+						</ul>
+					</li>
+					<li class="mobile-nav__item">
+						<a class="mobile-nav__link" href="#">
+							<span>Child Development
+							</span>
+						</a>
+					</li>
+					<li class="mobile-nav__item">
+						<a class="mobile-nav__link" href="#">
+							<span>What are Quiet Books
+							</span>
+						</a>
+					</li>
+					<li class="mobile-nav__item">
+						<a class="mobile-nav__link" href="#">
+							<span>Blog
+							</span>
+						</a>
+					</li>
+					<li class="dropdown" id="mobile-about-dropdown">
+						<button class="dropdown-button" type="button">About Us
+							<svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd"
+									d="M7.94625 0.462988C8.0555 0.743244 7.99511 1.06583 7.79323 1.28033L4.49913 4.78033C4.22347 5.07322 3.77653 5.07322 3.50087 4.78033L0.206768 1.28033C0.00488768 1.06583 -0.055504 0.743243 0.0537524 0.462987C0.163009 0.182732 0.420399 -1.32597e-08 0.7059 0L7.2941 3.0598e-07C7.5796 3.19239e-07 7.83699 0.182732 7.94625 0.462988Z"
+									fill="#FF8F8F"></path>
+							</svg>
+						</button>
+						<ul class="dropdown-selection">
+							<li><a href="">Quiet Books</a></li>
+							<li><a href="">Mini Quiet Books</a></li>
+							<li><a href="">Booklets</a></li>
+							<li><a href="">Wooden Toys</a></li>
+							<li><a href="">Wall decorations</a></li>
+							<li><a href="">Felt Masks</a></li>
+						</ul>
+					</li>
+					<li class="dropdown" id="mobile-support-dropdown">
+						<button class="dropdown-button" type="button">Support
+							<svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd"
+									d="M7.94625 0.462988C8.0555 0.743244 7.99511 1.06583 7.79323 1.28033L4.49913 4.78033C4.22347 5.07322 3.77653 5.07322 3.50087 4.78033L0.206768 1.28033C0.00488768 1.06583 -0.055504 0.743243 0.0537524 0.462987C0.163009 0.182732 0.420399 -1.32597e-08 0.7059 0L7.2941 3.0598e-07C7.5796 3.19239e-07 7.83699 0.182732 7.94625 0.462988Z"
+									fill="#FF8F8F"></path>
+							</svg>
+						</button>
+						<ul class="dropdown-selection">
+							<li><a href="">Quiet Books</a></li>
+							<li><a href="">Mini Quiet Books</a></li>
+							<li><a href="">Booklets</a></li>
+							<li><a href="">Wooden Toys</a></li>
+							<li><a href="">Wall decorations</a></li>
+							<li><a href="">Felt Masks</a></li>
+						</ul>
+					</li>
+					<li class="mobile-nav__item">
+						<a class="mobile-nav__link" href="#">
+							<span>Where to Find Us
+							</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		<!-- Mobile menu -->
+		<!-- Mobile categories block -->
+		<div class="categories-mobile">
+			<ul class="categories-mobile__list categories-mobile-items">
+				<li class="categories-mobile-items__item">
+					<img class="categories-mobile-items__image" src="img/categories-image-3-320.png" alt="">
+					<a class="categories-mobile-items__link" href="#">
+						Booklets
+					</a>
+				</li>
+				<li class="categories-mobile-items__item">
+					<img class="categories-mobile-items__image" src="img/categories-image-4-320.png" alt="">
+					<a class="categories-mobile-items__link" href="#">
+						Wooden Toys
+					</a>
+				</li>
+				<li class="categories-mobile-items__item">
+					<img class="categories-mobile-items__image" src="img/categories-image-5-320.png" alt="">
+					<a class="categories-mobile-items__link" href="#">
+						Wall decorations
+					</a>
+				</li>
+				<li class="categories-mobile-items__item">
+					<img class="categories-mobile-items__image" src="img/categories-image-2-320.png" alt="">
+					<a class="categories-mobile-items__link" href="#">
+						Mini Quiet Books
+					</a>
+				</li>
+				<li class="categories-mobile-items__item">
+					<img class="categories-mobile-items__image" src="img/categories-image-1-320.png" alt="">
+					<a class="categories-mobile-items__link" href="#">
+						Quiet Books
+					</a>
+				</li>
+				<li class="categories-mobile-items__item">
+					<img class="categories-mobile-items__image" src="img/categories-image-2-320.png" alt="">
+					<a class="categories-mobile-items__link" href="#">
+						Mini Quiet Books
+					</a>
+				</li>
+			</ul>
+		</div>
+		<!-- Mobile categories block -->
+	</div>
+	<div class="main-slider">
+		<!-- <div class="container"> -->
+		<div class="main-slider__holder">
+			<div class="main-slider__actions">
+				<h2 class="main-slider__title title">
+					Discover the new way of playing
+				</h2>
+				<a href="" class="main-slider__buy-button button">
+					Shop now
+				</a>
+				<a href="" class="main-slider__about-button button">
+					About us
+				</a>
+			</div>
+			<div class="main-slider__controls">
+				<button type="button" class="main-slider__control main-slider__control_prev">
+					<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path fill-rule="evenodd" clip-rule="evenodd"
+							d="M25.8107 9.43934C26.3964 10.0251 26.3964 10.9749 25.8107 11.5607L17.3713 20L25.8107 28.4393C26.3964 29.0251 26.3964 29.9749 25.8107 30.5607C25.2249 31.1464 24.2751 31.1464 23.6893 30.5607L14.1893 21.0607C13.6036 20.4749 13.6036 19.5251 14.1893 18.9393L23.6893 9.43934C24.2751 8.85355 25.2249 8.85355 25.8107 9.43934Z"
+							fill="white" />
+					</svg>
+					<span class="main-slider__fallback-text">Arrow left</span>
+				</button>
+				<button type="button" class="main-slider__control main-slider__control_next">
+					<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path fill-rule="evenodd" clip-rule="evenodd"
+							d="M14.1893 9.43934C14.7751 8.85355 15.7249 8.85355 16.3107 9.43934L25.8107 18.9393C26.3964 19.5251 26.3964 20.4749 25.8107 21.0607L16.3107 30.5607C15.7249 31.1464 14.7751 31.1464 14.1893 30.5607C13.6036 29.9749 13.6036 29.0251 14.1893 28.4393L22.6287 20L14.1893 11.5607C13.6036 10.9749 13.6036 10.0251 14.1893 9.43934Z"
+							fill="white" />
+					</svg>
+					<span class="main-slider__fallback-text">Arrow right</span>
+				</button>
+			</div>
+			<ul class="main-slider__list">
+				<li class="main-slider__item">
+					<picture class="main-slider__picture">
+						<source srcset="img/image-749.jpg" media="(max-width: 630px)">
+						<source srcset="img/image-1199.jpg" media="(max-width: 1199px)">
+						<img src="img/image.jpg" alt="">
+					</picture>
+				</li>
+				<li class="main-slider__item">
+					<picture class="main-slider__picture">
+						<source srcset="img/image-749.jpg" media="(max-width: 630px)">
+						<source srcset="img/image-1199.jpg" media="(max-width: 1199px)">
+						<img src="img/image.jpg" alt="">
+					</picture>
+				</li>
+				<li class="main-slider__item">
+					<picture class="main-slider__picture">
+						<source srcset="img/image-749.jpg" media="(max-width: 630px)">
+						<source srcset="img/image-1199.jpg" media="(max-width: 1199px)">
+						<img src="img/image.jpg" alt="">
+					</picture>
+				</li>
+				<li class="main-slider__item">
+					<picture class="main-slider__picture">
+						<source srcset="img/image-749.jpg" media="(max-width: 630px)">
+						<source srcset="img/image-1199.jpg" media="(max-width: 1199px)">
+						<img src="img/image.jpg" alt="">
+					</picture>
+				</li>
+				<li class="main-slider__item">
+					<picture class="main-slider__picture">
+						<source srcset="img/image-749.jpg" media="(max-width: 630px)">
+						<source srcset="img/image-1199.jpg" media="(max-width: 1199px)">
+						<img src="img/image.jpg" alt="">
+					</picture>
+				</li>
+			</ul>
+		</div>
+		<!-- </div> -->
+	</div>
+</header>
