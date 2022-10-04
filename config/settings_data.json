@@ -235,6 +235,7 @@
       "header-shopify": {
         "type": "header-shopify",
         "settings": {
+          "logo": "shopify:\/\/shop_images\/logo.png",
           "slider_title": "Discover the new way of playing",
           "buy-button_text": "Shop now",
           "about-button_text": "About us",
