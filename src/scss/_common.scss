@@ -1,0 +1,258 @@
+$colorWhite: #fff;
+$colorBlack: #000;
+$colorGrey: #666;
+$colorLightGrey: #999;
+$colorDarkGrey: #333;
+$colorGreen: #4ab020;
+$colorLightGreen: #99c71f;
+$colorDarkGreen: #648300;
+$colorRed: #b01e1e;
+$colorLightRed: #ce7f7f;
+$colorDarkRed: #881616;
+
+
+// colors variables
+$white: #ffffff;
+$pink: #ff8f8f;
+$dark-pink: #e86e6e;
+$yellow: #ffe4bb;
+$dark-grey: #414249;
+$dark-blue: #105393;
+$light-blue: #cee8ff;
+$dirty-blue: #6f92b4;
+$light-grey: #e2e2e2;
+$grey: #a8aab7;
+// colors variables
+
+// fonts variables
+$main-font-family: 'Poppins', sans-serif;
+$secondary-font-family: 'DM Serif Display', serif;
+$base-font-size: 16px;
+$base-font-weight: 400;
+$base-line-height: 24px;
+
+%heading-1 {
+	font-family: 'DM Serif Display',
+		serif;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 64px;
+	line-height: 88px;
+}
+
+%heading-2 {
+	font-family: 'DM Serif Display',
+		serif;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 48px;
+	line-height: 56px;
+}
+
+%heading-3 {
+	font-family: 'DM Serif Display',
+		serif;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 32px;
+	line-height: 48px;
+}
+
+%heading-4 {
+	font-family: 'DM Serif Display',
+		serif;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 20px;
+	line-height: 30px;
+}
+
+%heading-5 {
+	font-family: 'DM Serif Display',
+		serif;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 30px;
+}
+
+%heading-6 {
+	font-family: 'DM Serif Display',
+		serif;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 24px;
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+}
+
+%tabs {
+	font-family: 'Poppins',
+		sans-serif;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 14px;
+	line-height: 21px;
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+}
+
+%paragraph {
+	font-family: 'Poppins',
+		sans-serif;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 24px;
+}
+
+// fonts variables
+
+// html,
+// body {
+// 	height: 100%;
+// }
+
+html {
+	box-sizing: border-box;
+	overflow-x: hidden;
+}
+
+body {
+	min-width: 320px;
+	overflow-x: inherit;
+	position: relative;
+	@extend %paragraph;
+	color: $dark-grey;
+	font-size: 16px;
+	line-height: 24px;
+}
+
+// * {
+// 	outline: none;
+// 	box-sizing: border-box;
+// }
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+// h1,
+// h2,
+// h3,
+// h4,
+// h5,
+// h6 {
+// 	font-size: 1em;
+// 	line-height: 1;
+// 	margin: 0;
+// }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+	font-size: inherit;
+}
+
+// img {
+// 	vertical-align: top;
+// 	max-width: 100%;
+// }
+
+a {
+	text-decoration: none;
+	transition: none;
+
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+// ul,
+// ol {
+// 	list-style-type: none;
+// 	list-style-position: inside;
+// 	padding: 0;
+// 	margin: 0;
+// }
+
+ul,
+li {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+// p {
+// 	margin: 0;
+// }
+
+// button {
+// 	outline: none;
+
+// 	&:focus {
+// 		outline: none;
+// 	}
+// }
+
+button {
+	background-color: transparent;
+	border-width: 0;
+	font-family: inherit;
+	font-size: inherit;
+	font-style: inherit;
+	font-weight: inherit;
+	line-height: inherit;
+	padding: 0;
+	cursor: pointer;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+	position: relative;
+	vertical-align: middle;
+}
+
+// .wrapper {
+// 	position: relative;
+// 	min-width: 320px;
+// 	min-height: 100%;
+// 	overflow: hidden;
+// }
+
+img {
+	max-width: 100%;
+	height: auto;
+	display: block;
+}
+
+.container {
+	max-width: 1280px;
+	// padding: 0 20px;
+	margin: 0 auto;
+}
+
+.visually-hidden,
+.service__fallback-text,
+.main-slider__fallback-text,
+.favorite-slider__fallback-text,
+.slider-controls__fallback-text,
+.socials__fallback-text,
+.mobile-actions__fallback-text {
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	border: 0;
+	padding: 0;
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	margin: -1px;
+}

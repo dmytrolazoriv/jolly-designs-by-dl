@@ -1,0 +1,59 @@
+@font-face
+	font-family: "svgfont"
+	src: url('fonts/svgfont.eot')
+	src: url('fonts/svgfont.eot?#iefix') format('eot'), url('fonts/svgfont.woff') format('woff'), url('fonts/svgfont.woff2') format('woff2'), url('fonts/svgfont.ttf') format('truetype')
+	font-weight: normal
+	font-style: normal
+
+$icon-close: "\EA01"
+$icon-car: "\EA02"
+$icon-returns: "\EA03"
+$icon-replacement: "\EA04"
+$icon-star: "\EA05"
+$icon-hand-made: "\EA06"
+$icon-heart: "\EA07"
+$icon-guarantee: "\EA08"
+$icon-phone: "\EA09"
+$icon-magnifying: "\EA0A"
+$icon-heart-2: "\EA0B"
+$icon-cart: "\EA0C"
+
+
+%icon
+	font-family: "svgfont"
+	font-style: normal
+	font-weight: normal
+	text-rendering: auto
+	speak: none
+	line-height: 1
+	-webkit-font-smoothing: antialiased
+	-moz-osx-font-smoothing: grayscale
+
+.icon, [class^="icon-"], [class*=" icon-"]
+	@extend %icon
+	display: inline-block
+
+.icon-close:before
+	content: $icon-close
+.icon-car:before
+	content: $icon-car
+.icon-returns:before
+	content: $icon-returns
+.icon-replacement:before
+	content: $icon-replacement
+.icon-star:before
+	content: $icon-star
+.icon-hand-made:before
+	content: $icon-hand-made
+.icon-heart:before
+	content: $icon-heart
+.icon-guarantee:before
+	content: $icon-guarantee
+.icon-phone:before
+	content: $icon-phone
+.icon-magnifying:before
+	content: $icon-magnifying
+.icon-heart-2:before
+	content: $icon-heart-2
+.icon-cart:before
+	content: $icon-cart
