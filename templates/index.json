@@ -1,4 +1,25 @@
 {
-  "sections": {},
-  "order": []
+  "sections": {
+    "1664873050c36bf10b": {
+      "type": "categories-mobile",
+      "blocks": {
+        "084b0063-9724-4993-a1ed-ce8f60e98281": {
+          "type": "header",
+          "settings": {
+            "categ_mob_img": "shopify:\/\/shop_images\/categories-image-1-320.png",
+            "categ_mob_title": "Quiet Books",
+            "categ_mob_link": "shopify:\/\/collections\/all"
+          }
+        }
+      },
+      "block_order": [
+        "084b0063-9724-4993-a1ed-ce8f60e98281"
+      ],
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "1664873050c36bf10b"
+  ]
 }
