@@ -1,0 +1,108 @@
+<div class="header__announcement-slider announcement-slider">
+      <div class="container">
+        <div class="announcement-slider__controls">
+          <button class="announcement-slider__button announcement-slider__control_prev" type="button">
+            {% render 'announc-arrow' %}
+          </button>
+          <button class="announcement-slider__button announcement-slider__control_next" type="button">
+            {% render 'announc-arrow' %}
+          </button>
+        </div>
+        <ul class="announcement-slider__list">
+          <li class="announcement-slider__item">
+            <svg class="icon-icon-car"><use xlink:href="#icon-icon-car"></use></svg>
+            <a class="announcement-slider__link announcement-slider__link-1" href="#">Free shipping from 60€
+              (DE)
+            </a>
+          </li>
+          <li class="announcement-slider__item">
+            <svg class="icon-icon-hand"><use xlink:href="#icon-icon-hand"></use></svg>
+            <a class="announcement-slider__link announcement-slider__link-2" href="#">{{ block.settings.text | truncatewords: "7" }}</a>
+            <a class="announcement-slider__link announcement-slider__link-2" href="#">
+              High quality hand-mand
+              & ethical products</a>
+          </li>
+          <li class="announcement-slider__item">
+            <svg class="icon-icon-guarantee"><use xlink:href="#icon-icon-guarantee"></use></svg>
+            <a class="announcement-slider__link announcement-slider__link-3" href="#">6 Months guarantee</a>
+          </li>
+          <li class="announcement-slider__item">
+            <svg class="icon-icon-heart"><use xlink:href="#icon-icon-heart"></use></svg>
+            <a class="announcement-slider__link announcement-slider__link-4" href="#">The favourite of XXXX
+              partners</a>
+          </li>
+          <li class="announcement-slider__item">
+            {% render 'icon-flag' %}
+            <a class="announcement-slider__link announcement-slider__link-5" href="#">Made in Germany</a>
+          </li>
+          <li class="announcement-slider__item">
+            <svg class="icon-icon-replacement"><use xlink:href="#icon-icon-replacement"></use></svg>
+            <a class="announcement-slider__link announcement-slider__link-6" href="#">
+              Free parts replacement
+              service
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    {%- style -%}
+.header__announcement-slider {
+  margin-bottom: {{ block.settings.margin_bottom }}px;
+  }
+{%- endstyle -%}
+
+
+{% schema %}
+{
+  "name":"Announcement bar",
+  "class":"announcement-slider",
+  "tag":"div",
+  "blocks":[
+     {
+        "type":"message_item",
+        "name":"Message item",
+        "settings":[
+           {
+              "type":"header",
+              "content":"Set your value for margin-bottom property"
+           },
+           {
+              "type":"range",
+              "id":"margin_bottom",
+              "min":0,
+              "max":44,
+              "step":4,
+              "unit":"px",
+              "label":"Set your value for margin-bottom property",
+              "default":0
+           },
+           {
+              "type":"header",
+              "content":"Icon settings"
+           },
+           {
+              "type":"image_picker",
+              "id":"icon",
+              "label":"Icon"
+           },
+           {
+              "type":"header",
+              "content":"Text settings"
+           },
+           {
+              "type":"text",
+              "id":"text",
+              "label":"Text",
+              "default":"Free shipping from 60€ (DE)"
+           }
+        ]
+     }
+  ],
+  "presets":[
+     {
+        "name":"Announcement bar"
+     }
+  ]
+}
+{% endschema %}

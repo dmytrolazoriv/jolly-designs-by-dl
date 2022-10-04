@@ -1,0 +1,136 @@
+<section class="production">
+    <div class="container">
+      <div class="production__description">
+
+        {%- if section.settings.title != blank -%}
+        <h2 class="production__title title">
+          {{ section.settings.title | escape }}
+        </h2>
+        {%- endif -%}
+
+        <p class="production__definition">
+          are developed by child experts to improve your children's fine motor development
+        </p>
+      </div>
+      <div class="production__items items">
+        <ul class="items__list">
+          <li class="items__item">
+            <p>
+              <img class="items__image" src="/assets/production-icon-1.svg" alt="">
+            <h4 class="items__title">
+              Learning
+            </h4>
+            <p class="items__description">
+              Our pediatrician-recommended products are a great way for your children to learn,
+              enhance their fine motor skills and develop their imagination.
+            </p>
+          </li>
+          <li class="items__item">
+            <img class="items__image" src="/assets/production-icon-3.svg" alt="">
+            <h4 class="items__title">
+              Easy to carry
+            </h4>
+            <p class="items__description">
+              Our light-weight and flexible books will keep your children busy for your long journeys
+              or dinners at the restaurant.
+            </p>
+          </li>
+          <li class="items__item">
+            <img class="items__image" src="/assets/production-icon-5.svg" alt="">
+            <h4 class="items__title">
+              Sustainability
+            </h4>
+            <p class="items__description">
+              All of our products are plastic-free and fairly produced.
+            </p>
+          </li>
+          <li class="items__item">
+            <img class="items__image" src="/assets/production-icon-2.svg" alt="">
+            <h4 class="items__title">
+              Long-lasting products
+            </h4>
+            <p class="items__description">
+              Our high-quality products can be passed on from generation to generation.
+            </p>
+          </li>
+          <li class="items__item">
+            <img class="items__image" src="/assets/production-icon-4.svg" alt="">
+            <h4 class="items__title">
+              Versatile toys
+            </h4>
+            <p class="items__description">
+              Our products can be played in countless unimaginable ways. We offer your children a
+              world of creativity in each of our books.
+            </p>
+          </li>
+        </ul>
+        <ul class="items-mobile__list">
+          <li class="items-mobile__item">
+            <p>
+              <img class="items-mobile__image" src="/assets/production-icon-1.svg" alt="">
+            <h4 class="items__title">
+              Learning
+            </h4>
+            <p class="items-mobile__description">
+              Our pediatrician-recommended products are a great way for your children to learn,
+              enhance their fine motor skills and develop their imagination.
+            </p>
+          </li>
+          <li class="items-mobile__item">
+            <img class="items-mobile__image" src="/assets/production-icon-3.svg" alt="">
+            <h4 class="items-mobile__title">
+              Easy to carry
+            </h4>
+            <p class="items-mobile__description">
+              Our light-weight and flexible books will keep your children busy for your long journeys
+              or dinners at the restaurant.
+            </p>
+          </li>
+          <li class="items-mobile__item">
+            <img class="items-mobile__image" src="/assets/production-icon-5.svg" alt="">
+            <h4 class="items-mobile__title">
+              Sustainability
+            </h4>
+            <p class="items-mobile__description">
+              All of our products are plastic-free and fairly produced.
+            </p>
+          </li>
+          <li class="items-mobile__item">
+            <img class="items-mobile__image" src="/assets/production-icon-2.svg" alt="">
+            <h4 class="items-mobile__title">
+              Long-lasting products
+            </h4>
+            <p class="items-mobile__description">
+              Our high-quality products can be passed on from generation to generation.
+            </p>
+          </li>
+          <li class="items-mobile__item">
+            <img class="items-mobile__image" src="/assets/production-icon-4.svg" alt="">
+            <h4 class="items-mobile__title">
+              Versatile toys
+            </h4>
+            <p class="items-mobile__description">
+              Our products can be played in countless unimaginable ways. We offer your children a
+              world of creativity in each of our books.
+            </p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  {% schema %}
+  {
+    "name": "Production",
+    "tag": "section",
+    "class": "production",
+    "settings": [
+        {
+            "type": "text",
+            "id": "title",
+            "default": "Our Quiet Books",
+            "label": "Production title"
+        }
+    ]
+}
+  {% endschema %}

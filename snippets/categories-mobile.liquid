@@ -1,0 +1,53 @@
+<div class="categories-mobile">
+    <ul class="categories-mobile__list categories-mobile-items">
+        {% for block in section.blocks %}
+        <li class="categories-mobile-items__item">
+                    <img width="56" height="56" src="{{ block.settings.categ_mob_img | image_url: width: 56, height: 56 }}" alt="{{ block.settings.categ_mob_img | escape }}" loading="lazy">
+            <a class="categories-mobile-items__link" href="{{ block.setting.categ_mob_link }}">
+                {{ block.settings.categ_mob_title | escape }}
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+
+{% schema %}
+{
+    "name":"Categories mobile slider",
+    "blocks":[
+        {
+           "type":"header",
+           "name":"Сategories mobile slider",
+           "settings":[
+              {
+                 "type":"header",
+                 "content":"Image for categories mobile slider"
+              },
+              {
+                 "type":"image_picker",
+                 "id":"categ_mob_img",
+                 "label":"Image for categories mobile slider"
+              },
+              {
+                 "type":"text",
+                 "id":"categ_mob_title",
+                 "default":"Quiet Books",
+                 "label":"Write a caption for the slider image"
+              },
+              {
+                 "type":"url",
+                 "id":"categ_mob_link",
+                 "label":"Add link"
+              }
+           ]
+        }
+     ],
+    "settings":[
+    ],
+    "presets":[
+       {
+          "name":"Categories mobile slider"
+       }
+    ]
+ }
+{% endschema %}

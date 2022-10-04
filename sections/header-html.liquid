@@ -1,0 +1,734 @@
+{% comment %} {{ 'style.css' | asset_url | stylesheet_tag }} {% endcomment %}
+
+<header class="header">
+	<div class="container">
+		<div class="header__wrapper">
+			<div class="header__service service">
+				<p class="service__phone">
+					<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path
+							d="M13 18.675C14.93 19.505 17.242 20 20 20V16L16 15L13 18.675ZM13 18.675C9.159 17.023 6.824 14.045 5.5 11L13 18.675ZM5.5 11C4.4 8.472 4 5.898 4 4H8L9 8L5.5 11Z"
+							stroke="#414249" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+					</svg>
+					<!-- <i class="icon-phone"></i> -->
+					<a href="tel:+4961729452910">
+						+49&nbsp;61729452910
+					</a>
+				</p>
+				<ul class="service__lang-list">
+					<!-- <li class="service__lang-item">
+						<a class="service__lang-link" href="#"></a>
+					</li> -->
+					<li class='dropdown service__lang-item' id='language-dropdown'>
+						<button class='dropdown-button service__lang-link' type="button">EN</button>
+						<ul class='dropdown-selection'>
+							<li><a href="">FR</a></li>
+							<li><a href="">DE</a></li>
+						</ul>
+					</li>
+				</ul>
+				<h1 class="service__logo">
+					<a class="service__logo-image" href="/">
+						<img src="/assets/logo.png" alt="jolly designs logo">
+						{% comment %} <img src="assets/logo.png" alt="jolly designs logo"> {% endcomment %}
+						{% comment %} <img src="{{ block.settings.logo-image | image_url: width: 179, height: 46 }}" alt="{{ block.settings.logo-image.alt }}"> {% endcomment %}
+					</a>
+				</h1>
+				<ul class="service__actions">
+					<li class="service__actions-item">
+						<button class="service__button" type="button">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" fill="currentColor"
+								xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M19.9999 20.0001L15.9499 15.9501M15.9499 15.9501C16.5999 15.3001 17.1156 14.5284 17.4674 13.679C17.8192 12.8297 18.0002 11.9194 18.0002 11.0001C18.0002 10.0808 17.8192 9.17051 17.4674 8.32119C17.1156 7.47187 16.5999 6.70016 15.9499 6.05011C15.2998 5.40007 14.5281 4.88443 13.6788 4.53263C12.8295 4.18083 11.9192 3.99976 10.9999 3.99976C10.0806 3.99976 9.17027 4.18083 8.32095 4.53263C7.47163 4.88443 6.69991 5.40007 6.04987 6.05011C4.73705 7.36293 3.99951 9.1435 3.99951 11.0001C3.99951 12.8567 4.73705 14.6373 6.04987 15.9501C7.36269 17.2629 9.14326 18.0005 10.9999 18.0005C12.8565 18.0005 14.637 17.2629 15.9499 15.9501V15.9501Z"
+									stroke="currentColor" stroke-width="1.4" stroke-linecap="round"
+									stroke-linejoin="round" />
+							</svg>
+							<span class="service__fallback-text">Seek</span>
+							<span class="service__counter"></span>
+						</button>
+					</li>
+					<li class="service__actions-item">
+						<a class="service__link" href="#">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M12 13C14.7614 13 17 10.7614 17 8C17 5.23858 14.7614 3 12 3C9.23858 3 7 5.23858 7 8C7 10.7614 9.23858 13 12 13Z"
+									stroke="currentColor" stroke-width="1.4" stroke-linecap="round"
+									stroke-linejoin="round" />
+								<path
+									d="M20 21C20 18.8783 19.1571 16.8434 17.6569 15.3431C16.1566 13.8429 14.1217 13 12 13C9.87827 13 7.84344 13.8429 6.34315 15.3431C4.84285 16.8434 4 18.8783 4 21M20 21C20 18.8783 19.1571 16.8434 17.6569 15.3431C16.1566 13.8429 14.1217 13 12 13C9.87827 13 7.84344 13.8429 6.34315 15.3431C4.84285 16.8434 4 18.8783 4 21"
+									stroke="currentColor" stroke-width="1.4" stroke-linecap="round"
+									stroke-linejoin="round" />
+							</svg>
+							<span class="service__fallback-text">log in</span>
+							<span class="service__counter"></span>
+						</a>
+					</li>
+					<li class="service__actions-item">
+						<a class="service__link" href="#">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M17 4C13.8 4 12 6.667 12 8C12 6.667 10.2 4 7 4C3.8 4 3 6.667 3 8C3 15 12 20 12 20C12 20 21 15 21 8C21 6.667 20.2 4 17 4Z"
+									stroke="currentColor" stroke-width="1.4" stroke-linecap="round"
+									stroke-linejoin="round" />
+							</svg>
+							<span class="service__fallback-text">Favorite</span>
+							<span class="service__counter">6</span>
+						</a>
+					</li>
+					<li class="service__actions-item">
+						<a class="service__link" href="#">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path d="M3 4H5L5.5 7M5.5 7L7 16H18L21 7H5.5Z" stroke="currentColor" stroke-width="1.4"
+									stroke-linecap="round" stroke-linejoin="round" />
+								<path
+									d="M9 21.7C9.93888 21.7 10.7 20.9389 10.7 20C10.7 19.0611 9.93888 18.3 9 18.3C8.06112 18.3 7.3 19.0611 7.3 20C7.3 20.9389 8.06112 21.7 9 21.7Z"
+									stroke="currentColor" stroke-width="1.4" stroke-linecap="round"
+									stroke-linejoin="round" />
+								<path
+									d="M16 21.7C16.9389 21.7 17.7 20.9389 17.7 20C17.7 19.0611 16.9389 18.3 16 18.3C15.0611 18.3 14.3 19.0611 14.3 20C14.3 20.9389 15.0611 21.7 16 21.7Z"
+									stroke="currentColor" stroke-width="1.4" stroke-linecap="round"
+									stroke-linejoin="round" />
+							</svg>
+							<span class="service__fallback-text">Shopping cart</span>
+							<span class="service__counter">2</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<nav class="header__main-nav main-nav">
+				<ul class="main-nav__list">
+					<!-- <li class="main-nav__item">
+						<button id="main-nav__button-1" class="main-nav__button" type="button">
+							<span>Products</span>
+							<svg width="8" height="5" viewBox="0 0 8 5" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd"
+									d="M7.94625 0.462988C8.0555 0.743244 7.99511 1.06583 7.79323 1.28033L4.49913 4.78033C4.22347 5.07322 3.77653 5.07322 3.50087 4.78033L0.206768 1.28033C0.00488768 1.06583 -0.055504 0.743243 0.0537524 0.462987C0.163009 0.182732 0.420399 -1.32597e-08 0.7059 0L7.2941 3.0598e-07C7.5796 3.19239e-07 7.83699 0.182732 7.94625 0.462988Z"
+									fill="#FF8F8F" />
+							</svg>
+						</button>
+						<div>
+							<ul>
+								<li><a href="">Quiet Books</a></li>
+								<li><a href="">Mini Quiet Books</a></li>
+								<li><a href="">Booklets</a></li>
+								<li><a href="">Wooden Toys</a></li>
+								<li><a href="">Wall decorations</a></li>
+							</ul>
+						</div>
+					</li> -->
+					<!-- <button onclick="myFunction()" class="main-nav__button" type="button"> -->
+					<!-- <li class="main-nav__item">
+						<button class="main-nav__button" type="button">
+							Products
+							<svg width="8" height="5" viewBox="0 0 8 5" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd"
+									d="M7.94625 0.462988C8.0555 0.743244 7.99511 1.06583 7.79323 1.28033L4.49913 4.78033C4.22347 5.07322 3.77653 5.07322 3.50087 4.78033L0.206768 1.28033C0.00488768 1.06583 -0.055504 0.743243 0.0537524 0.462987C0.163009 0.182732 0.420399 -1.32597e-08 0.7059 0L7.2941 3.0598e-07C7.5796 3.19239e-07 7.83699 0.182732 7.94625 0.462988Z"
+									fill="#FF8F8F" />
+							</svg>
+						</button>
+						<div id="my-dropdown" class="main-nav__dropdown-content">
+							<ul>
+								<li><a href="">Quiet Books</a></li>
+								<li><a href="">Mini Quiet Books</a></li>
+								<li><a href="">Booklets</a></li>
+								<li><a href="">Wooden Toys</a></li>
+								<li><a href="">Wall decorations</a></li>
+							</ul>
+						</div>
+					</li> -->
+					<li class='dropdown' id='products-dropdown'>
+						<button class='dropdown-button' type="button">Products</button>
+						<svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path fill-rule="evenodd" clip-rule="evenodd"
+								d="M7.94625 0.462988C8.0555 0.743244 7.99511 1.06583 7.79323 1.28033L4.49913 4.78033C4.22347 5.07322 3.77653 5.07322 3.50087 4.78033L0.206768 1.28033C0.00488768 1.06583 -0.055504 0.743243 0.0537524 0.462987C0.163009 0.182732 0.420399 -1.32597e-08 0.7059 0L7.2941 3.0598e-07C7.5796 3.19239e-07 7.83699 0.182732 7.94625 0.462988Z"
+								fill="#FF8F8F" />
+						</svg>
+						<ul class='dropdown-selection'>
+							<li><a href="">Quiet Books</a></li>
+							<li><a href="">Mini Quiet Books</a></li>
+							<li><a href="">Booklets</a></li>
+							<li><a href="">Wooden Toys</a></li>
+							<li><a href="">Wall decorations</a></li>
+						</ul>
+					</li>
+					<li class="main-nav__item">
+						<a class="main-nav__link" href="#">
+							<span>Child Development
+							</span>
+						</a>
+					</li>
+					<li class="main-nav__item">
+						<a class="main-nav__link" href="#">
+							<span>What are Quiet Books
+							</span>
+						</a>
+					</li>
+					<li class="main-nav__item">
+						<a class="main-nav__link" href="#">
+							<span>Blog
+							</span>
+						</a>
+					</li>
+					<!-- <li class="main-nav__item">
+						<button class="main-nav__button" type="button">
+							About Us
+							<svg width="8" height="5" viewBox="0 0 8 5" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd"
+									d="M7.94625 0.462988C8.0555 0.743244 7.99511 1.06583 7.79323 1.28033L4.49913 4.78033C4.22347 5.07322 3.77653 5.07322 3.50087 4.78033L0.206768 1.28033C0.00488768 1.06583 -0.055504 0.743243 0.0537524 0.462987C0.163009 0.182732 0.420399 -1.32597e-08 0.7059 0L7.2941 3.0598e-07C7.5796 3.19239e-07 7.83699 0.182732 7.94625 0.462988Z"
+									fill="#FF8F8F" />
+							</svg>
+						</button>
+						<div id="my-dropdown" class="main-nav__dropdown-content">
+							<ul>
+								<li><a href="">Quiet Books</a></li>
+								<li><a href="">Mini Quiet Books</a></li>
+								<li><a href="">Booklets</a></li>
+								<li><a href="">Wooden Toys</a></li>
+								<li><a href="">Wall decorations</a></li>
+							</ul>
+						</div>
+					</li> -->
+					<li class='dropdown' id='about-dropdown'>
+						<button class='dropdown-button' type="button">About Us</button>
+						<svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path fill-rule="evenodd" clip-rule="evenodd"
+								d="M7.94625 0.462988C8.0555 0.743244 7.99511 1.06583 7.79323 1.28033L4.49913 4.78033C4.22347 5.07322 3.77653 5.07322 3.50087 4.78033L0.206768 1.28033C0.00488768 1.06583 -0.055504 0.743243 0.0537524 0.462987C0.163009 0.182732 0.420399 -1.32597e-08 0.7059 0L7.2941 3.0598e-07C7.5796 3.19239e-07 7.83699 0.182732 7.94625 0.462988Z"
+								fill="#FF8F8F" />
+						</svg>
+						<ul class='dropdown-selection'>
+							<li><a href="">Quiet Books</a></li>
+							<li><a href="">Mini Quiet Books</a></li>
+							<li><a href="">Booklets</a></li>
+							<li><a href="">Wooden Toys</a></li>
+							<li><a href="">Wall decorations</a></li>
+						</ul>
+					</li>
+					<!-- <li class="main-nav__item">
+						<button class="main-nav__button" type="button">
+							Support
+							<svg width="8" height="5" viewBox="0 0 8 5" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd"
+									d="M7.94625 0.462988C8.0555 0.743244 7.99511 1.06583 7.79323 1.28033L4.49913 4.78033C4.22347 5.07322 3.77653 5.07322 3.50087 4.78033L0.206768 1.28033C0.00488768 1.06583 -0.055504 0.743243 0.0537524 0.462987C0.163009 0.182732 0.420399 -1.32597e-08 0.7059 0L7.2941 3.0598e-07C7.5796 3.19239e-07 7.83699 0.182732 7.94625 0.462988Z"
+									fill="#FF8F8F" />
+							</svg>
+						</button>
+						<div id="my-dropdown" class="main-nav__dropdown-content">
+							<ul>
+								<li><a href="">Quiet Books</a></li>
+								<li><a href="">Mini Quiet Books</a></li>
+								<li><a href="">Booklets</a></li>
+								<li><a href="">Wooden Toys</a></li>
+								<li><a href="">Wall decorations</a></li>
+							</ul>
+						</div>
+					</li> -->
+					<li class='dropdown' id='support-dropdown'>
+						<button class='dropdown-button' type="button">Support</button>
+						<svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path fill-rule="evenodd" clip-rule="evenodd"
+								d="M7.94625 0.462988C8.0555 0.743244 7.99511 1.06583 7.79323 1.28033L4.49913 4.78033C4.22347 5.07322 3.77653 5.07322 3.50087 4.78033L0.206768 1.28033C0.00488768 1.06583 -0.055504 0.743243 0.0537524 0.462987C0.163009 0.182732 0.420399 -1.32597e-08 0.7059 0L7.2941 3.0598e-07C7.5796 3.19239e-07 7.83699 0.182732 7.94625 0.462988Z"
+								fill="#FF8F8F" />
+						</svg>
+						<ul class='dropdown-selection'>
+							<li><a href="">Quiet Books</a></li>
+							<li><a href="">Mini Quiet Books</a></li>
+							<li><a href="">Booklets</a></li>
+							<li><a href="">Wooden Toys</a></li>
+							<li><a href="">Wall decorations</a></li>
+						</ul>
+					</li>
+					<li class="main-nav__item">
+						<a class="main-nav__link" href="#">
+							<span>Where to Find Us
+							</span>
+						</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+		<!-- Mobile menu -->
+		<div class="header__service-mobile">
+			<div class="header__button-wrapper">
+				<button class="header__burger-button">
+					<span></span>
+				</button>
+				<button class="header__button-search" type="button">
+					<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path
+							d="M19.9999 20.0001L15.9499 15.9501M15.9499 15.9501C16.5999 15.3001 17.1156 14.5284 17.4674 13.679C17.8192 12.8297 18.0002 11.9194 18.0002 11.0001C18.0002 10.0808 17.8192 9.17051 17.4674 8.32119C17.1156 7.47187 16.5999 6.70016 15.9499 6.05011C15.2998 5.40007 14.5281 4.88443 13.6788 4.53263C12.8295 4.18083 11.9192 3.99976 10.9999 3.99976C10.0806 3.99976 9.17027 4.18083 8.32095 4.53263C7.47163 4.88443 6.69991 5.40007 6.04987 6.05011C4.73705 7.36293 3.99951 9.1435 3.99951 11.0001C3.99951 12.8567 4.73705 14.6373 6.04987 15.9501C7.36269 17.2629 9.14326 18.0005 10.9999 18.0005C12.8565 18.0005 14.637 17.2629 15.9499 15.9501V15.9501Z"
+							stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+						</path>
+					</svg>
+					<span class="service__fallback-text">Seek</span>
+					<span class="service__counter"></span>
+				</button>
+			</div>
+			<h1 class="service__mobile-logo">
+				<a class="service__mobile-image" href="/">
+					<img src="/assets/logo.png" alt="jolly designs logo">
+				</a>
+			</h1>
+			<ul class="header__mobile-actions mobile-actions">
+				<li class="mobile-actions__item">
+					<a class="mobile-actions__link" href="#">
+						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path
+								d="M17 4C13.8 4 12 6.667 12 8C12 6.667 10.2 4 7 4C3.8 4 3 6.667 3 8C3 15 12 20 12 20C12 20 21 15 21 8C21 6.667 20.2 4 17 4Z"
+								stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+							</path>
+						</svg>
+						<span class="mobile-actions__fallback-text">Favorite</span>
+						<span class="mobile-actions__counter">6</span>
+					</a>
+				</li>
+				<li class="mobile-actions__item">
+					<a class="mobile-actions__link" href="#">
+						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M3 4H5L5.5 7M5.5 7L7 16H18L21 7H5.5Z" stroke="currentColor" stroke-width="1.4"
+								stroke-linecap="round" stroke-linejoin="round"></path>
+							<path
+								d="M9 21.7C9.93888 21.7 10.7 20.9389 10.7 20C10.7 19.0611 9.93888 18.3 9 18.3C8.06112 18.3 7.3 19.0611 7.3 20C7.3 20.9389 8.06112 21.7 9 21.7Z"
+								stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+							</path>
+							<path
+								d="M16 21.7C16.9389 21.7 17.7 20.9389 17.7 20C17.7 19.0611 16.9389 18.3 16 18.3C15.0611 18.3 14.3 19.0611 14.3 20C14.3 20.9389 15.0611 21.7 16 21.7Z"
+								stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+							</path>
+						</svg>
+						<span class="mobile-actions__fallback-text">Shopping cart</span>
+						<span class="mobile-actions__counter">2</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<nav class="header__mobile-nav mobile-nav">
+			<div class="mobile-nav__topbar">
+				<ul class="mobile-nav__actions-list">
+					<li class="mobile-nav__actions-item">
+						<a class="mobile-nav__actions-link" href="">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M12 13C14.7614 13 17 10.7614 17 8C17 5.23858 14.7614 3 12 3C9.23858 3 7 5.23858 7 8C7 10.7614 9.23858 13 12 13Z"
+									stroke="currentColor" stroke-width="1.4" stroke-linecap="round"
+									stroke-linejoin="round"></path>
+								<path
+									d="M20 21C20 18.8783 19.1571 16.8434 17.6569 15.3431C16.1566 13.8429 14.1217 13 12 13C9.87827 13 7.84344 13.8429 6.34315 15.3431C4.84285 16.8434 4 18.8783 4 21M20 21C20 18.8783 19.1571 16.8434 17.6569 15.3431C16.1566 13.8429 14.1217 13 12 13C9.87827 13 7.84344 13.8429 6.34315 15.3431C4.84285 16.8434 4 18.8783 4 21"
+									stroke="currentColor" stroke-width="1.4" stroke-linecap="round"
+									stroke-linejoin="round"></path>
+							</svg>
+						</a>
+					</li>
+					<li class="mobile-nav__actions-item">
+						<a class="mobile-nav__actions-link" href="">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M13 18.675C14.93 19.505 17.242 20 20 20V16L16 15L13 18.675ZM13 18.675C9.159 17.023 6.824 14.045 5.5 11L13 18.675ZM5.5 11C4.4 8.472 4 5.898 4 4H8L9 8L5.5 11Z"
+									stroke="currentColor" stroke-width="1.4" stroke-linecap="round"
+									stroke-linejoin="round" />
+							</svg>
+						</a>
+					</li>
+					<!-- <li class="mobile-nav__actions-item"> service__lang-list -it's ul class -->
+					<li class="mobile-nav__actions-item dropdown" id="mobile-language-dropdown">
+						<button class="service__lang-link dropdown-button" type="button">EN
+						</button>
+						<ul class="dropdown-selection">
+							<li>
+								<a href="">
+									FR
+								</a>
+							</li>
+							<li>
+								<a href="">
+									DE
+								</a>
+							</li>
+						</ul>
+					</li>
+					<!-- </li> -->
+				</ul>
+			</div>
+			<div class="mobile-nav__primary-list">
+				<ul class="mobile-nav__list">
+					<li class="dropdown" id="mobile-products-dropdown">
+						<button class="dropdown-button" type="button">Products
+							<svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd"
+									d="M7.94625 0.462988C8.0555 0.743244 7.99511 1.06583 7.79323 1.28033L4.49913 4.78033C4.22347 5.07322 3.77653 5.07322 3.50087 4.78033L0.206768 1.28033C0.00488768 1.06583 -0.055504 0.743243 0.0537524 0.462987C0.163009 0.182732 0.420399 -1.32597e-08 0.7059 0L7.2941 3.0598e-07C7.5796 3.19239e-07 7.83699 0.182732 7.94625 0.462988Z"
+									fill="#FF8F8F"></path>
+							</svg>
+						</button>
+						<ul class="dropdown-selection">
+							<li><a href="">Quiet Books</a></li>
+							<li><a href="">Mini Quiet Books</a></li>
+							<li><a href="">Booklets</a></li>
+							<li><a href="">Wooden Toys</a></li>
+							<li><a href="">Wall decorations</a></li>
+							<li><a href="">Felt Masks</a></li>
+						</ul>
+					</li>
+					<li class="mobile-nav__item">
+						<a class="mobile-nav__link" href="#">
+							<span>Child Development
+							</span>
+						</a>
+					</li>
+					<li class="mobile-nav__item">
+						<a class="mobile-nav__link" href="#">
+							<span>What are Quiet Books
+							</span>
+						</a>
+					</li>
+					<li class="mobile-nav__item">
+						<a class="mobile-nav__link" href="#">
+							<span>Blog
+							</span>
+						</a>
+					</li>
+					<li class="dropdown" id="mobile-about-dropdown">
+						<button class="dropdown-button" type="button">About Us
+							<svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd"
+									d="M7.94625 0.462988C8.0555 0.743244 7.99511 1.06583 7.79323 1.28033L4.49913 4.78033C4.22347 5.07322 3.77653 5.07322 3.50087 4.78033L0.206768 1.28033C0.00488768 1.06583 -0.055504 0.743243 0.0537524 0.462987C0.163009 0.182732 0.420399 -1.32597e-08 0.7059 0L7.2941 3.0598e-07C7.5796 3.19239e-07 7.83699 0.182732 7.94625 0.462988Z"
+									fill="#FF8F8F"></path>
+							</svg>
+						</button>
+						<ul class="dropdown-selection">
+							<li><a href="">Quiet Books</a></li>
+							<li><a href="">Mini Quiet Books</a></li>
+							<li><a href="">Booklets</a></li>
+							<li><a href="">Wooden Toys</a></li>
+							<li><a href="">Wall decorations</a></li>
+							<li><a href="">Felt Masks</a></li>
+						</ul>
+					</li>
+					<li class="dropdown" id="mobile-support-dropdown">
+						<button class="dropdown-button" type="button">Support
+							<svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd"
+									d="M7.94625 0.462988C8.0555 0.743244 7.99511 1.06583 7.79323 1.28033L4.49913 4.78033C4.22347 5.07322 3.77653 5.07322 3.50087 4.78033L0.206768 1.28033C0.00488768 1.06583 -0.055504 0.743243 0.0537524 0.462987C0.163009 0.182732 0.420399 -1.32597e-08 0.7059 0L7.2941 3.0598e-07C7.5796 3.19239e-07 7.83699 0.182732 7.94625 0.462988Z"
+									fill="#FF8F8F"></path>
+							</svg>
+						</button>
+						<ul class="dropdown-selection">
+							<li><a href="">Quiet Books</a></li>
+							<li><a href="">Mini Quiet Books</a></li>
+							<li><a href="">Booklets</a></li>
+							<li><a href="">Wooden Toys</a></li>
+							<li><a href="">Wall decorations</a></li>
+							<li><a href="">Felt Masks</a></li>
+						</ul>
+					</li>
+					<li class="mobile-nav__item">
+						<a class="mobile-nav__link" href="#">
+							<span>Where to Find Us
+							</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		<!-- Mobile menu -->
+		<!-- Mobile categories block -->
+		<div class="categories-mobile">
+			<ul class="categories-mobile__list categories-mobile-items">
+				<li class="categories-mobile-items__item">
+					<img class="categories-mobile-items__image" src="/assets/categories-image-3-320.png" alt="">
+					<a class="categories-mobile-items__link" href="#">
+						Booklets
+					</a>
+				</li>
+				<li class="categories-mobile-items__item">
+					<img class="categories-mobile-items__image" src="/assets/categories-image-4-320.png" alt="">
+					<a class="categories-mobile-items__link" href="#">
+						Wooden Toys
+					</a>
+				</li>
+				<li class="categories-mobile-items__item">
+					<img class="categories-mobile-items__image" src="/assets/categories-image-5-320.png" alt="">
+					<a class="categories-mobile-items__link" href="#">
+						Wall decorations
+					</a>
+				</li>
+				<li class="categories-mobile-items__item">
+					<img class="categories-mobile-items__image" src="/assets/categories-image-2-320.png" alt="">
+					<a class="categories-mobile-items__link" href="#">
+						Mini Quiet Books
+					</a>
+				</li>
+				<li class="categories-mobile-items__item">
+					<img class="categories-mobile-items__image" src="/assets/categories-image-1-320.png" alt="">
+					<a class="categories-mobile-items__link" href="#">
+						Quiet Books
+					</a>
+				</li>
+				<li class="categories-mobile-items__item">
+					<img class="categories-mobile-items__image" src="/assets/categories-image-2-320.png" alt="">
+					<a class="categories-mobile-items__link" href="#">
+						Mini Quiet Books
+					</a>
+				</li>
+			</ul>
+		</div>
+		<!-- Mobile categories block -->
+	</div>
+	<div class="main-slider">
+		<!-- <div class="container"> -->
+		<div class="main-slider__holder">
+			<div class="main-slider__actions">
+				<h2 class="main-slider__title title">
+					Discover the new way of playing
+				</h2>
+				<a href="" class="main-slider__buy-button button">
+					Shop now
+				</a>
+				<a href="" class="main-slider__about-button button">
+					About us
+				</a>
+			</div>
+			<div class="main-slider__controls">
+				<button type="button" class="main-slider__control main-slider__control_prev">
+					<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path fill-rule="evenodd" clip-rule="evenodd"
+							d="M25.8107 9.43934C26.3964 10.0251 26.3964 10.9749 25.8107 11.5607L17.3713 20L25.8107 28.4393C26.3964 29.0251 26.3964 29.9749 25.8107 30.5607C25.2249 31.1464 24.2751 31.1464 23.6893 30.5607L14.1893 21.0607C13.6036 20.4749 13.6036 19.5251 14.1893 18.9393L23.6893 9.43934C24.2751 8.85355 25.2249 8.85355 25.8107 9.43934Z"
+							fill="white" />
+					</svg>
+					<span class="main-slider__fallback-text">Arrow left</span>
+				</button>
+				<button type="button" class="main-slider__control main-slider__control_next">
+					<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path fill-rule="evenodd" clip-rule="evenodd"
+							d="M14.1893 9.43934C14.7751 8.85355 15.7249 8.85355 16.3107 9.43934L25.8107 18.9393C26.3964 19.5251 26.3964 20.4749 25.8107 21.0607L16.3107 30.5607C15.7249 31.1464 14.7751 31.1464 14.1893 30.5607C13.6036 29.9749 13.6036 29.0251 14.1893 28.4393L22.6287 20L14.1893 11.5607C13.6036 10.9749 13.6036 10.0251 14.1893 9.43934Z"
+							fill="white" />
+					</svg>
+					<span class="main-slider__fallback-text">Arrow right</span>
+				</button>
+			</div>
+			<ul class="main-slider__list">
+				<li class="main-slider__item">
+					<picture class="main-slider__picture">
+						<source srcset="/assets/image-749.jpg" media="(max-width: 630px)">
+						<source srcset="/assets/image-1199.jpg" media="(max-width: 1199px)">
+						<img src="/assets/image.jpg" alt="">
+					</picture>
+				</li>
+				<li class="main-slider__item">
+					<picture class="main-slider__picture">
+						<source srcset="/assets/image-749.jpg" media="(max-width: 630px)">
+						<source srcset="/assets/image-1199.jpg" media="(max-width: 1199px)">
+						<img src="/assets/image.jpg" alt="">
+					</picture>
+				</li>
+				<li class="main-slider__item">
+					<picture class="main-slider__picture">
+						<source srcset="/assets/image-749.jpg" media="(max-width: 630px)">
+						<source srcset="/assets/image-1199.jpg" media="(max-width: 1199px)">
+						<img src="/assets/image.jpg" alt="">
+					</picture>
+				</li>
+				<li class="main-slider__item">
+					<picture class="main-slider__picture">
+						<source srcset="/assets/image-749.jpg" media="(max-width: 630px)">
+						<source srcset="/assets/image-1199.jpg" media="(max-width: 1199px)">
+						<img src="/assets/image.jpg" alt="">
+					</picture>
+				</li>
+				<li class="main-slider__item">
+					<picture class="main-slider__picture">
+						<source srcset="/assets/image-749.jpg" media="(max-width: 630px)">
+						<source srcset="/assets/image-1199.jpg" media="(max-width: 1199px)">
+						<img src="/assets/image.jpg" alt="">
+					</picture>
+				</li>
+			</ul>
+		</div>
+		<!-- </div> -->
+	</div>
+</header>
+
+
+
+{% schema %}
+{
+  "name": "t:sections.header.name",
+  "class": "section-header",
+  "settings": [
+    {
+      "type": "select",
+      "id": "color_scheme",
+      "options": [
+        {
+          "value": "accent-1",
+          "label": "t:sections.all.colors.accent_1.label"
+        },
+        {
+          "value": "accent-2",
+          "label": "t:sections.all.colors.accent_2.label"
+        },
+        {
+          "value": "background-1",
+          "label": "t:sections.all.colors.background_1.label"
+        },
+        {
+          "value": "background-2",
+          "label": "t:sections.all.colors.background_2.label"
+        },
+        {
+          "value": "inverse",
+          "label": "t:sections.all.colors.inverse.label"
+        }
+      ],
+      "default": "background-1",
+      "label": "t:sections.all.colors.label"
+    },
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "t:sections.header.settings.logo.label"
+    },
+	{
+		"type": "image_picker",
+		"id": "logo",
+		"label": "t:sections.header.settings.logo.label"
+	  },
+    {
+      "type": "range",
+      "id": "logo_width",
+      "min": 50,
+      "max": 250,
+      "step": 10,
+      "default": 100,
+      "unit": "t:sections.header.settings.logo_width.unit",
+      "label": "t:sections.header.settings.logo_width.label"
+    },
+    {
+      "type": "select",
+      "id": "logo_position",
+      "options": [
+        {
+          "value": "top-left",
+          "label": "t:sections.header.settings.logo_position.options__2.label"
+        },
+        {
+          "value": "top-center",
+          "label": "t:sections.header.settings.logo_position.options__3.label"
+        },
+        {
+          "value": "middle-left",
+          "label": "t:sections.header.settings.logo_position.options__1.label"
+        },
+        {
+          "value": "middle-center",
+          "label": "t:sections.header.settings.logo_position.options__4.label"
+        }
+      ],
+      "default": "middle-left",
+      "label": "t:sections.header.settings.logo_position.label"
+    },
+    {
+      "type": "link_list",
+      "id": "menu",
+      "default": "main-menu",
+      "label": "t:sections.header.settings.menu.label"
+    },
+    {
+      "type": "select",
+      "id": "menu_type_desktop",
+      "options": [
+        {
+          "value": "dropdown",
+          "label": "t:sections.header.settings.menu_type_desktop.options__1.label"
+        },
+        {
+          "value": "mega",
+          "label": "t:sections.header.settings.menu_type_desktop.options__2.label"
+        }
+      ],
+      "default": "dropdown",
+      "label": "t:sections.header.settings.menu_type_desktop.label",
+      "info": "t:sections.header.settings.menu_type_desktop.info"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_line_separator",
+      "default": true,
+      "label": "t:sections.header.settings.show_line_separator.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_sticky_header",
+      "default": true,
+      "label": "t:sections.header.settings.enable_sticky_header.label",
+      "info": "t:sections.header.settings.enable_sticky_header.info"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.header.settings.mobile_layout.content"
+    },
+    {
+      "type": "select",
+      "id": "mobile_logo_position",
+      "options": [
+        {
+          "value": "center",
+          "label": "t:sections.header.settings.mobile_logo_position.options__1.label"
+        },
+        {
+          "value": "left",
+          "label": "t:sections.header.settings.mobile_logo_position.options__2.label"
+        }
+      ],
+      "default": "center",
+      "label": "t:sections.header.settings.mobile_logo_position.label"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.spacing"
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.header.settings.margin_bottom.label",
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 36,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 36,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 20
+    }
+  ]
+}
+{% endschema %}

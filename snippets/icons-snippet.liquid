@@ -1,0 +1,16 @@
+{% if block.settings.image != blank and block.settings.text != blank %}
+    <li class="announcement-slider__item">
+        <img width="" height="" src="{{ block.settings.icon | image_url: width: 32, height: 32 }}" alt="{{ block.settings.icon.alt }}" loading="lazy">
+        {% case block.settings.select_icon %}
+            {% when 'cart' %}
+                {% render 'icon-cart' %}
+            {% when 'caret' %}
+                {% render 'icon-caret' %}
+            {% when 'clipboard' %}
+                {% render 'icon-clipboard' %}
+            {% endcase %}
+            <a class="announcement-slider__link announcement-slider__link-1" href="#">
+                {{ block.settings.link_text }}
+          </a>
+     </li>
+{% endif %}

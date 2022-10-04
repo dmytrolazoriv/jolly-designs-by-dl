@@ -428,6 +428,34 @@
         }
       }
     },
+    "announcement-slider": {
+      "name": "Announcement slider",
+      "blocks": {
+        "announcement": {
+          "name": "Announcement slider",
+          "settings": {
+            "text": {
+              "label": "Text"
+            },
+            "text_alignment": {
+              "label": "Text alignment",
+              "options__1": {
+                "label": "Left"
+              },
+              "options__2": {
+                "label": "Center"
+              },
+              "options__3": {
+                "label": "Right"
+              }
+            },
+            "link": {
+              "label": "Link"
+            }
+          }
+        }
+      }
+    },
     "apps": {
       "name": "Apps",
       "settings": {

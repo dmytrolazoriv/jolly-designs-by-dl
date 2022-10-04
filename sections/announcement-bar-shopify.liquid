@@ -1,0 +1,108 @@
+<div class="header__announcement-slider announcement-slider">
+      <div class="container">
+        <div class="announcement-slider__controls">
+          <button class="announcement-slider__button announcement-slider__control_prev" type="button">
+            {% render 'announc-arrow' %}
+          </button>
+          <button class="announcement-slider__button announcement-slider__control_next" type="button">
+            {% render 'announc-arrow' %}
+          </button>
+        </div>
+        <ul class="announcement-slider__list">
+         {% comment %} {% for block in section.blocks %}
+            {% render 'icons-snippet', block: block %}
+         {% endfor %} {% endcomment %}
+         {% for block in section.blocks %}
+         <li class="announcement-slider__item">
+            {% comment %} <img width="" height="" src="{{ block.settings.icon | image_url: width: 32, height: 32 }}" alt="{{ block.settings.icon.alt }}" loading="lazy"> {% endcomment %}
+            {% case block.settings.select_icon %}
+               {% when 'car' %}
+                   {% render 'icon-car' %}
+               {% when 'hand' %}
+                   {% render 'icon-hand' %}
+               {% when 'guarantee' %}
+                   {% render 'icon-guarantee' %}
+               {% when 'heart' %}
+                   {% render 'icon-heart' %}
+               {% when 'flag' %}
+                   {% render 'icon-flag' %}
+               {% when 'replacement' %}
+                   {% render 'icon-replacement' %}
+               {% endcase %}
+                <a class="announcement-slider__link announcement-slider__link-1" href="#">
+                    {{ block.settings.link_text | truncatewords: "7" }}
+              </a>
+         </li>
+      {% endfor %}
+        </ul>
+      </div>
+    </div>
+
+{% schema %}
+{
+   "name":"Announcement slider",
+   "class": "header__announcement-slider",
+   "tag": "div",
+   "max_blocks":6,
+   "settings": [],
+   "blocks":[
+      {
+         "type":"list_item",
+         "name":"List item",
+         "settings":[
+            {
+               "type": "header",
+               "content": "Icon settings"
+            },
+            {
+               "type":"select",
+               "id":"select_icon",
+               "label":"Select icon",
+               "options":[
+                  {
+                     "value":"car",
+                     "label":"Car"
+                  },
+                  {
+                     "value":"hand",
+                     "label":"Hand"
+                  },
+                  {
+                     "value":"guarantee",
+                     "label":"Guarantee"
+                  },
+                  {
+                     "value":"heart",
+                     "label":"Heart"
+                  },
+                  {
+                     "value":"flag",
+                     "label":"Flag"
+                  },
+                  {
+                     "value":"replacement",
+                     "label":"Replacement"
+                  }
+               ],
+               "default": "car"
+            },
+            {
+               "type":"header",
+               "content": "Text settings"
+            },
+            {
+               "type":"text",
+               "id":"link_text",
+               "label":"Text for icon",
+               "default": "Free shipping from 60€ (DE)"
+            }
+         ]
+      }
+   ],
+   "presets":[
+      {
+         "name":"Announcement slider"
+      }
+   ]
+}
+{% endschema %}

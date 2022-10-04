@@ -1,0 +1,162 @@
+{% javascript %}
+$('.announcement-slider__list').slick({
+infinite: true,
+speed: 1000,
+slidesToShow: 3,
+slidesToScroll: 3,
+autoplay: true,
+nextArrow: $(".announcement-slider__control_next"),
+prevArrow: $(".announcement-slider__control_prev"),
+});
+{% endjavascript %}
+
+{{ 'announcement-slider.css' | asset_url | stylesheet_tag }}
+
+{%- for block in section.blocks -%}
+  {%- case block.type -%}
+    {%- when 'announcement' -%}
+      <div class="announcement-bar color-{{ block.settings.color_scheme }}" role="region" aria-label="{{ 'sections.header.announcement' | t }}" {{ block.shopify_attributes }}>
+        {%- if block.settings.text != blank -%}
+          {%- if block.settings.link != blank -%}
+            <a href="{{ block.settings.link }}" class="announcement-bar__link link link--text focus-inset animate-arrow">
+          {%- endif -%}
+              <div class="page-width">
+              <div class="announcement-slider__wrapper">
+                  <div class="announcement-slider__controls">
+                    <button class="announcement-slider__button announcement-slider__control_prev slick-arrow" type="button" style="">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14 7L9 12L14 17" stroke="#414249" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path>
+                      </svg>
+                    </button>
+                    <button class="announcement-slider__button announcement-slider__control_next slick-arrow" type="button" style="">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10 7L15 12L10 17" stroke="#414249" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path>
+                      </svg>
+                    </button>
+                  </div>
+                  <ul class="announcement-slider__list" data-slick='{"autoplay": {{ section.settings.carousel_autoplay }}, "autoplaySpeed": {{ section.settings.autoplay_speed }}, "dots": {{ section.settings.carousel_dots }}, "arrows": {{ section.settings.carousel_arrows }}}'>
+                    <li class="announcement-slider__item">
+                    </span>
+                    <svg class="icon-icon-car"><use xlink:href="#icon-icon-car"></use></svg>
+                      <a class="announcement-slider__link announcement-slider__link-1" href="#">
+                        Free shipping from 60€
+                        (DE)
+                      </a>
+                    </li>
+                    <li class="announcement-slider__item">
+                      <svg class="icon-icon-hand"><use xlink:href="#icon-icon-hand"></use></svg>
+                      <a class="announcement-slider__link announcement-slider__link-2" href="#">High quality hand-mand
+                        & ethical products</a>
+                    </li>
+                    <li class="announcement-slider__item">
+                      <svg class="icon-icon-guarantee"><use xlink:href="#icon-icon-guarantee"></use></svg>
+                      <a class="announcement-slider__link announcement-slider__link-3" href="#">6 Months guarantee</a>
+                    </li>
+                    <li class="announcement-slider__item">
+                      <svg class="icon-icon-heart"><use xlink:href="#icon-icon-heart"></use></svg>
+                      <a class="announcement-slider__link announcement-slider__link-4" href="#">The favourite of XXXX
+                        partners</a>
+                    </li>
+                    <li class="announcement-slider__item">
+                      {% render 'icon-flag' %}
+                      {% comment %} <svg class="icon-icon-flag"><use xlink:href="#icon-icon-flag"></use></svg> {% endcomment %}
+                      <a class="announcement-slider__link announcement-slider__link-5" href="#">Made in Germany</a>
+                    </li>
+                    <li class="announcement-slider__item">
+                      <svg class="icon-icon-replacement"><use xlink:href="#icon-icon-replacement"></use></svg>
+                      <a class="announcement-slider__link announcement-slider__link-6" href="#">
+                        Free parts replacement
+                        service
+                      </a>
+                    </li>
+                  </ul>
+                </div> 
+              </div> 
+          {%- if block.settings.link != blank -%}
+            </a>
+          {%- endif -%}
+        {%- endif -%}
+      </div>
+  {%- endcase -%}
+{%- endfor -%}
+
+{% schema %}
+{
+  "name": "t:sections.announcement-slider.name",
+  "max_blocks": 6,
+  "blocks": [
+    {
+      "type": "announcement",
+      "name": "t:sections.announcement-slider.blocks.announcement.name",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "default": "Slider option",
+          "label": "Slider option"
+        },
+        {
+          "type": "select",
+          "id": "text_alignment",
+          "options": [
+            {
+              "value": "left",
+              "label": "t:sections.announcement-slider.blocks.announcement.settings.text_alignment.options__1.label"
+            },
+            {
+              "value": "center",
+              "label": "t:sections.announcement-slider.blocks.announcement.settings.text_alignment.options__2.label"
+            },
+            {
+              "value": "right",
+              "label": "t:sections.announcement-slider.blocks.announcement.settings.text_alignment.options__3.label"
+            }
+          ],
+          "default": "center",
+          "label": "t:sections.announcement-slider.blocks.announcement.settings.text_alignment.label"
+        },
+        {
+          "type": "select",
+          "id": "color_scheme",
+          "options": [
+            {
+              "value": "accent-1",
+              "label": "t:sections.all.colors.accent_1.label"
+            },
+            {
+              "value": "accent-2",
+              "label": "t:sections.all.colors.accent_2.label"
+            },
+            {
+              "value": "background-1",
+              "label": "t:sections.all.colors.background_1.label"
+            },
+            {
+              "value": "background-2",
+              "label": "t:sections.all.colors.background_2.label"
+            },
+            {
+              "value": "inverse",
+              "label": "t:sections.all.colors.inverse.label"
+            }
+          ],
+          "default": "accent-1",
+          "label": "t:sections.all.colors.label"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "t:sections.announcement-slider.blocks.announcement.settings.link.label"
+        }
+      ]
+    }
+  ],
+  "default": {
+    "blocks": [
+      {
+        "type": "announcement"
+      }
+    ]
+  }
+}
+{% endschema %}
