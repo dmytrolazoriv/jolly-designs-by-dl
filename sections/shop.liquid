@@ -1,0 +1,101 @@
+{% comment %} <section class="shop"> {% endcomment %}
+	<!-- <div class="container"> -->
+	<h3 class="shop__title title">
+		{{ section.settings.title | escape }}
+	</h3>
+
+	<div class="shop__inner">
+
+	  <ul class="shop__items cards">
+
+		{% for block in section.blocks %}
+		<li class="cards__item">
+		  <span class="cards__cart-count"></span>
+
+		  <img width="" height="" class="cards__image" src="{{ block.settings.card_img | image_url: width: 296, height: 302 }}"
+			alt="{{ block.settings.card_img.alt }}" loading="lazy">
+
+		  <h4 class="cards__title">
+			{{ block.settings.cards_title | escape }}
+		  </h4>
+
+		  <p class="cards__price">
+			{{ block.settings.cards_price }}
+		  </p>
+
+		  <a class="cards__link" href="{{ block.settings.card_url }}">
+			{{ block.settings.link_title }}
+		  </a>
+
+		</li>
+		{% endfor %}
+
+	  </ul>
+	</div>
+	<!-- </div> -->
+  {% comment %} </section> {% endcomment %}
+
+  {% schema %}
+  {
+	"name":"Shop",
+	"tag":"section",
+	"class":"shop",
+	"settings": [
+		{
+			"type":"text",
+			"id":"title",
+			"default":"Shop Our Bestseller",
+			"label":"Shop title"
+		 }
+	],
+	"blocks":[
+		{
+		   "name":"Product item",
+		   "type":"product_item",
+		   "settings":[
+			  {
+				 "type":"header",
+				 "content":"Image settings"
+			  },
+			  {
+				 "type":"image_picker",
+				 "id":"card_img",
+				 "label":"Product image"
+			  },
+			  {
+				 "type":"header",
+				 "content":"Text settings"
+			  },
+			  {
+				 "type":"text",
+				 "id":"cards_title",
+				 "label":"Product title",
+				 "default":"Magic Bird - 6 Pages Mini Quiet Book"
+			  },
+			  {
+				 "type":"text",
+				 "id":"cards_price",
+				 "label":"Product price",
+				 "default":"€39,99"
+			  },
+			  {
+                "type":"url",
+                "id":"card_url",
+                "label":"Add link for product"
+             },
+			{
+			"type":"text",
+			"id":"link_title",
+			"label":"Link title",
+			"default":"Add to cart"
+			}
+		   ]
+		}
+	 ],
+	 "presets":[
+		{
+		   "name":"Shop section"
+		}
+	 ]
+}
+  {% endschema %}

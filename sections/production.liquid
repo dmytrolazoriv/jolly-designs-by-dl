@@ -1,4 +1,5 @@
-<section class="production">
+{% comment %} <section class="production"> {% endcomment %}
+
     <div class="container">
       <div class="production__description">
 
@@ -8,129 +9,98 @@
         </h2>
         {%- endif -%}
 
+		{%- if section.settings.definition != blank -%}
         <p class="production__definition">
-          are developed by child experts to improve your children's fine motor development
+			{{ section.settings.definition }}
         </p>
+		{%- endif -%}
+
       </div>
       <div class="production__items items">
         <ul class="items__list">
+
+		{% for block in section.blocks %}
           <li class="items__item">
-            <p>
-              <img class="items__image" src="/assets/production-icon-1.svg" alt="">
+
+              <img width="" height="" class="items__image" src="{{ block.settings.icon | image_url: width: 96, height: 96 }}" alt="{{ block.settings.icon.alt }}" loading="lazy">
+
             <h4 class="items__title">
-              Learning
+				{{ block.settings.items_title }}
             </h4>
+
+			{%- if block.settings.items_description != blank -%}
             <p class="items__description">
-              Our pediatrician-recommended products are a great way for your children to learn,
-              enhance their fine motor skills and develop their imagination.
+				{{ block.settings.items_description }}
             </p>
+			{%- endif -%}
+
           </li>
-          <li class="items__item">
-            <img class="items__image" src="/assets/production-icon-3.svg" alt="">
-            <h4 class="items__title">
-              Easy to carry
-            </h4>
-            <p class="items__description">
-              Our light-weight and flexible books will keep your children busy for your long journeys
-              or dinners at the restaurant.
-            </p>
-          </li>
-          <li class="items__item">
-            <img class="items__image" src="/assets/production-icon-5.svg" alt="">
-            <h4 class="items__title">
-              Sustainability
-            </h4>
-            <p class="items__description">
-              All of our products are plastic-free and fairly produced.
-            </p>
-          </li>
-          <li class="items__item">
-            <img class="items__image" src="/assets/production-icon-2.svg" alt="">
-            <h4 class="items__title">
-              Long-lasting products
-            </h4>
-            <p class="items__description">
-              Our high-quality products can be passed on from generation to generation.
-            </p>
-          </li>
-          <li class="items__item">
-            <img class="items__image" src="/assets/production-icon-4.svg" alt="">
-            <h4 class="items__title">
-              Versatile toys
-            </h4>
-            <p class="items__description">
-              Our products can be played in countless unimaginable ways. We offer your children a
-              world of creativity in each of our books.
-            </p>
-          </li>
+		{% endfor %}
+
         </ul>
-        <ul class="items-mobile__list">
-          <li class="items-mobile__item">
-            <p>
-              <img class="items-mobile__image" src="/assets/production-icon-1.svg" alt="">
-            <h4 class="items__title">
-              Learning
-            </h4>
-            <p class="items-mobile__description">
-              Our pediatrician-recommended products are a great way for your children to learn,
-              enhance their fine motor skills and develop their imagination.
-            </p>
-          </li>
-          <li class="items-mobile__item">
-            <img class="items-mobile__image" src="/assets/production-icon-3.svg" alt="">
-            <h4 class="items-mobile__title">
-              Easy to carry
-            </h4>
-            <p class="items-mobile__description">
-              Our light-weight and flexible books will keep your children busy for your long journeys
-              or dinners at the restaurant.
-            </p>
-          </li>
-          <li class="items-mobile__item">
-            <img class="items-mobile__image" src="/assets/production-icon-5.svg" alt="">
-            <h4 class="items-mobile__title">
-              Sustainability
-            </h4>
-            <p class="items-mobile__description">
-              All of our products are plastic-free and fairly produced.
-            </p>
-          </li>
-          <li class="items-mobile__item">
-            <img class="items-mobile__image" src="/assets/production-icon-2.svg" alt="">
-            <h4 class="items-mobile__title">
-              Long-lasting products
-            </h4>
-            <p class="items-mobile__description">
-              Our high-quality products can be passed on from generation to generation.
-            </p>
-          </li>
-          <li class="items-mobile__item">
-            <img class="items-mobile__image" src="/assets/production-icon-4.svg" alt="">
-            <h4 class="items-mobile__title">
-              Versatile toys
-            </h4>
-            <p class="items-mobile__description">
-              Our products can be played in countless unimaginable ways. We offer your children a
-              world of creativity in each of our books.
-            </p>
-          </li>
-        </ul>
+
       </div>
     </div>
-  </section>
+	
+  {% comment %} </section> {% endcomment %}
 
   {% schema %}
   {
-    "name": "Production",
-    "tag": "section",
-    "class": "production",
-    "settings": [
-        {
-            "type": "text",
-            "id": "title",
-            "default": "Our Quiet Books",
-            "label": "Production title"
-        }
-    ]
-}
+	"name":"Production",
+	"tag":"section",
+	"class":"production",
+	"max_blocks":5,
+	"settings":[
+	   {
+		  "type":"text",
+		  "id":"title",
+		  "default":"Our Quiet Books",
+		  "label":"Production title"
+	   },
+	   {
+		  "type":"text",
+		  "id":"definition",
+		  "default":"are developed by child experts to improve your children's fine motor development",
+		  "label":"Production definition"
+	   }
+	],
+	"blocks":[
+	   {
+		  "name":"Production item",
+		  "type":"production_item",
+		  "settings":[
+			 {
+				"type":"header",
+				"content":"Item settings"
+			 },
+			 {
+				"type":"image_picker",
+				"id":"icon",
+				"label":"Icon"
+			 },
+			 {
+				"type":"header",
+				"content":"Text settings"
+			 },
+			 {
+				"type":"text",
+				"id":"items_title",
+				"label":"Items title",
+				"default":"Sustainability"
+			 },
+			 {
+				"type":"text",
+				"id":"items_description",
+				"label":"Items description",
+				"default":"All of our products are plastic-free and fairly produced."
+			 }
+		  ]
+	   }
+	],
+	"presets":[
+	   {
+		  "name":"Production section"
+	   }
+	]
+ }
   {% endschema %}

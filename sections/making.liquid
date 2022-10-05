@@ -1,0 +1,76 @@
+{% comment %} <section class="making"> {% endcomment %}
+
+	<div class="container">
+		{%- if section.settings.title != blank -%}
+			<h3 class="making__title title">
+		{{ section.settings.title | escape }}
+			</h3>
+		{%- endif -%}
+
+	  <div class="making__inner">
+		<ol class="making__list">
+
+		{% for block in section.blocks %}
+		  <li class="making__item">
+
+			<h4 class="making__subtitle">
+				{{ block.settings.items_title }}
+			</h4>
+
+			<p class="making__description">
+			  {{ block.settings.items_description }}
+			</p>
+
+		  </li>
+		{% endfor %}
+
+		</ol>
+	  </div>
+	</div>
+
+  {% comment %} </section> {% endcomment %}
+{% schema %}
+{
+	"name":"Making",
+	"tag":"section",
+	"class":"making",
+	"max_blocks":4,
+	"settings":[
+	   {
+		  "type":"text",
+		  "id":"title",
+		  "default":"How our Quiet Books are made",
+		  "label":"Making title"
+	   }
+	],
+	"blocks":[
+	   {
+		  "name":"Making item",
+		  "type":"making_item",
+		  "settings":[
+			 {
+				"type":"header",
+				"content":"Text settings"
+			 },
+			 {
+				"type":"text",
+				"id":"items_title",
+				"label":"Items title",
+				"default":"Step 1"
+			 },
+			 {
+				"type":"text",
+				"id":"items_description",
+				"label":"Items description",
+				"default":"Lorem Ipsum is simply dummy text of the printing and typesetting industry"
+			 }
+		  ]
+	   }
+	],
+	"presets":[
+	   {
+		  "name":"Making section"
+	   }
+	]
+ }
+{% endschema %}

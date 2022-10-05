@@ -1,0 +1,107 @@
+{% comment %} <section class="favorite"> {% endcomment %}
+	<!-- <div class="container"> -->
+	<div class="favorite-slider__controls">
+	  <button type="button" class="favorite-slider__control favorite-slider__control_prev">
+		{% render 'favorite-slider-arrow' %}
+		<span class="favorite-slider__fallback-text">Arrow left</span>
+	  </button>
+	  <button type="button" class="favorite-slider__control favorite-slider__control_next">
+		{% render 'favorite-slider-arrow' %}
+		<span class="favorite-slider__fallback-text">Arrow right</span>
+	  </button>
+	</div>
+	<div class="favorite__inner">
+	  <ul class="favorite__cards favorite-cards">
+
+		{% for block in section.blocks %}
+		<li class="favorite-cards__item">
+		  <picture class="favorite-cards__image">
+			<source media="(max-width:768px)" srcset="/assets/favorite-img-1-768.png">
+			<img width="" height="" class="cards__image" src="{{ block.settings.favorite_img | image_url: width: 300,
+				height: 298 }}" alt="{{ block.settings.favorite_img.alt }}" loading="lazy">
+		  </picture>
+		  <p class="favorite-cards__subtitle">
+			{{ block.settings.favorite_subtitle | escape }}
+		  </p>
+		  <div class="favorite-cards__rating">
+			<div class="star-rating">
+			  <span class="icon-star">
+				<span class="icon-star">
+				  <span class="icon-star">
+					<span class="icon-star">
+					  <span class="icon-star">
+					  </span>
+					</span>
+				  </span>
+				</span>
+			  </span>
+			</div>
+		  </div>
+		  <h4 class="favorite-cards__title">
+			{{ block.settings.favorite_title | escape }}
+		  </h4>
+		  <p class="favorite-cards__description">
+			{{ block.settings.favorite_description | escape }}
+		  </p>
+		</li>
+		{% endfor %}
+
+	  </ul>
+	</div>
+	<!-- </div> -->
+  {% comment %} </section> {% endcomment %}
+
+  {% schema %}
+  {
+	"name":"Favorite section",
+	"tag":"section",
+	"class":"favorite",
+	"settings":[
+	],
+	"max_blocks":4,
+	"blocks":[
+	   {
+		  "name":"Favorite product item",
+		  "type":"favorite_item",
+		  "settings":[
+			 {
+				"type":"header",
+				"content":"Image settings"
+			 },
+			 {
+				"type":"image_picker",
+				"id":"favorite_img",
+				"label":"Add image for favorite product"
+			 },
+			 {
+				"type":"header",
+				"content":"Text settings"
+			 },
+			 {
+				"type":"text",
+				"id":"favorite_subtitle",
+				"label":"Add subtitle for favorite product",
+				"default":"The Favorite Over Partners"
+			 },
+			 {
+				"type":"text",
+				"id":"favorite_title",
+				"label":"Add title for favorite product",
+				"default":"Angelina Bork"
+			 },
+			 {
+				"type":"text",
+				"id":"favorite_description",
+				"label":"Add description for favorite product",
+				"default":"Brings' color in the children's room but also ideally suited for the living room or bedroom. With our hand-woven wall rug, the home becomes even more of a feel-good oasis."
+			 }
+			]
+		  }
+	   ],
+	   "presets":[
+		  {
+			 "name":"Favorite section"
+		  }
+	   ]
+	}
+  {% endschema %}

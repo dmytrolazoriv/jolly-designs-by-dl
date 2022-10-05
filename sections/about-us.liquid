@@ -1,0 +1,244 @@
+{% comment %} <section class="about"> {% endcomment %}
+
+	<div class="container">
+	  <ul class="about__navigation navigation">
+	
+		{% comment %} {% for i in (1..3) %}
+			{{ i }}
+		{% endfor %} {% endcomment %}
+
+		{% for block in section.blocks %}
+		<li class="navigation__item">
+		
+		  <a class="navigation__link" href="{{ block.settings.navlink_url }}" data-slide="">
+			{{ block.settings.navlink_title }}
+		  </a>
+		</li>
+		{% endfor %}
+
+	  </ul>
+
+	  <div class="about__slider-controls slider-controls">
+		<button type="button" class="slider-controls__control  slider-controls__control_prev">
+			{% render 'favorite-slider-arrow' %}
+		  <span class="slider-controls__fallback-text">Arrow left</span>
+		</button>
+		<button type="button" class="slider-controls__control  slider-controls__control_next">
+			{% render 'favorite-slider-arrow' %}
+		  <span class="slider-controls__fallback-text">Arrow right</span>
+		</button>
+	  </div>
+
+	  <ul class="about__slider-list">
+
+		{% for block in section.blocks %}
+		<li class="about__slider-item">
+
+		  <div class="about__slider-header">
+			<h3 class="about__slider-title title">
+				{{ block.settings.about_title }}
+			</h3>
+
+			<p class="about__slider-description">
+				{{ block.settings.about_description }}
+			</p>
+		  </div>
+
+		  <picture class="about__slider-picture">
+			<source srcset="/assets/about-image-1-768.png" media="(max-width: 768px)">
+			<source srcset="" media="(max-width: 424px)">
+			<img width="" height="" src="{{ block.settings.slider_img | image_url: width: 1062, height: 597 }}" alt="{{ block.settings.slider_img.alt }}" loading="lazy">
+		  </picture>
+
+		  <a class="about__slider-link" href="{{ block.settings.link_url }}">
+			{{ block.settings.link_title }}
+		  </a>
+
+		</li>
+		{% endfor %}
+
+	  </ul>
+
+	  <ul class="about__mobile-slider-list">
+		<li class="about__mobile-slider-item">
+		  <!-- For resolution 750px -->
+		  <ul class="about__navigation-mobile navigation-mobile">
+			<li class="navigation-mobile__item">
+			  <a class="navigation-mobile__link active" href="#" data-slide="1">
+				Meet the Jolly Family
+			  </a>
+			</li>
+		  </ul>
+		  <div class="about__slider-header">
+			<h3 class="about__slider-title title">
+			  Meet the Jolly Family!
+			</h3>
+			<p class="about__slider-description">
+			  About our story, values & mission
+			</p>
+		  </div>
+		  <picture class="about__slider-picture">
+			<source srcset="/assets/about-image-1-425.png" media="(max-width: 425px)">
+			<source srcset="/assets/about-image-1-749.png" media="(max-width: 749px)">
+			<source srcset="/assets/about-image-1-768.png" media="(max-width: 768px)">
+			<img src="/assets/about-image-1.png" alt="">
+		  </picture>
+		  <a class="about__slider-link" href="">
+			learn more
+		  </a>
+		</li>
+		<li class="about__mobile-slider-item">
+		  <!-- For resolution 750px -->
+		  <ul class="about__navigation-mobile navigation-mobile">
+			<li class="navigation-mobile__item">
+			  <a class="navigation-mobile__link" href="#" data-slide="2">
+				Meet the Team
+			  </a>
+			</li>
+		  </ul>
+		  <div class="about__slider-header">
+			<h3 class="about__slider-title title">
+			  Meet the Production Team
+			</h3>
+			<p class="about__slider-description">
+			  About our story, values & mission
+			</p>
+		  </div>
+		  <picture class="about__slider-picture">
+			<source srcset="/assets/about-image-2-425.png" media="(max-width: 425px)">
+			<source srcset="/assets/about-image-2-749.png" media="(max-width: 749px)">
+			<source srcset="/assets/about-image-2-768.png" media="(max-width: 768px)">
+			<img src="/assets/about-image-2.png" alt="">
+		  </picture>
+		  <a class="about__slider-link" href="">
+			learn more
+		  </a>
+		</li>
+		<li class="about__mobile-slider-item">
+		  <!-- For resolution 750px -->
+		  <ul class="about__navigation-mobile navigation-mobile">
+			<li class="navigation-mobile__item">
+			  <a class="navigation-mobile__link" href="#" data-slide="3">
+				Meet the Production
+			  </a>
+			</li>
+		  </ul>
+		  <div class="about__slider-header">
+			<h3 class="about__slider-title title">
+			  Meet the Jolly Family!
+			</h3>
+			<p class="about__slider-description">
+			  About our story, values & mission
+			</p>
+		  </div>
+		  <picture class="about__slider-picture">
+			<source srcset="/assets/about-image-1-425.png" media="(max-width: 425px)">
+			<source srcset="/assets/about-image-1-749.png" media="(max-width: 749px)">
+			<source srcset="/assets/about-image-1-768.png" media="(max-width: 768px)">
+			<img src="/assets/about-image-1.png" alt="">
+		  </picture>
+		  <a class="about__slider-link" href="">
+			learn more
+		  </a>
+		</li>
+		<!-- For resolution 750px reserve -->
+		<!-- <li class="about__mobile-slider-item">
+		  <ul class="about__navigation-mobile navigation-mobile">
+			<li class="navigation-mobile__item">
+			  <a class="navigation-mobile__link" href="#" data-slide="4">
+				Meet the Production4
+			  </a>
+			</li>
+		  </ul>
+		  <div class="about__slider-header">
+			<h3 class="about__slider-title title">
+			  Meet the Jolly Family!4
+			</h3>
+			<p class="about__slider-description">
+			  About our story, values & mission
+			</p>
+		  </div>
+		  <picture class="about__slider-picture">
+			<source srcset="img/about-image-1-768.png" media="(max-width: 768px)">
+			<source srcset="" media="(max-width: 424px)">
+			<img src="img/about-image-1.png" alt="">
+		  </picture>
+		  <a class="about__slider-link" href="">
+			learn more
+		  </a>
+		</li> -->
+	  </ul>
+	</div>
+
+  {% comment %} </section> {% endcomment %}
+
+  {% schema %}
+  {
+	"name":"About us section",
+	"tag":"section",
+	"class":"about",
+	"max_blocks":3,
+	"settings":[
+	],
+	"blocks":[
+	   {
+		  "name":"Slider item",
+		  "type":"slider_item",
+		  "settings":[
+				{
+				   "type":"header",
+				   "content":"Navigation settings"
+				},
+				{
+				   "type":"text",
+				   "id":"navlink_title",
+				   "label":"Add text for link",
+				   "default":"Meet the Jolly Family"
+				},
+				{
+				   "type":"url",
+				   "id":"navlink_url",
+				   "label":"Add url for navigation"
+				},
+				{
+				   "type":"header",
+				   "content":"Slider settings"
+				},
+				{
+				   "type":"text",
+				   "id":"about_title",
+				   "label":"Add text for slider title",
+				   "default":"Meet the Jolly Family!"
+				},
+				{
+				   "type":"text",
+				   "id":"about_description",
+				   "label":"Add text description for slider",
+				   "default":"About our story, values & mission"
+				},
+				{
+				   "type":"image_picker",
+				   "id":"slider_img",
+				   "label":"Add image for slider"
+				},
+				{
+				   "type":"url",
+				   "id":"link_url",
+				   "label":"Add url for slider"
+				},
+				{
+				   "type":"text",
+				   "id":"link_title",
+				   "label":"Add text for button",
+				   "default":"learn more"
+				}
+		  ]
+	   }
+	],
+	"presets":[
+		{
+		   "name":"About us section"
+		}
+	 ]
+ }
+{% endschema %}
