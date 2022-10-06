@@ -265,6 +265,54 @@
       ],
       "settings": {
       }
+    },
+    "936dfde1-3fb7-4852-a913-cbe4e27d049b": {
+      "type": "about-us",
+      "blocks": {
+        "cbdd2f09-5353-462d-bfc9-acffc9a428cc": {
+          "type": "slider_item",
+          "settings": {
+            "navlink_title": "Meet the Jolly Family",
+            "navlink_url": "",
+            "about_title": "Meet the Jolly Family!",
+            "about_description": "About our story, values & mission",
+            "slider_img": "shopify:\/\/shop_images\/about-us-1_d1d8df77-3f8b-4ff8-81c0-60282cac2504.png",
+            "link_url": "",
+            "link_title": "learn more"
+          }
+        },
+        "8a451427-4008-4d8c-b85c-4f28458b3dc9": {
+          "type": "slider_item",
+          "settings": {
+            "navlink_title": "Meet the Team",
+            "navlink_url": "",
+            "about_title": "Meet the Team",
+            "about_description": "About our story, values & mission",
+            "slider_img": "shopify:\/\/shop_images\/about-us-1_d1d8df77-3f8b-4ff8-81c0-60282cac2504.png",
+            "link_url": "",
+            "link_title": "learn more"
+          }
+        },
+        "e84d6c36-1f71-4800-af0a-b203b7fe8864": {
+          "type": "slider_item",
+          "settings": {
+            "navlink_title": "Meet the Production",
+            "navlink_url": "",
+            "about_title": "Meet the Production Team",
+            "about_description": "About our story, values & mission",
+            "slider_img": "shopify:\/\/shop_images\/about-us-2_f4869b2e-dca2-41f3-9458-617b14baa957.png",
+            "link_url": "",
+            "link_title": "learn more"
+          }
+        }
+      },
+      "block_order": [
+        "cbdd2f09-5353-462d-bfc9-acffc9a428cc",
+        "8a451427-4008-4d8c-b85c-4f28458b3dc9",
+        "e84d6c36-1f71-4800-af0a-b203b7fe8864"
+      ],
+      "settings": {
+      }
     }
   },
   "order": [
@@ -272,6 +320,7 @@
     "83f07686-412f-4023-bcab-92664040f6ab",
     "c766b9e7-be25-414f-aff5-76c8db35727f",
     "76ff86ff-fdc9-4843-8191-b5b4b9eddcd6",
-    "ca22a9cd-6fdf-4992-94c3-432a51a2b41a"
+    "ca22a9cd-6fdf-4992-94c3-432a51a2b41a",
+    "936dfde1-3fb7-4852-a913-cbe4e27d049b"
   ]
 }
