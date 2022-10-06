@@ -57,12 +57,12 @@
     "83f07686-412f-4023-bcab-92664040f6ab": {
       "type": "production",
       "blocks": {
-        "b1b227ad-3771-43f1-a644-1afad0da8c55": {
+        "14931021-46a4-4d99-b1b6-524911902724": {
           "type": "production_item",
           "settings": {
-            "icon": "shopify:\/\/shop_images\/production-icon-5_558b2c02-ee5c-488b-88cb-ac00022c4530.png",
-            "items_title": "Sustainability",
-            "items_description": "All of our products are plastic-free and fairly produced."
+            "icon": "shopify:\/\/shop_images\/production-icon-1_9fa1e8ba-7ad0-40f3-8d6d-bd067a7e7de6.png",
+            "items_title": "Learning",
+            "items_description": "Our pediatrician-recommended products are a great way for your children to learn, enhance their fine motor skills and develop their imagination"
           }
         },
         "7b5b93d0-9547-48ad-b6b2-436b5073165b": {
@@ -73,12 +73,12 @@
             "items_description": "Our light-weight and flexible books will keep your children busy for your long journeys or dinners at the restaurant."
           }
         },
-        "14931021-46a4-4d99-b1b6-524911902724": {
+        "b1b227ad-3771-43f1-a644-1afad0da8c55": {
           "type": "production_item",
           "settings": {
-            "icon": "shopify:\/\/shop_images\/production-icon-1_9fa1e8ba-7ad0-40f3-8d6d-bd067a7e7de6.png",
-            "items_title": "Learning",
-            "items_description": "Our pediatrician-recommended products are a great way for your children to learn, enhance their fine motor skills and develop their imagination"
+            "icon": "shopify:\/\/shop_images\/production-icon-5_558b2c02-ee5c-488b-88cb-ac00022c4530.png",
+            "items_title": "Sustainability",
+            "items_description": "All of our products are plastic-free and fairly produced."
           }
         },
         "f08c49ec-f2bc-4911-9f27-74206c20da28": {
@@ -99,9 +99,9 @@
         }
       },
       "block_order": [
-        "b1b227ad-3771-43f1-a644-1afad0da8c55",
-        "7b5b93d0-9547-48ad-b6b2-436b5073165b",
         "14931021-46a4-4d99-b1b6-524911902724",
+        "7b5b93d0-9547-48ad-b6b2-436b5073165b",
+        "b1b227ad-3771-43f1-a644-1afad0da8c55",
         "f08c49ec-f2bc-4911-9f27-74206c20da28",
         "124659dd-5321-4dc3-bb85-e0d87e0621b7"
       ],
