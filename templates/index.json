@@ -216,12 +216,62 @@
       "settings": {
         "title": "Shop Our Bestseller"
       }
+    },
+    "ca22a9cd-6fdf-4992-94c3-432a51a2b41a": {
+      "type": "favorite",
+      "blocks": {
+        "372dd9e0-5965-471b-bb0a-e7138adac6a5": {
+          "type": "favorite_item",
+          "settings": {
+            "favorite_img": "shopify:\/\/shop_images\/f-image-l_c1ea4174-56bc-4aad-aab5-afb50fd04586.png",
+            "favorite_subtitle": "The Favorite Over Partners",
+            "favorite_title": "Angelina Bork",
+            "favorite_description": "Brings' color in the children's room but also ideally suited for the living room or bedroom. With our hand-woven wall rug, the home becomes even more of a feel-good oasis."
+          }
+        },
+        "2bd1d06c-e79d-4050-88c8-07623f2f79d3": {
+          "type": "favorite_item",
+          "settings": {
+            "favorite_img": "shopify:\/\/shop_images\/f-image-r_d3695927-7f2d-4c5a-8c04-34a47115694c.png",
+            "favorite_subtitle": "The Favorite Over Partners",
+            "favorite_title": "Monica Rendel",
+            "favorite_description": "Brings' color in the children's room but also ideally suited for the living room or bedroom. With our hand-woven wall rug, the home becomes even more of a feel-good oasis."
+          }
+        },
+        "3de4d19a-9e48-457f-8959-541edac926a5": {
+          "type": "favorite_item",
+          "settings": {
+            "favorite_img": "shopify:\/\/shop_images\/f-image-l_c1ea4174-56bc-4aad-aab5-afb50fd04586.png",
+            "favorite_subtitle": "The Favorite Over Partners",
+            "favorite_title": "Angelina Bork",
+            "favorite_description": "Brings' color in the children's room but also ideally suited for the living room or bedroom. With our hand-woven wall rug, the home becomes even more of a feel-good oasis."
+          }
+        },
+        "ca656a7f-848f-48f5-a6f2-ea0f6a5ad280": {
+          "type": "favorite_item",
+          "settings": {
+            "favorite_img": "shopify:\/\/shop_images\/f-image-r_d3695927-7f2d-4c5a-8c04-34a47115694c.png",
+            "favorite_subtitle": "The Favorite Over Partners",
+            "favorite_title": "Monica Rendel",
+            "favorite_description": "Brings' color in the children's room but also ideally suited for the living room or bedroom. With our hand-woven wall rug, the home becomes even more of a feel-good oasis."
+          }
+        }
+      },
+      "block_order": [
+        "372dd9e0-5965-471b-bb0a-e7138adac6a5",
+        "2bd1d06c-e79d-4050-88c8-07623f2f79d3",
+        "3de4d19a-9e48-457f-8959-541edac926a5",
+        "ca656a7f-848f-48f5-a6f2-ea0f6a5ad280"
+      ],
+      "settings": {
+      }
     }
   },
   "order": [
     "1664873050c36bf10b",
     "83f07686-412f-4023-bcab-92664040f6ab",
     "c766b9e7-be25-414f-aff5-76c8db35727f",
-    "76ff86ff-fdc9-4843-8191-b5b4b9eddcd6"
+    "76ff86ff-fdc9-4843-8191-b5b4b9eddcd6",
+    "ca22a9cd-6fdf-4992-94c3-432a51a2b41a"
   ]
 }
