@@ -151,11 +151,77 @@
       "settings": {
         "title": "How our Quiet Books are made"
       }
+    },
+    "76ff86ff-fdc9-4843-8191-b5b4b9eddcd6": {
+      "type": "shop",
+      "blocks": {
+        "68c4eb5b-bbcf-47c7-b121-338843489824": {
+          "type": "product_item",
+          "settings": {
+            "card_img": "shopify:\/\/shop_images\/shop-1-img.png",
+            "cards_title": "Magic Bird - 6 Pages Mini Quiet Book",
+            "cards_price": "€39,99",
+            "card_url": "shopify:\/\/collections\/all",
+            "link_title": "Add to cart"
+          }
+        },
+        "81945b15-f661-4c71-b5fa-2ed4caf95fb6": {
+          "type": "product_item",
+          "settings": {
+            "card_img": "shopify:\/\/shop_images\/shop-2-img.png",
+            "cards_title": "Little Bee - 6 Pages Mini Quiet Book",
+            "cards_price": "€39,99",
+            "card_url": "shopify:\/\/collections\/all",
+            "link_title": "Add to cart"
+          }
+        },
+        "fd52defe-6003-4978-8ac9-f8086e8bab1b": {
+          "type": "product_item",
+          "settings": {
+            "card_img": "shopify:\/\/shop_images\/shop-3-img.png",
+            "cards_title": "Jolly Baby - 6 pages Mini Quiet Book",
+            "cards_price": "€39,99",
+            "card_url": "shopify:\/\/collections\/all",
+            "link_title": "Add to cart"
+          }
+        },
+        "3956fa36-8b3a-454d-87fb-1a821d2c9f94": {
+          "type": "product_item",
+          "settings": {
+            "card_img": "shopify:\/\/shop_images\/shop-4-img.png",
+            "cards_title": "Globetrotter - Quiet Book",
+            "cards_price": "€79,99",
+            "card_url": "shopify:\/\/collections\/all",
+            "link_title": "Add to cart"
+          }
+        },
+        "776e0da2-2a80-4ce8-8c0f-5d3cbe2afa05": {
+          "type": "product_item",
+          "settings": {
+            "card_img": "shopify:\/\/shop_images\/shop-2-img.png",
+            "cards_title": "Little Bee - 6 Pages Mini Quiet Book",
+            "cards_price": "€39,99",
+            "card_url": "shopify:\/\/collections\/all",
+            "link_title": "Add to cart"
+          }
+        }
+      },
+      "block_order": [
+        "68c4eb5b-bbcf-47c7-b121-338843489824",
+        "81945b15-f661-4c71-b5fa-2ed4caf95fb6",
+        "fd52defe-6003-4978-8ac9-f8086e8bab1b",
+        "3956fa36-8b3a-454d-87fb-1a821d2c9f94",
+        "776e0da2-2a80-4ce8-8c0f-5d3cbe2afa05"
+      ],
+      "settings": {
+        "title": "Shop Our Bestseller"
+      }
     }
   },
   "order": [
     "1664873050c36bf10b",
     "83f07686-412f-4023-bcab-92664040f6ab",
-    "c766b9e7-be25-414f-aff5-76c8db35727f"
+    "c766b9e7-be25-414f-aff5-76c8db35727f",
+    "76ff86ff-fdc9-4843-8191-b5b4b9eddcd6"
   ]
 }
