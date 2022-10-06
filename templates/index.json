@@ -1,41 +1,79 @@
 {
-	"sections": {
-		"1664873050c36bf10b": {
-			"type": "categories-mobile",
-			"blocks": {
-				"084b0063-9724-4993-a1ed-ce8f60e98281": {
-					"type": "header",
-					"settings": {
-						"categ_mob_img": "shopify:\/\/shop_images\/categories-image-1-320.png",
-						"categ_mob_title": "Quiet Books",
-						"categ_mob_link": "shopify:\/\/collections\/all"
-					}
-				}
-			},
-			"block_order": [
-				"084b0063-9724-4993-a1ed-ce8f60e98281"
-			],
-			"settings": {}
-		},
-		"166487308400462947": {
-			"type": "categories-mobile",
-			"blocks": {
-				"3e2558d6-0599-4c79-8fb1-c1e9cecaef94": {
-					"type": "header",
-					"settings": {
-						"categ_mob_title": "Quiet Books23",
-						"categ_mob_link": ""
-					}
-				}
-			},
-			"block_order": [
-				"3e2558d6-0599-4c79-8fb1-c1e9cecaef94"
-			],
-			"settings": {}
-		}
-	},
-	"order": [
-		"1664873050c36bf10b",
-		"166487308400462947"
-	]
+  "sections": {
+    "1664873050c36bf10b": {
+      "type": "categories-mobile",
+      "blocks": {
+        "084b0063-9724-4993-a1ed-ce8f60e98281": {
+          "type": "header",
+          "settings": {
+            "categ_mob_img": "shopify:\/\/shop_images\/categories-image-1-320.png",
+            "categ_mob_title": "Quiet Books",
+            "categ_mob_link": "shopify:\/\/collections\/all"
+          }
+        },
+        "997341f2-0c9c-4196-96fe-d122f79cdf2b": {
+          "type": "header",
+          "settings": {
+            "categ_mob_img": "shopify:\/\/shop_images\/categories-img-2.png",
+            "categ_mob_title": "Mini Quiet Books",
+            "categ_mob_link": "shopify:\/\/collections\/all"
+          }
+        },
+        "375bf6d5-c965-42b2-ad96-fca296031147": {
+          "type": "header",
+          "settings": {
+            "categ_mob_img": "shopify:\/\/shop_images\/categories-img-3.png",
+            "categ_mob_title": "Booklets",
+            "categ_mob_link": "shopify:\/\/collections\/all"
+          }
+        },
+        "139b6dbd-9622-4f3d-8b20-67d71e46e967": {
+          "type": "header",
+          "settings": {
+            "categ_mob_img": "shopify:\/\/shop_images\/categories-img-4.png",
+            "categ_mob_title": "Wooden Toys",
+            "categ_mob_link": "shopify:\/\/collections\/all"
+          }
+        },
+        "19855974-03cf-42d8-868a-17329c1e9846": {
+          "type": "header",
+          "settings": {
+            "categ_mob_img": "shopify:\/\/shop_images\/categories-img-5.png",
+            "categ_mob_title": "Wall decorations",
+            "categ_mob_link": "shopify:\/\/collections\/all"
+          }
+        }
+      },
+      "block_order": [
+        "084b0063-9724-4993-a1ed-ce8f60e98281",
+        "997341f2-0c9c-4196-96fe-d122f79cdf2b",
+        "375bf6d5-c965-42b2-ad96-fca296031147",
+        "139b6dbd-9622-4f3d-8b20-67d71e46e967",
+        "19855974-03cf-42d8-868a-17329c1e9846"
+      ],
+      "settings": {
+      }
+    },
+    "166487308400462947": {
+      "type": "categories-mobile",
+      "blocks": {
+        "3e2558d6-0599-4c79-8fb1-c1e9cecaef94": {
+          "type": "header",
+          "settings": {
+            "categ_mob_title": "Quiet Books23",
+            "categ_mob_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "3e2558d6-0599-4c79-8fb1-c1e9cecaef94"
+      ],
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "1664873050c36bf10b",
+    "166487308400462947"
+  ]
 }
