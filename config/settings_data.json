@@ -189,35 +189,35 @@
             "type": "list_item",
             "settings": {
               "select_icon": "hand",
-              "link_text": "Free shipping from 60€ (DE)"
+              "link_text": "High quality hand-mand & ethical products"
             }
           },
           "cdc8d8b7-5091-4cc8-aa53-cbc1232af008": {
             "type": "list_item",
             "settings": {
               "select_icon": "guarantee",
-              "link_text": "Free shipping from 60€ (DE)"
+              "link_text": "6 Months guarantee"
             }
           },
           "7bbd05e7-0606-4ebf-b070-0e4bc715eb11": {
             "type": "list_item",
             "settings": {
               "select_icon": "heart",
-              "link_text": "Free shipping from 60€ (DE)"
+              "link_text": "The favourite of XXXX partners"
             }
           },
           "2b132024-5d40-4790-ac52-f64b75a4eaea": {
             "type": "list_item",
             "settings": {
               "select_icon": "flag",
-              "link_text": "Free shipping from 60€ (DE)"
+              "link_text": "Made in Germany"
             }
           },
           "aeebd236-06bc-43ef-b490-dd1c90dc9189": {
             "type": "list_item",
             "settings": {
               "select_icon": "replacement",
-              "link_text": "Free shipping from 60€ (DE)"
+              "link_text": "Free parts replacement service"
             }
           }
         },
