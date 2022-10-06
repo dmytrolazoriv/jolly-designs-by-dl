@@ -236,19 +236,20 @@
         "type": "header-shopify",
         "settings": {
           "logo": "shopify:\/\/shop_images\/logo.png",
+          "logo-mobile": "shopify:\/\/shop_images\/jolly-designs-logo_mob.png",
           "slider_title": "Discover the new way of playing",
           "buy-button_text": "Shop now",
           "about-button_text": "About us",
           "service_link": "+4961729452910",
           "lang_button": "EN",
-          "language-menu": "",
+          "language-menu": "language-menu",
           "product_button": "Products",
-          "products-menu": "",
-          "main-navigation": "",
+          "products-menu": "products-menu",
+          "main-navigation": "main-navigation",
           "about_button": "About us",
-          "about-menu": "",
+          "about-menu": "about-menu",
           "support_button": "Support",
-          "support-menu": ""
+          "support-menu": "support-menu"
         }
       },
       "footer-copy": {
