@@ -109,10 +109,53 @@
         "title": "Our Quiet Books",
         "definition": "are developed by child experts to improve your children's fine motor development"
       }
+    },
+    "c766b9e7-be25-414f-aff5-76c8db35727f": {
+      "type": "making",
+      "blocks": {
+        "b170a3d6-7787-4a1e-b5b6-8205383f3505": {
+          "type": "making_item",
+          "settings": {
+            "items_title": "Step 1",
+            "items_description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry"
+          }
+        },
+        "afdfe271-ef7d-4372-bb36-6314c1812fe1": {
+          "type": "making_item",
+          "settings": {
+            "items_title": "Step 2",
+            "items_description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry"
+          }
+        },
+        "daae61d9-7a8e-4436-9aca-4122dc898619": {
+          "type": "making_item",
+          "settings": {
+            "items_title": "Step 3",
+            "items_description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry"
+          }
+        },
+        "933029fd-527e-4af0-b98f-2ae0a9cf268c": {
+          "type": "making_item",
+          "settings": {
+            "items_title": "Step 4",
+            "items_description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry"
+          }
+        }
+      },
+      "block_order": [
+        "b170a3d6-7787-4a1e-b5b6-8205383f3505",
+        "afdfe271-ef7d-4372-bb36-6314c1812fe1",
+        "daae61d9-7a8e-4436-9aca-4122dc898619",
+        "933029fd-527e-4af0-b98f-2ae0a9cf268c"
+      ],
+      "settings": {
+        "title": "How our Quiet Books are made"
+      }
     }
   },
   "order": [
     "1664873050c36bf10b",
-    "83f07686-412f-4023-bcab-92664040f6ab"
+    "83f07686-412f-4023-bcab-92664040f6ab",
+    "c766b9e7-be25-414f-aff5-76c8db35727f"
   ]
 }
