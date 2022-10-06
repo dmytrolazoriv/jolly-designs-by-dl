@@ -1,0 +1,80 @@
+{% comment %} <section class="categories"> {% endcomment %}
+
+	<h3 class="categories__title title">
+		{{ section.settings.title | escape }}
+	</h3>
+
+	<!-- <div class="container"> -->
+	<ul class="categories__list categories-items">
+
+	{% for block in section.blocks %}
+	  <li class="categories-items__item">
+
+		<img width="" height="" class="categories-items__image" src="{{ block.settings.items_img | image_url: width: 296, height: 296 }}"
+			alt="{{ block.settings.items_img.alt }}" loading="lazy">
+
+		<a class="categories-items__link" href="{{ block.settings.items_url }}">
+			{{ block.settings.items_title }}
+		</a>
+
+	  </li>
+	{% endfor %}
+
+	</ul>
+	<!-- </div> -->
+
+  {% comment %} </section> {% endcomment %}
+
+  {% schema %}
+  {
+	"name":"Categories",
+	"tag":"section",
+	"class":"categories",
+	"max_blocks":6,
+	"settings":[
+	   {
+		  "type":"text",
+		  "id":"title",
+		  "default":"Our Categories",
+		  "label":"Categories section title"
+	   }
+	],
+	"blocks":[
+	   {
+		  "name":"Categories item",
+		  "type":"categories_item",
+		  "settings":[
+			 {
+				"type":"header",
+				"content":"Image settings"
+			 },
+			 {
+				"type":"image_picker",
+				"id":"items_img",
+				"label":"Categories item image"
+			 },
+			 {
+				"type":"header",
+				"content":"Text settings"
+			 },
+			 {
+				"type":"text",
+				"id":"items_title",
+				"label":"Categories item title",
+				"default":"Quiet Books"
+			 },
+			 {
+				"type":"url",
+				"id":"items_url",
+				"label":"Add url for item"
+			 }
+		  ]
+	   }
+	],
+	"presets":[
+	   {
+		  "name":"Categories section"
+	   }
+	]
+ }
+  {% endschema %}
