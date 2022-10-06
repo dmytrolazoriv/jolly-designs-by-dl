@@ -234,6 +234,45 @@
       },
       "header-shopify": {
         "type": "header-shopify",
+        "blocks": {
+          "76d65b14-ae34-4b0d-b217-d7d0a4e7585e": {
+            "type": "slide",
+            "settings": {
+              "slide_img": "shopify:\/\/shop_images\/image_59093ef4-3a0c-4dcf-b920-772690767603.jpg"
+            }
+          },
+          "379900cb-e70a-4896-a573-1b07bab8c98d": {
+            "type": "slide",
+            "settings": {
+              "slide_img": "shopify:\/\/shop_images\/image_59093ef4-3a0c-4dcf-b920-772690767603.jpg"
+            }
+          },
+          "8269a978-6f4d-4d40-b3e2-f165c86bf1ac": {
+            "type": "slide",
+            "settings": {
+              "slide_img": "shopify:\/\/shop_images\/image_59093ef4-3a0c-4dcf-b920-772690767603.jpg"
+            }
+          },
+          "1ba815c8-a5c8-4fdf-94b4-69aa7f74bc69": {
+            "type": "slide",
+            "settings": {
+              "slide_img": "shopify:\/\/shop_images\/image_59093ef4-3a0c-4dcf-b920-772690767603.jpg"
+            }
+          },
+          "9b515da8-0210-42e0-a57f-e81432e25954": {
+            "type": "slide",
+            "settings": {
+              "slide_img": "shopify:\/\/shop_images\/image_59093ef4-3a0c-4dcf-b920-772690767603.jpg"
+            }
+          }
+        },
+        "block_order": [
+          "76d65b14-ae34-4b0d-b217-d7d0a4e7585e",
+          "379900cb-e70a-4896-a573-1b07bab8c98d",
+          "8269a978-6f4d-4d40-b3e2-f165c86bf1ac",
+          "1ba815c8-a5c8-4fdf-94b4-69aa7f74bc69",
+          "9b515da8-0210-42e0-a57f-e81432e25954"
+        ],
         "settings": {
           "logo": "shopify:\/\/shop_images\/logo.png",
           "logo-mobile": "shopify:\/\/shop_images\/jolly-designs-logo_mob.png",
