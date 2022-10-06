@@ -53,27 +53,9 @@
       ],
       "settings": {
       }
-    },
-    "166487308400462947": {
-      "type": "categories-mobile",
-      "blocks": {
-        "3e2558d6-0599-4c79-8fb1-c1e9cecaef94": {
-          "type": "header",
-          "settings": {
-            "categ_mob_title": "Quiet Books23",
-            "categ_mob_link": ""
-          }
-        }
-      },
-      "block_order": [
-        "3e2558d6-0599-4c79-8fb1-c1e9cecaef94"
-      ],
-      "settings": {
-      }
     }
   },
   "order": [
-    "1664873050c36bf10b",
-    "166487308400462947"
+    "1664873050c36bf10b"
   ]
 }
