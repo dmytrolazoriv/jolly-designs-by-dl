@@ -1,388 +1,461 @@
 {
-	"sections": {
-		"1664873050c36bf10b": {
-			"type": "categories-mobile",
-			"blocks": {
-				"084b0063-9724-4993-a1ed-ce8f60e98281": {
-					"type": "header",
-					"settings": {
-						"categ_mob_img": "shopify:\/\/shop_images\/categories-image-1-320.png",
-						"categ_mob_title": "Quiet Books",
-						"categ_mob_link": "shopify:\/\/collections\/all"
-					}
-				},
-				"997341f2-0c9c-4196-96fe-d122f79cdf2b": {
-					"type": "header",
-					"settings": {
-						"categ_mob_img": "shopify:\/\/shop_images\/categories-img-2.png",
-						"categ_mob_title": "Mini Quiet Books",
-						"categ_mob_link": "shopify:\/\/collections\/all"
-					}
-				},
-				"375bf6d5-c965-42b2-ad96-fca296031147": {
-					"type": "header",
-					"settings": {
-						"categ_mob_img": "shopify:\/\/shop_images\/categories-img-3.png",
-						"categ_mob_title": "Booklets",
-						"categ_mob_link": "shopify:\/\/collections\/all"
-					}
-				},
-				"139b6dbd-9622-4f3d-8b20-67d71e46e967": {
-					"type": "header",
-					"settings": {
-						"categ_mob_img": "shopify:\/\/shop_images\/categories-img-4.png",
-						"categ_mob_title": "Wooden Toys",
-						"categ_mob_link": "shopify:\/\/collections\/all"
-					}
-				},
-				"19855974-03cf-42d8-868a-17329c1e9846": {
-					"type": "header",
-					"settings": {
-						"categ_mob_img": "shopify:\/\/shop_images\/categories-img-5.png",
-						"categ_mob_title": "Wall decorations",
-						"categ_mob_link": "shopify:\/\/collections\/all"
-					}
-				}
-			},
-			"block_order": [
-				"084b0063-9724-4993-a1ed-ce8f60e98281",
-				"997341f2-0c9c-4196-96fe-d122f79cdf2b",
-				"375bf6d5-c965-42b2-ad96-fca296031147",
-				"139b6dbd-9622-4f3d-8b20-67d71e46e967",
-				"19855974-03cf-42d8-868a-17329c1e9846"
-			],
-			"settings": {}
-		},
-		"83f07686-412f-4023-bcab-92664040f6ab": {
-			"type": "production",
-			"blocks": {
-				"14931021-46a4-4d99-b1b6-524911902724": {
-					"type": "production_item",
-					"settings": {
-						"icon": "shopify:\/\/shop_images\/production-icon-1_9fa1e8ba-7ad0-40f3-8d6d-bd067a7e7de6.png",
-						"items_title": "Learning",
-						"items_description": "Our pediatrician-recommended products are a great way for your children to learn, enhance their fine motor skills and develop their imagination"
-					}
-				},
-				"7b5b93d0-9547-48ad-b6b2-436b5073165b": {
-					"type": "production_item",
-					"settings": {
-						"icon": "shopify:\/\/shop_images\/production-icon-3_ae19b73a-c077-474e-a0be-64130d729d3a.png",
-						"items_title": "Easy to carry",
-						"items_description": "Our light-weight and flexible books will keep your children busy for your long journeys or dinners at the restaurant."
-					}
-				},
-				"b1b227ad-3771-43f1-a644-1afad0da8c55": {
-					"type": "production_item",
-					"settings": {
-						"icon": "shopify:\/\/shop_images\/production-icon-5_558b2c02-ee5c-488b-88cb-ac00022c4530.png",
-						"items_title": "Sustainability",
-						"items_description": "All of our products are plastic-free and fairly produced."
-					}
-				},
-				"f08c49ec-f2bc-4911-9f27-74206c20da28": {
-					"type": "production_item",
-					"settings": {
-						"icon": "shopify:\/\/shop_images\/production-icon-2_7f8095d4-5ca4-4b1f-8cd0-141f5f67e1dc.png",
-						"items_title": "Long-lasting products",
-						"items_description": "Our high-quality products can be passed on from generation to generation"
-					}
-				},
-				"124659dd-5321-4dc3-bb85-e0d87e0621b7": {
-					"type": "production_item",
-					"settings": {
-						"icon": "shopify:\/\/shop_images\/production-icon-4_9aad207a-34c8-4f4e-a121-9eb528e0c0a1.png",
-						"items_title": "Versatile toys",
-						"items_description": "Our products can be played in countless unimaginable ways. We offer your children a world of creativity in each of our books."
-					}
-				}
-			},
-			"block_order": [
-				"14931021-46a4-4d99-b1b6-524911902724",
-				"7b5b93d0-9547-48ad-b6b2-436b5073165b",
-				"b1b227ad-3771-43f1-a644-1afad0da8c55",
-				"f08c49ec-f2bc-4911-9f27-74206c20da28",
-				"124659dd-5321-4dc3-bb85-e0d87e0621b7"
-			],
-			"settings": {
-				"title": "Our Quiet Books",
-				"definition": "are developed by child experts to improve your children's fine motor development"
-			}
-		},
-		"c766b9e7-be25-414f-aff5-76c8db35727f": {
-			"type": "making",
-			"blocks": {
-				"b170a3d6-7787-4a1e-b5b6-8205383f3505": {
-					"type": "making_item",
-					"settings": {
-						"items_title": "Step 1",
-						"items_description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry"
-					}
-				},
-				"afdfe271-ef7d-4372-bb36-6314c1812fe1": {
-					"type": "making_item",
-					"settings": {
-						"items_title": "Step 2",
-						"items_description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry"
-					}
-				},
-				"daae61d9-7a8e-4436-9aca-4122dc898619": {
-					"type": "making_item",
-					"settings": {
-						"items_title": "Step 3",
-						"items_description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry"
-					}
-				},
-				"933029fd-527e-4af0-b98f-2ae0a9cf268c": {
-					"type": "making_item",
-					"settings": {
-						"items_title": "Step 4",
-						"items_description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry"
-					}
-				}
-			},
-			"block_order": [
-				"b170a3d6-7787-4a1e-b5b6-8205383f3505",
-				"afdfe271-ef7d-4372-bb36-6314c1812fe1",
-				"daae61d9-7a8e-4436-9aca-4122dc898619",
-				"933029fd-527e-4af0-b98f-2ae0a9cf268c"
-			],
-			"settings": {
-				"title": "How our Quiet Books are made"
-			}
-		},
-		"76ff86ff-fdc9-4843-8191-b5b4b9eddcd6": {
-			"type": "shop",
-			"blocks": {
-				"68c4eb5b-bbcf-47c7-b121-338843489824": {
-					"type": "product_item",
-					"settings": {
-						"card_img": "shopify:\/\/shop_images\/shop-1-img.png",
-						"cards_title": "Magic Bird - 6 Pages Mini Quiet Book",
-						"cards_price": "€39,99",
-						"card_url": "shopify:\/\/collections\/all",
-						"link_title": "Add to cart"
-					}
-				},
-				"81945b15-f661-4c71-b5fa-2ed4caf95fb6": {
-					"type": "product_item",
-					"settings": {
-						"card_img": "shopify:\/\/shop_images\/shop-2-img.png",
-						"cards_title": "Little Bee - 6 Pages Mini Quiet Book",
-						"cards_price": "€39,99",
-						"card_url": "shopify:\/\/collections\/all",
-						"link_title": "Add to cart"
-					}
-				},
-				"fd52defe-6003-4978-8ac9-f8086e8bab1b": {
-					"type": "product_item",
-					"settings": {
-						"card_img": "shopify:\/\/shop_images\/shop-3-img.png",
-						"cards_title": "Jolly Baby - 6 pages Mini Quiet Book",
-						"cards_price": "€39,99",
-						"card_url": "shopify:\/\/collections\/all",
-						"link_title": "Add to cart"
-					}
-				},
-				"3956fa36-8b3a-454d-87fb-1a821d2c9f94": {
-					"type": "product_item",
-					"settings": {
-						"card_img": "shopify:\/\/shop_images\/shop-4-img.png",
-						"cards_title": "Globetrotter - Quiet Book",
-						"cards_price": "€79,99",
-						"card_url": "shopify:\/\/collections\/all",
-						"link_title": "Add to cart"
-					}
-				},
-				"776e0da2-2a80-4ce8-8c0f-5d3cbe2afa05": {
-					"type": "product_item",
-					"settings": {
-						"card_img": "shopify:\/\/shop_images\/shop-2-img.png",
-						"cards_title": "Little Bee - 6 Pages Mini Quiet Book",
-						"cards_price": "€39,99",
-						"card_url": "shopify:\/\/collections\/all",
-						"link_title": "Add to cart"
-					}
-				}
-			},
-			"block_order": [
-				"68c4eb5b-bbcf-47c7-b121-338843489824",
-				"81945b15-f661-4c71-b5fa-2ed4caf95fb6",
-				"fd52defe-6003-4978-8ac9-f8086e8bab1b",
-				"3956fa36-8b3a-454d-87fb-1a821d2c9f94",
-				"776e0da2-2a80-4ce8-8c0f-5d3cbe2afa05"
-			],
-			"settings": {
-				"title": "Shop Our Bestseller"
-			}
-		},
-		"ca22a9cd-6fdf-4992-94c3-432a51a2b41a": {
-			"type": "favorite",
-			"blocks": {
-				"372dd9e0-5965-471b-bb0a-e7138adac6a5": {
-					"type": "favorite_item",
-					"settings": {
-						"favorite_img": "shopify:\/\/shop_images\/f-image-l_c1ea4174-56bc-4aad-aab5-afb50fd04586.png",
-						"favorite_subtitle": "The Favorite Over Partners",
-						"favorite_title": "Angelina Bork",
-						"favorite_description": "Brings' color in the children's room but also ideally suited for the living room or bedroom. With our hand-woven wall rug, the home becomes even more of a feel-good oasis."
-					}
-				},
-				"2bd1d06c-e79d-4050-88c8-07623f2f79d3": {
-					"type": "favorite_item",
-					"settings": {
-						"favorite_img": "shopify:\/\/shop_images\/f-image-r_d3695927-7f2d-4c5a-8c04-34a47115694c.png",
-						"favorite_subtitle": "The Favorite Over Partners",
-						"favorite_title": "Monica Rendel",
-						"favorite_description": "Brings' color in the children's room but also ideally suited for the living room or bedroom. With our hand-woven wall rug, the home becomes even more of a feel-good oasis."
-					}
-				},
-				"3de4d19a-9e48-457f-8959-541edac926a5": {
-					"type": "favorite_item",
-					"settings": {
-						"favorite_img": "shopify:\/\/shop_images\/f-image-l_c1ea4174-56bc-4aad-aab5-afb50fd04586.png",
-						"favorite_subtitle": "The Favorite Over Partners",
-						"favorite_title": "Angelina Bork",
-						"favorite_description": "Brings' color in the children's room but also ideally suited for the living room or bedroom. With our hand-woven wall rug, the home becomes even more of a feel-good oasis."
-					}
-				},
-				"ca656a7f-848f-48f5-a6f2-ea0f6a5ad280": {
-					"type": "favorite_item",
-					"settings": {
-						"favorite_img": "shopify:\/\/shop_images\/f-image-r_d3695927-7f2d-4c5a-8c04-34a47115694c.png",
-						"favorite_subtitle": "The Favorite Over Partners",
-						"favorite_title": "Monica Rendel",
-						"favorite_description": "Brings' color in the children's room but also ideally suited for the living room or bedroom. With our hand-woven wall rug, the home becomes even more of a feel-good oasis."
-					}
-				}
-			},
-			"block_order": [
-				"372dd9e0-5965-471b-bb0a-e7138adac6a5",
-				"2bd1d06c-e79d-4050-88c8-07623f2f79d3",
-				"3de4d19a-9e48-457f-8959-541edac926a5",
-				"ca656a7f-848f-48f5-a6f2-ea0f6a5ad280"
-			],
-			"settings": {}
-		},
-		"936dfde1-3fb7-4852-a913-cbe4e27d049b": {
-			"type": "about-us",
-			"blocks": {
-				"cbdd2f09-5353-462d-bfc9-acffc9a428cc": {
-					"type": "slider_item",
-					"settings": {
-						"navlink_title": "Meet the Jolly Family",
-						"navlink_url": "",
-						"about_title": "Meet the Jolly Family!",
-						"about_description": "About our story, values & mission",
-						"slider_img": "shopify:\/\/shop_images\/about-us-1_d1d8df77-3f8b-4ff8-81c0-60282cac2504.png",
-						"link_url": "",
-						"link_title": "learn more"
-					}
-				},
-				"8a451427-4008-4d8c-b85c-4f28458b3dc9": {
-					"type": "slider_item",
-					"settings": {
-						"navlink_title": "Meet the Team",
-						"navlink_url": "",
-						"about_title": "Meet the Team",
-						"about_description": "About our story, values & mission",
-						"slider_img": "shopify:\/\/shop_images\/about-us-1_d1d8df77-3f8b-4ff8-81c0-60282cac2504.png",
-						"link_url": "",
-						"link_title": "learn more"
-					}
-				},
-				"e84d6c36-1f71-4800-af0a-b203b7fe8864": {
-					"type": "slider_item",
-					"settings": {
-						"navlink_title": "Meet the Production",
-						"navlink_url": "",
-						"about_title": "Meet the Production Team",
-						"about_description": "About our story, values & mission",
-						"slider_img": "shopify:\/\/shop_images\/about-us-2_f4869b2e-dca2-41f3-9458-617b14baa957.png",
-						"link_url": "",
-						"link_title": "learn more"
-					}
-				}
-			},
-			"block_order": [
-				"cbdd2f09-5353-462d-bfc9-acffc9a428cc",
-				"8a451427-4008-4d8c-b85c-4f28458b3dc9",
-				"e84d6c36-1f71-4800-af0a-b203b7fe8864"
-			],
-			"settings": {}
-		},
-		"b0436072-9038-466b-9d55-2c42e8f039a4": {
-			"type": "categories",
-			"blocks": {
-				"780838d7-e6ff-4fbe-82a5-8ba2879da5b2": {
-					"type": "categories_item",
-					"settings": {
-						"items_img": "shopify:\/\/shop_images\/categories-img-1_2d2bfeea-feb9-40c6-a671-2a62f318da27.png",
-						"items_title": "Quiet Books",
-						"items_url": "shopify:\/\/collections\/all"
-					}
-				},
-				"93672f5d-3703-4dc9-9709-549f7e075e62": {
-					"type": "categories_item",
-					"settings": {
-						"items_img": "shopify:\/\/shop_images\/categories-img-2_f2d6d05c-915f-4e21-bd32-3882171bba0f.png",
-						"items_title": "Mini Quiet Books",
-						"items_url": "shopify:\/\/collections\/all"
-					}
-				},
-				"4194c254-267e-4b7b-8ed7-943b3d60249e": {
-					"type": "categories_item",
-					"settings": {
-						"items_img": "shopify:\/\/shop_images\/categories-img-3_6cc5f1c7-af3c-46c6-a0a7-c9b73331ec11.png",
-						"items_title": "Booklets",
-						"items_url": "shopify:\/\/collections\/all"
-					}
-				},
-				"d9040c16-accd-4e8d-8c02-90f65dcade43": {
-					"type": "categories_item",
-					"settings": {
-						"items_img": "shopify:\/\/shop_images\/categories-img-4_420ec39b-9258-48e4-bdaa-9e98940a081c.png",
-						"items_title": "Wooden Toys",
-						"items_url": "shopify:\/\/collections\/all"
-					}
-				},
-				"117e97f6-a1ce-43f1-b82e-4c16761bf8ef": {
-					"type": "categories_item",
-					"settings": {
-						"items_img": "shopify:\/\/shop_images\/categories-img-5_d2a2c084-20c2-42ba-8257-bd199bca50f3.png",
-						"items_title": "Wall decorations",
-						"items_url": "shopify:\/\/collections\/all"
-					}
-				},
-				"25ddded6-d6da-4797-8a3a-a34dea2e0571": {
-					"type": "categories_item",
-					"settings": {
-						"items_img": "shopify:\/\/shop_images\/categories-img-2_f2d6d05c-915f-4e21-bd32-3882171bba0f.png",
-						"items_title": "Mini Quiet Books",
-						"items_url": "shopify:\/\/collections\/all"
-					}
-				}
-			},
-			"block_order": [
-				"780838d7-e6ff-4fbe-82a5-8ba2879da5b2",
-				"93672f5d-3703-4dc9-9709-549f7e075e62",
-				"4194c254-267e-4b7b-8ed7-943b3d60249e",
-				"d9040c16-accd-4e8d-8c02-90f65dcade43",
-				"117e97f6-a1ce-43f1-b82e-4c16761bf8ef",
-				"25ddded6-d6da-4797-8a3a-a34dea2e0571"
-			],
-			"settings": {
-				"title": "Our Categories"
-			}
-		}
-	},
-	"order": [
-		"1664873050c36bf10b",
-		"83f07686-412f-4023-bcab-92664040f6ab",
-		"c766b9e7-be25-414f-aff5-76c8db35727f",
-		"76ff86ff-fdc9-4843-8191-b5b4b9eddcd6",
-		"ca22a9cd-6fdf-4992-94c3-432a51a2b41a",
-		"936dfde1-3fb7-4852-a913-cbe4e27d049b",
-		"b0436072-9038-466b-9d55-2c42e8f039a4"
-	]
+  "sections": {
+    "1664873050c36bf10b": {
+      "type": "categories-mobile",
+      "blocks": {
+        "084b0063-9724-4993-a1ed-ce8f60e98281": {
+          "type": "header",
+          "settings": {
+            "categ_mob_img": "shopify:\/\/shop_images\/categories-image-1-320.png",
+            "categ_mob_title": "Quiet Books",
+            "categ_mob_link": "shopify:\/\/collections\/all"
+          }
+        },
+        "997341f2-0c9c-4196-96fe-d122f79cdf2b": {
+          "type": "header",
+          "settings": {
+            "categ_mob_img": "shopify:\/\/shop_images\/categories-img-2.png",
+            "categ_mob_title": "Mini Quiet Books",
+            "categ_mob_link": "shopify:\/\/collections\/all"
+          }
+        },
+        "375bf6d5-c965-42b2-ad96-fca296031147": {
+          "type": "header",
+          "settings": {
+            "categ_mob_img": "shopify:\/\/shop_images\/categories-img-3.png",
+            "categ_mob_title": "Booklets",
+            "categ_mob_link": "shopify:\/\/collections\/all"
+          }
+        },
+        "139b6dbd-9622-4f3d-8b20-67d71e46e967": {
+          "type": "header",
+          "settings": {
+            "categ_mob_img": "shopify:\/\/shop_images\/categories-img-4.png",
+            "categ_mob_title": "Wooden Toys",
+            "categ_mob_link": "shopify:\/\/collections\/all"
+          }
+        },
+        "19855974-03cf-42d8-868a-17329c1e9846": {
+          "type": "header",
+          "settings": {
+            "categ_mob_img": "shopify:\/\/shop_images\/categories-img-5.png",
+            "categ_mob_title": "Wall decorations",
+            "categ_mob_link": "shopify:\/\/collections\/all"
+          }
+        }
+      },
+      "block_order": [
+        "084b0063-9724-4993-a1ed-ce8f60e98281",
+        "997341f2-0c9c-4196-96fe-d122f79cdf2b",
+        "375bf6d5-c965-42b2-ad96-fca296031147",
+        "139b6dbd-9622-4f3d-8b20-67d71e46e967",
+        "19855974-03cf-42d8-868a-17329c1e9846"
+      ],
+      "settings": {
+      }
+    },
+    "83f07686-412f-4023-bcab-92664040f6ab": {
+      "type": "production",
+      "blocks": {
+        "14931021-46a4-4d99-b1b6-524911902724": {
+          "type": "production_item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/production-icon-1_9fa1e8ba-7ad0-40f3-8d6d-bd067a7e7de6.png",
+            "items_title": "Learning",
+            "items_description": "Our pediatrician-recommended products are a great way for your children to learn, enhance their fine motor skills and develop their imagination"
+          }
+        },
+        "7b5b93d0-9547-48ad-b6b2-436b5073165b": {
+          "type": "production_item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/production-icon-3_ae19b73a-c077-474e-a0be-64130d729d3a.png",
+            "items_title": "Easy to carry",
+            "items_description": "Our light-weight and flexible books will keep your children busy for your long journeys or dinners at the restaurant."
+          }
+        },
+        "b1b227ad-3771-43f1-a644-1afad0da8c55": {
+          "type": "production_item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/production-icon-5_558b2c02-ee5c-488b-88cb-ac00022c4530.png",
+            "items_title": "Sustainability",
+            "items_description": "All of our products are plastic-free and fairly produced."
+          }
+        },
+        "f08c49ec-f2bc-4911-9f27-74206c20da28": {
+          "type": "production_item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/production-icon-2_7f8095d4-5ca4-4b1f-8cd0-141f5f67e1dc.png",
+            "items_title": "Long-lasting products",
+            "items_description": "Our high-quality products can be passed on from generation to generation"
+          }
+        },
+        "124659dd-5321-4dc3-bb85-e0d87e0621b7": {
+          "type": "production_item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/production-icon-4_9aad207a-34c8-4f4e-a121-9eb528e0c0a1.png",
+            "items_title": "Versatile toys",
+            "items_description": "Our products can be played in countless unimaginable ways. We offer your children a world of creativity in each of our books."
+          }
+        }
+      },
+      "block_order": [
+        "14931021-46a4-4d99-b1b6-524911902724",
+        "7b5b93d0-9547-48ad-b6b2-436b5073165b",
+        "b1b227ad-3771-43f1-a644-1afad0da8c55",
+        "f08c49ec-f2bc-4911-9f27-74206c20da28",
+        "124659dd-5321-4dc3-bb85-e0d87e0621b7"
+      ],
+      "settings": {
+        "title": "Our Quiet Books",
+        "definition": "are developed by child experts to improve your children's fine motor development"
+      }
+    },
+    "c766b9e7-be25-414f-aff5-76c8db35727f": {
+      "type": "making",
+      "blocks": {
+        "b170a3d6-7787-4a1e-b5b6-8205383f3505": {
+          "type": "making_item",
+          "settings": {
+            "items_title": "Step 1",
+            "items_description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry"
+          }
+        },
+        "afdfe271-ef7d-4372-bb36-6314c1812fe1": {
+          "type": "making_item",
+          "settings": {
+            "items_title": "Step 2",
+            "items_description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry"
+          }
+        },
+        "daae61d9-7a8e-4436-9aca-4122dc898619": {
+          "type": "making_item",
+          "settings": {
+            "items_title": "Step 3",
+            "items_description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry"
+          }
+        },
+        "933029fd-527e-4af0-b98f-2ae0a9cf268c": {
+          "type": "making_item",
+          "settings": {
+            "items_title": "Step 4",
+            "items_description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry"
+          }
+        }
+      },
+      "block_order": [
+        "b170a3d6-7787-4a1e-b5b6-8205383f3505",
+        "afdfe271-ef7d-4372-bb36-6314c1812fe1",
+        "daae61d9-7a8e-4436-9aca-4122dc898619",
+        "933029fd-527e-4af0-b98f-2ae0a9cf268c"
+      ],
+      "settings": {
+        "title": "How our Quiet Books are made"
+      }
+    },
+    "76ff86ff-fdc9-4843-8191-b5b4b9eddcd6": {
+      "type": "shop",
+      "blocks": {
+        "68c4eb5b-bbcf-47c7-b121-338843489824": {
+          "type": "product_item",
+          "settings": {
+            "card_img": "shopify:\/\/shop_images\/shop-1-img.png",
+            "cards_title": "Magic Bird - 6 Pages Mini Quiet Book",
+            "cards_price": "€39,99",
+            "card_url": "shopify:\/\/collections\/all",
+            "link_title": "Add to cart"
+          }
+        },
+        "81945b15-f661-4c71-b5fa-2ed4caf95fb6": {
+          "type": "product_item",
+          "settings": {
+            "card_img": "shopify:\/\/shop_images\/shop-2-img.png",
+            "cards_title": "Little Bee - 6 Pages Mini Quiet Book",
+            "cards_price": "€39,99",
+            "card_url": "shopify:\/\/collections\/all",
+            "link_title": "Add to cart"
+          }
+        },
+        "fd52defe-6003-4978-8ac9-f8086e8bab1b": {
+          "type": "product_item",
+          "settings": {
+            "card_img": "shopify:\/\/shop_images\/shop-3-img.png",
+            "cards_title": "Jolly Baby - 6 pages Mini Quiet Book",
+            "cards_price": "€39,99",
+            "card_url": "shopify:\/\/collections\/all",
+            "link_title": "Add to cart"
+          }
+        },
+        "3956fa36-8b3a-454d-87fb-1a821d2c9f94": {
+          "type": "product_item",
+          "settings": {
+            "card_img": "shopify:\/\/shop_images\/shop-4-img.png",
+            "cards_title": "Globetrotter - Quiet Book",
+            "cards_price": "€79,99",
+            "card_url": "shopify:\/\/collections\/all",
+            "link_title": "Add to cart"
+          }
+        },
+        "776e0da2-2a80-4ce8-8c0f-5d3cbe2afa05": {
+          "type": "product_item",
+          "settings": {
+            "card_img": "shopify:\/\/shop_images\/shop-2-img.png",
+            "cards_title": "Little Bee - 6 Pages Mini Quiet Book",
+            "cards_price": "€39,99",
+            "card_url": "shopify:\/\/collections\/all",
+            "link_title": "Add to cart"
+          }
+        }
+      },
+      "block_order": [
+        "68c4eb5b-bbcf-47c7-b121-338843489824",
+        "81945b15-f661-4c71-b5fa-2ed4caf95fb6",
+        "fd52defe-6003-4978-8ac9-f8086e8bab1b",
+        "3956fa36-8b3a-454d-87fb-1a821d2c9f94",
+        "776e0da2-2a80-4ce8-8c0f-5d3cbe2afa05"
+      ],
+      "settings": {
+        "title": "Shop Our Bestseller"
+      }
+    },
+    "ca22a9cd-6fdf-4992-94c3-432a51a2b41a": {
+      "type": "favorite",
+      "blocks": {
+        "372dd9e0-5965-471b-bb0a-e7138adac6a5": {
+          "type": "favorite_item",
+          "settings": {
+            "favorite_img": "shopify:\/\/shop_images\/f-image-l_c1ea4174-56bc-4aad-aab5-afb50fd04586.png",
+            "favorite_subtitle": "The Favorite Over Partners",
+            "favorite_title": "Angelina Bork",
+            "favorite_description": "Brings' color in the children's room but also ideally suited for the living room or bedroom. With our hand-woven wall rug, the home becomes even more of a feel-good oasis."
+          }
+        },
+        "2bd1d06c-e79d-4050-88c8-07623f2f79d3": {
+          "type": "favorite_item",
+          "settings": {
+            "favorite_img": "shopify:\/\/shop_images\/f-image-r_d3695927-7f2d-4c5a-8c04-34a47115694c.png",
+            "favorite_subtitle": "The Favorite Over Partners",
+            "favorite_title": "Monica Rendel",
+            "favorite_description": "Brings' color in the children's room but also ideally suited for the living room or bedroom. With our hand-woven wall rug, the home becomes even more of a feel-good oasis."
+          }
+        },
+        "3de4d19a-9e48-457f-8959-541edac926a5": {
+          "type": "favorite_item",
+          "settings": {
+            "favorite_img": "shopify:\/\/shop_images\/f-image-l_c1ea4174-56bc-4aad-aab5-afb50fd04586.png",
+            "favorite_subtitle": "The Favorite Over Partners",
+            "favorite_title": "Angelina Bork",
+            "favorite_description": "Brings' color in the children's room but also ideally suited for the living room or bedroom. With our hand-woven wall rug, the home becomes even more of a feel-good oasis."
+          }
+        },
+        "ca656a7f-848f-48f5-a6f2-ea0f6a5ad280": {
+          "type": "favorite_item",
+          "settings": {
+            "favorite_img": "shopify:\/\/shop_images\/f-image-r_d3695927-7f2d-4c5a-8c04-34a47115694c.png",
+            "favorite_subtitle": "The Favorite Over Partners",
+            "favorite_title": "Monica Rendel",
+            "favorite_description": "Brings' color in the children's room but also ideally suited for the living room or bedroom. With our hand-woven wall rug, the home becomes even more of a feel-good oasis."
+          }
+        }
+      },
+      "block_order": [
+        "372dd9e0-5965-471b-bb0a-e7138adac6a5",
+        "2bd1d06c-e79d-4050-88c8-07623f2f79d3",
+        "3de4d19a-9e48-457f-8959-541edac926a5",
+        "ca656a7f-848f-48f5-a6f2-ea0f6a5ad280"
+      ],
+      "settings": {
+      }
+    },
+    "936dfde1-3fb7-4852-a913-cbe4e27d049b": {
+      "type": "about-us",
+      "blocks": {
+        "cbdd2f09-5353-462d-bfc9-acffc9a428cc": {
+          "type": "slider_item",
+          "settings": {
+            "navlink_title": "Meet the Jolly Family",
+            "navlink_url": "",
+            "about_title": "Meet the Jolly Family!",
+            "about_description": "About our story, values & mission",
+            "slider_img": "shopify:\/\/shop_images\/about-us-1_d1d8df77-3f8b-4ff8-81c0-60282cac2504.png",
+            "link_url": "",
+            "link_title": "learn more"
+          }
+        },
+        "8a451427-4008-4d8c-b85c-4f28458b3dc9": {
+          "type": "slider_item",
+          "settings": {
+            "navlink_title": "Meet the Team",
+            "navlink_url": "",
+            "about_title": "Meet the Team",
+            "about_description": "About our story, values & mission",
+            "slider_img": "shopify:\/\/shop_images\/about-us-1_d1d8df77-3f8b-4ff8-81c0-60282cac2504.png",
+            "link_url": "",
+            "link_title": "learn more"
+          }
+        },
+        "e84d6c36-1f71-4800-af0a-b203b7fe8864": {
+          "type": "slider_item",
+          "settings": {
+            "navlink_title": "Meet the Production",
+            "navlink_url": "",
+            "about_title": "Meet the Production Team",
+            "about_description": "About our story, values & mission",
+            "slider_img": "shopify:\/\/shop_images\/about-us-2_f4869b2e-dca2-41f3-9458-617b14baa957.png",
+            "link_url": "",
+            "link_title": "learn more"
+          }
+        }
+      },
+      "block_order": [
+        "cbdd2f09-5353-462d-bfc9-acffc9a428cc",
+        "8a451427-4008-4d8c-b85c-4f28458b3dc9",
+        "e84d6c36-1f71-4800-af0a-b203b7fe8864"
+      ],
+      "settings": {
+      }
+    },
+    "b0436072-9038-466b-9d55-2c42e8f039a4": {
+      "type": "categories",
+      "blocks": {
+        "780838d7-e6ff-4fbe-82a5-8ba2879da5b2": {
+          "type": "categories_item",
+          "settings": {
+            "items_img": "shopify:\/\/shop_images\/categories-img-1_2d2bfeea-feb9-40c6-a671-2a62f318da27.png",
+            "items_title": "Quiet Books",
+            "items_url": "shopify:\/\/collections\/all"
+          }
+        },
+        "93672f5d-3703-4dc9-9709-549f7e075e62": {
+          "type": "categories_item",
+          "settings": {
+            "items_img": "shopify:\/\/shop_images\/categories-img-2_f2d6d05c-915f-4e21-bd32-3882171bba0f.png",
+            "items_title": "Mini Quiet Books",
+            "items_url": "shopify:\/\/collections\/all"
+          }
+        },
+        "4194c254-267e-4b7b-8ed7-943b3d60249e": {
+          "type": "categories_item",
+          "settings": {
+            "items_img": "shopify:\/\/shop_images\/categories-img-3_6cc5f1c7-af3c-46c6-a0a7-c9b73331ec11.png",
+            "items_title": "Booklets",
+            "items_url": "shopify:\/\/collections\/all"
+          }
+        },
+        "d9040c16-accd-4e8d-8c02-90f65dcade43": {
+          "type": "categories_item",
+          "settings": {
+            "items_img": "shopify:\/\/shop_images\/categories-img-4_420ec39b-9258-48e4-bdaa-9e98940a081c.png",
+            "items_title": "Wooden Toys",
+            "items_url": "shopify:\/\/collections\/all"
+          }
+        },
+        "117e97f6-a1ce-43f1-b82e-4c16761bf8ef": {
+          "type": "categories_item",
+          "settings": {
+            "items_img": "shopify:\/\/shop_images\/categories-img-5_d2a2c084-20c2-42ba-8257-bd199bca50f3.png",
+            "items_title": "Wall decorations",
+            "items_url": "shopify:\/\/collections\/all"
+          }
+        },
+        "25ddded6-d6da-4797-8a3a-a34dea2e0571": {
+          "type": "categories_item",
+          "settings": {
+            "items_img": "shopify:\/\/shop_images\/categories-img-2_f2d6d05c-915f-4e21-bd32-3882171bba0f.png",
+            "items_title": "Mini Quiet Books",
+            "items_url": "shopify:\/\/collections\/all"
+          }
+        }
+      },
+      "block_order": [
+        "780838d7-e6ff-4fbe-82a5-8ba2879da5b2",
+        "93672f5d-3703-4dc9-9709-549f7e075e62",
+        "4194c254-267e-4b7b-8ed7-943b3d60249e",
+        "d9040c16-accd-4e8d-8c02-90f65dcade43",
+        "117e97f6-a1ce-43f1-b82e-4c16761bf8ef",
+        "25ddded6-d6da-4797-8a3a-a34dea2e0571"
+      ],
+      "settings": {
+        "title": "Our Categories"
+      }
+    },
+    "edeaa5d9-a79c-4e98-85f5-45faef6f0bcc": {
+      "type": "follow-us",
+      "blocks": {
+        "241f4863-689d-49c7-a418-a030b11ee22c": {
+          "type": "slider_item",
+          "settings": {
+            "insta-items_img": "shopify:\/\/shop_images\/follow-us-image-1.png",
+            "insta-img_url": "shopify:\/\/collections\/all"
+          }
+        },
+        "27f0f3fc-5a2d-4525-927c-2b753eac3daf": {
+          "type": "slider_item",
+          "settings": {
+            "insta-items_img": "shopify:\/\/shop_images\/follow-us-image-2.png",
+            "insta-img_url": "shopify:\/\/collections\/all"
+          }
+        },
+        "74c74cd0-57ed-4e6b-baea-6f360a4808fc": {
+          "type": "slider_item",
+          "settings": {
+            "insta-items_img": "shopify:\/\/shop_images\/follow-us-image-3.png",
+            "insta-img_url": ""
+          }
+        },
+        "02fe426f-673e-4e1e-81f3-009f0aa90454": {
+          "type": "slider_item",
+          "settings": {
+            "insta-items_img": "shopify:\/\/shop_images\/follow-us-image-4.png",
+            "insta-img_url": "shopify:\/\/collections\/all"
+          }
+        },
+        "04eee032-4055-4c1b-9a13-449bf5166b89": {
+          "type": "slider_item",
+          "settings": {
+            "insta-items_img": "shopify:\/\/shop_images\/follow-us-image-5.png",
+            "insta-img_url": "shopify:\/\/collections\/all"
+          }
+        },
+        "e317d254-99e0-48ed-bce4-df16376d93df": {
+          "type": "slider_item",
+          "settings": {
+            "insta-items_img": "shopify:\/\/shop_images\/follow-us-image-6.png",
+            "insta-img_url": ""
+          }
+        },
+        "3b1a3b43-a3d1-42dd-81f5-ce471bd4616f": {
+          "type": "slider_item",
+          "settings": {
+            "insta-items_img": "shopify:\/\/shop_images\/follow-us-image-3.png",
+            "insta-img_url": "shopify:\/\/collections\/all"
+          }
+        }
+      },
+      "block_order": [
+        "241f4863-689d-49c7-a418-a030b11ee22c",
+        "27f0f3fc-5a2d-4525-927c-2b753eac3daf",
+        "74c74cd0-57ed-4e6b-baea-6f360a4808fc",
+        "02fe426f-673e-4e1e-81f3-009f0aa90454",
+        "04eee032-4055-4c1b-9a13-449bf5166b89",
+        "e317d254-99e0-48ed-bce4-df16376d93df",
+        "3b1a3b43-a3d1-42dd-81f5-ce471bd4616f"
+      ],
+      "settings": {
+        "title": "Follow us",
+        "description": "in our journey in helping children get to their full potential, one book at a time!",
+        "insta_title": "@jollydesigns",
+        "insta_url": ""
+      }
+    }
+  },
+  "order": [
+    "1664873050c36bf10b",
+    "83f07686-412f-4023-bcab-92664040f6ab",
+    "c766b9e7-be25-414f-aff5-76c8db35727f",
+    "76ff86ff-fdc9-4843-8191-b5b4b9eddcd6",
+    "ca22a9cd-6fdf-4992-94c3-432a51a2b41a",
+    "936dfde1-3fb7-4852-a913-cbe4e27d049b",
+    "b0436072-9038-466b-9d55-2c42e8f039a4",
+    "edeaa5d9-a79c-4e98-85f5-45faef6f0bcc"
+  ]
 }
