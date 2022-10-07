@@ -446,6 +446,40 @@
         "insta_title": "@jollydesigns",
         "insta_url": ""
       }
+    },
+    "a096376c-9d6d-44fb-a721-02bfe75375b5": {
+      "type": "stores",
+      "blocks": {
+        "20389213-7aa1-4a6d-995d-d69bf6194237": {
+          "type": "slider_item",
+          "settings": {
+            "stores_url": "",
+            "select_slide": "first-slide"
+          }
+        },
+        "a4f29972-a54e-436f-aac6-b11549bb1991": {
+          "type": "slider_item",
+          "settings": {
+            "stores_url": "",
+            "select_slide": "second-slide"
+          }
+        },
+        "e84197a8-1bcb-43e9-9eae-4207be54fecd": {
+          "type": "slider_item",
+          "settings": {
+            "stores_url": "",
+            "select_slide": "third-slide"
+          }
+        }
+      },
+      "block_order": [
+        "20389213-7aa1-4a6d-995d-d69bf6194237",
+        "a4f29972-a54e-436f-aac6-b11549bb1991",
+        "e84197a8-1bcb-43e9-9eae-4207be54fecd"
+      ],
+      "settings": {
+        "title": "Retailer Stores"
+      }
     }
   },
   "order": [
@@ -456,6 +490,7 @@
     "ca22a9cd-6fdf-4992-94c3-432a51a2b41a",
     "936dfde1-3fb7-4852-a913-cbe4e27d049b",
     "b0436072-9038-466b-9d55-2c42e8f039a4",
-    "edeaa5d9-a79c-4e98-85f5-45faef6f0bcc"
+    "edeaa5d9-a79c-4e98-85f5-45faef6f0bcc",
+    "a096376c-9d6d-44fb-a721-02bfe75375b5"
   ]
 }
