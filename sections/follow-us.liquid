@@ -1,0 +1,100 @@
+{% comment %} <section class="follow-us"> {% endcomment %}
+	<!-- <div class="container"> -->
+
+	<div class="follow-us__inner">
+	  <div class="follow-us__heading">
+
+		<h3 class="follow-us__title title">
+			{{ section.settings.title }}
+		</h3>
+
+		<p class="follow-us__description">
+			{{ section.settings.description }}
+		</p>
+
+		<div class="follow-us__instagram instagram">
+
+		  <a class="instagram__link" href="{{ section.settings.insta_url }}">
+			{{ section.settings.insta_title }}
+		 </a>
+
+		</div>
+
+	  </div>
+	  <ul class="follow-us__instagram-list">
+
+		{% for block in section.blocks %}
+		<li class="follow-us__instagram-item">
+		  <a class="follow-us__instagram-link" href="{{ block.settings.insta-img_url }}">
+			<img width="" height="" class="follow-us__instagram-image" src="{{ block.settings.insta-items_img | image_url: width: 233, height: 232 }}"
+				alt="{{ block.settings.insta-items_img.alt }}" loading="lazy">
+		  </a>
+		</li>
+		{% endfor %}
+
+	  </ul>
+	</div>
+	
+	<!-- </div> -->
+  {% comment %} </section> {% endcomment %}
+
+  {% schema %}
+  {
+	"name":"Follow us",
+	"tag":"section",
+	"class":"follow-us",
+	"max_blocks":7,
+	"settings":[
+		{
+			"type":"text",
+			"id":"title",
+			"default":"Follow us",
+			"label":"Follow us section title"
+		},
+		{
+			"type":"text",
+			"id":"description",
+			"label":"Follow us section description text",
+			"default":"in our journey in helping children get to their full potential, one book at a time!"
+		},
+		{
+			"type":"text",
+			"id":"insta_title",
+			"label":"Title for your instagram",
+			"default":"@jollydesigns"
+		},
+		{
+			"type":"url",
+			"id":"insta_url",
+			"label":"Add url address for instagram"
+		}
+	],
+	"blocks":[
+	   {
+		  "name":"Slider item",
+		  "type":"slider_item",
+		  "settings":[
+			 {
+				"type":"header",
+				"content":"Image settings"
+			 },
+			 {
+				"type":"image_picker",
+				"id":"insta-items_img",
+				"label":"Add image for slide"
+			 },
+			 {
+				"type":"url",
+				"id":"insta-img_url",
+				"label":"Add url for image"
+			 }
+		  ]
+	   }
+	],
+	"presets":[
+	   {
+		  "name":"Follow us section"
+	   }
+	]
+ }
+  {% endschema %}

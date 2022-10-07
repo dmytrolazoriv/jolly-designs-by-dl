@@ -1,0 +1,97 @@
+{% comment %} <section class="stores"> {% endcomment %}
+
+	<div class="container">
+	  <h3 class="stores__title title">
+		{{ section.settings.title }}
+	  </h3>
+
+	  <ul class="stores__list">
+
+		{% for block in section.blocks %}
+		<li class="stores__item">
+			{% case block.settings.select_slide %}
+				{% when 'first-slide' %}
+					{% render 'stores-slide-first' %}
+				{% when 'second-slide' %}
+					{% render 'stores-slide-second' %}
+				{% when 'third-slide' %}
+					{% render 'stores-slide-third' %}
+				{% endcase %}
+			{% comment %} <a class="stores__link" href="{{ block.settings.stores_url }}"> {% endcomment %}
+				{% comment %} <img width="" height="" class="stores__image" src="{{ block.settings.stores_img | image_url: width: 212 }}"
+				alt="{{ block.settings.stores_img.alt }}" loading="lazy"> {% endcomment %}
+			{% comment %} </a> {% endcomment %}
+
+		</li>
+	{% endfor %}
+
+	  </ul>
+	</div>
+  {% comment %} </section> {% endcomment %}
+
+
+  {%schema%}
+  {
+	"name":"Stores",
+	"tag":"section",
+	"class":"stores",
+	"max_blocks":3,
+	"settings":[
+	   {
+		  "type":"text",
+		  "id":"title",
+		  "label":"Title for section",
+		  "default":"Retailer Stores"
+	   }
+	],
+	"blocks":[
+	   {
+		  "name":"Slider item",
+		  "type":"slider_item",
+		  "settings":[
+			 {
+				"type":"header",
+				"content":"Links settings"
+			 },
+			 {
+				"type":"url",
+				"id":"stores_url",
+				"label":"Add url for image slide"
+			 },
+			 {
+				"type":"header",
+				"content":"Slider settings"
+			 },
+			 {
+				"type":"select",
+				"id":"select_slide",
+				"label":"Select slide",
+				"options":[
+				   {
+					  "group":"first slide",
+					  "value":"first-slide",
+					  "label":"first slide"
+				   },
+				   {
+					  "group":"second slide",
+					  "value":"second-slide",
+					  "label":"second slide"
+				   },
+				   {
+					  "group":"third slide",
+					  "value":"third-slide",
+					  "label":"third slide"
+				   }
+				],
+				"default":"first-slide"
+			 }
+		  ]
+	   }
+	],
+	"presets":[
+	   {
+		  "name":"Stores section"
+	   }
+	]
+ }
+  {%endschema%}
