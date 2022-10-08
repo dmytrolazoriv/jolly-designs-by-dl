@@ -71,22 +71,6 @@
 
 					<li class="service__actions-item">
 						<a class="service__link" href="#">
-							{% if cart == 'cart' %}
-								{% render 'icon-cart' %}
-							{% endif %}
-							<span class="service__fallback-text">
-								{% assign counter_fallback = 'Shopping cart' %}
-								{{ counter_fallback }}
-							</span>
-							<span class="service__counter">
-							{% assign counter_first = 6 %}
-							{{ counter_first }}
-							</span>
-						</a>
-					</li>
-
-					<li class="service__actions-item">
-						<a class="service__link" href="#">
 							{% if heart-outline == 'heart-outline' %}
 								{% render 'icon-heart-outline' %}
 							{% endif %}
@@ -96,6 +80,22 @@
 							</span>
 							<span class="service__counter">
 							{% assign counter_first = 2 %}
+							{{ counter_first }}
+							</span>
+						</a>
+					</li>
+
+					<li class="service__actions-item">
+						<a class="service__link" href="#">
+							{% if cart == 'cart' %}
+								{% render 'icon-cart' %}
+							{% endif %}
+							<span class="service__fallback-text">
+								{% assign counter_fallback = 'Shopping cart' %}
+								{{ counter_fallback }}
+							</span>
+							<span class="service__counter">
+							{% assign counter_first = 6 %}
 							{{ counter_first }}
 							</span>
 						</a>
@@ -278,9 +278,11 @@
 			<h1 class="service__mobile-logo">
 				<a class="service__mobile-image" href="/">
 					{% if section.settings.logo != blank %}
-						<img width="101" height="26" src="{{ section.settings.logo-mobile | image_url: width: 101, height: 26 }}" 
-							alt="{{ section.settings.logo.alt | escape }}" loading="lazy">
+						{% comment %} <img width="" height="" src="{{ section.settings.logo-mobile | image_url: width: 101, height: 26 }}" 
+							alt="{{ section.settings.logo.alt | escape }}" loading="lazy"> {% endcomment %}
 					{% endif %}
+					<img width="" height="" src="{{ 'logo.png' | asset_url }}" 
+						alt="jolly designs logo" loading="lazy">
 				</a>
 			</h1>
 			<ul class="header__mobile-actions mobile-actions">

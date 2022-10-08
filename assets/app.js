@@ -435,6 +435,10 @@ $(function () {
 		dataSlide.last().attr("data-slide", "3");
 		// Set for the first element the active class by default
 		dataSlide.first().addClass('active');
+		// Change the path to the second image favorite-cards__image on resolution 768px
+		if ($(window).width() <= 768) {
+			$('.favorite__cards .favorite-cards__item:odd source').prop('srcset', '/assets/favorite-img-2-768.png');
+		}
 	});
 }); // Dropdown menu
 

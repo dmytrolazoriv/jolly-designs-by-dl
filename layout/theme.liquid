@@ -86,7 +86,8 @@
             <div class="modal__body">
               <div class="modal__content">
                 <a class="modal__logo" href="#">
-                  <img src="/assets/logo.png" alt="jolly designs logo">
+					{{ 'logo.png' | asset_url }}
+                  {% comment %} <img src="/assets/" alt="jolly designs logo"> {% endcomment %}
                 </a>
                 <h3 class="modal__heading">
                   Get 10% on your first order!
