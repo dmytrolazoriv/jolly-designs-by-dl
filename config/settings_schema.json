@@ -1,21 +1,21 @@
 [
-	{
-		"name": "theme_info",
-		"theme_name": "Dawn",
-		"theme_version": "7.0.0",
-		"theme_author": "Shopify",
-		"theme_documentation_url": "https://help.shopify.com/manual/online-store/themes",
-		"theme_support_url": "https://support.shopify.com/"
-	},
-	{
-		"name": "Announcement bar color setting",
-		"settings": [
-			{
-				"type": "color",
-				"id": "announcement-bar_color",
-				"label": "Announcement bar background colors",
-				"default": "#ffe4bb"
-			}
-		]
-	}
+  {
+    "name": "theme_info",
+    "theme_name": "Dawn",
+    "theme_version": "7.0.0",
+    "theme_author": "Shopify",
+    "theme_documentation_url": "https:\/\/help.shopify.com\/manual\/online-store\/themes",
+    "theme_support_url": "https:\/\/support.shopify.com\/"
+  },
+  {
+    "name": "Announcement bar color setting",
+    "settings": [
+      {
+        "type": "color",
+        "id": "announcement-bar_color",
+        "label": "Announcement bar background colors",
+        "default": "#ffe4bb"
+      }
+    ]
+  }
 ]
