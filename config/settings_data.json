@@ -250,15 +250,63 @@
       },
       "footer": {
         "type": "footer",
+        "blocks": {
+          "0976f652-05c6-4923-9a82-11d3878c2984": {
+            "type": "top-company",
+            "settings": {
+              "top-company_title": "Jolly Designs",
+              "top-company_description": "Jolly Designs GmbH stands for unique, magical and wonderful toys. Our products range from Quiet Books, cute accessories for toddlers to wall decor for the nursery.We offer high quality, innovative and responsible products for curious and imaginative little minds."
+            }
+          },
+          "af29cae2-e0d6-47b3-af6a-83c1744db2b8": {
+            "type": "top-info",
+            "settings": {
+              "top-info_title": "Information",
+              "top-info_menu": "top-info-menu"
+            }
+          },
+          "c340f4d2-3db3-4357-9c83-1e44b0ea4c0a": {
+            "type": "top-about",
+            "settings": {
+              "top-about_title": "About Us",
+              "top-about_menu": "top-about-menu"
+            }
+          },
+          "3e19e149-831d-4004-84a6-8ec031690487": {
+            "type": "top-letter",
+            "settings": {
+              "top-letter_title": "Newsletter"
+            }
+          },
+          "8902d7b2-2264-4cc0-aa34-5cc5a594ba8b": {
+            "type": "payment-icons",
+            "settings": {
+              "payment_icons": "american_express"
+            }
+          },
+          "baf2b21a-0525-4e2d-8eb9-0e79065bbfd5": {
+            "type": "copyright",
+            "settings": {
+              "copyright_text": "Jolly Designs"
+            }
+          },
+          "b69f00f0-16c7-4aae-86b2-830936a8c80d": {
+            "type": "social-icons",
+            "settings": {
+              "social_icons": "facebook"
+            }
+          }
+        },
+        "block_order": [
+          "0976f652-05c6-4923-9a82-11d3878c2984",
+          "af29cae2-e0d6-47b3-af6a-83c1744db2b8",
+          "c340f4d2-3db3-4357-9c83-1e44b0ea4c0a",
+          "3e19e149-831d-4004-84a6-8ec031690487",
+          "8902d7b2-2264-4cc0-aa34-5cc5a594ba8b",
+          "baf2b21a-0525-4e2d-8eb9-0e79065bbfd5",
+          "b69f00f0-16c7-4aae-86b2-830936a8c80d"
+        ],
         "settings": {
-          "top-company_title": "Jolly Designs",
-          "top-company_description": "Jolly Designs GmbH stands for unique, magical and wonderful toys. Our products range from Quiet Books, cute accessories for toddlers to wall decor for the nursery.We offer high quality, innovative and responsible products for curious and imaginative little minds.",
-          "top-info_title": "Information",
-          "top-info-menu": "top-info-menu",
-          "top-about_title": "About Us",
-          "top-about-menu": "about-menu",
-          "top-letter_title": "Newsletter",
-          "copyright_text": "Jolly Designs"
         }
       }
     },
