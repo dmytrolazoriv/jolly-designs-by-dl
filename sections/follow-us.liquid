@@ -24,7 +24,7 @@
 	  <ul class="follow-us__instagram-list">
 
 		{% for block in section.blocks %}
-		<li class="follow-us__instagram-item">
+		<li class="follow-us__instagram-item" {{ block.shopify_attributes }}>
 		  <a class="follow-us__instagram-link" href="{{ block.settings.insta-img_url }}">
 			<img width="" height="" class="follow-us__instagram-image" src="{{ block.settings.insta-items_img | image_url: width: 233, height: 232 }}"
 				alt="{{ block.settings.insta-items_img.alt }}" loading="lazy">

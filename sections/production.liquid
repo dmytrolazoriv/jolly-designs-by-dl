@@ -20,7 +20,7 @@
         <ul class="items__list">
 
 		{% for block in section.blocks %}
-          <li class="items__item">
+          <li class="items__item" {{ block.shopify_attributes }}>
 
               <img width="" height="" class="items__image" src="{{ block.settings.icon | image_url: width: 96, height: 96 }}" alt="{{ block.settings.icon.alt }}" loading="lazy">
 
@@ -38,6 +38,9 @@
 		{% endfor %}
 
         </ul>
+		
+		{% comment %} Displayed at resolution less than 749px {% endcomment %}
+		{% render 'prod-mob-slider' %}
 
       </div>
     </div>

@@ -32,7 +32,7 @@
 	  <ul class="about__slider-list">
 
 		{% for block in section.blocks %}
-		<li class="about__slider-item">
+		<li class="about__slider-item" {{ block.shopify_attributes }}>
 
 		  <div class="about__slider-header">
 			<h3 class="about__slider-title title">
@@ -81,7 +81,9 @@
 			<source srcset="/assets/about-image-1-425.png" media="(max-width: 425px)">
 			<source srcset="/assets/about-image-1-749.png" media="(max-width: 749px)">
 			<source srcset="/assets/about-image-1-768.png" media="(max-width: 768px)">
-			<img src="/assets/about-image-1.png" alt="">
+			{% comment %} <img src="/assets/about-image-1.png" alt=""> {% endcomment %}
+			{% comment %} {{ 'about-image-1.png' | image_url | image_tag }} {% endcomment %}
+			<img width="" height="" src="{{ block.settings.slider_img | image_url: width: 1062, height: 597 }}" alt="{{ block.settings.slider_img.alt }}" loading="lazy">
 		  </picture>
 		  <a class="about__slider-link" href="">
 			learn more
@@ -108,7 +110,9 @@
 			<source srcset="/assets/about-image-2-425.png" media="(max-width: 425px)">
 			<source srcset="/assets/about-image-2-749.png" media="(max-width: 749px)">
 			<source srcset="/assets/about-image-2-768.png" media="(max-width: 768px)">
-			<img src="/assets/about-image-2.png" alt="">
+			{% comment %} <img src="/assets/about-image-2.png" alt=""> {% endcomment %}
+			{% comment %} {{ 'about-image-2.png' | image_url | image_tag }} {% endcomment %}
+			<img width="" height="" src="{{ block.settings.slider_img | image_url: width: 1062, height: 597 }}" alt="{{ block.settings.slider_img.alt }}" loading="lazy">
 		  </picture>
 		  <a class="about__slider-link" href="">
 			learn more
@@ -135,7 +139,9 @@
 			<source srcset="/assets/about-image-1-425.png" media="(max-width: 425px)">
 			<source srcset="/assets/about-image-1-749.png" media="(max-width: 749px)">
 			<source srcset="/assets/about-image-1-768.png" media="(max-width: 768px)">
-			<img src="/assets/about-image-1.png" alt="">
+			{% comment %} <img src="/assets/about-image-1.png" alt=""> {% endcomment %}
+			{% comment %} {{ 'about-image-1.png' | image_url | image_tag }} {% endcomment %}
+			<img width="" height="" src="{{ block.settings.slider_img | image_url: width: 1062, height: 597 }}" alt="{{ block.settings.slider_img.alt }}" loading="lazy">
 		  </picture>
 		  <a class="about__slider-link" href="">
 			learn more

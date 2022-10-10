@@ -11,7 +11,7 @@
 		<ol class="making__list">
 
 		{% for block in section.blocks %}
-		  <li class="making__item">
+		  <li class="making__item" {{ block.shopify_attributes }}>
 
 			<h4 class="making__subtitle">
 				{{ block.settings.items_title }}

@@ -1,0 +1,66 @@
+<ul class="items-mobile__list">
+
+	{% for block in section.blocks %}
+	<li class="items-mobile__item">
+		
+		<img width="" height="" class="items-mobile__image" src="{{ block.settings.items-mob_img | image_url: width: 96, height: 96 }}" alt="{{ block.settings.items-mob_img.alt }}" loading="lazy">
+
+		{%- if block.settings.items-mob_title != blank -%}
+		<h4 class="items__title">
+			{{ block.settings.items-mob_title }}
+		</h4>
+		{%- endif -%}
+
+		{%- if block.settings.items-mob_description != blank -%}
+		<p class="items-mobile__description">
+			{{ block.settings.items-mob_description | truncatewords: 145 }}
+		</p>
+		{%- endif -%}
+	</li>
+	{% endfor %}
+
+</ul>
+
+{% schema %}
+{
+	"name": "Production mobile slider",
+	"blocks": [
+		{
+			"type":"header",
+			"name":"Add mobile slider item",
+			"settings": [
+				{
+					"type":"header",
+					"content":"Slider image settings"
+				 },
+				 {
+					"type":"image_picker",
+					"id":"items-mob_img",
+					"label":"Image for production mobile slider"
+				 },
+				 {
+					"type":"header",
+					"content":"Slider text settings"
+				 },
+				 {
+					"type":"text",
+					"id":"items-mob_title",
+					"default":"Title text",
+					"label":"Title for first slide item"
+				 },
+				 {
+					"type": "text",
+					"id": "items-mob_description",
+					"default": "Description text",
+					"label":"Description text for first slide item"
+				}
+			]
+		}
+	],
+	"presets":[
+		{
+		   "name":"Production mobile slider"
+		}
+	 ]
+}
+{% endschema %}

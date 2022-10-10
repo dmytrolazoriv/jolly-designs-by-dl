@@ -527,7 +527,7 @@
 			</div>
 			<ul class="main-slider__list">
 				{% for block in section.blocks %}
-				<li class="main-slider__item">
+				<li class="main-slider__item" {{ block.shopify_attributes }}>
 					<picture class="main-slider__picture">
 						<source srcset="/assets/image-749.jpg" media="(max-width: 630px)">
 						<source srcset="/assets/image-1199.jpg" media="(max-width: 1199px)">

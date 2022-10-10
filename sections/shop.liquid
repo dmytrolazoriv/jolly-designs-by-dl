@@ -9,7 +9,7 @@
 	  <ul class="shop__items cards">
 
 		{% for block in section.blocks %}
-		<li class="cards__item">
+		<li class="cards__item" {{ block.shopify_attributes }}>
 		  <span class="cards__cart-count"></span>
 
 		  <img width="" height="" class="cards__image" src="{{ block.settings.card_img | image_url: width: 296, height: 302 }}"

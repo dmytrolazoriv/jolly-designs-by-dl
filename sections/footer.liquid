@@ -2,40 +2,58 @@
 
 <footer class="footer">
 	<div class="container">
+		
 		<div class="footer__inner">
+			
 			<div class="footer__top">
-				<div class="footer__top-company top-company">
-				
-					<h4 class="footer__title top-company__title">
-						<span>{{- section.settings.top-company_title -}}</span> Ltd.
-					</h4> 
+				{%- for block in section.blocks -%}
 
+				{%- case block.type -%}
+
+				{%- when 'top-company' -%}
+				{% comment %} First block {% endcomment %}
+				<div class="footer__top-company top-company" {{ block.shopify_attributes }}>
+
+					<h4 class="footer__title top-company__title">
+						<span>{{- block.settings.top-company_title -}}</span>
+					</h4> 
+					
 					<p class="top-company__description">
-						{{- section.settings.top-company_description -}}
+						{{- block.settings.top-company_description -}}
 					</p>
+
 				</div>
-				<div class="footer__top-info top-info">
+
+				{%- when 'top-info' -%}
+				{% comment %} Second block {% endcomment %}
+				<div class="footer__top-info top-info" {{ block.shopify_attributes }}>
+
 					<h4 class="footer__title top-info__title">
-						{{- section.settings.top-info_title -}}
+						{{- block.settings.top-info_title -}}
 					</h4>
+					
 					<ul class="top-info__list">
-				
-					{% for link in linklists.top-info-menu.links %}
+						{% for link in block.settings.top-info_menu.links %}
 						<li class="top-info__item">
 							<a class="top-info__link" href="{{ link.url }}">
 								{{ link.title }}
 							</a>
 						</li>
-					{% endfor %}
+						{% endfor %}
 
 					</ul>
 				</div>
-				<div class="footer__top-about top-about">
+
+				{%- when 'top-about' -%}
+				{% comment %} Third block {% endcomment %}
+				<div class="footer__top-about top-about" {{ block.shopify_attributes }}>
+
 					<h4 class="footer__title top-about__title">
-						{{- section.settings.top-about_title -}}
+						{{- block.settings.top-about_title -}}
 					</h4>
+
 					<ul class="top-about__list">
-						{% for link in linklists.top-about-menu.links %}
+						{% for link in block.settings.top-about_menu.links %}
 						<li class="top-about__item">
 							<a class="top-about__link" href="{{ link.url }}">
 								{{ link.title }}
@@ -45,9 +63,13 @@
 
 					</ul>
 				</div>
-				<div class="footer__top-letter top-letter">
+
+				{%- when 'top-letter' -%}
+				{% comment %} Fourth block {% endcomment %}
+				<div class="footer__top-letter top-letter" {{ block.shopify_attributes }}>
+
 					<h4 class="footer__title top-letter__title">
-						{{- section.settings.top-letter_title -}}
+						{{- block.settings.top-letter_title -}}
 					</h4>
 
 					{%- form 'customer', class: 'top-letter__form' -%}
@@ -63,32 +85,91 @@
 
 					<div class="top-letter__links-wrapper">
 						{{ 'Create account' | customer_register_link | replace: '<a', '<a class="top-letter__link"' }}
-
 						{{ 'B2B Log-in' | customer_login_link | replace: '<a', '<a class="top-letter__link"' }}
 					</div>
 				</div>
+				{%- endcase -%}
+			{% endfor %}
 			</div>
+		
+
 			<div class="footer__bottom">
-				<div class="footer__payment-icons">
+				{%- for block in section.blocks -%}
+					{%- case block.type -%}
+
+				{%- when 'payment-icons' -%}
+				{% comment %} Fifth block {% endcomment %}
+				<div class="footer__payment-icons" {{ block.shopify_attributes }}>
 					<span class="visually-hidden">Payment methods</span>
 					<ul class="payment-icons__list">
 						{% render 'payment-icons' %}
+						{% comment %} {% for block in section.blocks %}
+						<li class="payment-icons__item">
+							{% case block.settings.payment_icons %}
+								{% when 'american_express' %}
+									{% render 'icon-american_express' %}
+								{% when 'apple_pay' %}
+									{% render 'icon-apple_pay' %}
+								{% when 'google_pay' %}
+									{% render 'icon-google_pay' %}
+								{% when 'klarna_bank' %}
+									{% render 'icon-klarna_bank' %}
+								{% when 'maestro' %}
+									{% render 'icon-maestro' %}
+								{% when 'mastercard' %}
+									{% render 'icon-mastercard' %}
+								{% when 'paypal' %}
+									{% render 'icon-paypal' %}
+								{% when 'shopify_pay' %}
+									{% render 'icon-shopify_pay' %}
+								{% when 'visa' %}
+									{% render 'icon-visa' %}
+								{% endcase %}
+						</li>
+					{% endfor %} {% endcomment %}
 					</ul>
 				</div>
-				<div class="footer__copyright copyright">
+
+				{%- when 'copyright' -%}
+				{% comment %} Sixth block {% endcomment %}
+				<div class="footer__copyright copyright" {{ block.shopify_attributes }}>
 					<small class="copyright__content">
 						&copy; {{ 'now' | date: "%Y" }}
 					<a href="/" title="copyright">
-						{{ section.settings.copyright_text }}
+						{{ block.settings.copyright_text }}
 					</a>
 				</small>
 				</div>
-				<div class="footer__socials socials">
+
+				{%- when 'social-icons' -%}
+				{% comment %} Seventh block {% endcomment %}
+				<div class="footer__socials socials" {{ block.shopify_attributes }}>
 					<ul class="socials__icons-list">
 						{% render 'social-icons' %}
+						{% comment %} {% for block in section.blocks %}
+							<li class="socials__icons-item">
+								{% case block.settings.social_icons %}
+									{% when 'facebook' %}
+										{% render 'icon-facebook' %}
+									{% when 'twitter' %}
+										{% render 'icon-twitter' %}
+									{% when 'pinterest' %}
+										{% render 'icon-pinterest' %}
+									{% when 'instagram' %}
+										{% render 'icon-instagram' %}
+									{% when 'etsy' %}
+										{% render 'icon-etsy' %}
+									{% when 'youtube' %}
+										{% render 'icon-youTube' %}
+									{% endcase %}
+							</li>
+						{% endfor %} {% endcomment %}
 					</ul>
 				</div>
+
 			</div>
+			{%- endcase -%}
+			{% endfor %}
 		</div>
 	</div>
 </footer>
@@ -96,73 +177,171 @@
 {% schema %}
 {
 	"name":"Footer",
-	"settings": [
-		{
-			"type":"header",
-			"content":"Footer first title"
-		 },
-		 {
-			"type":"text",
-			"id":"top-company_title",
-			"label":"Add first footer title",
-			"default":"Jolly Designs"
-		 },
-		 {
-			"type": "text",
-			"id": "top-company_description",
-			"label": "Add description text for first footer title",
-			"default":"Description text for first footer title"
-		},
-		{
-			"type":"header",
-			"content":"Information menu settings"
-		 },
-		 {
-			"type": "text",
-			"id": "top-info_title",
-			"label": "Add second footer title",
-			"default": "Information"
-		},
-		{
-			"type":"link_list",
-			"id":"top-info-menu",
-			"label":"Information menu"
-		 },
-		{
-			"type":"header",
-			"content":"About Us menu settings"
-		 },
-		 {
-			"type": "text",
-			"id": "top-about_title",
-			"label": "Add third footer title",
-			"default": "About Us"
-		},
-		{
-			"type":"link_list",
-			"id":"top-about-menu",
-			"label":"About Us menu"
-		 },
-		 {
-			"type":"header",
-			"content":"Newsletter form settings"
-		 },
-		 {
-			"type": "text",
-			"id": "top-letter_title",
-			"label": "Add fourth footer title",
-			"default": "Newsletter"
-		},
-		{
-			"type": "header",
-			"content": "Copyright settings"
-		},
-		{
-			"type": "text",
-			"id": "copyright_text",
-			"label": "Add your copyright text",
-			"default": "Jolly Designs"
-		}
+	"blocks":[
+	   {
+		  "type":"top-company",
+		  "name":"Footer first menu",
+		  "settings":[
+			 {
+				"type":"text",
+				"id":"top-company_title",
+				"label":"Add first footer title",
+				"default":"Jolly Designs"
+			 },
+			 {
+				"type":"text",
+				"id":"top-company_description",
+				"label":"Add description text for first footer title",
+				"default":"Description text for first footer title"
+			 }
+		  ]
+	   },
+	   {
+		  "type":"top-info",
+		  "name":"Footer second menu",
+		  "settings":[
+			 {
+				"type":"text",
+				"id":"top-info_title",
+				"label":"Add second footer title",
+				"default":"Information"
+			 },
+			 {
+				"type":"link_list",
+				"id":"top-info_menu",
+				"label":"Information menu"
+			 }
+		  ]
+	   },
+	   {
+		  "type":"top-about",
+		  "name":"Footer third menu",
+		  "settings":[
+			 {
+				"type":"text",
+				"id":"top-about_title",
+				"label":"Add third footer title",
+				"default":"About Us"
+			 },
+			 {
+				"type":"link_list",
+				"id":"top-about_menu",
+				"label":"About Us menu"
+			 }
+		  ]
+	   },
+	   {
+		  "type":"top-letter",
+		  "name":"Footer fourth menu",
+		  "settings":[
+			 {
+				"type":"text",
+				"id":"top-letter_title",
+				"label":"Add fourth footer title",
+				"default":"Newsletter"
+			 }
+		  ]
+	   },
+	   {
+		  "type":"payment-icons",
+		  "name":"Footer fifth menu",
+		  "settings":[
+			 {
+				"type":"select",
+				"id":"payment_icons",
+				"label":"Select icon",
+				"options":[
+				   {
+					  "value":"american_express",
+					  "label":"American Express"
+				   },
+				   {
+					  "value":"apple_pay",
+					  "label":"Apple Pay"
+				   },
+				   {
+					  "value":"google_pay",
+					  "label":"Google Pay"
+				   },
+				   {
+					  "value":"klarna_bank",
+					  "label":"Klarna Bank"
+				   },
+				   {
+					  "value":"maestro",
+					  "label":"Maestro"
+				   },
+				   {
+					  "value":"mastercard",
+					  "label":"Mastercard"
+				   },
+				   {
+					  "value":"paypal",
+					  "label":"PayPal"
+				   },
+				   {
+					  "value":"shopify_pay",
+					  "label":"Shop Pay"
+				   },
+				   {
+					  "value":"visa",
+					  "label":"Visa"
+				   }
+				],
+				"default":"american_express"
+			 }
+		  ]
+	   },
+	   {
+		  "type":"copyright",
+		  "name":"Copyright settings",
+		  "settings":[
+			 {
+				"type":"text",
+				"id":"copyright_text",
+				"label":"Add your copyright text",
+				"default":"Jolly Designs"
+			 }
+		  ]
+	   },
+	   {
+		  "type":"social-icons",
+		  "name":"Social icons",
+		  "settings":[
+			 {
+				"type":"select",
+				"id":"social_icons",
+				"label":"Select icon",
+				"options":[
+				   {
+					  "value":"facebook",
+					  "label":"Facebook"
+				   },
+				   {
+					  "value":"twitter",
+					  "label":"Twitter"
+				   },
+				   {
+					  "value":"pinterest",
+					  "label":"Pinterest"
+				   },
+				   {
+					  "value":"instagram",
+					  "label":"Instagram"
+				   },
+				   {
+					  "value":"etsy",
+					  "label":"Etsy"
+				   },
+				   {
+					  "value":"youtube",
+					  "label":"YouTube"
+				   }
+				],
+				"default":"facebook"
+			 }
+		  ]
+	   }
 	]
  }
 {% endschema %}

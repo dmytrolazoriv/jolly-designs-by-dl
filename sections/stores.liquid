@@ -8,7 +8,7 @@
 	  <ul class="stores__list">
 
 		{% for block in section.blocks %}
-		<li class="stores__item">
+		<li class="stores__item" {{ block.shopify_attributes }}>
 			{% case block.settings.select_slide %}
 				{% when 'first-slide' %}
 					{% render 'stores-slide-first' %}

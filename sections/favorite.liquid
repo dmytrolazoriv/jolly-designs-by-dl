@@ -14,7 +14,7 @@
 	  <ul class="favorite__cards favorite-cards">
 
 		{% for block in section.blocks %}
-		<li class="favorite-cards__item">
+		<li class="favorite-cards__item" {{ block.shopify_attributes }}>
 		  <picture class="favorite-cards__image">
 			<source media="(max-width:768px)" srcset="/assets/favorite-img-1-768.png">
 			<img width="" height="" class="cards__image" src="{{ block.settings.favorite_img | image_url: width: 300,
