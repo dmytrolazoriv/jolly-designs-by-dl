@@ -110,6 +110,62 @@
         "definition": "are developed by child experts to improve your children's fine motor development"
       }
     },
+    "a8b70724-5963-4f4b-a5cc-9250cf9e6e00": {
+      "type": "production-mobile-slider-section",
+      "blocks": {
+        "17864de1-d6d8-41e8-bd2e-9d7113560dc8": {
+          "type": "header",
+          "settings": {
+            "items-mob_img": "shopify:\/\/shop_images\/production-icon-1_5481e4d8-2e00-4879-b696-8de4522261c9.png",
+            "items-mob_title": "Learning",
+            "items-mob_description": "Our pediatrician-recommended products are a great way for your children to learn, \t\t\t\t\t\t\t\tenhance their fine motor skills and develop their imagination."
+          }
+        },
+        "cf3def7d-140d-436b-8f6b-c2c8d9c9bbff": {
+          "type": "header",
+          "settings": {
+            "items-mob_img": "shopify:\/\/shop_images\/production-icon-3_d770c583-6d72-4501-b787-e84adb6b4a2c.png",
+            "items-mob_title": "Easy to carry",
+            "items-mob_description": "Our light-weight and flexible books will keep your children busy for your long journeys or dinners at the restaurant."
+          }
+        },
+        "a0fded3b-b5a1-498d-b040-09206b7ddaf6": {
+          "type": "header",
+          "settings": {
+            "items-mob_img": "shopify:\/\/shop_images\/production-icon-5_f1cde733-2d4e-4bd1-b207-ed37e2f5fdb5.png",
+            "items-mob_title": "Sustainability",
+            "items-mob_description": "All of our products are plastic-free and fairly produced."
+          }
+        },
+        "5abc0243-7a8e-45c1-a657-38de8e0d2b46": {
+          "type": "header",
+          "settings": {
+            "items-mob_img": "shopify:\/\/shop_images\/production-icon-2_e5fa7f20-a3cb-4ba2-8e8c-ebbd83d252dd.png",
+            "items-mob_title": "Long-lasting products",
+            "items-mob_description": "Our high-quality products can be passed on from generation to generation"
+          }
+        },
+        "c06e77c9-70fc-47a5-986f-2dc42079fc55": {
+          "type": "header",
+          "settings": {
+            "items-mob_img": "shopify:\/\/shop_images\/production-icon-4_f4f2fb51-6130-438a-bef7-742d9331ecd5.png",
+            "items-mob_title": "Versatile toys",
+            "items-mob_description": "Our products can be played in countless unimaginable ways. We offer your children a world of creativity in each of our books."
+          }
+        }
+      },
+      "block_order": [
+        "17864de1-d6d8-41e8-bd2e-9d7113560dc8",
+        "cf3def7d-140d-436b-8f6b-c2c8d9c9bbff",
+        "a0fded3b-b5a1-498d-b040-09206b7ddaf6",
+        "5abc0243-7a8e-45c1-a657-38de8e0d2b46",
+        "c06e77c9-70fc-47a5-986f-2dc42079fc55"
+      ],
+      "settings": {
+        "mob_title": "Our Quiet Books",
+        "mob_definition": "are developed by child experts to improve your children's fine motor development"
+      }
+    },
     "c766b9e7-be25-414f-aff5-76c8db35727f": {
       "type": "making",
       "blocks": {
@@ -485,6 +541,7 @@
   "order": [
     "1664873050c36bf10b",
     "83f07686-412f-4023-bcab-92664040f6ab",
+    "a8b70724-5963-4f4b-a5cc-9250cf9e6e00",
     "c766b9e7-be25-414f-aff5-76c8db35727f",
     "76ff86ff-fdc9-4843-8191-b5b4b9eddcd6",
     "ca22a9cd-6fdf-4992-94c3-432a51a2b41a",
