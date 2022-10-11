@@ -100,9 +100,9 @@
 				{%- when 'payment-icons' -%}
 				{% comment %} Fifth block {% endcomment %}
 				<div class="footer__payment-icons" {{ block.shopify_attributes }}>
-					<span class="visually-hidden">Payment methods</span>
-					<ul class="payment-icons__list">
-						{% render 'payment-icons' %}
+					{% comment %} <span class="visually-hidden">Payment methods</span> {% endcomment %}
+					{% comment %} <ul class="payment-icons__list"> {% endcomment %}
+						{% comment %} {% render 'payment-icons' %} {% endcomment %}
 						{% comment %} {% for block in section.blocks %}
 						<li class="payment-icons__item">
 							{% case block.settings.payment_icons %}
@@ -127,7 +127,83 @@
 								{% endcase %}
 						</li>
 					{% endfor %} {% endcomment %}
-					</ul>
+					{% comment %} </ul> {% endcomment %}
+					{%- if section.settings.show_payment -%}
+						<ul class="payment-icons__list list-unstyled list-social" role="list">
+						  {%- if settings.payment_american_express_link != blank -%}
+							<li class="payment-icons__item">
+							  <a href="{{ settings.payment_american_express_link }}" class="socials__icons-link link">
+								{%- render 'icon-american_express' -%}
+								<span class="visually-hidden">{{ 'general.payment.links.american_express' | t }}</span>
+							  </a>
+							</li>
+						  {%- endif -%}
+						  {%- if settings.payment_apple_pay_link != blank -%}
+							<li class="payment-icons__item">
+							  <a href="{{ settings.payment_apple_pay_link }}" class="socials__icons-link link">
+								{%- render 'icon-apple_pay' -%}
+								<span class="visually-hidden">{{ 'general.payment.links.apple_pay' | t }}</span>
+							  </a>
+							</li>
+						  {%- endif -%}
+						  {%- if settings.payment_google_pay_link != blank -%}
+							<li class="payment-icons__item">
+							  <a href="{{ settings.payment_google_pay_link }}" class="socials__icons-link link">
+								{%- render 'icon-google_pay' -%}
+								<span class="visually-hidden">{{ 'general.payment.links.google_pay' | t }}</span>
+							  </a>
+							</li>
+						  {%- endif -%}
+						  {%- if settings.payment_klarna_bank_link != blank -%}
+							<li class="payment-icons__item">
+							  <a href="{{ settings.payment_klarna_bank_link }}" class="socials__icons-link link">
+								{%- render 'icon-klarna_bank' -%}
+								<span class="visually-hidden">{{ 'general.payment.links.klarna_bank' | t }}</span>
+							  </a>
+							</li>
+						  {%- endif -%}
+						  {%- if settings.payment_maestro_link != blank -%}
+							<li class="payment-icons__item">
+							  <a href="{{ settings.payment_maestro_link }}" class="socials__icons-link link">
+								{%- render 'icon-maestro' -%}
+								<span class="visually-hidden">{{ 'general.payment.links.maestro' | t }}</span>
+							  </a>
+							</li>
+						  {%- endif -%}
+						  {%- if settings.payment_master_link != blank -%}
+							<li class="payment-icons__item">
+							  <a href="{{ settings.payment_master_link }}" class="socials__icons-link link">
+								{%- render 'icon-mastercard' -%}
+								<span class="visually-hidden">{{ 'general.payment.links.master' | t }}</span>
+							  </a>
+							</li>
+						  {%- endif -%}
+						  {%- if settings.payment_paypal_link != blank -%}
+							<li class="payment-icons__item">
+							  <a href="{{ settings.payment_paypal_link }}" class="socials__icons-link link">
+								{%- render 'icon-paypal' -%}
+								<span class="visually-hidden">{{ 'general.payment.links.paypal' | t }}</span>
+							  </a>
+							</li>
+						  {%- endif -%}
+						  {%- if settings.payment_shopify_pay_link != blank -%}
+							<li class="payment-icons__item">
+							  <a href="{{ settings.payment_shopify_pay_link }}" class="socials__icons-link link">
+								{%- render 'icon-shopify_pay' -%}
+								<span class="visually-hidden">{{ 'general.payment.links.shopify_pay' | t }}</span>
+							  </a>
+							</li>
+						  {%- endif -%}
+						  {%- if settings.payment_visa_link != blank -%}
+							<li class="payment-icons__item">
+							  <a href="{{ settings.payment_visa_link }}" class="socials__icons-link link">
+								{%- render 'icon-visa' -%}
+								<span class="visually-hidden">{{ 'general.payment.links.visa' | t }}</span>
+							  </a>
+							</li>
+						  {%- endif -%}
+						</ul>
+					  {%- endif -%}
 				</div>
 
 				{%- when 'copyright' -%}
@@ -144,8 +220,8 @@
 				{%- when 'social-icons' -%}
 				{% comment %} Seventh block {% endcomment %}
 				<div class="footer__socials socials" {{ block.shopify_attributes }}>
-					<ul class="socials__icons-list">
-						{% render 'social-icons' %}
+					{% comment %} <ul class="socials__icons-list">
+						{% render 'social-icons' %} {% endcomment %}
 						{% comment %} {% for block in section.blocks %}
 							<li class="socials__icons-item">
 								{% case block.settings.social_icons %}
@@ -164,7 +240,91 @@
 									{% endcase %}
 							</li>
 						{% endfor %} {% endcomment %}
-					</ul>
+					{% comment %} </ul> {% endcomment %}
+					{%- if section.settings.show_social -%}
+						<ul class="socials__icons-list list-unstyled list-social" role="list">
+						  {%- if settings.social_facebook_link != blank -%}
+							<li class="socials__icons-item">
+							  <a href="{{ settings.social_facebook_link }}" class=" socials__icons-link link ">
+								{%- render 'icon-facebook' -%}
+								<span class="visually-hidden">{{ 'general.social.links.facebook' | t }}</span>
+							  </a>
+							</li>
+						  {%- endif -%}
+						  {%- if settings.social_twitter_link != blank -%}
+							<li class="socials__icons-item">
+							  <a href="{{ settings.social_twitter_link }}" class="socials__icons-link link ">
+								{%- render 'icon-twitter' -%}
+								<span class="visually-hidden">{{ 'general.social.links.twitter' | t }}</span>
+							  </a>
+							</li>
+						  {%- endif -%}
+						  {%- if settings.social_pinterest_link != blank -%}
+							<li class="socials__icons-item">
+							  <a href="{{ settings.social_pinterest_link }}" class=" socials__icons-link link">
+								{%- render 'icon-pinterest' -%}
+								<span class="visually-hidden">{{ 'general.social.links.pinterest' | t }}</span>
+							  </a>
+							</li>
+						  {%- endif -%}
+						  {%- if settings.social_instagram_link != blank -%}
+							<li class="socials__icons-item">
+							  <a href="{{ settings.social_instagram_link }}" class=" socials__icons-link link">
+								{%- render 'icon-instagram' -%}
+								<span class="visually-hidden">{{ 'general.social.links.instagram' | t }}</span>
+							  </a>
+							</li>
+						  {%- endif -%}
+						  {%- if settings.social_etsy_link != blank -%}
+							<li class="socials__icons-item">
+							  <a href="{{ settings.social_etsy_link }}" class="socials__icons-link">
+								{%- render 'icon-bag' -%}
+								<span class="visually-hidden">{{ 'general.social.links.etsy' | t }}</span>
+							  </a>
+							</li>
+						  {%- endif -%}
+						  {%- if settings.social_youtube_link != blank -%}
+							<li class="socials__icons-item">
+							  <a href="{{ settings.social_youtube_link }}" class="socials__icons-link">
+								{%- render 'icon-youtube' -%}
+								<span class="visually-hidden">{{ 'general.social.links.youtube' | t }}</span>
+							  </a>
+							</li>
+						  {%- endif -%}
+						  {%- if settings.social_tiktok_link != blank -%}
+							<li class="socials__icons-item">
+							  <a href="{{ settings.social_tiktok_link }}" class="socials__icons-link link">
+								{%- render 'icon-tiktok' -%}
+								<span class="visually-hidden">{{ 'general.social.links.tiktok' | t }}</span>
+							  </a>
+							</li>
+						  {%- endif -%}
+						  {%- if settings.social_tumblr_link != blank -%}
+							<li class="socials__icons-item">
+							  <a href="{{ settings.social_tumblr_link }}" class="socials__icons-link link">
+								{%- render 'icon-tumblr' -%}
+								<span class="visually-hidden">{{ 'general.social.links.tumblr' | t }}</span>
+							  </a>
+							</li>
+						  {%- endif -%}
+						  {%- if settings.social_snapchat_link != blank -%}
+							<li class="socials__icons-item">
+							  <a href="{{ settings.social_snapchat_link }}" class="socials__icons-link link">
+								{%- render 'icon-snapchat' -%}
+								<span class="visually-hidden">{{ 'general.social.links.snapchat' | t }}</span>
+							  </a>
+							</li>
+						  {%- endif -%}
+						  {%- if settings.social_vimeo_link != blank -%}
+							<li class="socials__icons-item">
+							  <a href="{{ settings.social_vimeo_link }}" class="socials__icons-link">
+								{%- render 'icon-vimeo' -%}
+								<span class="visually-hidden">{{ 'general.social.links.vimeo' | t }}</span>
+							  </a>
+							</li>
+						  {%- endif -%}
+						</ul>
+					  {%- endif -%}
 				</div>
 
 			</div>
@@ -172,11 +332,26 @@
 			{% endfor %}
 		</div>
 	</div>
+	
 </footer>
 
 {% schema %}
 {
 	"name":"Footer",
+	"settings": [
+		{
+			"type": "checkbox",
+			"id": "show_social",
+			"default": true,
+			"label": "t:sections.footer.settings.show_social.label"
+		  },
+		  {
+			"type": "checkbox",
+			"id": "show_payment",
+			"default": true,
+			"label": "t:sections.footer.settings.show_payment.label"
+		}
+	],
 	"blocks":[
 	   {
 		  "type":"top-company",

@@ -1,66 +1,105 @@
+<div class="container">
+
+<div class="production-mobile__description">
+
+	{%- if section.settings.mob_title != blank -%}
+	<h2 class="production-mobile__title title">
+	  {{ section.settings.mob_title | escape }}
+	</h2>
+	{%- endif -%}
+
+	{%- if section.settings.mob_definition != blank -%}
+	<p class="production-mobile__definition">
+		{{- section.settings.mob_definition -}}
+	</p>
+	{%- endif -%}
+
+  </div>
+
 <ul class="items-mobile__list">
 
-	{% for block in section.blocks %}
-	<li class="items-mobile__item">
-		
-		<img width="" height="" class="items-mobile__image" src="{{ block.settings.items-mob_img | image_url: width: 96, height: 96 }}" alt="{{ block.settings.items-mob_img.alt }}" loading="lazy">
+		{% for block in section.blocks %}
+		<li class="items-mobile__item" {{ block.shopify_attributes }}>
+			
+			<img width="" height="" class="items-mobile__image" src="{{ block.settings.items-mob_img | image_url: width: 96, height: 96 }}" alt="{{ block.settings.items-mob_img.alt }}" loading="lazy">
 
-		{%- if block.settings.items-mob_title != blank -%}
-		<h4 class="items__title">
-			{{ block.settings.items-mob_title }}
-		</h4>
-		{%- endif -%}
+			{%- if block.settings.items-mob_title != blank -%}
+			<h4 class="items__title">
+				{{ block.settings.items-mob_title }}
+			</h4>
+			{%- endif -%}
 
-		{%- if block.settings.items-mob_description != blank -%}
-		<p class="items-mobile__description">
-			{{ block.settings.items-mob_description | truncatewords: 145 }}
-		</p>
-		{%- endif -%}
-	</li>
-	{% endfor %}
+			{%- if block.settings.items-mob_description != blank -%}
+			<p class="items-mobile__description">
+				{{ block.settings.items-mob_description | truncatewords: 145 }}
+			</p>
+			{%- endif -%}
+		</li>
+		{% endfor %}
 
-</ul>
+	</ul>
+
+</div>
+
+</div>
 
 {% schema %}
 {
-	"name": "Production mobile slider",
-	"blocks": [
-		{
-			"type":"header",
-			"name":"Add mobile slider item",
-			"settings": [
-				{
-					"type":"header",
-					"content":"Slider image settings"
-				 },
-				 {
-					"type":"image_picker",
-					"id":"items-mob_img",
-					"label":"Image for production mobile slider"
-				 },
-				 {
-					"type":"header",
-					"content":"Slider text settings"
-				 },
-				 {
-					"type":"text",
-					"id":"items-mob_title",
-					"default":"Title text",
-					"label":"Title for first slide item"
-				 },
-				 {
-					"type": "text",
-					"id": "items-mob_description",
-					"default": "Description text",
-					"label":"Description text for first slide item"
-				}
-			]
-		}
+	"name":"Production mobile-slider",
+	"tag":"section",
+	"class":"production production-mobile",
+	"max_blocks":5,
+	"settings":[
+	   {
+		  "type":"text",
+		  "id":"mob_title",
+		  "default":"Our Quiet Books",
+		  "label":"Production title"
+	   },
+	   {
+		  "type":"text",
+		  "id":"mob_definition",
+		  "default":"are developed by child experts to improve your children's fine motor development",
+		  "label":"Production definition"
+	   }
+	],
+	"blocks":[
+	   {
+		  "type":"header",
+		  "name":"Add mobile slider item",
+		  "settings":[
+			 {
+				"type":"header",
+				"content":"Slider image settings"
+			 },
+			 {
+				"type":"image_picker",
+				"id":"items-mob_img",
+				"label":"Image for production mobile slider"
+			 },
+			 {
+				"type":"header",
+				"content":"Slider text settings"
+			 },
+			 {
+				"type":"text",
+				"id":"items-mob_title",
+				"default":"Title text",
+				"label":"Title for first slide item"
+			 },
+			 {
+				"type":"text",
+				"id":"items-mob_description",
+				"default":"Description text",
+				"label":"Description text for first slide item"
+			 }
+		  ]
+	   }
 	],
 	"presets":[
-		{
-		   "name":"Production mobile slider"
-		}
-	 ]
-}
+	   {
+		  "name":"Production mobile slider"
+	   }
+	]
+ }
 {% endschema %}

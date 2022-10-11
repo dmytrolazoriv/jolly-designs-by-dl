@@ -13,7 +13,7 @@
             {% render 'icons-snippet', block: block %}
          {% endfor %} {% endcomment %}
          {% for block in section.blocks %}
-         <li class="announcement-slider__item">
+         <li class="announcement-slider__item" {{ block.shopify_attributes }}>
             {% comment %} <img width="" height="" src="{{ block.settings.icon | image_url: width: 32, height: 32 }}" alt="{{ block.settings.icon.alt }}" loading="lazy"> {% endcomment %}
             {% case block.settings.select_icon %}
                {% when 'car' %}
