@@ -1,14 +1,24 @@
 {
   "current": {
-    "social_facebook_link": "",
-    "social_twitter_link": "",
-    "social_pinterest_link": "",
-    "social_instagram_link": "",
-    "social_youtube_link": "",
+    "social_facebook_link": "https:\/\/facebook.com\/shopify",
+    "social_twitter_link": "https:\/\/twitter.com\/shopify",
+    "social_pinterest_link": "https:\/\/pinterest.com\/shopify",
+    "social_instagram_link": "http:\/\/instagram.com\/shopify",
+    "social_etsy_link": "https:\/\/www.etsy.com\/shopify",
+    "social_youtube_link": "https:\/\/www.youtube.com\/shopify",
     "social_tiktok_link": "",
     "social_tumblr_link": "",
     "social_snapchat_link": "",
     "social_vimeo_link": "",
+    "payment_american_express_link": "https:\/\/www.americanexpress.com\/shopify",
+    "payment_apple_pay_link": "https:\/\/www.apple.com\/apple-pay\/shopify",
+    "payment_google_pay_link": "https:\/\/pay.google.com\/shopify",
+    "payment_klarna_bank_link": "https:\/\/www.klarna.com\/shopify",
+    "payment_maestro_link": "http:\/\/www.mastercard.com\/shopify",
+    "payment_master_link": "http:\/\/www.mastercard.com\/shopify",
+    "payment_paypal_link": "https:\/\/www.paypal.com\/shopify",
+    "payment_shopify_pay_link": "https:\/\/www.shopify.com\/payments",
+    "payment_visa_link": "https:\/\/www.visa.com\/shopify",
     "colors_solid_button_labels": "#ffffff",
     "colors_accent_1": "#121212",
     "gradient_accent_1": "",
@@ -307,6 +317,8 @@
           "b69f00f0-16c7-4aae-86b2-830936a8c80d"
         ],
         "settings": {
+          "show_social": true,
+          "show_payment": true
         }
       }
     },
