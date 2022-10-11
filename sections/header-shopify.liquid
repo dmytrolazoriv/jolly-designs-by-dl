@@ -1,3 +1,5 @@
+{% render 'search-bar' %}
+
 <header class="header">
 	<div class="container">
 		<div class="header__wrapper">
@@ -42,7 +44,11 @@
 					{% assign cart = 'cart' %}
 
 					<li class="service__actions-item">
-						<a class="service__link" href="#">
+						<button type="button" class="btn--link site-header__icon site-header__search-toggle js-drawer-open-top" data-predictive-search-open-drawer>
+							{% render 'icon-search' %}
+							<span class="icon__fallback-text">{{ 'layout.navigation.search' | t }}</span>
+						  </button>
+						{% comment %} <a class="service__link" href="#">
 							{% if magnifying == 'magnifying' %}
 								{% render 'icon-magnifying' %}
 							{% endif %}
@@ -52,7 +58,7 @@
 							</span>
 							<span class="service__counter">
 							</span>
-						</a>
+						</a> {% endcomment %}
 					</li>
 
 					<li class="service__actions-item">

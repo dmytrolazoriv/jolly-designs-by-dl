@@ -2,6 +2,9 @@
 // $( document ).ready(
 // 	function() {
 // 	}
+
+// const { keyBy } = require("lodash");
+
 // );
 $(function () {
 	// First slider announcement-slider__list
@@ -524,3 +527,52 @@ modalWrapper.on('click', function (e) {
 });
 /* Modal Popup */
 //# sourceMappingURL=app.js.map
+
+
+// search bar start
+// $('.js-drawer-open-top').on('click', function (event) {
+// 	$('#SearchDrawer').addClass('js-drawer-open-top');
+// });
+
+$(".search-bar__close").on("click keydown keyup", function (event) {
+	$('#SearchDrawer').removeClass("js-drawer-open-top");
+});
+
+$(".js-drawer-open-top").on("click", function (e) {
+	e.stopPropagation();
+	$("#SearchDrawer").toggleClass("js-drawer-open-top");
+});
+
+$(document).on("click", function (event) {
+	if (!$(event.target).closest('#SearchDrawer').length) {
+		if ($('#SearchDrawer').is(":visible")) {
+			$('#SearchDrawer').removeClass("js-drawer-open-top");
+		}
+	}
+});
+
+// Close on esc keypress
+$(document).on("keyup", function (e) {
+	if ($('#SearchDrawer').hasClass('js-drawer-open-top') && e.keyCode === 27) { // ESC
+		$('#SearchDrawer').removeClass('js-drawer-open-top');
+	}
+})
+
+// $(document).on("click", function (event) {
+// 	var $target = $(event.target);
+// 	if (!$target.closest('#SearchDrawer').length &&
+// 		$('#SearchDrawer').is(":visible")) {
+// 		$('#SearchDrawer').hide();
+// 		console.log(!$target.closest('#SearchDrawer').length);
+// 	}
+// });
+
+
+// $(document).on('click', function (e) {
+// 	var el = $('#SearchDrawer');
+// 	if ($(e.target).closest(el).length) return;
+// 	$('#SearchDrawer').hide();
+// 	console.log($(e.target).closest(el).length);
+// });
+
+// search bar end

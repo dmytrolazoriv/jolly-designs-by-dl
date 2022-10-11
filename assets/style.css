@@ -494,7 +494,8 @@ img {
 .favorite-slider__fallback-text,
 .slider-controls__fallback-text,
 .socials__fallback-text,
-.mobile-actions__fallback-text {
+.mobile-actions__fallback-text,
+.icon__fallback-text {
 	position: absolute;
 	white-space: nowrap;
 	width: 1px;
@@ -506,6 +507,10 @@ img {
 	clip-path: inset(50%);
 	margin: -1px
 }
+
+/* Search bar style start */
+
+/* Search bar style end */
 
 div:is(.header__wrapper) {
 	position: relative;
