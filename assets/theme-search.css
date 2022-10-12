@@ -74,7 +74,7 @@
   - Remove `outline: none` from `.slick-dots li button`
 ==============================================================================*/
 /*================ Slick Slider SCSS ================*/
-.slick-slider {
+/* .slick-slider {
 	position: relative;
 	display: block;
 	box-sizing: border-box;
@@ -175,16 +175,16 @@
 
 .slick-arrow.slick-hidden {
 	display: none;
-}
+} */
 
 /*================ Slick Slider Theme ================*/
-.slick-loading .slick-list {
+/* .slick-loading .slick-list {
 	background: #fff var(--slick-img-url) center center no-repeat;
-}
+} */
 
 /* Icons */
 /* Arrows */
-.slick-prev,
+/* .slick-prev,
 .slick-next {
 	position: absolute;
 	display: block;
@@ -266,10 +266,10 @@
 
 [dir="rtl"] .slick-next:before {
 	content: "←";
-}
+} */
 
 /* Dots */
-.slick-dotted.slick-slider {
+/* .slick-dotted.slick-slider {
 	margin-bottom: 30px;
 }
 
@@ -333,7 +333,7 @@
 .slick-dots li.slick-active button:before {
 	color: #fff;
 	opacity: 0.75;
-}
+} */
 
 /*================ GLOBAL ================*/
 /*============================================================================
@@ -2050,10 +2050,10 @@ ol {
 }
 
 /*================ #Links and Buttons ================*/
-a:not([disabled]):hover,
+/* a:not([disabled]):hover,
 a:focus {
 	color: var(--color-text-focus);
-}
+} */
 
 .password-powered-by a:not([disabled]):hover,
 .password-powered-by a:focus {
@@ -3421,9 +3421,9 @@ hr {
 /*============================================================================
   Slick slider overrides
 ==============================================================================*/
-.slick-dotted.slick-slider {
+/* .slick-dotted.slick-slider {
 	margin-bottom: 0;
-}
+} */
 
 /*================ Slick dots and prev/next pagination ================*/
 .slideshow__arrows .slick-dots {

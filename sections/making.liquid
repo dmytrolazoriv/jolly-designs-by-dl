@@ -1,5 +1,12 @@
 {% comment %} <section class="making"> {% endcomment %}
 
+{% style %}
+  .making__inner::after {
+    background-image: url({{ "making-decorative-1.png" | asset_url }});
+	background-image: {{ section.settings.background_image }}
+  }
+{% endstyle %}
+
 	<div class="container">
 		{%- if section.settings.title != blank -%}
 			<h3 class="making__title title">
@@ -41,7 +48,13 @@
 		  "id":"title",
 		  "default":"How our Quiet Books are made",
 		  "label":"Making title"
-	   }
+	   },
+	   {
+		"type": "checkbox",
+		"id": "background_image",
+		"label": "Show a background image",
+		"default": true
+	  }
 	],
 	"blocks":[
 	   {

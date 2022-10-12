@@ -38,44 +38,40 @@
 					</a>
 				</h1>
 				<ul class="service__actions">
-					{% assign magnifying = 'magnifying' %}
+					{% comment %} {% assign magnifying = 'magnifying' %}
 					{% assign user = 'user' %}
 					{% assign heart-outline = 'heart-outline' %}
-					{% assign cart = 'cart' %}
+					{% assign cart = 'cart' %} {% endcomment %}
 
 					<li class="service__actions-item">
 						<button type="button" class="btn--link site-header__icon site-header__search-toggle js-drawer-open-top" data-predictive-search-open-drawer>
 							{% render 'icon-search' %}
 							<span class="icon__fallback-text">{{ 'layout.navigation.search' | t }}</span>
 						  </button>
-						{% comment %} <a class="service__link" href="#">
-							{% if magnifying == 'magnifying' %}
-								{% render 'icon-magnifying' %}
-							{% endif %}
-							<span class="service__fallback-text">
-								{% assign counter_fallback = 'Favorite' %}
-								{{ counter_fallback }}
-							</span>
-							<span class="service__counter">
-							</span>
-						</a> {% endcomment %}
 					</li>
 
-					<li class="service__actions-item">
+					{% for block in section.blocks %}
+					 <li class="service__actions-item" {{ block.shopify_attributes }}>
 						<a class="service__link" href="#">
-							{% if user == 'user' %}
-								{% render 'icon-user' %}
-							{% endif %}
+							{% case block.settings.service_icons %}
+								{% when 'user' %}
+									{% render 'icon-user' %}
+								{% when 'heart-outline' %}
+									{% render 'icon-heart-outline' %}
+								{% when 'cart' %}
+									{% render 'icon-cart' %}
+								{% endcase %}
 							<span class="service__fallback-text">
-								{% assign counter_fallback = 'Log in' %}
-								{{ counter_fallback }}
+								{{ 'layout.navigation.search' | t }}
 							</span>
-							<span class="service__counter">
+							<span class="service__counter" data-cart-count>
+								{{ cart.item_count }}
 							</span>
 						</a>
 					</li>
+					{% endfor %}
 
-					<li class="service__actions-item">
+					{% comment %} <li class="service__actions-item">
 						<a class="service__link" href="#">
 							{% if heart-outline == 'heart-outline' %}
 								{% render 'icon-heart-outline' %}
@@ -105,7 +101,7 @@
 							{{ counter_first }}
 							</span>
 						</a>
-					</li>
+					</li>  {% endcomment %}
 				
 				</ul>
 			</div>
@@ -499,52 +495,6 @@
 		</div>-->
 		<!-- Mobile categories block -->
 	</div>
-	<div class="main-slider">
-		<!-- <div class="container"> -->
-		<div class="main-slider__holder">
-			<div class="main-slider__actions">
-				<h2 class="main-slider__title title">
-					{{ section.settings.slider_title }}
-				</h2>
-				<a href="" class="main-slider__buy-button button">
-					{{ section.settings.buy-button_text }}
-				</a>
-				<a href="" class="main-slider__about-button button">
-					{{ section.settings.about-button_text }}
-				</a>
-			</div>
-			<div class="main-slider__controls">
-				<button type="button" class="main-slider__control main-slider__control_prev">
-					<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<path fill-rule="evenodd" clip-rule="evenodd"
-							d="M25.8107 9.43934C26.3964 10.0251 26.3964 10.9749 25.8107 11.5607L17.3713 20L25.8107 28.4393C26.3964 29.0251 26.3964 29.9749 25.8107 30.5607C25.2249 31.1464 24.2751 31.1464 23.6893 30.5607L14.1893 21.0607C13.6036 20.4749 13.6036 19.5251 14.1893 18.9393L23.6893 9.43934C24.2751 8.85355 25.2249 8.85355 25.8107 9.43934Z"
-							fill="white" />
-					</svg>
-					<span class="main-slider__fallback-text">Arrow left</span>
-				</button>
-				<button type="button" class="main-slider__control main-slider__control_next">
-					<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<path fill-rule="evenodd" clip-rule="evenodd"
-							d="M14.1893 9.43934C14.7751 8.85355 15.7249 8.85355 16.3107 9.43934L25.8107 18.9393C26.3964 19.5251 26.3964 20.4749 25.8107 21.0607L16.3107 30.5607C15.7249 31.1464 14.7751 31.1464 14.1893 30.5607C13.6036 29.9749 13.6036 29.0251 14.1893 28.4393L22.6287 20L14.1893 11.5607C13.6036 10.9749 13.6036 10.0251 14.1893 9.43934Z"
-							fill="white" />
-					</svg>
-					<span class="main-slider__fallback-text">Arrow right</span>
-				</button>
-			</div>
-			<ul class="main-slider__list">
-				{% for block in section.blocks %}
-				<li class="main-slider__item" {{ block.shopify_attributes }}>
-					<picture class="main-slider__picture">
-						<source srcset="/assets/image-749.jpg" media="(max-width: 630px)">
-						<source srcset="/assets/image-1199.jpg" media="(max-width: 1199px)">
-						<img width="1440" height="612" src="{{ block.settings.slide_img | image_url: width: 1440, height: 612 }}" alt="{{ block.settings.slide_img.alt | escape }}" loading="lazy">
-					</picture>
-				</li>
-				{% endfor %}
-			</ul>
-		</div>
-		<!-- </div> -->
-	</div>
 </header>
 
 {% schema %}
@@ -656,22 +606,14 @@
 		  ]
 	   },
 	   {
-		  "type":"list_item",
-		  "name":"Services icons",
+		  "type":"service_icons",
+		  "name":"Service icons",
 		  "settings":[
 			 {
-				"type":"header",
-				"content":"Icon settings"
-			 },
-			 {
 				"type":"select",
-				"id":"service_icon",
+				"id":"service_icons",
 				"label":"Select icon",
 				"options":[
-				   {
-					  "value":"magnifying",
-					  "label":"Magnifying"
-				   },
 				   {
 					  "value":"user",
 					  "label":"User"
@@ -685,7 +627,7 @@
 					  "label":"Cart"
 				   }
 				],
-				"default":"cart"
+				"default":"user"
 			 }
 		  ]
 	   }

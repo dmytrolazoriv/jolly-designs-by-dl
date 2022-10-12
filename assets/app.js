@@ -493,7 +493,6 @@ window.onclick = function (event) {
 /* Modal Popup */
 // Cache selectors
 
-
 var html = $('html'),
 	demo = $('.demo'),
 	modal = $('.modal'),
@@ -534,7 +533,8 @@ modalWrapper.on('click', function (e) {
 // 	$('#SearchDrawer').addClass('js-drawer-open-top');
 // });
 
-$(".search-bar__close").on("click keydown keyup", function (event) {
+// $(".search-bar__close").on("click keydown keyup", function (event) {
+$(".search-bar__close").on("click", function (event) {
 	$('#SearchDrawer').removeClass("js-drawer-open-top");
 });
 

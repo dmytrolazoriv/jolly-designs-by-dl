@@ -2013,7 +2013,7 @@ div:is(.header__wrapper) {
 .favorite-cards__item {
 	text-align: center;
 	padding: 119px 80px 114px 80px;
-	width: 50%
+	width: 50%;
 }
 
 .favorite-cards__item:first-child {
@@ -2045,8 +2045,8 @@ div:is(.header__wrapper) {
 
 .favorite-cards__rating {
 	line-height: 0;
-	/* margin-bottom: 16px */
-	margin-bottom: 5px;
+	margin-bottom: 16px;
+	/* margin-bottom: 5px; */
 }
 
 .favorite-cards__title {
@@ -2917,7 +2917,8 @@ div:is(.header__wrapper) {
 
 	.favorite-cards__item {
 		/* padding: 122px 80px 116px 80px; */
-		padding: 122px 80px 130px 80px;
+		/* padding: 122px 80px 130px 80px; */
+		padding: 121px 80px 120px 80px;
 	}
 }
 

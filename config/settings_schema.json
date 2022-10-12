@@ -149,5 +149,15 @@
 				"info": "t:settings_schema.payment-media.settings.payment_visa_link.info"
 			}
 		]
+	},
+	{
+		"name": "Making section image setting",
+		"settings": [
+			{
+				"type": "image",
+				"id": "background_image",
+				"label": "Choose a background image"
+			}
+		]
 	}
 ]
