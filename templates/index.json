@@ -1,5 +1,54 @@
 {
   "sections": {
+    "da587bdc-3400-416c-90f6-ed6f31a819f4": {
+      "type": "main-slider",
+      "blocks": {
+        "33ac2c13-2437-404e-928c-7fce4c3c195b": {
+          "type": "slide",
+          "settings": {
+            "slide_img": "shopify:\/\/shop_images\/image_47bdb9c1-a4c4-4969-9469-d7778ab36766.jpg"
+          }
+        },
+        "e7f29c3f-3b23-4bdb-81a8-33bcfb608cfc": {
+          "type": "slide",
+          "settings": {
+            "slide_img": "shopify:\/\/shop_images\/image_47bdb9c1-a4c4-4969-9469-d7778ab36766.jpg"
+          }
+        },
+        "8c7dbc2c-e5e4-4ad5-bbd5-b048078e9e40": {
+          "type": "slide",
+          "settings": {
+            "slide_img": "shopify:\/\/shop_images\/image_47bdb9c1-a4c4-4969-9469-d7778ab36766.jpg"
+          }
+        },
+        "f9c2ca5b-ae6d-40a8-872d-8f976865d95c": {
+          "type": "slide",
+          "settings": {
+            "slide_img": "shopify:\/\/shop_images\/image_47bdb9c1-a4c4-4969-9469-d7778ab36766.jpg"
+          }
+        },
+        "029225b8-bcd8-4152-abf8-ceeb16be48ac": {
+          "type": "slide",
+          "settings": {
+            "slide_img": "shopify:\/\/shop_images\/image_47bdb9c1-a4c4-4969-9469-d7778ab36766.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "33ac2c13-2437-404e-928c-7fce4c3c195b",
+        "e7f29c3f-3b23-4bdb-81a8-33bcfb608cfc",
+        "8c7dbc2c-e5e4-4ad5-bbd5-b048078e9e40",
+        "f9c2ca5b-ae6d-40a8-872d-8f976865d95c",
+        "029225b8-bcd8-4152-abf8-ceeb16be48ac"
+      ],
+      "settings": {
+        "slider_title": "Discover the new way of playing",
+        "buy_button_text": "Shop now",
+        "buy_button_link": "",
+        "about_button_text": "About us",
+        "about_button_link": ""
+      }
+    },
     "1664873050c36bf10b": {
       "type": "categories-mobile",
       "blocks": {
@@ -205,7 +254,8 @@
         "933029fd-527e-4af0-b98f-2ae0a9cf268c"
       ],
       "settings": {
-        "title": "How our Quiet Books are made"
+        "title": "How our Quiet Books are made",
+        "background_image": true
       }
     },
     "76ff86ff-fdc9-4843-8191-b5b4b9eddcd6": {
@@ -539,6 +589,7 @@
     }
   },
   "order": [
+    "da587bdc-3400-416c-90f6-ed6f31a819f4",
     "1664873050c36bf10b",
     "83f07686-412f-4023-bcab-92664040f6ab",
     "a8b70724-5963-4f4b-a5cc-9250cf9e6e00",
