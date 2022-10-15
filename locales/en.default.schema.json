@@ -412,16 +412,16 @@
 				"padding_top": "Top padding",
 				"padding_bottom": "Bottom padding"
 			},
-			"spacing": "Spacing",
+			"spacing": "Spacing between sections",
 			"colors": {
 				"accent_1": {
-					"label": "Accent 1"
+					"label": "Background yellow"
 				},
 				"accent_2": {
-					"label": "Accent 2"
+					"label": "Background pink"
 				},
 				"background_1": {
-					"label": "Background 1"
+					"label": "Background blue"
 				},
 				"background_2": {
 					"label": "Background 2"
@@ -429,7 +429,7 @@
 				"inverse": {
 					"label": "Inverse"
 				},
-				"label": "Color scheme",
+				"label": "Background color scheme",
 				"has_cards_info": "To change the card color scheme, update your theme settings."
 			},
 			"heading_size": {
@@ -995,6 +995,26 @@
 				"header__4": {
 					"info": "To add a country\/region, go to your [payment settings.](\/admin\/settings\/payments)"
 				},
+				"favorite_card_left_header": {
+					"content": "Favorite section left cards color settings",
+					"info": "Choose a color and background color for the left card"
+				},
+				"color_cards_left_text": {
+					"label": "Select text color"
+				},
+				"color_cards_left_bg": {
+					"label": "Select background color"
+				},
+				"favorite_card_right_header": {
+					"content": "Favorite section right cards color settings",
+					"info": "Choose a color and background color for the right card"
+				},
+				"color_cards_right_text": {
+					"label": "Select text color"
+				},
+				"color_cards_right_bg": {
+					"label": "Select background color"
+				},
 				"enable_country_selector": {
 					"label": "Enable country\/region selector"
 				},
@@ -1015,6 +1035,15 @@
 				},
 				"margin_top": {
 					"label": "Top margin"
+				},
+				"color_production_bg": {
+					"label": "Background light blue"
+				},
+				"color_production_text": {
+					"label": "Color dark blue"
+				},
+				"heading_colors": {
+					"content": "Color settings"
 				}
 			}
 		},

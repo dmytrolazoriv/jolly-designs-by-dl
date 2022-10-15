@@ -1,3 +1,16 @@
+{% style %}
+.favorite-cards__item.favorite-cards__item-left {
+	color: {{ section.settings.color_cards_left_text }};
+    background-color: {{ section.settings.color_cards_left_bg }};
+}
+
+.favorite-cards__item-right {
+    color: {{ section.settings.color_cards_right_text }};
+    background-color: {{ section.settings.color_cards_right_bg }};
+}
+{% endstyle %}
+
+
 {% comment %} <section class="favorite"> {% endcomment %}
 	<!-- <div class="container"> -->
 	<div class="favorite-slider__controls">
@@ -57,6 +70,40 @@
 	"tag":"section",
 	"class":"favorite",
 	"settings":[
+		{
+			"type": "header",
+			"content": "t:sections.footer.settings.favorite_card_left_header.content",
+			"info": "t:sections.footer.settings.favorite_card_left_header.info"
+		  },
+		  {
+			"type": "color",
+			"id": "color_cards_left_text",
+			"label": "t:sections.footer.settings.color_cards_left_text.label",
+			"default": "#ffffff"
+		  },
+		  {
+			"type": "color",
+			"id": "color_cards_left_bg",
+			"label": "t:sections.footer.settings.color_cards_left_bg.label",
+			"default": "#ff8f8f"
+		  },
+		  {
+			"type": "header",
+			"content": "t:sections.footer.settings.favorite_card_right_header.content",
+			"info": "t:sections.footer.settings.favorite_card_right_header.info"
+		  },
+		  {
+			"type": "color",
+			"id": "color_cards_right_text",
+			"label": "t:sections.footer.settings.color_cards_right_text.label",
+			"default": "#105393"
+		  },
+		  {
+			"type": "color",
+			"id": "color_cards_right_bg",
+			"label": "t:sections.footer.settings.color_cards_right_bg.label",
+			"default": "#cee8ff"
+		  }
 	],
 	"max_blocks":4,
 	"blocks":[

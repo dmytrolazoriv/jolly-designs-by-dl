@@ -1,4 +1,14 @@
 {% comment %} <section class="production"> {% endcomment %}
+{%- style -%}
+.production__title,
+.production__definition {
+	color: {{ section.settings.color_production_text }};
+}
+.production {
+	background-color: {{ section.settings.color_production_bg }};
+}
+{%- endstyle -%}
+
 
     <div class="container">
       <div class="production__description">
@@ -66,7 +76,23 @@
 		  "id":"definition",
 		  "default":"are developed by child experts to improve your children's fine motor development",
 		  "label":"Production definition"
-	   }
+	   },
+	   {
+		"type": "header",
+		"content": "t:sections.footer.settings.heading_colors.content"
+	  },
+	  {
+		"type": "color",
+		"id": "color_production_text",
+		"label": "t:sections.footer.settings.color_production_text.label",
+		"default": "#105393"
+	  },
+	  {
+		"type": "color",
+		"id": "color_production_bg",
+		"label": "t:sections.footer.settings.color_production_bg.label",
+		"default": "#cee8ff"
+	  }
 	],
 	"blocks":[
 	   {

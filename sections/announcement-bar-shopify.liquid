@@ -1,4 +1,23 @@
-<div class="header__announcement-slider announcement-slider">
+{% style %}
+.color-yellow {
+background-color: #ffe4bb;
+  }
+
+.color-pink {
+	background-color: #ff8f8f;
+  }
+
+.color-blue {
+	background-color: #cee8ff;
+}
+
+.header__announcement-slider {
+	margin-bottom: {{ section.settings.margin_bottom | round: 0 }}px;
+}
+
+{% endstyle %}
+
+<div class="header__announcement-slider announcement-slider color-{{ section.settings.color_scheme }}">
       <div class="container">
         <div class="announcement-slider__controls">
           <button class="announcement-slider__button announcement-slider__control_prev" type="button">
@@ -44,7 +63,38 @@
    "class": "header__announcement-slider",
    "tag": "div",
    "max_blocks":6,
-   "settings": [],
+   "settings": [
+		{
+			"type": "select",
+			"id": "color_scheme",
+			"options": [
+				{
+				"value": "yellow",
+				"label": "t:sections.all.colors.accent_1.label"
+				},
+				{
+				"value": "pink",
+				"label": "t:sections.all.colors.accent_2.label"
+				},
+				{
+				"value": "blue",
+				"label": "t:sections.all.colors.background_1.label"
+				}
+			],
+			"default": "yellow",
+			"label": "t:sections.all.colors.label"
+		},
+		{
+			"type": "range",
+			"id": "margin_bottom",
+			"min": 0,
+			"max": 100,
+			"step": 4,
+			"unit": "px",
+			"label": "t:sections.header.settings.margin_bottom.label",
+			"default": 24
+		  }
+   ],
    "blocks":[
       {
          "type":"list_item",

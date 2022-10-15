@@ -5415,7 +5415,7 @@ hr {
 	margin-right: 3px;
 }
 
-.site-header__cart-count {
+/* .site-header__cart-count {
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -5434,23 +5434,23 @@ hr {
 	font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size: calc(11em / 16);
 	line-height: 1;
-}
+} */
 
 @media only screen and (max-width: 749px) {
-	.site-header__cart-count {
+	/* .site-header__cart-count {
 		top: calc(7em / 16);
 		right: 0;
 		border-radius: 50%;
 		min-width: calc(19em / 16);
 		height: calc(19em / 16);
-	}
+	} */
 }
 
 @media only screen and (max-width: 749px) {
-	.site-header__cart-count span {
+	/* .site-header__cart-count span {
 		padding: 0.25em calc(6em / 16);
 		font-size: 12px;
-	}
+	} */
 }
 
 .site-header__menu {
@@ -6580,7 +6580,7 @@ hr {
 }
 
 /*================ Mobile Site Nav ================*/
-.mobile-nav {
+/* .mobile-nav {
 	display: block;
 	-ms-transform: translate3d(0, 0, 0);
 	-webkit-transform: translate3d(0, 0, 0);
@@ -6708,10 +6708,10 @@ hr {
 
 .mobile-nav__dropdown .mobile-nav__sublist-header--main-nav-parent {
 	color: var(--color-body-text);
-}
+} */
 
 /*================ Mobile nav wrapper ================*/
-.mobile-nav-wrapper {
+/* .mobile-nav-wrapper {
 	-ms-transform: translateY(-100%);
 	-webkit-transform: translateY(-100%);
 	transform: translateY(-100%);
@@ -6761,10 +6761,10 @@ hr {
 		-o-align-items: center;
 		align-items: center;
 	}
-}
+} */
 
 /*================ Modals ================*/
-.modal {
+/* .modal {
 	-ms-transform: translateY(-20px);
 	-webkit-transform: translateY(-20px);
 	transform: translateY(-20px);
@@ -6815,7 +6815,7 @@ hr {
 
 .modal__close .icon {
 	font-size: calc(((20) / (var(--font-size-base))) * 1em);
-}
+} */
 
 /*============================================================================
   Hero slider

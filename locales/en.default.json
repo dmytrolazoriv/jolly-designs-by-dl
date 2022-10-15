@@ -315,6 +315,10 @@
 		},
 		"page": {
 			"title": "Page title"
+		},
+		"main-slider": {
+			"control_prev": "Arrow left",
+			"control_next": "Arrow right"
 		}
 	},
 	"localization": {
@@ -450,6 +454,19 @@
 	"layout": {
 		"navigation": {
 			"search": "Search"
+		},
+		"cart": {
+			"title": "Cart",
+			"items_count": {
+				"one": "item",
+				"other": "items"
+			}
+		},
+		"customer": {
+			"account": "Account",
+			"log_out": "Log out",
+			"log_in": "Log in",
+			"create_account": "Create account"
 		}
 	}
 }

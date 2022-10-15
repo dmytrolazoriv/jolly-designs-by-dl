@@ -442,6 +442,9 @@ $(function () {
 		if ($(window).width() <= 768) {
 			$('.favorite__cards .favorite-cards__item:odd source').prop('srcset', '/assets/favorite-img-2-768.png');
 		}
+		// Move main navigation inside header
+		$(".header__main-nav.main-nav").detach().appendTo('.header__wrapper');
+		$(".header__mobile-nav.mobile-nav").detach().appendTo('.header .container').insertAfter('.header__service-mobile');
 	});
 }); // Dropdown menu
 

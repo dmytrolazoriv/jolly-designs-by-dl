@@ -2,8 +2,8 @@
 
 {% style %}
   .making__inner::after {
-    background-image: url({{ "making-decorative-1.png" | asset_url }});
-	background-image: {{ section.settings.background_image }}
+    {% comment %} background-image: url({{ "making-decorative-1.png" | asset_url }}); {% endcomment %}
+	background-image: url({{ section.settings.making_background_image | img_url: 'master' }});
   }
 {% endstyle %}
 
@@ -49,12 +49,11 @@
 		  "default":"How our Quiet Books are made",
 		  "label":"Making title"
 	   },
-	   {
-		"type": "checkbox",
-		"id": "background_image",
-		"label": "Show a background image",
-		"default": true
-	  }
+	  {
+		"type": "image_picker",
+		"id": "making_background_image",
+		"label": "Select Background Image"
+	}
 	],
 	"blocks":[
 	   {
