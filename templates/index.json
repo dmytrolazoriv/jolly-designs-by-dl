@@ -1,5 +1,18 @@
 {
   "sections": {
+    "95d08151-6ec7-40c8-b517-f6d471a5a447": {
+      "type": "main-nav",
+      "settings": {
+        "product_button": "Products",
+        "products-menu": "products-menu",
+        "main-navigation": "main-navigation",
+        "about_button": "About us",
+        "about-menu": "about-menu",
+        "support_button": "Support",
+        "support-menu": "support-menu",
+        "margin_bottom": 24
+      }
+    },
     "da587bdc-3400-416c-90f6-ed6f31a819f4": {
       "type": "main-slider",
       "blocks": {
@@ -156,7 +169,9 @@
       ],
       "settings": {
         "title": "Our Quiet Books",
-        "definition": "are developed by child experts to improve your children's fine motor development"
+        "definition": "are developed by child experts to improve your children's fine motor development",
+        "color_production_text": "#105393",
+        "color_production_bg": "#cee8ff"
       }
     },
     "a8b70724-5963-4f4b-a5cc-9250cf9e6e00": {
@@ -254,8 +269,7 @@
         "933029fd-527e-4af0-b98f-2ae0a9cf268c"
       ],
       "settings": {
-        "title": "How our Quiet Books are made",
-        "background_image": true
+        "title": "How our Quiet Books are made"
       }
     },
     "76ff86ff-fdc9-4843-8191-b5b4b9eddcd6": {
@@ -370,6 +384,10 @@
         "ca656a7f-848f-48f5-a6f2-ea0f6a5ad280"
       ],
       "settings": {
+        "color_cards_left_text": "#ffffff",
+        "color_cards_left_bg": "#ff8f8f",
+        "color_cards_right_text": "#105393",
+        "color_cards_right_bg": "#cee8ff"
       }
     },
     "936dfde1-3fb7-4852-a913-cbe4e27d049b": {
@@ -589,6 +607,7 @@
     }
   },
   "order": [
+    "95d08151-6ec7-40c8-b517-f6d471a5a447",
     "da587bdc-3400-416c-90f6-ed6f31a819f4",
     "1664873050c36bf10b",
     "83f07686-412f-4023-bcab-92664040f6ab",

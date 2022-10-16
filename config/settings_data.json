@@ -197,6 +197,8 @@
           "aeebd236-06bc-43ef-b490-dd1c90dc9189"
         ],
         "settings": {
+          "color_scheme": "yellow",
+          "margin_bottom": 24
         }
       },
       "header-shopify": {
@@ -208,40 +210,28 @@
               "service_icons": "user"
             }
           },
-          "4a788563-cd5a-4a81-900b-9fb00c753401": {
-            "type": "service_icons",
+          "f2855ce2-bedc-4c09-9d23-417f63814ad3": {
+            "type": "mob_service_icons",
             "settings": {
-              "service_icons": "heart-outline"
-            }
-          },
-          "b27cde6a-3a47-4d60-b5f1-4badf3d86bb9": {
-            "type": "service_icons",
-            "settings": {
-              "service_icons": "cart"
+              "mob_service_icons": "heart-outline",
+              "mob_service_icons_url": ""
             }
           }
         },
         "block_order": [
           "5cb7cece-c089-49ee-b8ed-8ee99f9eaf6a",
-          "4a788563-cd5a-4a81-900b-9fb00c753401",
-          "b27cde6a-3a47-4d60-b5f1-4badf3d86bb9"
+          "f2855ce2-bedc-4c09-9d23-417f63814ad3"
         ],
         "settings": {
           "logo": "shopify:\/\/shop_images\/logo.png",
-          "logo-mobile": "shopify:\/\/shop_images\/jolly-designs-logo_mob.png",
           "slider_title": "Discover the new way of playing",
           "buy-button_text": "Shop now",
           "about-button_text": "About us",
           "service_link": "+4961729452910",
           "lang_button": "EN",
           "language-menu": "language-menu",
-          "product_button": "Products",
-          "products-menu": "products-menu",
-          "main-navigation": "main-navigation",
-          "about_button": "About us",
-          "about-menu": "about-menu",
-          "support_button": "Support",
-          "support-menu": "support-menu"
+          "logo_mobile_url": "",
+          "margin_bottom": 24
         }
       },
       "footer": {
