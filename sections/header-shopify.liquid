@@ -76,7 +76,7 @@
 					  {% endif %}
 
 					  <li class="service__actions-item">
-						<button class="swym-button swym-add-to-wishlist-view-product service__link product_{{ product.id }}" data-swaction="addToWishlist" data-product-id="{{ product.id | json }}">
+						<button class="service__link product_{{ product.id }}" data-swaction="addToWishlist" data-product-id="{{ product.id | json }}">
 							{% render 'icon-heart-outline' %}
 							<span class="service__counter" data-cart-count>{{ cart.item_count }}</span>
 							<span class="icon__fallback-text medium-up--hide">{{ 'layout.cart.items_count' | t: count: cart.item_count }}</span>
@@ -243,7 +243,7 @@
 				   </li> {% endcomment %}
 
 				   <li class="mobile-actions__item">
-					<button class="swym-button swym-add-to-wishlist-view-product mobile-actions__link product_{{ product.id }}" data-swaction="addToWishlist" data-product-id="{{ product.id | json }}">
+					<button class="mobile-actions__link product_{{ product.id }}" data-swaction="addToWishlist" data-product-id="{{ product.id | json }}">
 						{% render 'icon-heart-outline' %}
 						<span class="service__counter" data-cart-count>{{ cart.item_count }}</span>
 						<span class="icon__fallback-text medium-up--hide">{{ 'layout.cart.items_count' | t: count: cart.item_count }}</span>
