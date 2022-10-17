@@ -1,4 +1,24 @@
 {% comment %} <section class="categories"> {% endcomment %}
+{% style %}
+    #shopify-section-{{ section.id }} {
+      padding-top: {{ section.settings.categories_padding_top }}px;
+      padding-bottom: {{ section.settings.categories_padding_bottom }}px;
+    }
+
+	{% comment %}  .color-{{ section.settings.categories_color_scheme }} {
+		background-color: #cee8ff;
+		color: #105393;
+	} {% endcomment %}
+
+	.categories {
+	background-color: {{ section.settings.categories_bg_color }};
+	}
+
+	.categories__title,
+	.categories-items__link {
+		color: {{ section.settings.categories_text_color }};
+	}
+{% endstyle %}
 
 	<h3 class="categories__title title">
 		{{ section.settings.title | escape }}
@@ -37,7 +57,50 @@
 		  "id":"title",
 		  "default":"Our Categories",
 		  "label":"Categories section title"
-	   }
+	   },
+	   {
+		"type": "header",
+		"content": "t:sections.all.padding.categories_padding_heading"
+	  },
+	  {
+		"type": "range",
+		"id": "categories_padding_top",
+		"min": 0,
+		"max": 200,
+		"step": 4,
+		"unit": "px",
+		"label": "t:sections.all.padding.categories_padding_top",
+		"default": 120
+	  },
+	  {
+		"type": "range",
+		"id": "categories_padding_bottom",
+		"min": 0,
+		"max": 200,
+		"step": 4,
+		"unit": "px",
+		"label": "t:sections.all.padding.categories_padding_bottom",
+		"default": 120
+	  },
+	  {
+		"type":"header",
+		"content":"t:sections.categories.settings.categories_colors.content",
+		"info":"t:sections.categories.settings.categories_colors.info"
+	 },
+	 {
+		"type":"color",
+		"id":"categories_bg_color",
+		"label":"t:sections.categories.settings.categories_bg_color.label",
+		"default":"#cee8ff",
+		"info": "t:sections.categories.settings.categories_bg_color.info"
+	 },
+	 {
+		"type":"color",
+		"id":"categories_text_color",
+		"label":"t:sections.categories.settings.categories_text_color.label",
+		"default":"#105393",
+		"info": "t:sections.categories.settings.categories_text_color.info"
+	 }
 	],
 	"blocks":[
 	   {

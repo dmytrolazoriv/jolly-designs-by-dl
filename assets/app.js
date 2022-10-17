@@ -445,6 +445,15 @@ $(function () {
 		// Move main navigation inside header
 		$(".header__main-nav.main-nav").detach().appendTo('.header__wrapper');
 		$(".header__mobile-nav.mobile-nav").detach().appendTo('.header .container').insertAfter('.header__service-mobile');
+
+		// Change the color of a pseudo element
+		if ($(".footer").hasClass("background-light-blue")) {
+			$(".footer").append('<style>.footer::after{border-color: ' + "#e8f4ff" + ';}</style>');
+		} else if ($(".footer").hasClass("background-dark-blue")) {
+			$(".footer").append('<style>.footer::after{border-color: ' + "#1363ad" + ';}</style>');
+		} else {
+			$(".footer").append('<style>.footer::after{border-color: ' + "#f6adad" + ';}</style>');
+		}
 	});
 }); // Dropdown menu
 

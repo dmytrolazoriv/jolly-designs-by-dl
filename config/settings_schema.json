@@ -1,20 +1,56 @@
 [
 	{
 		"name": "theme_info",
-		"theme_name": "Dawn",
+		"theme_name": "Dawn modified by DL",
 		"theme_version": "7.0.0",
-		"theme_author": "Shopify",
+		"theme_author": "Shopify and DL",
 		"theme_documentation_url": "https:\/\/help.shopify.com\/manual\/online-store\/themes",
-		"theme_support_url": "https:\/\/support.shopify.com\/"
+		"theme_support_email": "dmytrolazoriv@outlook.com"
 	},
 	{
-		"name": "Announcement bar color setting",
+		"name": "t:settings_schema.typography.name",
 		"settings": [
 			{
-				"type": "color",
-				"id": "announcement-bar_color",
-				"label": "Announcement bar background colors",
-				"default": "#ffe4bb"
+				"type": "header",
+				"content": "t:settings_schema.typography.settings.header__1.content"
+			},
+			{
+				"type": "font_picker",
+				"id": "type_header_font",
+				"default": "assistant_n4",
+				"label": "t:settings_schema.typography.settings.type_header_font.label",
+				"info": "t:settings_schema.typography.settings.type_header_font.info"
+			},
+			{
+				"type": "range",
+				"id": "heading_scale",
+				"min": 100,
+				"max": 150,
+				"step": 5,
+				"unit": "%",
+				"label": "t:settings_schema.typography.settings.heading_scale.label",
+				"default": 100
+			},
+			{
+				"type": "header",
+				"content": "t:settings_schema.typography.settings.header__2.content"
+			},
+			{
+				"type": "font_picker",
+				"id": "type_body_font",
+				"default": "assistant_n4",
+				"label": "t:settings_schema.typography.settings.type_body_font.label",
+				"info": "t:settings_schema.typography.settings.type_body_font.info"
+			},
+			{
+				"type": "range",
+				"id": "body_scale",
+				"min": 100,
+				"max": 130,
+				"step": 5,
+				"unit": "%",
+				"label": "t:settings_schema.typography.settings.body_scale.label",
+				"default": 100
 			}
 		]
 	},

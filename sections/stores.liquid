@@ -1,5 +1,9 @@
 {% comment %} <section class="stores"> {% endcomment %}
-
+{% style %}
+    #shopify-section-{{ section.id }} {
+      padding-bottom: {{ section.settings.stores_padding_bottom }}px;
+    }
+{% endstyle %}
 	<div class="container">
 	  <h3 class="stores__title title">
 		{{ section.settings.title }}
@@ -42,7 +46,21 @@
 		  "id":"title",
 		  "label":"Title for section",
 		  "default":"Retailer Stores"
-	   }
+	   },
+	   {
+		"type": "header",
+		"content": "t:sections.all.padding.stores_padding_heading"
+	  },
+	  {
+		"type": "range",
+		"id": "padding_bottom",
+		"min": 0,
+		"max": 300,
+		"step": 3,
+		"unit": "px",
+		"label": "t:sections.all.padding.stores_padding_bottom",
+		"default": 198
+	  }
 	],
 	"blocks":[
 	   {

@@ -410,7 +410,15 @@
 			"padding": {
 				"section_padding_heading": "Section padding",
 				"padding_top": "Top padding",
-				"padding_bottom": "Bottom padding"
+				"padding_bottom": "Bottom padding",
+				"categories_padding_heading": "Categories padding",
+				"categories_padding_top": "Top padding",
+				"categories_padding_bottom": "Bottom padding",
+				"stores_padding_heading": "Stores padding",
+				"stores_padding_bottom": "Bottom padding",
+				"footer_padding_heading": "Footer padding",
+				"footer_padding_top": "Top padding",
+				"footer_padding_bottom": "Bottom padding"
 			},
 			"spacing": "Spacing between sections",
 			"colors": {
@@ -428,6 +436,15 @@
 				},
 				"inverse": {
 					"label": "Inverse"
+				},
+				"default": {
+					"label": "Default"
+				},
+				"light_blue": {
+					"label": "Light blue"
+				},
+				"dark_blue": {
+					"label": "Dark blue"
 				},
 				"label": "Background color scheme",
 				"has_cards_info": "To change the card color scheme, update your theme settings."
@@ -939,6 +956,48 @@
 			},
 			"presets": {
 				"name": "Featured product"
+			}
+		},
+		"about-us": {
+			"name": "About us",
+			"settings": {
+				"about-us_colors": {
+					"content": "Color settings for About Us section",
+					"info": "It is possible to invert colors in settings"
+				},
+				"about_color_bg": {
+					"label": "Background color",
+					"info": "Use this color #ffe4bb to invert"
+				},
+				"about_color_text": {
+					"label": "Text color",
+					"info": "Use this color #105393 to invert"
+				},
+				"about_shadow_color": {
+					"label": "Shadow color",
+					"info": "Use this color #105393 to invert"
+				},
+				"about_stroke_color": {
+					"label": "Stroke color",
+					"info": "Use this color #105393 to invert"
+				}
+			}
+		},
+		"categories": {
+			"name": "Categories",
+			"settings": {
+				"categories_colors": {
+					"content": "Color settings for Categories section",
+					"info": "See how to invert colors"
+				},
+				"categories_bg_color": {
+					"label": "Background color",
+					"info": "Use this  #105393 color to invert"
+				},
+				"categories_text_color": {
+					"label": "Text color",
+					"info": "Use this #cee8ff color to invert"
+				}
 			}
 		},
 		"footer": {

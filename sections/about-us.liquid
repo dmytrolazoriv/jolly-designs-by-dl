@@ -1,5 +1,26 @@
 {% comment %} <section class="about"> {% endcomment %}
 
+{% style %}
+.about {
+	background-color: {{ section.settings.about_color_bg }};
+}
+
+.navigation__link.active,
+.about__slider-header,
+.about__slider-title {
+	color: {{ section.settings.about_color_text }};
+}
+
+.navigation__link.active::before {
+    box-shadow: 0 4px .1px {{ section.settings.about_shadow_color }};
+}
+
+.about__slider-controls .slider-controls__control svg path {
+	stroke: {{ section.settings.about_stroke_color }};
+}
+
+{% endstyle %}
+
 	<div class="container">
 	  <ul class="about__navigation navigation">
 	
@@ -185,66 +206,99 @@
 	"class":"about",
 	"max_blocks":3,
 	"settings":[
+	   {
+		  "type":"header",
+		  "content":"t:sections.about-us.settings.about-us_colors.content",
+		  "info":"t:sections.about-us.settings.about-us_colors.info"
+	   },
+	   {
+		  "type":"color",
+		  "id":"about_color_bg",
+		  "label":"t:sections.about-us.settings.about_color_bg.label",
+		  "default":"#105393",
+		  "info": "t:sections.about-us.settings.about_color_bg.info"
+	   },
+	   {
+		  "type":"color",
+		  "id":"about_color_text",
+		  "label":"t:sections.about-us.settings.about_color_text.label",
+		  "default":"#ffe4bb",
+		  "info": "t:sections.about-us.settings.about_color_text.info"
+	   },
+	   {
+		  "type":"color",
+		  "id":"about_shadow_color",
+		  "label":"t:sections.about-us.settings.about_shadow_color.label",
+		  "default":"#ffe4bb",
+		  "info": "t:sections.about-us.settings.about_shadow_color.info"
+	   },
+	   {
+		  "type":"color",
+		  "id":"about_stroke_color",
+		  "label":"t:sections.about-us.settings.about_stroke_color.label",
+		  "default":"#ffe4bb",
+		  "info": "t:sections.about-us.settings.about_stroke_color.info"
+	   }
 	],
 	"blocks":[
 	   {
 		  "name":"Slider item",
 		  "type":"slider_item",
 		  "settings":[
-				{
-				   "type":"header",
-				   "content":"Navigation settings"
-				},
-				{
-				   "type":"text",
-				   "id":"navlink_title",
-				   "label":"Add text for link",
-				   "default":"Meet the Jolly Family"
-				},
-				{
-				   "type":"url",
-				   "id":"navlink_url",
-				   "label":"Add url for navigation"
-				},
-				{
-				   "type":"header",
-				   "content":"Slider settings"
-				},
-				{
-				   "type":"text",
-				   "id":"about_title",
-				   "label":"Add text for slider title",
-				   "default":"Meet the Jolly Family!"
-				},
-				{
-				   "type":"text",
-				   "id":"about_description",
-				   "label":"Add text description for slider",
-				   "default":"About our story, values & mission"
-				},
-				{
-				   "type":"image_picker",
-				   "id":"slider_img",
-				   "label":"Add image for slider"
-				},
-				{
-				   "type":"url",
-				   "id":"link_url",
-				   "label":"Add url for slider"
-				},
-				{
-				   "type":"text",
-				   "id":"link_title",
-				   "label":"Add text for button",
-				   "default":"learn more"
-				}
+			 {
+				"type":"header",
+				"content":"Navigation settings"
+			 },
+			 {
+				"type":"text",
+				"id":"navlink_title",
+				"label":"Add text for link",
+				"default":"Meet the Jolly Family"
+			 },
+			 {
+				"type":"url",
+				"id":"navlink_url",
+				"label":"Add url for navigation"
+			 },
+			 {
+				"type":"header",
+				"content":"Slider settings"
+			 },
+			 {
+				"type":"text",
+				"id":"about_title",
+				"label":"Add text for slider title",
+				"default":"Meet the Jolly Family!"
+			 },
+			 {
+				"type":"text",
+				"id":"about_description",
+				"label":"Add text description for slider",
+				"default":"About our story, values & mission"
+			 },
+			 {
+				"type":"image_picker",
+				"id":"slider_img",
+				"label":"Add image for slider"
+			 },
+			 {
+				"type":"url",
+				"id":"link_url",
+				"label":"Add url for slider"
+			 },
+			 {
+				"type":"text",
+				"id":"link_title",
+				"label":"Add text for button",
+				"default":"learn more"
+			 }
 		  ]
 	   }
 	],
 	"presets":[
-		{
-		   "name":"About us section"
-		}
-	 ]
+	   {
+		  "name":"About us section"
+	   }
+	]
  }
 {% endschema %}

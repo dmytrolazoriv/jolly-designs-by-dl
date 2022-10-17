@@ -1,5 +1,11 @@
 {% comment %} <section class="follow-us"> {% endcomment %}
 	<!-- <div class="container"> -->
+	{% style %}
+		#shopify-section-{{ section.id }} {
+		padding-top: {{ section.settings.padding_top }}px;
+		padding-bottom: {{ section.settings.padding_bottom }}px;
+		}
+	{% endstyle %}
 
 	<div class="follow-us__inner">
 	  <div class="follow-us__heading">
@@ -67,7 +73,31 @@
 			"type":"url",
 			"id":"insta_url",
 			"label":"Add url address for instagram"
-		}
+		},
+		{
+			"type": "header",
+			"content": "t:sections.all.padding.section_padding_heading"
+		  },
+		  {
+			"type": "range",
+			"id": "padding_top",
+			"min": 0,
+			"max": 200,
+			"step": 4,
+			"unit": "px",
+			"label": "t:sections.all.padding.padding_top",
+			"default": 120
+		  },
+		  {
+			"type": "range",
+			"id": "padding_bottom",
+			"min": 0,
+			"max": 200,
+			"step": 4,
+			"unit": "px",
+			"label": "t:sections.all.padding.padding_bottom",
+			"default": 120
+		  }
 	],
 	"blocks":[
 	   {

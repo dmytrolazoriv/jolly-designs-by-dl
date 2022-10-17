@@ -1,6 +1,30 @@
 {% comment %} {{ 'style.css' | asset_url | stylesheet_tag }} {% endcomment %}
+{%- style -%}
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.footer_padding_top }}px;
+      padding-bottom: {{ section.settings.footer_padding_bottom }}px;
+    }
 
-<footer class="footer">
+	.background-default,
+	.footer::after {
+		background-color: #ff8f8f;
+		border-top: 2px solid #f6adad;
+	}
+
+	.background-light-blue,
+	.footer::after {
+		background-color: #cee8ff;
+		border-top: 2px solid #e8f4ff;
+	}
+
+	.background-dark-blue,
+	.footer::after  {
+		background-color: #105393;
+		border-top: 2px solid #1363ad;
+	}
+{%- endstyle -%}
+
+<footer class="footer background-{{ section.settings.footer_color_scheme }} section-{{ section.id }}-padding">
 	<div class="container">
 		
 		<div class="footer__inner">
@@ -72,17 +96,37 @@
 						{{- block.settings.top-letter_title -}}
 					</h4>
 
-					{%- form 'customer', class: 'top-letter__form' -%}
+					{%- form 'customer', id: 'ContactFooter', class: 'top-letter__form' -%}
 						{%- if form.posted_successfully? -%}
-							<script>alert("Your message has been sent!");</script>
+							<h3 class="newsletter-form__message newsletter-form__message--success form__message" id="ContactFooter-success" tabindex="-1" autofocus>{% render 'icon-success' %}{{ 'newsletter.success' | t }}</h3>
 							{%- elsif form.errors -%}
-							<script>alert("Error, your message was not sent!");</script>
+							<small class="newsletter-form__message form__message" id="ContactFooter-error">{% render 'icon-error' %}{{ form.errors.translated_fields['email'] | capitalize }} {{ form.errors.messages['email'] }}</small>
 						{%- endif -%}
-						<input class="top-letter__email" type="email" placeholder="E-mail"
-							name="contact[email]">
-						<input class="top-letter__submit" type="submit" value="Subscribe">
+						<input class="top-letter__email"
+							type="email"
+							name="contact[email]"
+							value="{{ form.email }}"
+							aria-required="true"
+							autocorrect="off"
+							autocapitalize="off"
+							autocomplete="email"
+							{% if form.errors %}
+								autofocus
+								aria-invalid="true"
+								aria-describedby="ContactFooter-error"
+							  {% elsif form.posted_successfully? %}
+								aria-describedby="ContactFooter-success"
+							  {% endif %}
+							  placeholder="{{ 'newsletter.label' | t }}"
+							  required
+							>
+						<input class="top-letter__submit"
+							type="submit"
+							value="Subscribe"
+							name="commit"
+							aria-label="{{ 'newsletter.button_label' | t }}">
 					{%- endform -%}
-
+				
 					<div class="top-letter__links-wrapper">
 						{{ 'Create account' | customer_register_link | replace: '<a', '<a class="top-letter__link"' }}
 						{{ 'B2B Log-in' | customer_login_link | replace: '<a', '<a class="top-letter__link"' }}
@@ -350,7 +394,51 @@
 			"id": "show_payment",
 			"default": true,
 			"label": "t:sections.footer.settings.show_payment.label"
-		}
+		},
+		{
+			"type": "header",
+			"content": "t:sections.all.padding.footer_padding_heading"
+		  },
+		  {
+			"type": "range",
+			"id": "footer_padding_top",
+			"min": 0,
+			"max": 100,
+			"step": 4,
+			"unit": "px",
+			"label": "t:sections.all.padding.footer_padding_top",
+			"default": 80
+		  },
+		  {
+			"type": "range",
+			"id": "footer_padding_bottom",
+			"min": 0,
+			"max": 100,
+			"step": 4,
+			"unit": "px",
+			"label": "t:sections.all.padding.footer_padding_bottom",
+			"default": 40
+		  },
+		  {
+			"type": "select",
+			"id": "footer_color_scheme",
+			"options": [
+			  {
+				"value": "default",
+				"label": "t:sections.all.colors.default.label"
+			  },
+			  {
+				"value": "light-blue",
+				"label": "t:sections.all.colors.light_blue.label"
+			  },
+			  {
+				"value": "dark-blue",
+				"label": "t:sections.all.colors.dark_blue.label"
+			  }
+			],
+			"default": "default",
+			"label": "t:sections.all.colors.label"
+		  }
 	],
 	"blocks":[
 	   {
