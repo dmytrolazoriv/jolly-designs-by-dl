@@ -88,6 +88,13 @@
     }
 {% endstyle %}
 
+<script src="{{ 'details-disclosure.js' | asset_url }}" defer="defer"></script>
+<script src="{{ 'details-modal.js' | asset_url }}" defer="defer"></script>
+<script src="{{ 'cart-notification.js' | asset_url }}" defer="defer"></script>
+{%- if settings.cart_type == "drawer" -%}
+  <script src="{{ 'cart-drawer.js' | asset_url }}" defer="defer"></script>
+{%- endif -%}
+
 {% render 'search-bar' %}
 
 <header class="header">
@@ -177,6 +184,10 @@
 						</div>
 					  </a>
 					</li>
+
+					{%- if settings.cart_type == "notification" -%}
+						{%- render 'cart-notification', color_scheme: section.settings.color_scheme -%}
+					  {%- endif -%}
 
 					 {% comment %} <li class="service__actions-item">
 						<a class="service__link" href="#">

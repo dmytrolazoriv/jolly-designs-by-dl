@@ -304,6 +304,7 @@
 	white-space: nowrap;
 	transition: transform var(--duration-short) ease;
 	overflow: hidden;
+	display: none;
 }
 
 .card-information>*+* {

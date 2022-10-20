@@ -485,7 +485,14 @@ img {
 
 .container {
 	max-width: 1280px;
-	margin: 0 auto
+	margin: 0 auto;
+}
+
+cart-items.container,
+#main-cart-footer,
+#MainProduct-template--15352820662317__main {
+	max-width: 1280px;
+	margin: 0 auto;
 }
 
 .visually-hidden,
@@ -1003,6 +1010,44 @@ div:is(.header__wrapper) {
 .title {
 	color: #fff;
 }
+
+/* Cart styling start */
+.title--primary {
+	font-family: 'DM Serif Display';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 64px;
+	line-height: 88px;
+	color: #e86e6e;
+	margin: 3rem 0 3rem;
+}
+
+.title-wrapper-with-link {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	gap: 1rem;
+	margin-bottom: 3rem;
+	flex-wrap: wrap;
+}
+
+.underlined-link {
+	color: #414249 !important;
+	text-decoration: underline !important;
+	text-underline-offset: .3rem;
+	text-decoration-thickness: 0.1rem;
+	transition: text-decoration-thickness ease .1s;
+}
+
+.underlined-link:hover {
+	text-decoration-thickness: 0.11rem !important;
+}
+
+.cart-items {
+	color: #414249;
+}
+
+/* Cart styling end */
 
 .main-slider__list .my-dots {
 	bottom: 40px
@@ -2309,7 +2354,7 @@ div:is(.header__wrapper) {
 .categories__list .slick-list .slick-track {
 	display: flex;
 	column-gap: 32px;
-	height: 360px;
+	/* height: 360px; */
 }
 
 .categories__list .card__inner {
@@ -2333,7 +2378,12 @@ div:is(.header__wrapper) {
 .categories-items__link {
 	font-family: "Poppins", sans-serif;
 	color: #105393;
-	text-decoration: none
+	text-decoration: none;
+}
+
+.categories-items__link:hover {
+	text-decoration: underline;
+	text-underline-offset: 0.3rem;
 }
 
 .follow-us {

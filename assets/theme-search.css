@@ -2257,7 +2257,7 @@ table {
 }
 
 table a {
-	border-bottom: 1px solid currentColor;
+	/* border-bottom: 1px solid currentColor; */
 }
 
 th {
@@ -7342,7 +7342,8 @@ hr {
 .price {
 	display: flex;
 	flex-direction: column;
-	align-items: flex-start;
+	/* align-items: flex-start; */
+	align-items: center;
 	margin-top: 0;
 	margin-bottom: 0;
 }

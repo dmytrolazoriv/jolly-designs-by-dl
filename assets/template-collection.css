@@ -49,8 +49,12 @@
 }
 
 .collection__title.title-wrapper {
-	/* margin-bottom: 2.5rem; */
-	display: none;
+	margin-bottom: 2.5rem;
+	/* display: none; */
+}
+
+.collection__title.title-wrapper>.h2 {
+	color: #414249;
 }
 
 .collection__title .title:not(:only-child) {
@@ -78,4 +82,9 @@
 
 .collection__view-all a:not(.link) {
 	margin-top: 1rem;
+	font-family: "Poppins", sans-serif;
+	color: #fff;
+	text-decoration: none;
+	background-color: #ff8f8f;
+	border-radius: 38px;
 }
