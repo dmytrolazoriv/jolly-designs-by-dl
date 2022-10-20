@@ -7,6 +7,14 @@
 .production {
 	background-color: {{ section.settings.color_production_bg }};
 }
+
+.production__title::before {
+	background-image: url({{ "main-slider-decorative-1.svg" | asset_url }});
+}
+
+.production::before {
+	background-image: url({{ "production-decorative-1.svg" | asset_url }});
+}
 {%- endstyle -%}
 
 

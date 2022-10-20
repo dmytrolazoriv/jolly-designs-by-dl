@@ -2967,8 +2967,8 @@ body.prevent-scrolling {
 }
 
 .page-width {
-	padding-left: 55px;
-	padding-right: 55px;
+	/* padding-left: 55px;
+	padding-right: 55px; */
 }
 
 @media only screen and (max-width: 749px) {
@@ -7377,6 +7377,7 @@ hr {
 
 .price__regular {
 	display: block;
+	text-align: center;
 }
 
 .price__regular,

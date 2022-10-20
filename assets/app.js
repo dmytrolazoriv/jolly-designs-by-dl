@@ -48,7 +48,7 @@ $(function () {
 		slidesToShow: 4,
 		slidesToScroll: 1,
 		centerMode: true,
-		centerPadding: '120px',
+		centerPadding: '50px',
 		infinite: true,
 		prevArrow: false,
 		nextArrow: false,

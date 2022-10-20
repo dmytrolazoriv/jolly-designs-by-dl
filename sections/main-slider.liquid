@@ -1,14 +1,33 @@
 {% comment %} <div class="main-slider"> {% endcomment %}
 	<!-- <div class="container"> -->
+	{% style %}
+	.main-slider__title::before {
+    	background-image: url({{ "main-slider-decorative-1.svg" | asset_url }});
+	}
+
+	.main-slider__title::after {
+		background-image: url({{ "main-slider-decorative-2.svg" | asset_url }});
+	}
+
+	.main-slider__about-button::after {
+		background-image: url({{ "main-slider-decorative-3.svg" | asset_url }});
+	}
+  {% comment %}.making__inner::after {
+	 background-image: url({{ section.settings.making_background_image | img_url: 'master' }});
+  }{% endcomment %}
+	{% endstyle %}
+
 	<div class="main-slider__holder">
 		<div class="main-slider__actions">
 			<h2 class="main-slider__title title">
 				{{ section.settings.slider_title }}
 			</h2>
-			<a href="{{ section.settings.buy_button_link }}" class="main-slider__buy-button button">
+			{% comment %} <a href="{{ section.settings.buy_button_link }}" class="main-slider__buy-button button"> {% endcomment %}
+			<a href="{{ section.settings.buy_button_link }}" class="main-slider__buy-button">
 				{{ section.settings.buy_button_text }}
 			</a>
-			<a href="{{ section.settings.about_button_link }}" class="main-slider__about-button button">
+			{% comment %} <a href="{{ section.settings.about_button_link }}" class="main-slider__about-button button"> {% endcomment %}
+			<a href="{{ section.settings.about_button_link }}" class="main-slider__about-button">
 				{{ section.settings.about_button_text }}
 			</a>
 		</div>

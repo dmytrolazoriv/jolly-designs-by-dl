@@ -18,6 +18,10 @@
 	.categories-items__link {
 		color: {{ section.settings.categories_text_color }};
 	}
+
+	.categories__title::after {
+		background-image: url({{ "main-slider-decorative-1.svg" | asset_url }});
+	}
 {% endstyle %}
 
 	<h3 class="categories__title title">
