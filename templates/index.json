@@ -273,69 +273,12 @@
         "making_background_image": "shopify:\/\/shop_images\/making-decorative-1_c5a3baa2-750d-458c-a28b-a37921d67468.png"
       }
     },
-    "76ff86ff-fdc9-4843-8191-b5b4b9eddcd6": {
-      "type": "shop",
-      "blocks": {
-        "68c4eb5b-bbcf-47c7-b121-338843489824": {
-          "type": "product_item",
-          "settings": {
-            "card_img": "shopify:\/\/shop_images\/shop-1-img.png",
-            "cards_title": "Magic Bird - 6 Pages Mini Quiet Book",
-            "cards_price": "€39,99",
-            "card_url": "shopify:\/\/collections\/all",
-            "link_title": "Add to cart"
-          }
-        },
-        "81945b15-f661-4c71-b5fa-2ed4caf95fb6": {
-          "type": "product_item",
-          "settings": {
-            "card_img": "shopify:\/\/shop_images\/shop-2-img.png",
-            "cards_title": "Little Bee - 6 Pages Mini Quiet Book",
-            "cards_price": "€39,99",
-            "card_url": "shopify:\/\/collections\/all",
-            "link_title": "Add to cart"
-          }
-        },
-        "fd52defe-6003-4978-8ac9-f8086e8bab1b": {
-          "type": "product_item",
-          "settings": {
-            "card_img": "shopify:\/\/shop_images\/shop-3-img.png",
-            "cards_title": "Jolly Baby - 6 pages Mini Quiet Book",
-            "cards_price": "€39,99",
-            "card_url": "shopify:\/\/collections\/all",
-            "link_title": "Add to cart"
-          }
-        },
-        "3956fa36-8b3a-454d-87fb-1a821d2c9f94": {
-          "type": "product_item",
-          "settings": {
-            "card_img": "shopify:\/\/shop_images\/shop-4-img.png",
-            "cards_title": "Globetrotter - Quiet Book",
-            "cards_price": "€79,99",
-            "card_url": "shopify:\/\/collections\/all",
-            "link_title": "Add to cart"
-          }
-        },
-        "776e0da2-2a80-4ce8-8c0f-5d3cbe2afa05": {
-          "type": "product_item",
-          "settings": {
-            "card_img": "shopify:\/\/shop_images\/shop-2-img.png",
-            "cards_title": "Little Bee - 6 Pages Mini Quiet Book",
-            "cards_price": "€39,99",
-            "card_url": "shopify:\/\/collections\/all",
-            "link_title": "Add to cart"
-          }
-        }
-      },
-      "block_order": [
-        "68c4eb5b-bbcf-47c7-b121-338843489824",
-        "81945b15-f661-4c71-b5fa-2ed4caf95fb6",
-        "fd52defe-6003-4978-8ac9-f8086e8bab1b",
-        "3956fa36-8b3a-454d-87fb-1a821d2c9f94",
-        "776e0da2-2a80-4ce8-8c0f-5d3cbe2afa05"
-      ],
+    "986a67ea-52a7-4e39-8ff6-49e2774c73c6": {
+      "type": "shop_testing",
       "settings": {
-        "title": "Shop Our Bestseller"
+        "title": "Shop Our Bestseller",
+        "collection": "frontpage",
+        "enable_quick_add": true
       }
     },
     "ca22a9cd-6fdf-4992-94c3-432a51a2b41a": {
@@ -437,6 +380,10 @@
         "e84d6c36-1f71-4800-af0a-b203b7fe8864"
       ],
       "settings": {
+        "about_color_bg": "#105393",
+        "about_color_text": "#ffe4bb",
+        "about_shadow_color": "#ffe4bb",
+        "about_stroke_color": "#ffe4bb"
       }
     },
     "b0436072-9038-466b-9d55-2c42e8f039a4": {
@@ -500,7 +447,11 @@
         "25ddded6-d6da-4797-8a3a-a34dea2e0571"
       ],
       "settings": {
-        "title": "Our Categories"
+        "title": "Our Categories",
+        "categories_padding_top": 120,
+        "categories_padding_bottom": 120,
+        "categories_bg_color": "#cee8ff",
+        "categories_text_color": "#105393"
       }
     },
     "edeaa5d9-a79c-4e98-85f5-45faef6f0bcc": {
@@ -569,7 +520,9 @@
         "title": "Follow us",
         "description": "in our journey in helping children get to their full potential, one book at a time!",
         "insta_title": "@jollydesigns",
-        "insta_url": ""
+        "insta_url": "",
+        "padding_top": 120,
+        "padding_bottom": 120
       }
     },
     "a096376c-9d6d-44fb-a721-02bfe75375b5": {
@@ -603,7 +556,8 @@
         "e84197a8-1bcb-43e9-9eae-4207be54fecd"
       ],
       "settings": {
-        "title": "Retailer Stores"
+        "title": "Retailer Stores",
+        "padding_bottom": 198
       }
     }
   },
@@ -614,7 +568,7 @@
     "83f07686-412f-4023-bcab-92664040f6ab",
     "a8b70724-5963-4f4b-a5cc-9250cf9e6e00",
     "c766b9e7-be25-414f-aff5-76c8db35727f",
-    "76ff86ff-fdc9-4843-8191-b5b4b9eddcd6",
+    "986a67ea-52a7-4e39-8ff6-49e2774c73c6",
     "ca22a9cd-6fdf-4992-94c3-432a51a2b41a",
     "936dfde1-3fb7-4852-a913-cbe4e27d049b",
     "b0436072-9038-466b-9d55-2c42e8f039a4",
