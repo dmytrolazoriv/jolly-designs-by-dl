@@ -388,9 +388,9 @@ body,
 	z-index: 2;
 }
 
-::selection {
+/* ::selection {
 	background-color: rgba(var(--color-foreground), 0.2);
-}
+} */
 
 .text-body {
 	font-size: 1.5rem;
@@ -432,25 +432,26 @@ h5,
 }
 
 .h0 {
-	font-size: calc(var(--font-heading-scale) * 4rem);
+	font-size: calc(1.0 * 4rem);
 }
 
 @media only screen and (min-width: 750px) {
 	.h0 {
-		font-size: calc(var(--font-heading-scale) * 5.2rem);
+		font-size: 32px;
 	}
 }
 
 h1,
 .h1 {
-	font-size: calc(var(--font-heading-scale) * 3rem);
+	font-size: 48px;
+	line-height: 56px;
 }
 
 @media only screen and (min-width: 750px) {
 
 	h1,
 	.h1 {
-		font-size: calc(var(--font-heading-scale) * 4rem);
+		/* font-size: calc(var(--font-heading-scale) * 4rem); */
 	}
 }
 
@@ -745,8 +746,8 @@ details>* {
 
 .underlined-link:hover,
 .customer a:hover {
-	color: rgb(var(--color-link));
-	text-decoration-thickness: 0.2rem;
+	color: rgba(65, 66, 73, 1);
+	text-decoration-thickness: 0.2rem !important;
 }
 
 .icon-arrow {
@@ -826,13 +827,13 @@ summary::-webkit-details-marker {
   Focus ring - default (with offset)
 */
 
-*:focus {
+/* *:focus {
 	outline: 0;
 	box-shadow: none;
-}
+} */
 
 *:focus-visible {
-	outline: 0.2rem solid rgba(var(--color-foreground), 0.5);
+	outline: 0.2rem solid rgba(65, 66, 73, 0.5);
 	outline-offset: 0.3rem;
 	box-shadow: 0 0 0 0.3rem rgb(var(--color-background)),
 		0 0 0.5rem 0.4rem rgba(var(--color-foreground), 0.3);
@@ -841,52 +842,52 @@ summary::-webkit-details-marker {
 /* Fallback - for browsers that don't support :focus-visible, a fallback is set for :focus */
 .focused,
 .no-js *:focus {
-	outline: 0.2rem solid rgba(var(--color-foreground), 0.5);
+	outline: 0.2rem solid rgba(65, 66, 73, 0.5);
 	outline-offset: 0.3rem;
 	box-shadow: 0 0 0 0.3rem rgb(var(--color-background)),
 		0 0 0.5rem 0.4rem rgba(var(--color-foreground), 0.3);
 }
 
 /* Negate the fallback side-effect for browsers that support :focus-visible */
-.no-js *:focus:not(:focus-visible) {
+/* .no-js *:focus:not(:focus-visible) {
 	outline: 0;
 	box-shadow: none;
-}
+} */
 
 /*
   Focus ring - inset
 */
 
 .focus-inset:focus-visible {
-	outline: 0.2rem solid rgba(var(--color-foreground), 0.5);
+	outline: 0.2rem solid rgba(65, 66, 73, 0.5);
 	outline-offset: -0.2rem;
 	box-shadow: 0 0 0.2rem 0 rgba(var(--color-foreground), 0.3);
 }
 
 .focused.focus-inset,
 .no-js .focus-inset:focus {
-	outline: 0.2rem solid rgba(var(--color-foreground), 0.5);
+	outline: 0.2rem solid rgba(65, 66, 73, 0.5);
 	outline-offset: -0.2rem;
 	box-shadow: 0 0 0.2rem 0 rgba(var(--color-foreground), 0.3);
 }
 
-.no-js .focus-inset:focus:not(:focus-visible) {
+/* .no-js .focus-inset:focus:not(:focus-visible) {
 	outline: 0;
 	box-shadow: none;
-}
+} */
 
 /*
   Focus ring - none
 */
 
 /* Dangerous for a11y - Use with care */
-.focus-none {
+/* .focus-none {
 	box-shadow: none !important;
 	outline: 0 !important;
-}
+} */
 
 .focus-offset:focus-visible {
-	outline: 0.2rem solid rgba(var(--color-foreground), 0.5);
+	outline: 0.2rem solid rgba(65, 66, 73, 0.5);
 	outline-offset: 1rem;
 	box-shadow: 0 0 0 1rem rgb(var(--color-background)),
 		0 0 0.2rem 1.2rem rgba(var(--color-foreground), 0.3);
@@ -894,16 +895,16 @@ summary::-webkit-details-marker {
 
 .focus-offset.focused,
 .no-js .focus-offset:focus {
-	outline: 0.2rem solid rgba(var(--color-foreground), 0.5);
+	outline: 0.2rem solid rgba(65, 66, 73, 0.5);
 	outline-offset: 1rem;
 	box-shadow: 0 0 0 1rem rgb(var(--color-background)),
 		0 0 0.2rem 1.2rem rgba(var(--color-foreground), 0.3);
 }
 
-.no-js .focus-offset:focus:not(:focus-visible) {
+/* .no-js .focus-offset:focus:not(:focus-visible) {
 	outline: 0;
 	box-shadow: none;
-}
+} */
 
 /* component-title */
 /* .title,
@@ -1395,7 +1396,7 @@ button.shopify-payment-button__button--unbranded {
 	--border-opacity: var(--buttons-border-opacity);
 }
 
-.button:focus-visible,
+/* .button:focus-visible,
 .button:focus,
 .button.focused,
 .shopify-payment-button__button--unbranded:focus-visible,
@@ -1406,7 +1407,7 @@ button.shopify-payment-button__button--unbranded {
 	box-shadow: 0 0 0 0.3rem rgb(var(--color-background)),
 		0 0 0 0.5rem rgba(var(--color-foreground), 0.5),
 		0 0 0.5rem 0.4rem rgba(var(--color-foreground), 0.3);
-}
+} */
 
 .button:focus:not(:focus-visible):not(.focused),
 .shopify-payment-button__button--unbranded:focus:not(:focus-visible):not(.focused),
@@ -1633,7 +1634,7 @@ details[open]>.share-button__fallback {
 
 .share-button__fallback .field__input:focus,
 .share-button__fallback .field__input:-webkit-autofill {
-	outline: 0.2rem solid rgba(var(--color-foreground), .5);
+	outline: 0.2rem solid rgba(65, 66, 73, 0.5);
 	outline-offset: 0.1rem;
 	box-shadow: 0 0 0 0.1rem rgb(var(--color-background)), 0 0 0.5rem 0.4rem rgba(var(--color-foreground), .3);
 }
@@ -1736,7 +1737,7 @@ details[open]>.share-button__fallback {
 	color: rgba(var(--color-foreground), 0.75);
 }
 
-.field:hover.field:after,
+/* .field:hover.field:after,
 .select:hover.select:after,
 .select__select:hover.select__select:after,
 .customer .field:hover.field:after,
@@ -1745,9 +1746,9 @@ details[open]>.share-button__fallback {
 	box-shadow: 0 0 0 calc(0.1rem + var(--inputs-border-width)) rgba(var(--color-foreground), var(--inputs-border-opacity));
 	outline: 0;
 	border-radius: var(--inputs-radius);
-}
+} */
 
-.field__input:focus-visible,
+/* .field__input:focus-visible,
 .select__select:focus-visible,
 .customer .field input:focus-visible,
 .customer select:focus-visible,
@@ -1755,9 +1756,9 @@ details[open]>.share-button__fallback {
 	box-shadow: 0 0 0 calc(0.1rem + var(--inputs-border-width)) rgba(var(--color-foreground));
 	outline: 0;
 	border-radius: var(--inputs-radius);
-}
+} */
 
-.field__input:focus,
+/* .field__input:focus,
 .select__select:focus,
 .customer .field input:focus,
 .customer select:focus,
@@ -1765,12 +1766,12 @@ details[open]>.share-button__fallback {
 	box-shadow: 0 0 0 calc(0.1rem + var(--inputs-border-width)) rgba(var(--color-foreground));
 	outline: 0;
 	border-radius: var(--inputs-radius);
-}
+} */
 
-.localization-form__select:focus {
+/* .localization-form__select:focus {
 	outline: 0;
 	box-shadow: none;
-}
+} */
 
 .text-area,
 .select {
@@ -1997,7 +1998,7 @@ input[type='checkbox'] {
 	left: var(--inputs-border-width);
 	border: 0.1rem solid transparent;
 	border-radius: var(--inputs-radius);
-	box-shadow: 0 0 0 var(--inputs-border-width) rgba(var(--color-foreground), var(--inputs-border-opacity));
+	box-shadow: 0 0 0 var(--inputs-border-width) rgba(65, 66, 73, 0.25);
 	transition: box-shadow var(--duration-short) ease;
 	z-index: 1;
 }
@@ -2412,9 +2413,11 @@ input[type='checkbox'] {
 
 .header__icon,
 .header__icon--cart .icon {
-	height: 4.4rem;
+	/* height: 4.4rem;
 	width: 4.4rem;
-	padding: 0;
+	padding: 0; */
+	text-decoration: none;
+	color: #414249;
 }
 
 .header__icon--cart {
@@ -2941,13 +2944,13 @@ details-disclosure>details {
 /* outline and border styling for Windows High Contrast Mode */
 @media (forced-colors: active) {
 
-	.button,
+	/* .button,
 	.shopify-challenge__button,
 	.customer button {
 		border: transparent solid 1px;
-	}
+	} */
 
-	.button:focus-visible,
+	/* .button:focus-visible,
 	.button:focus,
 	.button.focused,
 	.shopify-payment-button__button--unbranded:focus-visible,
@@ -2967,5 +2970,5 @@ details-disclosure>details {
 
 	.localization-form__select:focus {
 		outline: transparent solid 1px;
-	}
+	} */
 }

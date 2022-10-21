@@ -34,8 +34,8 @@
 }
 
 .collection--empty .title-wrapper {
-	margin-top: 10rem;
-	margin-bottom: 15rem;
+	margin-top: 3rem;
+	margin-bottom: 2rem;
 }
 
 @media screen and (max-width: 989px) {

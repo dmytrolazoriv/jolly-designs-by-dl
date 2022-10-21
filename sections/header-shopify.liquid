@@ -86,6 +86,20 @@
     .header__service {
       margin-bottom: {{ section.settings.margin_bottom }}px;
     }
+
+	.header {
+		position: relative;
+	}
+
+	.header::after {
+		content: "";
+		position: absolute;
+		top: 113px;
+		height: 2px;
+		width: 100%;
+		border-top: 2px solid #ebebeb;
+	}
+
 {% endstyle %}
 
 <script src="{{ 'details-disclosure.js' | asset_url }}" defer="defer"></script>
@@ -175,13 +189,33 @@
 					</li>
 			
 					  <li class="service__actions-item">
-					  <a href="{{ routes.cart_url }}" class="service__link">
+					  {% comment %} <a href="{{ routes.cart_url }}" class="service__link">
 						{% render 'icon-cart' %}
 						<span class="icon__fallback-text">{{ 'layout.cart.title' | t }}</span>
 						<div id="CartCount" class="site-header__cart-count{% if cart.item_count == 0 %} {% endif %} critical-hidden" data-cart-count-bubble>
 						  <span class="service__counter" data-cart-count>{{ cart.item_count }}</span>
 						  <span class="icon__fallback-text medium-up--hide">{{ 'layout.cart.items_count' | t: count: cart.item_count }}</span>
 						</div>
+					  </a> {% endcomment %}
+
+					  <a href="{{ routes.cart_url }}" class="service__link header__icon header__icon--cart link focus-inset" id="cart-icon-bubble">
+						{%- liquid
+						  if cart == empty
+							render 'icon-cart'
+						  else
+							render 'icon-cart'
+						  endif
+						-%}
+						<span class="visually-hidden">{{ 'templates.cart.cart' | t }}</span>
+						{% comment %} {%- if cart != empty -%}
+						  <div class="cart-count-bubble">
+							{%- if cart.item_count < 100 -%}
+							  <span class="service__counter" aria-hidden="true">{{ cart.item_count }}</span>
+							{%- endif -%}
+							<span class="icon__fallback-text visually-hidden">{{ 'sections.header.cart_count' | t: count: cart.item_count }}</span>
+						  </div>
+						{%- endif -%} {% endcomment %}
+						<span class="service__counter" data-cart-count>{{ cart.item_count }}</span>
 					  </a>
 					</li>
 
@@ -227,16 +261,13 @@
 				{% endfor %}
 
 			</div>
-
-			{% for block in section.blocks %}
-				{%- case block.type -%}
-					{%- when 'main-nav' -%}
-				<nav class="header__main-nav main-nav" {{ block.shopify_attributes }}>
+		
+				<nav class="header__main-nav main-nav">
 					<ul class="main-nav__list">
 				
 						<li class='dropdown' id='products-dropdown'>
 							<button class='dropdown-button' type="button">
-								{{ block.settings.product_button }}
+								{{ section.settings.product_button }}
 							</button>
 							{% render 'icon-triangle-down' %}
 							<ul class='dropdown-selection'>
@@ -286,8 +317,6 @@
 				
 					</ul>
 				</nav>
-				{% endcase %}
-			{% endfor %}
 
 		</div>
 		<!-- Mobile menu -->
@@ -642,7 +671,61 @@
 		"unit": "px",
 		"label": "t:sections.header.settings.margin_bottom.label",
 		"default": 24
-	  }
+	  },
+	  {
+		"type":"header",
+		"content":"Products menu"
+	 },
+	 {
+		"type":"text",
+		"label":"Choose a product",
+		"id":"product_button",
+		"default":"Products"
+	 },
+	 {
+		"type":"link_list",
+		"id":"products-menu",
+		"label":"Products menu"
+	 },
+	 {
+		"type":"header",
+		"content":"Main menu"
+	 },
+	 {
+		"type":"link_list",
+		"id":"main-navigation",
+		"label":"Main navigation"
+	 },
+	 {
+		"type":"header",
+		"content":"About menu"
+	 },
+	 {
+		"type":"text",
+		"label":"About us menu",
+		"id":"about_button",
+		"default":"About us"
+	 },
+	 {
+		"type":"link_list",
+		"id":"about-menu",
+		"label":"About us menu"
+	 },
+	 {
+		"type":"header",
+		"content":"Support menu"
+	 },
+	 {
+		"type":"text",
+		"label":"Support menu",
+		"id":"support_button",
+		"default":"Support"
+	 },
+	 {
+		"type":"link_list",
+		"id":"support-menu",
+		"label":"Learn more about support"
+	 }
 	],
 	"blocks":[
 	   {
@@ -696,18 +779,6 @@
 				"id":"mob_service_icons_url",
 				"label":"Link for mobile icons",
 				"info":"Enter your url address for mobile icons"
-			 }
-		  ]
-	   },
-	   {
-		  "type":"main-nav",
-		  "name":"Main navigation",
-		  "settings":[
-			 {
-				"type":"text",
-				"id":"text",
-				"default":"Main navigation",
-				"label":"Main navigation"
 			 }
 		  ]
 	   }

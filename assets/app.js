@@ -443,7 +443,7 @@ $(function () {
 			$('.favorite__cards .favorite-cards__item:odd source').prop('srcset', '/assets/favorite-img-2-768.png');
 		}
 		// Move main navigation inside header
-		$(".header__main-nav.main-nav").detach().appendTo('.header__wrapper');
+		// $(".header__main-nav.main-nav").detach().appendTo('.header__wrapper');
 		$(".header__mobile-nav.mobile-nav").detach().appendTo('.header .container').insertAfter('.header__service-mobile');
 
 		// Change the color of a pseudo element

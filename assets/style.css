@@ -495,6 +495,14 @@ cart-items.container,
 	margin: 0 auto;
 }
 
+cart-items {
+	color: #414249;
+}
+
+cart-items .cart__login-paragraph .underlined-link {
+	color: #ff8f8f !important;
+}
+
 .visually-hidden,
 .service__fallback-text,
 .main-slider__fallback-text,
@@ -518,7 +526,6 @@ cart-items.container,
 /* Search bar style start */
 
 /* Search bar style end */
-
 div:is(.header__wrapper) {
 	position: relative;
 	z-index: 1
