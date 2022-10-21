@@ -454,6 +454,67 @@
         "categories_text_color": "#105393"
       }
     },
+    "5a1f6dcd-6616-4df7-9004-aa892d793cf0": {
+      "type": "collection-list",
+      "blocks": {
+        "template--15368131706925__5a1f6dcd-6616-4df7-9004-aa892d793cf0-166634224444f83485-0": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "quiet-books"
+          }
+        },
+        "template--15368131706925__5a1f6dcd-6616-4df7-9004-aa892d793cf0-166634224444f83485-1": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "mini-quiet-books"
+          }
+        },
+        "template--15368131706925__5a1f6dcd-6616-4df7-9004-aa892d793cf0-166634224444f83485-2": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "booklets"
+          }
+        },
+        "139f3260-a1c4-45b4-8a6c-3fcdda118951": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "wooden-toys"
+          }
+        },
+        "a34a4f70-39a5-4bee-964c-4e5d9e3282ad": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "wall-decorations"
+          }
+        },
+        "d722a581-74fe-4726-99d7-b3af0eb9fbef": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "mini-quiet-books"
+          }
+        }
+      },
+      "block_order": [
+        "template--15368131706925__5a1f6dcd-6616-4df7-9004-aa892d793cf0-166634224444f83485-0",
+        "template--15368131706925__5a1f6dcd-6616-4df7-9004-aa892d793cf0-166634224444f83485-1",
+        "template--15368131706925__5a1f6dcd-6616-4df7-9004-aa892d793cf0-166634224444f83485-2",
+        "139f3260-a1c4-45b4-8a6c-3fcdda118951",
+        "a34a4f70-39a5-4bee-964c-4e5d9e3282ad",
+        "d722a581-74fe-4726-99d7-b3af0eb9fbef"
+      ],
+      "settings": {
+        "title": "Collections",
+        "heading_size": "h1",
+        "image_ratio": "square",
+        "columns_desktop": 3,
+        "color_scheme": "background-1",
+        "show_view_all": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "edeaa5d9-a79c-4e98-85f5-45faef6f0bcc": {
       "type": "follow-us",
       "blocks": {
@@ -572,6 +633,7 @@
     "ca22a9cd-6fdf-4992-94c3-432a51a2b41a",
     "936dfde1-3fb7-4852-a913-cbe4e27d049b",
     "b0436072-9038-466b-9d55-2c42e8f039a4",
+    "5a1f6dcd-6616-4df7-9004-aa892d793cf0",
     "edeaa5d9-a79c-4e98-85f5-45faef6f0bcc",
     "a096376c-9d6d-44fb-a721-02bfe75375b5"
   ]
