@@ -1,18 +1,5 @@
 {
   "sections": {
-    "95d08151-6ec7-40c8-b517-f6d471a5a447": {
-      "type": "main-nav",
-      "settings": {
-        "product_button": "Products",
-        "products-menu": "products-menu",
-        "main-navigation": "main-navigation",
-        "about_button": "About us",
-        "about-menu": "about-menu",
-        "support_button": "Support",
-        "support-menu": "support-menu",
-        "margin_bottom": 24
-      }
-    },
     "da587bdc-3400-416c-90f6-ed6f31a819f4": {
       "type": "main-slider",
       "blocks": {
@@ -623,7 +610,6 @@
     }
   },
   "order": [
-    "95d08151-6ec7-40c8-b517-f6d471a5a447",
     "da587bdc-3400-416c-90f6-ed6f31a819f4",
     "1664873050c36bf10b",
     "83f07686-412f-4023-bcab-92664040f6ab",

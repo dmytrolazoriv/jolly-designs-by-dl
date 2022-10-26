@@ -198,41 +198,7 @@
         ],
         "settings": {
           "color_scheme": "yellow",
-          "margin_bottom": 24
-        }
-      },
-      "header-shopify": {
-        "type": "header-shopify",
-        "blocks": {
-          "5cb7cece-c089-49ee-b8ed-8ee99f9eaf6a": {
-            "type": "service_icons",
-            "settings": {
-              "service_icons": "user"
-            }
-          },
-          "f2855ce2-bedc-4c09-9d23-417f63814ad3": {
-            "type": "mob_service_icons",
-            "settings": {
-              "mob_service_icons": "heart-outline",
-              "mob_service_icons_url": ""
-            }
-          }
-        },
-        "block_order": [
-          "5cb7cece-c089-49ee-b8ed-8ee99f9eaf6a",
-          "f2855ce2-bedc-4c09-9d23-417f63814ad3"
-        ],
-        "settings": {
-          "logo": "shopify:\/\/shop_images\/logo.png",
-          "slider_title": "Discover the new way of playing",
-          "buy-button_text": "Shop now",
-          "about-button_text": "About us",
-          "service_link": "+4961729452910",
-          "lang_button": "EN",
-          "language-menu": "language-menu",
-          "logo_mobile_url": "",
-          "logo_mobile": "shopify:\/\/shop_images\/logo-mobile_e049b567-6036-4618-ad7a-b6a7a11c80f3.png",
-          "margin_bottom": 24
+          "margin_bottom": 0
         }
       },
       "footer": {
@@ -295,7 +261,34 @@
         ],
         "settings": {
           "show_social": true,
-          "show_payment": true
+          "show_payment": true,
+          "footer_padding_top": 80,
+          "footer_padding_bottom": 40,
+          "footer_color_scheme": "default"
+        }
+      },
+      "header": {
+        "type": "header",
+        "settings": {
+          "slider_title": "Discover the new way of playing",
+          "buy-button_text": "Shop now",
+          "about-button_text": "About us",
+          "service_link": "+4961729452910",
+          "lang_button": "EN",
+          "language-menu": "",
+          "logo_mobile_url": "",
+          "margin_bottom": 24,
+          "padding_top": 24,
+          "product_button": "Products",
+          "products-menu": "",
+          "main-navigation": "",
+          "about_button": "About us",
+          "about-menu": "",
+          "support_button": "Support",
+          "support-menu": "",
+          "color_scheme": "background-1",
+          "show_line_separator": true,
+          "enable_sticky_header": true
         }
       }
     },
