@@ -1617,12 +1617,12 @@ textarea {
 }
 
 .section-header {
-	margin-bottom: 35px;
+	/* margin-bottom: 35px; */
 }
 
 @media only screen and (min-width: 750px) {
 	.section-header {
-		margin-bottom: 55px;
+		/* margin-bottom: 55px; */
 	}
 }
 
@@ -1784,9 +1784,9 @@ h6,
 	margin-bottom: 35px;
 }
 
-.rte:last-child {
+/* .rte:last-child {
 	margin-bottom: 0;
-}
+} */
 
 .rte h1,
 .rte h2,

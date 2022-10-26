@@ -50,7 +50,7 @@
 
 .collection__title.title-wrapper {
 	margin-bottom: 2.5rem;
-	/* display: none; */
+	display: none;
 }
 
 .collection__title.title-wrapper>.h2 {
@@ -81,7 +81,7 @@
 }
 
 .collection__view-all a:not(.link) {
-	margin-top: 1rem;
+	margin-top: 2rem;
 	font-family: "Poppins", sans-serif;
 	color: #fff;
 	text-decoration: none;

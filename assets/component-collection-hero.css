@@ -18,6 +18,12 @@
 	.collection-hero--with-image .collection-hero__inner {
 		padding-bottom: 0;
 	}
+
+	.collection-hero__inner,
+	.facets-container,
+	.product-grid-container {
+		padding: 0 30px;
+	}
 }
 
 .collection-hero__text-wrapper {

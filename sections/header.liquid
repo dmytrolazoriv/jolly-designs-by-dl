@@ -1,0 +1,1152 @@
+<link rel="stylesheet" href="{{ 'component-list-menu.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'component-search.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'component-menu-drawer.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'component-cart-notification.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'component-cart-items.css' | asset_url }}" media="print" onload="this.media='all'">
+{%- if settings.predictive_search_enabled -%}
+  <link rel="stylesheet" href="{{ 'component-price.css' | asset_url }}" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="{{ 'component-loading-overlay.css' | asset_url }}" media="print" onload="this.media='all'">
+{%- endif -%}
+{%- if section.settings.menu_type_desktop == 'mega' -%}
+  <link rel="stylesheet" href="{{ 'component-mega-menu.css' | asset_url }}" media="print" onload="this.media='all'">
+  <noscript>{{ 'component-mega-menu.css' | asset_url | stylesheet_tag }}</noscript>
+{%- endif -%}
+{%- if settings.cart_type == "drawer" -%}
+  {{ 'component-cart-drawer.css' | asset_url | stylesheet_tag }}
+  {{ 'component-cart.css' | asset_url | stylesheet_tag }}
+  {{ 'component-totals.css' | asset_url | stylesheet_tag }}
+  {{ 'component-price.css' | asset_url | stylesheet_tag }}
+  {{ 'component-discounts.css' | asset_url | stylesheet_tag }}
+  {{ 'component-loading-overlay.css' | asset_url | stylesheet_tag }}
+{%- endif -%}
+
+<noscript>{{ 'component-list-menu.css' | asset_url | stylesheet_tag }}</noscript>
+<noscript>{{ 'component-search.css' | asset_url | stylesheet_tag }}</noscript>
+<noscript>{{ 'component-menu-drawer.css' | asset_url | stylesheet_tag }}</noscript>
+<noscript>{{ 'component-cart-notification.css' | asset_url | stylesheet_tag }}</noscript>
+<noscript>{{ 'component-cart-items.css' | asset_url | stylesheet_tag }}</noscript>
+
+<style>
+  header-drawer {
+    justify-self: start;
+    margin-left: -1.2rem;
+  }
+
+  .header__heading-logo {
+    max-width: {{ section.settings.logo_width }}px;
+  }
+
+  @media screen and (min-width: 990px) {
+    header-drawer {
+      display: none;
+    }
+  }
+
+  .menu-drawer-container {
+    display: flex;
+  }
+
+  .list-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .list-menu--inline {
+    display: inline-flex;
+    flex-wrap: wrap;
+  }
+
+  summary.list-menu__item {
+    padding-right: 2.7rem;
+  }
+
+  .list-menu__item {
+    display: flex;
+    align-items: center;
+    line-height: calc(1 + 0.3 / var(--font-body-scale));
+  }
+
+  .list-menu__item--link {
+    text-decoration: none;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    line-height: calc(1 + 0.8 / var(--font-body-scale));
+  }
+
+  @media screen and (min-width: 750px) {
+    .list-menu__item--link {
+      padding-bottom: 0.5rem;
+      padding-top: 0.5rem;
+    }
+  }
+</style>
+
+{% style %}
+    .header__service {
+      margin-bottom: {{ section.settings.margin_bottom | round: 0 }}px;
+	  padding-top: {{ section.settings.padding_top | round: 0 }}px;
+    }
+
+	.header {
+		position: relative;
+	}
+
+	.header::after {
+		content: "";
+		position: absolute;
+		bottom: -24px;
+		height: 2px;
+		width: 100%;
+		border-top: 2px solid #ebebeb;
+	}
+
+	@media screen and (max-width: 375px) {
+	.header::after {
+		bottom: -15px;
+			}
+		}
+{% endstyle %}
+
+<script src="{{ 'details-disclosure.js' | asset_url }}" defer="defer"></script>
+<script src="{{ 'details-modal.js' | asset_url }}" defer="defer"></script>
+<script src="{{ 'cart-notification.js' | asset_url }}" defer="defer"></script>
+{%- if settings.cart_type == "drawer" -%}
+  <script src="{{ 'cart-drawer.js' | asset_url }}" defer="defer"></script>
+{%- endif -%}
+
+{% render 'search-bar' %}
+
+<{% if section.settings.enable_sticky_header %}sticky-header{% else %}div{% endif %} class="header-wrapper color-{{ section.settings.color_scheme }} gradient{% if section.settings.show_line_separator %} header-wrapper--border-bottom{% endif %}">
+<header class="header">
+	<div class="container">
+		<div class="header__wrapper">
+			{%- if section.settings.menu != blank -%}
+				<header-drawer data-breakpoint="tablet">
+				  <details id="Details-menu-drawer-container" class="menu-drawer-container">
+					<summary class="header__icon header__icon--menu header__icon--summary link focus-inset" aria-label="{{ 'sections.header.menu' | t }}">
+					  <span>
+						{% render 'icon-hamburger' %}
+						{% render 'icon-close' %}
+					  </span>
+					</summary>
+					<div id="menu-drawer" class="gradient menu-drawer motion-reduce" tabindex="-1">
+					  <div class="menu-drawer__inner-container">
+						<div class="menu-drawer__navigation-container">
+						  <nav class="menu-drawer__navigation">
+							<ul class="menu-drawer__menu has-submenu list-menu" role="list">
+							  {%- for link in section.settings.menu.links -%}
+								<li>
+								  {%- if link.links != blank -%}
+									<details id="Details-menu-drawer-menu-item-{{ forloop.index }}">
+									  <summary class="menu-drawer__menu-item list-menu__item link link--text focus-inset{% if link.child_active %} menu-drawer__menu-item--active{% endif %}">
+										{{ link.title | escape }}
+										{% render 'icon-arrow' %}
+										{% render 'icon-caret' %}
+									  </summary>
+									  <div id="link-{{ link.handle | escape }}" class="menu-drawer__submenu has-submenu gradient motion-reduce" tabindex="-1">
+										<div class="menu-drawer__inner-submenu">
+										  <button class="menu-drawer__close-button link link--text focus-inset" aria-expanded="true">
+											{% render 'icon-arrow' %}
+											{{ link.title | escape }}
+										  </button>
+										  <ul class="menu-drawer__menu list-menu" role="list" tabindex="-1">
+											{%- for childlink in link.links -%}
+											  <li>
+												{%- if childlink.links == blank -%}
+												  <a href="{{ childlink.url }}" class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if childlink.current %} menu-drawer__menu-item--active{% endif %}"{% if childlink.current %} aria-current="page"{% endif %}>
+													{{ childlink.title | escape }}
+												  </a>
+												{%- else -%}
+												  <details id="Details-menu-drawer-submenu-{{ forloop.index }}">
+													<summary class="menu-drawer__menu-item link link--text list-menu__item focus-inset">
+													  {{ childlink.title | escape }}
+													  {% render 'icon-arrow' %}
+													  {% render 'icon-caret' %}
+													</summary>
+													<div id="childlink-{{ childlink.handle | escape }}" class="menu-drawer__submenu has-submenu gradient motion-reduce">
+													  <button class="menu-drawer__close-button link link--text focus-inset" aria-expanded="true">
+														{% render 'icon-arrow' %}
+														{{ childlink.title | escape }}
+													  </button>
+													  <ul class="menu-drawer__menu list-menu" role="list" tabindex="-1">
+														{%- for grandchildlink in childlink.links -%}
+														  <li>
+															<a href="{{ grandchildlink.url }}" class="menu-drawer__menu-item link link--text list-menu__item focus-inset{% if grandchildlink.current %} menu-drawer__menu-item--active{% endif %}"{% if grandchildlink.current %} aria-current="page"{% endif %}>
+															  {{ grandchildlink.title | escape }}
+															</a>
+														  </li>
+														{%- endfor -%}
+													  </ul>
+													</div>
+												  </details>
+												{%- endif -%}
+											  </li>
+											{%- endfor -%}
+										  </ul>
+										</div>
+									  </div>
+									</details>
+								  {%- else -%}
+									<a href="{{ link.url }}" class="menu-drawer__menu-item list-menu__item link link--text focus-inset{% if link.current %} menu-drawer__menu-item--active{% endif %}"{% if link.current %} aria-current="page"{% endif %}>
+									  {{ link.title | escape }}
+									</a>
+								  {%- endif -%}
+								</li>
+							  {%- endfor -%}
+							</ul>
+						  </nav>
+						  <div class="menu-drawer__utility-links">
+							{%- if shop.customer_accounts_enabled -%}
+							  <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}" class="menu-drawer__account link focus-inset h5">
+								{% render 'icon-account' %}
+								{%- liquid
+								  if customer
+									echo 'customer.account_fallback' | t
+								  else
+									echo 'customer.log_in' | t
+								  endif
+								-%}
+							  </a>
+							{%- endif -%}
+							<ul class="list list-social list-unstyled" role="list">
+							  {%- if settings.social_twitter_link != blank -%}
+								<li class="list-social__item">
+								  <a href="{{ settings.social_twitter_link }}" class="list-social__link link">
+									{%- render 'icon-twitter' -%}
+									<span class="visually-hidden">{{ 'general.social.links.twitter' | t }}</span>
+								  </a>
+								</li>
+							  {%- endif -%}
+							  {%- if settings.social_facebook_link != blank -%}
+								<li class="list-social__item">
+								  <a href="{{ settings.social_facebook_link }}" class="list-social__link link">
+									{%- render 'icon-facebook' -%}
+									<span class="visually-hidden">{{ 'general.social.links.facebook' | t }}</span>
+								  </a>
+								</li>
+							  {%- endif -%}
+							  {%- if settings.social_pinterest_link != blank -%}
+								<li class="list-social__item">
+								  <a href="{{ settings.social_pinterest_link }}" class="list-social__link link">
+									{%- render 'icon-pinterest' -%}
+									<span class="visually-hidden">{{ 'general.social.links.pinterest' | t }}</span>
+								  </a>
+								</li>
+							  {%- endif -%}
+							  {%- if settings.social_instagram_link != blank -%}
+								<li class="list-social__item">
+								  <a href="{{ settings.social_instagram_link }}" class="list-social__link link">
+									{%- render 'icon-instagram' -%}
+									<span class="visually-hidden">{{ 'general.social.links.instagram' | t }}</span>
+								  </a>
+								</li>
+							  {%- endif -%}
+							  {%- if settings.social_tiktok_link != blank -%}
+								<li class="list-social__item">
+								  <a href="{{ settings.social_tiktok_link }}" class="list-social__link link">
+									{%- render 'icon-tiktok' -%}
+									<span class="visually-hidden">{{ 'general.social.links.tiktok' | t }}</span>
+								  </a>
+								</li>
+							  {%- endif -%}
+							  {%- if settings.social_tumblr_link != blank -%}
+								<li class="list-social__item">
+								  <a href="{{ settings.social_tumblr_link }}" class="list-social__link link">
+									{%- render 'icon-tumblr' -%}
+									<span class="visually-hidden">{{ 'general.social.links.tumblr' | t }}</span>
+								  </a>
+								</li>
+							  {%- endif -%}
+							  {%- if settings.social_snapchat_link != blank -%}
+								<li class="list-social__item">
+								  <a href="{{ settings.social_snapchat_link }}" class="list-social__link link">
+									{%- render 'icon-snapchat' -%}
+									<span class="visually-hidden">{{ 'general.social.links.snapchat' | t }}</span>
+								  </a>
+								</li>
+							  {%- endif -%}
+							  {%- if settings.social_youtube_link != blank -%}
+								<li class="list-social__item">
+								  <a href="{{ settings.social_youtube_link }}" class="list-social__link link">
+									{%- render 'icon-youtube' -%}
+									<span class="visually-hidden">{{ 'general.social.links.youtube' | t }}</span>
+								  </a>
+								</li>
+							  {%- endif -%}
+							  {%- if settings.social_vimeo_link != blank -%}
+								<li class="list-social__item">
+								  <a href="{{ settings.social_vimeo_link }}" class="list-social__link link">
+									{%- render 'icon-vimeo' -%}
+									<span class="visually-hidden">{{ 'general.social.links.vimeo' | t }}</span>
+								  </a>
+								</li>
+							  {%- endif -%}
+							</ul>
+						  </div>
+						</div>
+					  </div>
+					</div>
+				  </details>
+				</header-drawer>
+			  {%- endif -%}
+
+			<div class="header__service service">
+				<p class="service__phone">
+					{% render 'icon-phone' %}
+					<!-- <i class="icon-phone"></i> -->
+					<a href="tel:+4961729452910">
+						{{ section.settings.service_link }}
+					</a>
+				</p>
+
+				<ul class="service__lang-list">
+					<li class='dropdown service__lang-item' id='language-dropdown'>
+						<button class='dropdown-button service__lang-link' type="button">
+							{{ section.settings.lang_button }}
+						</button>
+						<ul class='dropdown-selection'>
+							{% for link in linklists.language-menu.links %}
+								<li>
+									<a href="{{ link.url }}">{{ link.title }}</a>
+								</li>
+							{% endfor %}
+						</ul>
+					</li>
+				</ul>
+
+				<h1 class="service__logo">
+					<a class="service__logo-image" href="/">
+						{% if section.settings.logo != blank %}
+							<img width="179" height="46" src="{{ section.settings.logo | image_url: width: 179, height: 46 }}" 
+								alt="{{ section.settings.logo.alt | escape }}" loading="lazy">
+						{% endif %}
+					</a>
+				</h1>
+
+				{% for block in section.blocks %}
+				<ul class="service__actions" {{ block.shopify_attributes }}>
+					{% comment %} {% assign magnifying = 'magnifying' %}
+					{% assign user = 'user' %}
+					{% assign heart-outline = 'heart-outline' %}
+					{% assign cart = 'cart' %} {% endcomment %}
+
+					<li class="service__actions-item">
+						<button type="button" class="btn--link site-header__icon site-header__search-toggle js-drawer-open-top" data-predictive-search-open-drawer>
+							{% render 'icon-search' %}
+							<span class="icon__fallback-text">{{ 'layout.navigation.search' | t }}</span>
+						  </button>
+					</li>
+
+					{% if shop.customer_accounts_enabled %}
+						{% if customer %}
+						<li class="service__actions-item">
+						  <a href="{{ routes.account_url }}" class="service__link">
+							{% render 'icon-user' %}
+							<span class="icon__fallback-text">{{ 'layout.customer.account' | t }}</span>
+						  </a>
+						</li>
+						{% else %}
+						<li class="service__actions-item">
+						  <a href="{{ routes.account_login_url }}" class="service__link">
+							{% render 'icon-user' %}
+							<span class="icon__fallback-text">{{ 'layout.customer.log_in' | t }}</span>
+						  </a>
+						</li>
+						{% endif %}
+					  {% endif %}
+
+					  <li class="service__actions-item">
+						<button class="service__link product_{{ product.id }}" data-swaction="addToWishlist" data-product-id="{{ product.id | json }}">
+							{% render 'icon-heart-outline' %}
+							<span class="service__counter" data-cart-count>{{ cart.item_count }}</span>
+							<span class="icon__fallback-text medium-up--hide">{{ 'layout.cart.items_count' | t: count: cart.item_count }}</span>
+						</button>
+					</li>
+			
+					  <li class="service__actions-item">
+					  {% comment %} <a href="{{ routes.cart_url }}" class="service__link">
+						{% render 'icon-cart' %}
+						<span class="icon__fallback-text">{{ 'layout.cart.title' | t }}</span>
+						<div id="CartCount" class="site-header__cart-count{% if cart.item_count == 0 %} {% endif %} critical-hidden" data-cart-count-bubble>
+						  <span class="service__counter" data-cart-count>{{ cart.item_count }}</span>
+						  <span class="icon__fallback-text medium-up--hide">{{ 'layout.cart.items_count' | t: count: cart.item_count }}</span>
+						</div>
+					  </a> {% endcomment %}
+
+					  <a href="{{ routes.cart_url }}" class="service__link header__icon header__icon--cart link focus-inset" id="cart-icon-bubble">
+						{%- liquid
+						  if cart == empty
+							render 'icon-cart'
+						  else
+							render 'icon-cart'
+						  endif
+						-%}
+						<span class="visually-hidden">{{ 'templates.cart.cart' | t }}</span>
+						{% comment %} {%- if cart != empty -%}
+						  <div class="cart-count-bubble">
+							{%- if cart.item_count < 100 -%}
+							  <span class="service__counter" aria-hidden="true">{{ cart.item_count }}</span>
+							{%- endif -%}
+							<span class="icon__fallback-text visually-hidden">{{ 'sections.header.cart_count' | t: count: cart.item_count }}</span>
+						  </div>
+						{%- endif -%} {% endcomment %}
+						<span class="service__counter" data-cart-count>{{ cart.item_count }}</span>
+					  </a>
+					</li>
+
+					 {% comment %} <li class="service__actions-item">
+						<a class="service__link" href="#">
+							{% case block.settings.service_icons %}
+								{% when 'user' %}
+									{% render 'icon-user' %}
+								{% when 'heart-outline' %}
+									{% render 'icon-heart-outline' %}
+								{% when 'cart' %}
+									{% render 'icon-cart' %}
+								{% endcase %}
+							<span class="service__fallback-text">
+								{{ 'layout.navigation.search' | t }}
+							</span>
+							<span class="service__counter" data-cart-count>
+								{{ cart.item_count }}
+							</span>
+						</a>
+					</li> {% endcomment %}
+
+					{% comment %} <li class="service__actions-item">
+						<a class="service__link" href="#">
+							{% if heart-outline == 'heart-outline' %}
+								{% render 'icon-heart-outline' %}
+							{% endif %}
+							<span class="service__fallback-text">
+								{% assign counter_fallback = 'Favorite' %}
+								{{ counter_fallback }}
+							</span>
+							<span class="service__counter">
+							{% assign counter_first = 2 %}
+							{{ counter_first }}
+							</span>
+						</a>
+					</li> {% endcomment %}
+				</ul>
+				{% endfor %}
+
+			</div>
+		
+				<nav class="header__main-nav main-nav">
+					<ul class="main-nav__list">
+				
+						<li class='dropdown' id='products-dropdown'>
+							<button class='dropdown-button' type="button">
+								{{ section.settings.product_button }}
+							</button>
+							{% render 'icon-triangle-down' %}
+							<ul class='dropdown-selection'>
+								{% for link in linklists.products-menu.links %}
+								<li>
+									<a href="{{ link.url }}">{{ link.title }}</a>
+								</li>
+							{% endfor %}
+							</ul>
+						</li>
+				
+						{% for link in linklists.main-navigation.links %}
+						<li class="main-nav__item">
+							<a class="main-nav__link" href="{{ link.url }}">
+								{{ link.title }}
+							</a>
+						</li>
+						{%- endfor -%}
+				
+						<li class='dropdown' id='about-dropdown'>
+							<button class='dropdown-button' type="button">
+								{{ section.settings.about_button }}
+							</button>
+							{% render 'icon-triangle-down'%}
+							<ul class='dropdown-selection'>
+							{% for link in linklists.about-menu.links %}
+								<li>
+									<a href="{{ link.url }}">{{ link.title }}</a>
+								</li>
+							{% endfor %}
+							</ul>
+						</li>
+				
+						<li class='dropdown' id='support-dropdown'>
+							<button class='dropdown-button' type="button">
+								{{ section.settings.support_button }}
+						</button>
+							{% render 'icon-triangle-down'%}
+							<ul class='dropdown-selection'>
+								{% for link in linklists.support-menu.links %}
+								<li>
+									<a href="{{ link.url }}">{{ link.title }}</a>
+								</li>
+								{% endfor %}
+							</ul>
+						</li>
+				
+					</ul>
+				</nav>
+
+		</div>
+		<!-- Mobile menu -->
+		<div class="header__service-mobile">
+
+			<div class="header__button-wrapper">
+
+				<button class="header__burger-button">
+					<span></span>
+				</button>
+
+				<button type="button" class="header__button-search btn--link site-header__icon site-header__search-toggle js-drawer-open-top" data-predictive-search-open-drawer>
+					{% render 'icon-search' %}
+					<span class="icon__fallback-text">{{ 'layout.navigation.search' | t }}</span>
+				</button>
+
+			</div>
+
+			<h1 class="service__mobile-logo">
+				<a class="service__mobile-image" href="{{ section.settings.logo_mobile_url }}">
+					{% if section.settings.logo_mobile != blank %}
+						 {% comment %} <img width="" height="" src="{{ section.settings.logo_mobile | img_url }}" 
+							alt="{{ section.settings.logo_mobile.alt | escape }}" loading="lazy"> {% endcomment %}
+							{{ 'logo.png' | asset_url | img_tag: 'jolly designs logo' }}
+					{% endif %}
+					{% comment %} <img width="" height="" src="{{ 'logo.png' | asset_url }}" 
+						alt="jolly designs logo" loading="lazy"> {% endcomment %}
+				</a>
+			</h1>
+
+			{% for block in section.blocks %}
+			<ul class="header__mobile-actions mobile-actions" {{ block.shopify_attributes }}>
+				
+					{% comment %} <li class="mobile-actions__item" {{ block.shopify_attributes }}>
+					   <a class="mobile-actions__link" href="{{ block.settings.mob_service_icons_url }}">
+						   {% case block.settings.mob_service_icons %}
+							   {% when 'heart-outline' %}
+								   {% render 'icon-heart-outline' %}
+							   {% when 'cart' %}
+								   {% render 'icon-cart' %}
+							   {% endcase %}
+						   <span class="service__fallback-text">
+							   {{ 'layout.navigation.search' | t }}
+						   </span>
+						   <span class="mobile-actions__counter" data-cart-count>
+							{{ cart.item_count }}
+						</span>
+					   </a>
+				   </li> {% endcomment %}
+
+				   <li class="mobile-actions__item">
+					<button class="mobile-actions__link product_{{ product.id }}" data-swaction="addToWishlist" data-product-id="{{ product.id | json }}">
+						{% render 'icon-heart-outline' %}
+						<span class="service__counter" data-cart-count>{{ cart.item_count }}</span>
+						<span class="icon__fallback-text medium-up--hide">{{ 'layout.cart.items_count' | t: count: cart.item_count }}</span>
+					</button>
+					</li>
+		
+				<li class="mobile-actions__item">
+				  <a href="{{ routes.cart_url }}" class="mobile-actions__link">
+					{% render 'icon-cart' %}
+					<span class="icon__fallback-text">{{ 'layout.cart.title' | t }}</span>
+					<div id="CartCount" class="site-header__cart-count{% if cart.item_count == 0 %} {% endif %} critical-hidden" data-cart-count-bubble>
+					  <span class="service__counter" data-cart-count>{{ cart.item_count }}</span>
+					  <span class="icon__fallback-text medium-up--hide">{{ 'layout.cart.items_count' | t: count: cart.item_count }}</span>
+					</div>
+				  </a>
+				</li>
+			
+
+				{% comment %} 
+				<li class="mobile-actions__item">
+					<a class="mobile-actions__link" href="#">
+						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M3 4H5L5.5 7M5.5 7L7 16H18L21 7H5.5Z" stroke="currentColor" stroke-width="1.4"
+								stroke-linecap="round" stroke-linejoin="round"></path>
+							<path
+								d="M9 21.7C9.93888 21.7 10.7 20.9389 10.7 20C10.7 19.0611 9.93888 18.3 9 18.3C8.06112 18.3 7.3 19.0611 7.3 20C7.3 20.9389 8.06112 21.7 9 21.7Z"
+								stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+							</path>
+							<path
+								d="M16 21.7C16.9389 21.7 17.7 20.9389 17.7 20C17.7 19.0611 16.9389 18.3 16 18.3C15.0611 18.3 14.3 19.0611 14.3 20C14.3 20.9389 15.0611 21.7 16 21.7Z"
+								stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+							</path>
+						</svg>
+						<span class="mobile-actions__fallback-text">Shopping cart</span>
+						<span class="mobile-actions__counter">2</span>
+					</a>
+				</li> 
+				{% endcomment %}
+
+			</ul>
+			{% endfor %}
+
+		</div>
+		<nav class="header__mobile-nav mobile-nav">
+			<div class="mobile-nav__topbar">
+				<ul class="mobile-nav__actions-list">
+					<li class="mobile-nav__actions-item">
+						<a class="mobile-nav__actions-link" href="">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M12 13C14.7614 13 17 10.7614 17 8C17 5.23858 14.7614 3 12 3C9.23858 3 7 5.23858 7 8C7 10.7614 9.23858 13 12 13Z"
+									stroke="currentColor" stroke-width="1.4" stroke-linecap="round"
+									stroke-linejoin="round"></path>
+								<path
+									d="M20 21C20 18.8783 19.1571 16.8434 17.6569 15.3431C16.1566 13.8429 14.1217 13 12 13C9.87827 13 7.84344 13.8429 6.34315 15.3431C4.84285 16.8434 4 18.8783 4 21M20 21C20 18.8783 19.1571 16.8434 17.6569 15.3431C16.1566 13.8429 14.1217 13 12 13C9.87827 13 7.84344 13.8429 6.34315 15.3431C4.84285 16.8434 4 18.8783 4 21"
+									stroke="currentColor" stroke-width="1.4" stroke-linecap="round"
+									stroke-linejoin="round"></path>
+							</svg>
+						</a>
+					</li>
+					<li class="mobile-nav__actions-item">
+						<a class="mobile-nav__actions-link" href="">
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M13 18.675C14.93 19.505 17.242 20 20 20V16L16 15L13 18.675ZM13 18.675C9.159 17.023 6.824 14.045 5.5 11L13 18.675ZM5.5 11C4.4 8.472 4 5.898 4 4H8L9 8L5.5 11Z"
+									stroke="currentColor" stroke-width="1.4" stroke-linecap="round"
+									stroke-linejoin="round" />
+							</svg>
+						</a>
+					</li>
+					<!-- <li class="mobile-nav__actions-item"> service__lang-list -it's ul class -->
+					<li class="mobile-nav__actions-item dropdown" id="mobile-language-dropdown">
+						<button class="service__lang-link dropdown-button" type="button">EN
+						</button>
+						<ul class="dropdown-selection">
+							<li>
+								<a href="">
+									FR
+								</a>
+							</li>
+							<li>
+								<a href="">
+									DE
+								</a>
+							</li>
+						</ul>
+					</li>
+					<!-- </li> -->
+				</ul>
+			</div>
+			<div class="mobile-nav__primary-list">
+				<ul class="mobile-nav__list">
+					<li class="dropdown" id="mobile-products-dropdown">
+						<button class="dropdown-button" type="button">Products
+							<svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd"
+									d="M7.94625 0.462988C8.0555 0.743244 7.99511 1.06583 7.79323 1.28033L4.49913 4.78033C4.22347 5.07322 3.77653 5.07322 3.50087 4.78033L0.206768 1.28033C0.00488768 1.06583 -0.055504 0.743243 0.0537524 0.462987C0.163009 0.182732 0.420399 -1.32597e-08 0.7059 0L7.2941 3.0598e-07C7.5796 3.19239e-07 7.83699 0.182732 7.94625 0.462988Z"
+									fill="#FF8F8F"></path>
+							</svg>
+						</button>
+						<ul class="dropdown-selection">
+							<li><a href="">Quiet Books</a></li>
+							<li><a href="">Mini Quiet Books</a></li>
+							<li><a href="">Booklets</a></li>
+							<li><a href="">Wooden Toys</a></li>
+							<li><a href="">Wall decorations</a></li>
+							<li><a href="">Felt Masks</a></li>
+						</ul>
+					</li>
+					<li class="mobile-nav__item">
+						<a class="mobile-nav__link" href="#">
+							<span>Child Development
+							</span>
+						</a>
+					</li>
+					<li class="mobile-nav__item">
+						<a class="mobile-nav__link" href="#">
+							<span>What are Quiet Books
+							</span>
+						</a>
+					</li>
+					<li class="mobile-nav__item">
+						<a class="mobile-nav__link" href="#">
+							<span>Blog
+							</span>
+						</a>
+					</li>
+					<li class="dropdown" id="mobile-about-dropdown">
+						<button class="dropdown-button" type="button">About Us
+							<svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd"
+									d="M7.94625 0.462988C8.0555 0.743244 7.99511 1.06583 7.79323 1.28033L4.49913 4.78033C4.22347 5.07322 3.77653 5.07322 3.50087 4.78033L0.206768 1.28033C0.00488768 1.06583 -0.055504 0.743243 0.0537524 0.462987C0.163009 0.182732 0.420399 -1.32597e-08 0.7059 0L7.2941 3.0598e-07C7.5796 3.19239e-07 7.83699 0.182732 7.94625 0.462988Z"
+									fill="#FF8F8F"></path>
+							</svg>
+						</button>
+						<ul class="dropdown-selection">
+							<li><a href="">Quiet Books</a></li>
+							<li><a href="">Mini Quiet Books</a></li>
+							<li><a href="">Booklets</a></li>
+							<li><a href="">Wooden Toys</a></li>
+							<li><a href="">Wall decorations</a></li>
+							<li><a href="">Felt Masks</a></li>
+						</ul>
+					</li>
+					<li class="dropdown" id="mobile-support-dropdown">
+						<button class="dropdown-button" type="button">Support
+							<svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd"
+									d="M7.94625 0.462988C8.0555 0.743244 7.99511 1.06583 7.79323 1.28033L4.49913 4.78033C4.22347 5.07322 3.77653 5.07322 3.50087 4.78033L0.206768 1.28033C0.00488768 1.06583 -0.055504 0.743243 0.0537524 0.462987C0.163009 0.182732 0.420399 -1.32597e-08 0.7059 0L7.2941 3.0598e-07C7.5796 3.19239e-07 7.83699 0.182732 7.94625 0.462988Z"
+									fill="#FF8F8F"></path>
+							</svg>
+						</button>
+						<ul class="dropdown-selection">
+							<li><a href="">Quiet Books</a></li>
+							<li><a href="">Mini Quiet Books</a></li>
+							<li><a href="">Booklets</a></li>
+							<li><a href="">Wooden Toys</a></li>
+							<li><a href="">Wall decorations</a></li>
+							<li><a href="">Felt Masks</a></li>
+						</ul>
+					</li>
+					<li class="mobile-nav__item">
+						<a class="mobile-nav__link" href="#">
+							<span>Where to Find Us
+							</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		
+
+		<!-- Mobile menu -->
+		<!-- Mobile categories block -->
+		<!--<div class="categories-mobile">
+			<ul class="categories-mobile__list categories-mobile-items">
+				{% for block in section.blocks %}
+				<li class="categories-mobile-items__item">
+							<img width="56" height="56" src="{{ block.settings.categ_mob_img | image_url: width: 56, height: 56 }}" alt="{{ block.settings.categ_mob_img | escape }}" loading="lazy">
+					<a class="categories-mobile-items__link" href="{{ block.setting.categ_mob_link }}">
+						{{ block.settings.categ_mob_title | escape }}
+					</a>
+				</li>
+				{% endfor %}
+				{% comment %} <li class="categories-mobile-items__item">
+					<img class="categories-mobile-items__image" src="/assets/categories-image-4-320.png" alt="">
+					<a class="categories-mobile-items__link" href="#">
+						Wooden Toys
+					</a>
+				</li>
+				<li class="categories-mobile-items__item">
+					<img class="categories-mobile-items__image" src="/assets/categories-image-5-320.png" alt="">
+					<a class="categories-mobile-items__link" href="#">
+						Wall decorations
+					</a>
+				</li>
+				<li class="categories-mobile-items__item">
+					<img class="categories-mobile-items__image" src="/assets/categories-image-2-320.png" alt="">
+					<a class="categories-mobile-items__link" href="#">
+						Mini Quiet Books
+					</a>
+				</li>
+				<li class="categories-mobile-items__item">
+					<img class="categories-mobile-items__image" src="/assets/categories-image-1-320.png" alt="">
+					<a class="categories-mobile-items__link" href="#">
+						Quiet Books
+					</a>
+				</li>
+				<li class="categories-mobile-items__item">
+					<img class="categories-mobile-items__image" src="/assets/categories-image-2-320.png" alt="">
+					<a class="categories-mobile-items__link" href="#">
+						Mini Quiet Books
+					</a>
+				</li> {% endcomment %}
+			</ul>
+		</div>-->
+		<!-- Mobile categories block -->
+	</div>
+</header>
+</{% if section.settings.enable_sticky_header %}sticky-header{% else %}div{% endif %}>
+
+{%- if settings.cart_type == "notification" -%}
+	{%- render 'cart-notification', color_scheme: section.settings.color_scheme -%}
+  {%- endif -%}
+
+  {% javascript %}
+  class StickyHeader extends HTMLElement {
+    constructor() {
+      super();
+    }
+
+    connectedCallback() {
+      this.header = document.getElementById('shopify-section-header');
+      this.headerBounds = {};
+      this.currentScrollTop = 0;
+      this.preventReveal = false;
+      this.predictiveSearch = this.querySelector('predictive-search');
+
+      this.onScrollHandler = this.onScroll.bind(this);
+      this.hideHeaderOnScrollUp = () => this.preventReveal = true;
+
+      this.addEventListener('preventHeaderReveal', this.hideHeaderOnScrollUp);
+      window.addEventListener('scroll', this.onScrollHandler, false);
+
+      this.createObserver();
+    }
+
+    disconnectedCallback() {
+      this.removeEventListener('preventHeaderReveal', this.hideHeaderOnScrollUp);
+      window.removeEventListener('scroll', this.onScrollHandler);
+    }
+
+    createObserver() {
+      let observer = new IntersectionObserver((entries, observer) => {
+        this.headerBounds = entries[0].intersectionRect;
+        observer.disconnect();
+      });
+
+      observer.observe(this.header);
+    }
+
+    onScroll() {
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+      if (this.predictiveSearch && this.predictiveSearch.isOpen) return;
+
+      if (scrollTop > this.currentScrollTop && scrollTop > this.headerBounds.bottom) {
+        if (this.preventHide) return;
+        requestAnimationFrame(this.hide.bind(this));
+      } else if (scrollTop < this.currentScrollTop && scrollTop > this.headerBounds.bottom) {
+        if (!this.preventReveal) {
+          requestAnimationFrame(this.reveal.bind(this));
+        } else {
+          window.clearTimeout(this.isScrolling);
+
+          this.isScrolling = setTimeout(() => {
+            this.preventReveal = false;
+          }, 66);
+
+          requestAnimationFrame(this.hide.bind(this));
+        }
+      } else if (scrollTop <= this.headerBounds.top) {
+        requestAnimationFrame(this.reset.bind(this));
+      }
+
+      this.currentScrollTop = scrollTop;
+    }
+
+    hide() {
+      this.header.classList.add('shopify-section-header-hidden', 'shopify-section-header-sticky');
+      this.closeMenuDisclosure();
+      this.closeSearchModal();
+    }
+
+    reveal() {
+      this.header.classList.add('shopify-section-header-sticky', 'animate');
+      this.header.classList.remove('shopify-section-header-hidden');
+    }
+
+    reset() {
+      this.header.classList.remove('shopify-section-header-hidden', 'shopify-section-header-sticky', 'animate');
+    }
+
+    closeMenuDisclosure() {
+      this.disclosures = this.disclosures || this.header.querySelectorAll('header-menu');
+      this.disclosures.forEach(disclosure => disclosure.close());
+    }
+
+    closeSearchModal() {
+      this.searchModal = this.searchModal || this.header.querySelector('details-modal');
+      this.searchModal.close(false);
+    }
+  }
+
+  customElements.define('sticky-header', StickyHeader);
+{% endjavascript %}
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Organization",
+    "name": {{ shop.name | json }},
+    {% if section.settings.logo %}
+      "logo": {{ section.settings.logo | image_url: width: section.settings.logo.width | prepend: "https:" | json }},
+    {% endif %}
+    "sameAs": [
+      {{ settings.social_twitter_link | json }},
+      {{ settings.social_facebook_link | json }},
+      {{ settings.social_pinterest_link | json }},
+      {{ settings.social_instagram_link | json }},
+      {{ settings.social_tiktok_link | json }},
+      {{ settings.social_tumblr_link | json }},
+      {{ settings.social_snapchat_link | json }},
+      {{ settings.social_youtube_link | json }},
+      {{ settings.social_vimeo_link | json }}
+    ],
+    "url": {{ request.origin | append: page.url | json }}
+  }
+</script>
+
+{%- if request.page_type == 'index' -%}
+  {% assign potential_action_target = request.origin | append: routes.search_url | append: "?q={search_term_string}" %}
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "WebSite",
+      "name": {{ shop.name | json }},
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {{ potential_action_target | json }},
+        "query-input": "required name=search_term_string"
+      },
+      "url": {{ request.origin | append: page.url | json }}
+    }
+  </script>
+{%- endif -%}
+
+{% schema %}
+{
+	"name":"Main header",
+	"class":"section-header",
+	"settings":[
+	   {
+		  "type":"image_picker",
+		  "id":"logo",
+		  "label":"Logo image"
+	   },
+	   {
+		  "type":"text",
+		  "label":"Title text",
+		  "id":"slider_title",
+		  "default":"Discover the new way of playing"
+	   },
+	   {
+		  "type":"text",
+		  "label":"Slider button left",
+		  "id":"buy-button_text",
+		  "default":"Shop now",
+		  "info":"Enter button text here"
+	   },
+	   {
+		  "type":"text",
+		  "label":"Slider button right",
+		  "id":"about-button_text",
+		  "default":"About us",
+		  "info":"Enter button text here"
+	   },
+	   {
+		  "type":"text",
+		  "label":"Phone number",
+		  "id":"service_link",
+		  "default":"+4961729452910",
+		  "info":"Enter your phone numbe"
+	   },
+	   {
+		  "type":"header",
+		  "content":"Dropdown menus"
+	   },
+	   {
+		  "type":"text",
+		  "label":"Default language",
+		  "id":"lang_button",
+		  "default":"EN"
+	   },
+	   {
+		  "type":"link_list",
+		  "id":"language-menu",
+		  "label":"Language menu"
+	   },
+	   {
+		  "type":"header",
+		  "content":"Settings for mobile resolution"
+	   },
+	   {
+		  "type":"url",
+		  "id":"logo_mobile_url",
+		  "label":"Link for mobile logo",
+		  "info":"Enter url address for mobile logo"
+	   },
+	   {
+		  "type":"image_picker",
+		  "id":"logo_mobile",
+		  "label":"Image for mobile logo",
+		  "info":"Select image for mobile logo"
+	   },
+	   {
+		"type": "header",
+		"content": "t:sections.all.spacing"
+	  },
+	  {
+		"type": "range",
+		"id": "margin_bottom",
+		"min": 0,
+		"max": 100,
+		"step": 4,
+		"unit": "px",
+		"label": "t:sections.header.settings.margin_bottom.label",
+		"default": 24
+	  },
+	  {
+		"type": "header",
+		"content": "t:sections.all.padding.section_padding_heading"
+	  },
+	  {
+		"type": "range",
+		"id": "padding_top",
+		"min": 0,
+		"max": 100,
+		"step": 4,
+		"unit": "px",
+		"label": "t:sections.all.padding.padding_top",
+		"default": 24
+	  },
+	  {
+		"type":"header",
+		"content":"Products menu"
+	 },
+	 {
+		"type":"text",
+		"label":"Choose a product",
+		"id":"product_button",
+		"default":"Products"
+	 },
+	 {
+		"type":"link_list",
+		"id":"products-menu",
+		"label":"Products menu"
+	 },
+	 {
+		"type":"header",
+		"content":"Main menu"
+	 },
+	 {
+		"type":"link_list",
+		"id":"main-navigation",
+		"label":"Main navigation"
+	 },
+	 {
+		"type":"header",
+		"content":"About menu"
+	 },
+	 {
+		"type":"text",
+		"label":"About us menu",
+		"id":"about_button",
+		"default":"About us"
+	 },
+	 {
+		"type":"link_list",
+		"id":"about-menu",
+		"label":"About us menu"
+	 },
+	 {
+		"type":"header",
+		"content":"Support menu"
+	 },
+	 {
+		"type":"text",
+		"label":"Support menu",
+		"id":"support_button",
+		"default":"Support"
+	 },
+	 {
+		"type":"link_list",
+		"id":"support-menu",
+		"label":"Learn more about support"
+	 },
+	 {
+		"type": "select",
+		"id": "color_scheme",
+		"options": [
+		  {
+			"value": "accent-1",
+			"label": "t:sections.all.colors.accent_1.label"
+		  },
+		  {
+			"value": "accent-2",
+			"label": "t:sections.all.colors.accent_2.label"
+		  },
+		  {
+			"value": "background-1",
+			"label": "t:sections.all.colors.background_1.label"
+		  },
+		  {
+			"value": "background-2",
+			"label": "t:sections.all.colors.background_2.label"
+		  },
+		  {
+			"value": "inverse",
+			"label": "t:sections.all.colors.inverse.label"
+		  }
+		],
+		"default": "background-1",
+		"label": "t:sections.all.colors.label"
+	  },
+	  {
+		"type": "checkbox",
+		"id": "show_line_separator",
+		"default": true,
+		"label": "t:sections.header.settings.show_line_separator.label"
+	  },
+	  {
+		"type": "checkbox",
+		"id": "enable_sticky_header",
+		"default": true,
+		"label": "t:sections.header.settings.enable_sticky_header.label",
+		"info": "t:sections.header.settings.enable_sticky_header.info"
+	  }
+	],
+	"blocks":[
+	   {
+		  "type":"service_icons",
+		  "name":"Service icons",
+		  "settings":[
+			 {
+				"type":"select",
+				"id":"service_icons",
+				"label":"Select icon",
+				"options":[
+				   {
+					  "value":"user",
+					  "label":"User"
+				   },
+				   {
+					  "value":"heart-outline",
+					  "label":"Heart outline"
+				   },
+				   {
+					  "value":"cart",
+					  "label":"Cart"
+				   }
+				],
+				"default":"user"
+			 }
+		  ]
+	   },
+	   {
+		  "type":"mob_service_icons",
+		  "name":"Service icons for mobile",
+		  "settings":[
+			 {
+				"type":"select",
+				"id":"mob_service_icons",
+				"label":"Select icon for mobile",
+				"options":[
+				   {
+					  "value":"heart-outline",
+					  "label":"Heart outline"
+				   },
+				   {
+					  "value":"cart",
+					  "label":"Cart"
+				   }
+				],
+				"default":"heart-outline"
+			 },
+			 {
+				"type":"url",
+				"id":"mob_service_icons_url",
+				"label":"Link for mobile icons",
+				"info":"Enter your url address for mobile icons"
+			 }
+		  ]
+	   }
+	]
+}
+{% endschema %}

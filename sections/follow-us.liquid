@@ -2,24 +2,34 @@
 	<!-- <div class="container"> -->
 	{% style %}
 		#shopify-section-{{ section.id }} {
-		padding-top: {{ section.settings.padding_top }}px;
-		padding-bottom: {{ section.settings.padding_bottom }}px;
+			padding-top: {{ section.settings.padding_top }}px;
+			padding-bottom: {{ section.settings.padding_bottom }}px;
 		}
 
 		.follow-us__title::before {
-		background-image: url({{ "main-slider-decorative-1.svg" | asset_url }});
+			background-image: url({{ "main-slider-decorative-1.svg" | asset_url }});
 		}
 
 		.follow-us__heading::before {
-		background-image: url({{ "follow-us-decorative-1.svg" | asset_url }});
+			background-image: url({{ "follow-us-decorative-1.svg" | asset_url }});
 		}
 
 		.follow-us__heading::after {
-		background-image: url({{ "follow-us-decorative-2.svg" | asset_url }});
+			background-image: url({{ "follow-us-decorative-2.svg" | asset_url }});
 		}
 
 		.instagram__link::before {
-		background-image: url({{ "follow-us-instagram.svg" | asset_url }});
+			background-image: url({{ "follow-us-instagram.svg" | asset_url }});
+		}
+
+		.follow-us {
+    		overflow-x: hidden;
+		}
+
+		@media screen and (max-width: 800px) {
+			.follow-us {
+				padding: 105px 0 82px 0 !important;
+			}
 		}
 	{% endstyle %}
 

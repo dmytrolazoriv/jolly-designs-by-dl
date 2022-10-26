@@ -5,6 +5,12 @@
     {% comment %} background-image: url({{ "making-decorative-1.png" | asset_url }}); {% endcomment %}
 	background-image: url({{ section.settings.making_background_image | img_url: 'master' }});
   }
+
+  @media screen and (max-width: 425px) {
+	.making {
+		overflow-x: hidden;
+	}
+}
 {% endstyle %}
 
 	<div class="container">

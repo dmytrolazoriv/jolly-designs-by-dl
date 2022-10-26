@@ -63,7 +63,7 @@ $(function () {
 		}, {
 			breakpoint: 769,
 			settings: {
-				slidesToShow: 3,
+				slidesToShow: 2,
 				slidesToScroll: 1,
 				centerMode: true,
 				centerPadding: '75px',
@@ -85,7 +85,7 @@ $(function () {
 				slidesToScroll: 1,
 				// centerMode: false,
 				// centerPadding: false,
-				variableWidth: true
+				// variableWidth: true
 			}
 		}, {
 			breakpoint: 426,
@@ -103,7 +103,7 @@ $(function () {
 				slidesToScroll: 1,
 				centerMode: true,
 				centerPadding: '10px',
-				variableWidth: false
+				variableWidth: true
 			}
 		}, {
 			breakpoint: 321,
@@ -236,18 +236,20 @@ $(function () {
 		centerMode: true,
 		centerPadding: '60px',
 		// mobileFirst: true,//add this one
-		responsive: [{
-			breakpoint: 1441,
-			settings: {
-				slidesToShow: 4,
-				slidesToScroll: 1
+		responsive: [
+			{
+				breakpoint: 1441,
+				settings: {
+					slidesToShow: 4,
+					slidesToScroll: 1
+				}
 			}
-		}]
+		]
 	}); // Seventh follow-us__instagram-list
 
 	$(".follow-us__instagram-list").slick({
 		dots: false,
-		slidesToShow: 6,
+		slidesToShow: 5,
 		slidesToScroll: 1,
 		speed: 1000,
 		prevArrow: false,
@@ -448,11 +450,11 @@ $(function () {
 
 		// Change the color of a pseudo element
 		if ($(".footer").hasClass("background-light-blue")) {
-			$(".footer").append('<style>.footer::after{border-color: ' + "#e8f4ff" + ';}</style>');
+			$(".footer").append('<style>.footer::after{border-color: ' + "#e8f4ff" + ';background-color: ' + "#cee8ff" + ';}</style>');
 		} else if ($(".footer").hasClass("background-dark-blue")) {
-			$(".footer").append('<style>.footer::after{border-color: ' + "#1363ad" + ';}</style>');
+			$(".footer").append('<style>.footer::after{border-color: ' + "#1363ad" + ';background-color: ' + "#105393" + ';}</style>');
 		} else {
-			$(".footer").append('<style>.footer::after{border-color: ' + "#f6adad" + ';}</style>');
+			$(".footer").append('<style>.footer::after{border-color: ' + "#f6adad" + ';background-color: ' + "#ff8f8f" + ';}</style>');
 		}
 	});
 }); // Dropdown menu

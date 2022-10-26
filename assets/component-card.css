@@ -69,6 +69,12 @@
 	margin-bottom: 12px;
 }
 
+@media screen and (max-width: 375px) {
+	.card .card__inner .card__media {
+		margin-bottom: 0;
+	}
+}
+
 .card--card .card__inner .card__media {
 	border-bottom-right-radius: 0;
 	border-bottom-left-radius: 0;
@@ -126,6 +132,7 @@
 .card__information {
 	grid-row-start: 2;
 	/* padding: 1.3rem 1rem; */
+	padding: 1rem;
 }
 
 .card:not(.ratio)>.card__content {
@@ -177,6 +184,13 @@
 	font-size: 16px;
 	line-height: 24px;
 }
+
+@media screen and (max-width: 375px) {
+	.card__heading {
+		margin-bottom: 10px;
+	}
+}
+
 
 .card__heading:last-child {
 	margin-bottom: 0;

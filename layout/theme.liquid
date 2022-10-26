@@ -209,6 +209,97 @@
       document.documentElement.classList.add('shopify-design-mode');
     }
     </script>
+	<script>
+		class StickyHeader extends HTMLElement {
+			constructor() {
+			  super();
+			}
+		
+			connectedCallback() {
+			  this.header = document.getElementById('shopify-section-header');
+			  this.headerBounds = {};
+			  this.currentScrollTop = 0;
+			  this.preventReveal = false;
+			  this.predictiveSearch = this.querySelector('predictive-search');
+		
+			  this.onScrollHandler = this.onScroll.bind(this);
+			  this.hideHeaderOnScrollUp = () => this.preventReveal = true;
+		
+			  this.addEventListener('preventHeaderReveal', this.hideHeaderOnScrollUp);
+			  window.addEventListener('scroll', this.onScrollHandler, false);
+		
+			  this.createObserver();
+			}
+		
+			disconnectedCallback() {
+			  this.removeEventListener('preventHeaderReveal', this.hideHeaderOnScrollUp);
+			  window.removeEventListener('scroll', this.onScrollHandler);
+			}
+		
+			createObserver() {
+			  let observer = new IntersectionObserver((entries, observer) => {
+				this.headerBounds = entries[0].intersectionRect;
+				observer.disconnect();
+			  });
+		
+			  observer.observe(this.header);
+			}
+		
+			onScroll() {
+			  const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+		
+			  if (this.predictiveSearch && this.predictiveSearch.isOpen) return;
+		
+			  if (scrollTop > this.currentScrollTop && scrollTop > this.headerBounds.bottom) {
+				if (this.preventHide) return;
+				requestAnimationFrame(this.hide.bind(this));
+			  } else if (scrollTop < this.currentScrollTop && scrollTop > this.headerBounds.bottom) {
+				if (!this.preventReveal) {
+				  requestAnimationFrame(this.reveal.bind(this));
+				} else {
+				  window.clearTimeout(this.isScrolling);
+		
+				  this.isScrolling = setTimeout(() => {
+					this.preventReveal = false;
+				  }, 66);
+		
+				  requestAnimationFrame(this.hide.bind(this));
+				}
+			  } else if (scrollTop <= this.headerBounds.top) {
+				requestAnimationFrame(this.reset.bind(this));
+			  }
+		
+			  this.currentScrollTop = scrollTop;
+			}
+		
+			hide() {
+			  this.header.classList.add('shopify-section-header-hidden', 'shopify-section-header-sticky');
+			  this.closeMenuDisclosure();
+			  this.closeSearchModal();
+			}
+		
+			reveal() {
+			  this.header.classList.add('shopify-section-header-sticky', 'animate');
+			  this.header.classList.remove('shopify-section-header-hidden');
+			}
+		
+			reset() {
+			  this.header.classList.remove('shopify-section-header-hidden', 'shopify-section-header-sticky', 'animate');
+			}
+		
+			closeMenuDisclosure() {
+			  this.disclosures = this.disclosures || this.header.querySelectorAll('header-menu');
+			  this.disclosures.forEach(disclosure => disclosure.close());
+			}
+		
+			closeSearchModal() {
+			  this.searchModal = this.searchModal || this.header.querySelector('details-modal');
+			  this.searchModal.close(false);
+			}
+		  }
+		
+		  customElements.define('sticky-header', StickyHeader);
+	</script>
   </head>
 
   <body>
@@ -217,7 +308,7 @@
   {% comment %} {% section 'announcement-bar' %} {% endcomment %}
   {% comment %} {% section 'announcement-slider' %} {% endcomment %}
 
-  {% section 'header-shopify' %}
+  {% section 'header' %}
   <a class="skip-to-content-link button visually-hidden" href="#MainContent">
 	{{ "accessibility.skip_to_text" | t }}
   </a>
@@ -322,16 +413,15 @@
 
     {% section 'footer' %}  
       <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
-      <script src="https://file.myfontastic.com/W4hLWWnwtgdnaaZqJaYR5W/icons.js" defer></script>
+      {% comment %} <script src="https://file.myfontastic.com/W4hLWWnwtgdnaaZqJaYR5W/icons.js" defer></script> {% endcomment %}
       <script src="{{ 'jquery-3.6.1.js' | asset_url }}" defer></script>
       <script src="{{ 'slick.js' | asset_url }}" defer></script>
       {% comment %} <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js" defer></script> {% endcomment %}
       {% comment %} <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js" defer></script> {% endcomment %}
       {% comment %} <script src="{{ 'theme-search.js' | asset_url }}" defer="defer"></script> {% endcomment %}
-      <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
       <script src="{{ 'app.js' | asset_url }}" defer="defer"></script>
   
-{% include 'swymSnippet' %}
+{% comment %} {% include 'swymSnippet' %} {% endcomment %}
 
 </body>
 </html>
