@@ -456,6 +456,25 @@ $(function () {
 		} else {
 			$(".footer").append('<style>.footer::after{border-color: ' + "#f6adad" + ';background-color: ' + "#ff8f8f" + ';}</style>');
 		}
+
+		// Change value of srcset attribute .favorite-cards__item-right
+		$(".favorite-cards__item-right .favorite-cards__image source").attr("srcset", "//cdn.shopify.com/s/files/1/0597/1564/9581/t/6/assets/favorite-img-2-768.png?v=156763865099423740911664548464");
+		// Change value of srcset attribute .about__mobile-slider-item
+		$(".about__mobile-slider-list").find(".about__mobile-slider-item").eq(1).find("source:first-child").attr("srcset", "//cdn.shopify.com/s/files/1/0597/1564/9581/t/6/assets/about-image-2-425.png?v=37740696778911079821664548458");
+		$(".about__slider-list").find(".about__slider-item").eq(2).find("source:nth-child(2)").attr("srcset", "https://cdn.shopify.com/s/files/1/0597/1564/9581/t/6/assets/about-image-2-768.png?v=97667364067819794771664548459");
+		// $(".about__slider-list").find(".about__slider-item").eq(2).find("img").attr("src", "https://cdn.shopify.com/s/files/1/0597/1564/9581/t/6/assets/about-image-2-768.png?v=97667364067819794771664548459");
+		// Separator for header on resolution 749px and 375px
+		if (document.location.pathname == '/' && $(window).width() <= 749) {
+			$(".header").append('<style>.header::after{bottom: ' + 0 + "px" + ';}</style>');
+		} else if (document.location.pathname == '/cart' && $(window).width() <= 749) {
+			$(".header").append('<style>.header::after{bottom: ' + -24 + "px" + ';}</style>');
+		}
+		// Separator for header on resolution 375px
+		if (document.location.pathname == '/cart' && $(window).width() <= 375 && $(".header__service-mobile").css("padding-top") === "15px") {
+			$(".header").append('<style>.header::after{bottom: ' + -15 + "px" + ';}</style>');
+			$(".header").find("style").eq(0).remove();
+		}
+
 	});
 }); // Dropdown menu
 

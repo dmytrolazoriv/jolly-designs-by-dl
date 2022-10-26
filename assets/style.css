@@ -4847,6 +4847,14 @@ div:is(.header__wrapper) {
 		padding: 10px;
 		top: -68px
 	}
+
+	.about__mobile-slider-list .slick-slide:nth-child(2) .about__slider-title::before {
+		top: -30px;
+		left: -30px;
+		width: 54px;
+		height: 54px;
+		transform: rotate(356deg) skewX(350deg);
+	}
 }
 
 @media screen and (max-width: 420px) {

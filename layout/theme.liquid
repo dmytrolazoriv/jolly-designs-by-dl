@@ -189,6 +189,14 @@
         --variant-pills-shadow-vertical-offset: {{ settings.variant_pills_shadow_vertical_offset }}px;
         --variant-pills-shadow-blur-radius: {{ settings.variant_pills_shadow_blur }}px;
       }
+
+	  @font-face {
+			font-family: "svgfont";
+			src: url({{ "svgfont.eot" | asset_url }});
+			src: url({{ "svgfont.eot?#iefix" | asset_url }}) format("eot"), url({{ "svgfont.woff" | asset_url }}) format("woff"), url({{ "svgfont.woff2" | asset_url }}) format("woff2"), url({{ "svgfont.ttf" | asset_url }}) format("truetype");
+			font-weight: normal;
+			font-style: normal;
+		}
     {% endstyle %}
 
     {{ 'base.css' | asset_url | stylesheet_tag }}

@@ -36,7 +36,8 @@
 		{% for block in section.blocks %}
 		<li class="favorite-cards__item" {{ block.shopify_attributes }}>
 		  <picture class="favorite-cards__image">
-			<source media="(max-width:768px)" srcset="/assets/favorite-img-1-768.png">
+			{% comment %} <source media="(max-width:768px)" srcset="/assets/favorite-img-1-768.png"> {% endcomment %}
+			<source media="(max-width:768px)" srcset="{{ 'favorite-img-1-768.png' | asset_url }}">
 			<img width="" height="" class="cards__image" src="{{ block.settings.favorite_img | image_url: width: 300,
 				height: 298 }}" alt="{{ block.settings.favorite_img.alt }}" loading="lazy">
 		  </picture>
