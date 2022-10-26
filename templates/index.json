@@ -373,74 +373,6 @@
         "about_stroke_color": "#ffe4bb"
       }
     },
-    "b0436072-9038-466b-9d55-2c42e8f039a4": {
-      "type": "categories",
-      "blocks": {
-        "780838d7-e6ff-4fbe-82a5-8ba2879da5b2": {
-          "type": "categories_item",
-          "settings": {
-            "items_img": "shopify:\/\/shop_images\/categories-img-1_2d2bfeea-feb9-40c6-a671-2a62f318da27.png",
-            "items_title": "Quiet Books",
-            "items_url": "shopify:\/\/collections\/all"
-          }
-        },
-        "93672f5d-3703-4dc9-9709-549f7e075e62": {
-          "type": "categories_item",
-          "settings": {
-            "items_img": "shopify:\/\/shop_images\/categories-img-2_f2d6d05c-915f-4e21-bd32-3882171bba0f.png",
-            "items_title": "Mini Quiet Books",
-            "items_url": "shopify:\/\/collections\/all"
-          }
-        },
-        "4194c254-267e-4b7b-8ed7-943b3d60249e": {
-          "type": "categories_item",
-          "settings": {
-            "items_img": "shopify:\/\/shop_images\/categories-img-3_6cc5f1c7-af3c-46c6-a0a7-c9b73331ec11.png",
-            "items_title": "Booklets",
-            "items_url": "shopify:\/\/collections\/all"
-          }
-        },
-        "d9040c16-accd-4e8d-8c02-90f65dcade43": {
-          "type": "categories_item",
-          "settings": {
-            "items_img": "shopify:\/\/shop_images\/categories-img-4_420ec39b-9258-48e4-bdaa-9e98940a081c.png",
-            "items_title": "Wooden Toys",
-            "items_url": "shopify:\/\/collections\/all"
-          }
-        },
-        "117e97f6-a1ce-43f1-b82e-4c16761bf8ef": {
-          "type": "categories_item",
-          "settings": {
-            "items_img": "shopify:\/\/shop_images\/categories-img-5_d2a2c084-20c2-42ba-8257-bd199bca50f3.png",
-            "items_title": "Wall decorations",
-            "items_url": "shopify:\/\/collections\/all"
-          }
-        },
-        "25ddded6-d6da-4797-8a3a-a34dea2e0571": {
-          "type": "categories_item",
-          "settings": {
-            "items_img": "shopify:\/\/shop_images\/categories-img-2_f2d6d05c-915f-4e21-bd32-3882171bba0f.png",
-            "items_title": "Mini Quiet Books",
-            "items_url": "shopify:\/\/collections\/all"
-          }
-        }
-      },
-      "block_order": [
-        "780838d7-e6ff-4fbe-82a5-8ba2879da5b2",
-        "93672f5d-3703-4dc9-9709-549f7e075e62",
-        "4194c254-267e-4b7b-8ed7-943b3d60249e",
-        "d9040c16-accd-4e8d-8c02-90f65dcade43",
-        "117e97f6-a1ce-43f1-b82e-4c16761bf8ef",
-        "25ddded6-d6da-4797-8a3a-a34dea2e0571"
-      ],
-      "settings": {
-        "title": "Our Categories",
-        "categories_padding_top": 120,
-        "categories_padding_bottom": 120,
-        "categories_bg_color": "#cee8ff",
-        "categories_text_color": "#105393"
-      }
-    },
     "5a1f6dcd-6616-4df7-9004-aa892d793cf0": {
       "type": "collection-list",
       "blocks": {
@@ -490,7 +422,7 @@
         "d722a581-74fe-4726-99d7-b3af0eb9fbef"
       ],
       "settings": {
-        "title": "Collections",
+        "title": "Our Categories",
         "heading_size": "h1",
         "image_ratio": "square",
         "columns_desktop": 3,
@@ -498,8 +430,8 @@
         "show_view_all": false,
         "columns_mobile": "1",
         "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "edeaa5d9-a79c-4e98-85f5-45faef6f0bcc": {
@@ -618,7 +550,6 @@
     "986a67ea-52a7-4e39-8ff6-49e2774c73c6",
     "ca22a9cd-6fdf-4992-94c3-432a51a2b41a",
     "936dfde1-3fb7-4852-a913-cbe4e27d049b",
-    "b0436072-9038-466b-9d55-2c42e8f039a4",
     "5a1f6dcd-6616-4df7-9004-aa892d793cf0",
     "edeaa5d9-a79c-4e98-85f5-45faef6f0bcc",
     "a096376c-9d6d-44fb-a721-02bfe75375b5"
