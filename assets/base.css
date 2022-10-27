@@ -1477,9 +1477,20 @@ button.shopify-payment-button__button--unbranded {
 .button-label,
 .shopify-challenge__button,
 .customer button {
-	/* font-size: 1.5rem;
-	letter-spacing: 0.1rem;
+	/* font-size: 1.5rem; */
+	/* letter-spacing: 0.1rem;
 	line-height: calc(1 + 0.2 / var(--font-body-scale)); */
+}
+
+.shopify-challenge__button {
+	font-family: "Poppins", sans-serif;
+	font-weight: 600;
+	font-size: 1rem;
+	background-color: #ff8f8f;
+	color: #ffffff;
+	border-radius: 38px;
+	padding: 16px 44px;
+	margin-top: 1rem !important;
 }
 
 .button--tertiary {
@@ -1777,7 +1788,7 @@ details[open]>.share-button__fallback {
 	left: var(--inputs-border-width);
 	border: 0.1rem solid transparent;
 	border-radius: var(--inputs-radius);
-	box-shadow: 0 0 0 var(--inputs-border-width) rgba(var(--color-foreground), var(--inputs-border-opacity));
+	box-shadow: 0 0 0 var(--inputs-border-width) rgba(65, 66, 73, 0.2);
 	transition: box-shadow var(--duration-short) ease;
 	z-index: 1;
 }
@@ -1980,9 +1991,11 @@ input[type='checkbox'] {
 .form__message {
 	align-items: center;
 	display: flex;
-	font-size: 1.4rem;
+	font-size: 1rem;
 	line-height: 1;
-	margin-top: 1rem;
+	/* margin-top: 1rem; */
+	/* at the stage of integration */
+	margin-bottom: 1rem;
 }
 
 .form__message--large {
@@ -1997,9 +2010,9 @@ input[type='checkbox'] {
 .form__message .icon,
 .customer .form__message svg {
 	flex-shrink: 0;
-	height: 1.3rem;
+	height: 1rem;
 	margin-right: 0.5rem;
-	width: 1.3rem;
+	width: 1rem;
 }
 
 .form__message--large .icon,
@@ -3058,4 +3071,18 @@ details-disclosure>details {
 	.localization-form__select:focus {
 		outline: transparent solid 1px;
 	} */
+}
+
+
+.template-404 .title {
+	font-family: 'DM Serif Display';
+	color: #ff8f8f;
+}
+
+.template-404 .button {
+	font-family: "Poppins", sans-serif;
+	background-color: #ff8f8f;
+	color: #ffffff;
+	border-radius: 38px;
+	padding: 16px 44px;
 }

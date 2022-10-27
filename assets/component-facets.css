@@ -247,10 +247,11 @@
 .facets__display {
 	border-width: var(--popup-border-width);
 	border-style: solid;
-	border-color: rgba(var(--color-foreground), var(--popup-border-opacity));
+	border-color: rgba(65, 66, 73, 0.2);
 	border-radius: var(--popup-corner-radius);
 	box-shadow: var(--popup-shadow-horizontal-offset) var(--popup-shadow-vertical-offset) var(--popup-shadow-blur-radius) rgba(var(--color-shadow), var(--popup-shadow-opacity));
-	background-color: rgb(var(--color-background));
+	/* background-color: rgb(var(--color-background)); */
+	background-color: rgb(255, 255, 255);
 	position: absolute;
 	top: calc(100% + 0.5rem);
 	left: -1.2rem;
@@ -260,7 +261,7 @@
 }
 
 .facets__header {
-	border-bottom: 1px solid rgba(var(--color-foreground), 0.2);
+	border-bottom: 1px solid rgba(65, 66, 73, 0.2);
 	padding: 1.5rem 2rem;
 	display: flex;
 	justify-content: space-between;
@@ -278,6 +279,13 @@
 .facets__item {
 	display: flex;
 	align-items: center;
+}
+
+.facets__item .icon.icon-checkmark {
+	width: inherit;
+	height: inherit;
+	vertical-align: initial;
+	fill: none;
 }
 
 .facets__item label,
@@ -396,7 +404,7 @@ button.facets__button {
 }
 
 span.active-facets__button-inner {
-	color: rgb(var(--color-foreground));
+	color: rgb(65, 66, 73);
 	box-shadow: 0 0 0 0.1rem rgb(var(--color-foreground));
 	border-radius: 2.6rem;
 	font-size: 1rem;
@@ -461,11 +469,11 @@ span.active-facets__button-inner:after {
 }
 
 .active-facets__button--light .active-facets__button-inner {
-	box-shadow: 0 0 0 0.1rem rgba(var(--color-foreground), 0.2);
+	box-shadow: 0 0 0 0.1rem rgba(65, 66, 73, 0.2);
 }
 
 .active-facets__button--light:hover .active-facets__button-inner {
-	box-shadow: 0 0 0 0.2rem rgba(var(--color-foreground), 0.4);
+	box-shadow: 0 0 0 0.2rem rgba(65, 66, 73, 0.4);
 }
 
 a.active-facets__button:focus-visible {
@@ -579,7 +587,7 @@ a.active-facets__button.focused .active-facets__button-inner,
 }
 
 .mobile-facets__inner {
-	background-color: rgb(var(--color-background));
+	background-color: rgb(255, 255, 255);
 	width: calc(100% - 5rem);
 	margin-left: auto;
 	height: 100%;
@@ -589,7 +597,7 @@ a.active-facets__button.focused .active-facets__button-inner,
 	max-width: 37.5rem;
 	display: flex;
 	flex-direction: column;
-	border-color: rgba(var(--color-foreground), var(--drawer-border-opacity));
+	border-color: rgba(65, 66, 73, 0.2);
 	border-style: solid;
 	border-width: 0 0 0 var(--drawer-border-width);
 	filter: drop-shadow(var(--drawer-shadow-horizontal-offset) var(--drawer-shadow-vertical-offset) var(--drawer-shadow-blur-radius) rgba(var(--color-shadow), var(--drawer-shadow-opacity)));
@@ -813,6 +821,12 @@ details.menu-opening .mobile-facets__close svg {
 	position: relative;
 }
 
+.mobile-facets__item .icon.icon-checkmark {
+	width: initial;
+	height: initial;
+	fill: none;
+}
+
 input.mobile-facets__checkbox {
 	border: 0;
 	position: absolute;
@@ -864,7 +878,7 @@ input.mobile-facets__checkbox {
 }
 
 .mobile-facets__footer {
-	border-top: 0.1rem solid rgba(var(--color-foreground), 0.08);
+	border-top: 0.1rem solid rgba(65, 66, 73, 0.08);
 	padding: 2rem;
 	bottom: 0;
 	position: sticky;
@@ -885,6 +899,12 @@ input.mobile-facets__checkbox {
 
 .mobile-facets__footer noscript .button {
 	width: 100%;
+}
+
+.mobile-facets__footer button {
+	background-color: #ff8f8f;
+	color: #fff;
+	border-radius: 38px;
 }
 
 .mobile-facets__sort {
@@ -1117,5 +1137,149 @@ input.mobile-facets__checkbox {
 	.product-count__text {
 		font-size: 1rem;
 		line-height: calc(1 + 0.25 / var(--font-body-scale));
+	}
+}
+
+
+@media screen and (max-width: 425px) {
+	.mobile-facets__close {
+		width: 2.4rem;
+		height: 2.4rem;
+	}
+
+	.mobile-facets__heading {
+		font-size: calc(var(--font-heading-scale) * 1rem);
+	}
+
+	.mobile-facets__count {
+		font-size: 1rem;
+	}
+
+	.mobile-facets__close svg,
+	.icon-arrow,
+	.icon-caret {
+		width: 1rem;
+	}
+
+	.mobile-facets__sort .select__select {
+		margin-left: 0.25rem;
+		margin-right: 0.25rem;
+		padding-left: 0.25rem;
+		padding-right: 1rem;
+	}
+
+	.mobile-facets__sort label,
+	.select__select {
+		font-size: 0.75rem;
+	}
+
+	.select .icon-caret,
+	.customer select+svg {
+		height: 0.5rem;
+	}
+
+	.mobile-facets__header {
+		padding: 1rem;
+	}
+
+	.mobile-facets__main {
+		padding: 2rem 0 0;
+	}
+
+	.mobile-facets__summary {
+		padding: 1rem 1.5rem;
+	}
+
+	.mobile-facets__footer {
+		padding: 1rem;
+	}
+
+	.mobile-facets__footer button {
+		font-size: 1rem;
+		margin-left: 0;
+		padding: 0 1rem;
+		background-color: #ff8f8f;
+		color: #fff;
+		border-radius: 38px;
+		min-width: calc(6rem + var(--buttons-border-width) * 2);
+		min-height: calc(3rem + var(--buttons-border-width) * 2);
+	}
+
+	.mobile-facets__clear-wrapper {
+		justify-content: flex-start;
+	}
+
+	.mobile-facets__close-button {
+		font-size: 1rem;
+		padding: 1rem 2rem;
+		width: calc(100% - 2.5rem);
+	}
+
+	.mobile-facets__info {
+		padding: 0 1.5rem;
+	}
+
+	.facets__price {
+		padding: 1rem;
+	}
+
+
+	.facets__price .field+.field-currency {
+		margin-left: 0.75rem;
+	}
+
+
+	.field__label,
+	.customer .field label {
+		font-size: 1rem;
+		line-height: 1;
+	}
+
+	.facets__price .field__label {
+		left: 1rem;
+		top: 0.8rem;
+	}
+
+	.field__input:focus,
+	.field__input:not(:placeholder-shown),
+	.field__input:-webkit-autofill,
+	.customer .field input:focus,
+	.customer .field input:not(:placeholder-shown),
+	.customer .field input:-webkit-autofill {
+		padding: 1rem 0.5rem 0.25rem 0.5rem;
+		font-size: 1rem;
+	}
+
+	.field__input:focus~.field__label,
+	.field__input:not(:placeholder-shown)~.field__label,
+	.field__input:-webkit-autofill~.field__label,
+	.customer .field input:focus~label,
+	.customer .field input:not(:placeholder-shown)~label,
+	.customer .field input:-webkit-autofill~label {
+		font-size: 0.55rem;
+		top: calc(var(--inputs-border-width) + .5rem);
+		left: calc(var(--inputs-border-width) + 1rem);
+		letter-spacing: .04rem;
+	}
+
+	.field__input,
+	.customer .field input {
+		padding: 0.5rem;
+	}
+
+	.facets__price .field-currency {
+		margin-right: 0.5rem;
+	}
+
+	.field__input,
+	.select__select,
+	.customer .field input,
+	.customer select {
+		font-size: 1rem;
+		height: 2.75rem;
+		min-height: calc(var(--inputs-border-width) * 2);
+		min-width: calc(4rem + (var(--inputs-border-width) * 2));
+		position: relative;
+		border: 0;
 	}
 }

@@ -2107,8 +2107,8 @@ a[href^="tel"] {
 .shopify-payment-button .shopify-payment-button__button--unbranded:not([disabled]):hover,
 .btn:focus,
 .shopify-payment-button .shopify-payment-button__button--unbranded:focus {
-	color: var(--color-btn-primary-text);
-	background-color: var(--color-btn-primary-focus);
+	/* color: var(--color-btn-primary-text);
+	background-color: var(--color-btn-primary-focus); */
 }
 
 .btn .icon-arrow-right,
