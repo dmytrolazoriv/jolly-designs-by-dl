@@ -3073,6 +3073,18 @@ details-disclosure>details {
 	} */
 }
 
+#cart-notification-form .button {
+	width: 80%;
+	border: 3px solid #ff8f8f;
+	color: #ff8f8f;
+	border-radius: 38px;
+	font-family: "Poppins", sans-serif;
+}
+
+.template-404 p {
+	font-family: "Poppins", sans-serif;
+	font-size: 1.5rem;
+}
 
 .template-404 .title {
 	font-family: 'DM Serif Display';

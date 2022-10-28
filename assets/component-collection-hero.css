@@ -104,3 +104,17 @@
 		min-height: 20rem;
 	}
 }
+
+
+@media screen and (max-width: 425px) {
+	.collection-hero__title {
+		margin: 2rem 0;
+	}
+
+	.collection-hero__title+.collection-hero__description {
+		margin-top: 1rem;
+		margin-bottom: 1rem;
+		font-size: 1.25rem;
+		line-height: calc(1 + 0.50 / var(--font-body-scale));
+	}
+}

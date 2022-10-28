@@ -24,7 +24,8 @@
 		display: block;
 		position: sticky;
 		top: 3rem;
-		z-index: 2;
+		/* z-index: 2; */
+		z-index: 1;
 	}
 
 	.product--thumbnail .thumbnail-list {
