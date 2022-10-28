@@ -479,7 +479,7 @@ $(function () {
 
 // Automatic page reload at the next breakpoint 1199px and 749px
 $(window).on('resize', function () {
-	if ($(window).width() == 1199 || $(window).width() == 1200 | $(window).width() == 1024) {
+	if ($(window).width() == 1199 || $(window).width() == 1200 || $(window).width() == 1024) {
 		location.reload();  // refresh page 
 	} else if ($(window).width() == 768 || $(window).width() == 750 || $(window).width() == 749) {
 		location.reload();  // refresh page 
