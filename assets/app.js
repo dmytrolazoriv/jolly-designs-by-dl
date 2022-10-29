@@ -481,7 +481,7 @@ $(function () {
 $(window).on('resize', function () {
 	if ($(window).width() == 1199 || $(window).width() == 1200 || $(window).width() == 1024) {
 		location.reload();  // refresh page 
-	} else if ($(window).width() == 768 || $(window).width() == 750 || $(window).width() == 749) {
+	} else if ($(window).width() == 768 || $(window).width() == 750 || $(window).width() == 749 || $(window).width() == 320) {
 		location.reload();  // refresh page 
 	}
 });

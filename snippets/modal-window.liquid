@@ -1,0 +1,44 @@
+<section class="modal" aria-hidden="true" role="dialog" aria-labelledby="modalTitle"
+	aria-describedBy="modalDescription">
+	<div class="modal-overlay modal-hide" tabindex="-1"></div>
+	<div class="modal-container modal-hide">
+	  <div class="modal-wrapper modal-transition">
+		<!-- <div id="modalDescription" class="modal-description vh">Beginning of dialog window. It begins with a
+		  heading 1 called "This is a modal".</div> -->
+		<div class="modal-header">
+		  <button class="modal-close modal-hide">
+			<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+			  xmlns="http://www.w3.org/2000/svg">
+			  <path d="M12 12L6 6M12 12L18 18M12 12L18 6M12 12L6 18" stroke="#105393"
+				stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+			</svg>
+		  </button>
+		</div>
+
+		<div class="modal__body">
+		  <div class="modal__content">
+			<a class="modal__logo" href="#">
+			   <img width="" height="" src="{{ 'logo.png' | asset_url }}" alt="jolly designs logo" loading="lazy">
+			</a>
+			<h3 class="modal__heading">
+				{{ 'general.modal_window.heading' | t }}
+			</h3>
+			<p class="modal__description">
+				{{ 'general.modal_window.description' | t }}
+			</p>
+			<form class="modal__form form">
+			  <input class="form__email-input" type="email" name="email"
+				placeholder="Your e-mail address">
+			  <div class="modal__extra-wrap">
+				<input class="form__country-input" type="text" name="country"
+				  placeholder="Your country">
+			  </div>
+			  <button class="form__submit-button" type="submit">
+				{{ 'general.modal_window.button_label' | t }}
+			</button>
+			</form>
+		  </div>
+		</div>
+	  </div>
+	</div>
+  </section>

@@ -47,6 +47,11 @@
 				"visa": "Visa"
 			}
 		},
+		"modal_window": {
+			"heading": "Get 10% on your first order!",
+			"description": "Join our email list to receive updates and exclusive offers",
+			"button_label": "Subscribe"
+		},
 		"continue_shopping": "Continue shopping",
 		"pagination": {
 			"label": "Pagination",

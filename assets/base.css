@@ -1415,7 +1415,7 @@ button.shopify-payment-button__button--unbranded {
 }
 
 #cart-notification-button {
-	width: 80%;
+	width: 90%;
 	background-color: #ff8f8f;
 	color: #fff;
 	border-radius: 38px;
@@ -3075,7 +3075,7 @@ details-disclosure>details {
 }
 
 #cart-notification-form .button {
-	width: 80%;
+	width: 90%;
 	border: 3px solid #ff8f8f;
 	color: #ff8f8f;
 	border-radius: 38px;

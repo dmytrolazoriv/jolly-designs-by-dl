@@ -1980,7 +1980,7 @@ div:is(.header__wrapper) {
 }
 
 .shop {
-	padding-bottom: 130px
+	padding-bottom: 130px;
 }
 
 .shop__title {
@@ -3952,11 +3952,12 @@ div:is(.header__wrapper) {
 	}
 
 	.footer {
-		padding: 40px 30px 35px 30px
+		padding: 40px 30px 35px 30px;
 	}
 
 	.footer__top {
-		margin-bottom: 32px
+		/* margin-bottom: 32px; */
+		margin-bottom: 30px;
 	}
 
 	.footer::after {
@@ -4720,7 +4721,8 @@ div:is(.header__wrapper) {
 	}
 
 	.about__slider-link {
-		padding: 12px 58px
+		padding: 12px 58px;
+		min-width: 220px;
 	}
 }
 
