@@ -15,6 +15,18 @@
 .production::before {
 	background-image: url({{ "production-decorative-1.svg" | asset_url }});
 }
+
+@media screen and (max-width: 1199px) {
+	.production::before {
+    	background-image: url({{ "production-decorative-1-1199.svg" | asset_url }});
+	}
+}
+
+@media screen and (max-width: 375px) {
+	.production::before {
+    	background-image: url({{ "production-decorative-1-749.svg" | asset_url }});
+	}
+}
 {%- endstyle -%}
 
 

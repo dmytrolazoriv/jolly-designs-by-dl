@@ -12,6 +12,26 @@
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
+
+  .section-template--15352820138029__main-padding {
+	padding: 0 30px;
+	margin: 3rem auto 4rem auto;
+  }
+
+  @media screen and (max-width: 425px) {
+	.section-template--15352820138029__main-padding {
+	margin: 2rem auto 3rem auto;
+  	}
+  }
+  
+  .section-{{ section.id }}-padding {
+	padding: 0 30px;
+	margin-bottom: 3rem;
+  }
+
+  .rte {
+	display: none;
+  }
 {%- endstyle -%}
 
 <div class="color-{{ section.settings.color_scheme }} gradient">

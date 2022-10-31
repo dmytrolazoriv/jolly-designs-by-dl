@@ -1802,16 +1802,16 @@ details[open]>.share-button__fallback {
 	color: rgba(var(--color-foreground), 0.75);
 }
 
-/* .field:hover.field:after,
+.field:hover.field:after,
 .select:hover.select:after,
 .select__select:hover.select__select:after,
 .customer .field:hover.field:after,
 .customer select:hover.select:after,
 .localization-form__select:hover.localization-form__select:after {
-	box-shadow: 0 0 0 calc(0.1rem + var(--inputs-border-width)) rgba(var(--color-foreground), var(--inputs-border-opacity));
+	box-shadow: 0 0 0 calc(0.1rem + var(--inputs-border-width)) rgba(65, 66, 73, 0.25);
 	outline: 0;
 	border-radius: var(--inputs-radius);
-} */
+}
 
 /* .field__input:focus-visible,
 .select__select:focus-visible,
@@ -1904,6 +1904,20 @@ details[open]>.share-button__fallback {
 	color: rgba(var(--color-foreground), 0.75);
 	letter-spacing: 0.1rem;
 	line-height: 1.5;
+}
+
+@media screen and (max-width: 425px) {
+
+	.field__label,
+	.customer .field label {
+		font-size: 1.25rem;
+		line-height: 1.4;
+	}
+
+	.page-width--narrow .main-page-title {
+		font-size: 32px;
+		line-height: 40px;
+	}
 }
 
 .field__input:focus~.field__label,

@@ -1284,3 +1284,28 @@ input.mobile-facets__checkbox {
 		border: 0;
 	}
 }
+
+
+@media screen and (max-width: 825px) {
+	.facets__form {
+		gap: 0 2rem;
+	}
+
+	.facet-filters {
+		padding-left: 1.5rem;
+	}
+
+	.facets__disclosure {
+		margin-right: 1.5rem;
+	}
+
+	.facets__heading {
+		margin-bottom: 5px;
+	}
+
+	.facets__wrapper,
+	.facet-filters__field {
+		align-items: flex-start;
+		flex-direction: column;
+	}
+}

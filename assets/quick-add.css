@@ -37,7 +37,7 @@
 	transform: translateX(-50%);
 	margin: 3.2rem auto 0;
 	width: 100%;
-	background-color: rgb(var(--color-background));
+	background-color: rgb(255, 255, 255);
 	overflow: hidden;
 	max-width: var(--page-width);
 	width: calc(100% - 3rem);
@@ -103,7 +103,7 @@
 
 .quick-add-modal__toggle {
 	background-color: rgb(var(--color-background));
-	border: 0.1rem solid rgba(var(--color-foreground), 0.1);
+	border: 0.1rem solid rgba(65, 66, 73, 0.25);
 	border-radius: 50%;
 	color: rgba(var(--color-foreground), 0.55);
 	display: flex;
@@ -192,6 +192,7 @@ quick-add-modal .product__title>h1 {
 quick-add-modal .product__title>a {
 	display: block;
 	text-decoration: none;
+	color: rgb(65, 66, 73);
 }
 
 quick-add-modal .product__title>a:hover {
@@ -224,4 +225,26 @@ quick-add-modal .product-form__buttons {
 	min-height: unset;
 	line-height: unset;
 	width: fit-content;
+}
+
+
+@media screen and (max-width: 425px) {
+	.quick-add-modal__content-info {
+		padding: 1.5rem;
+		overflow-x: hidden;
+	}
+
+	.quick-add-modal__toggle {
+		padding: 0.5rem;
+
+		width: 2rem;
+
+		top: 1rem;
+		right: 1rem;
+	}
+
+	.price__regular .price-item {
+		font-size: 20px;
+		line-height: 30px;
+	}
 }

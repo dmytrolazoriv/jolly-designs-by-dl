@@ -56,6 +56,7 @@
 
 .cart-item__details>*+* {
 	margin-top: 0.6rem;
+	margin-bottom: 0.6rem;
 }
 
 .cart-item__media {
@@ -387,6 +388,7 @@ cart-remove-button .icon-remove {
 
 	.cart-item__details>*+* {
 		margin-top: 1rem;
+		margin-bottom: 1rem;
 	}
 
 	.cart-item {
@@ -413,7 +415,7 @@ cart-remove-button .icon-remove {
 		grid-column: 1 / 2;
 		grid-row: 4 / 5;
 		justify-self: start;
-		align-self: center;
+		align-self: end;
 	}
 
 	.cart-item__totals {
