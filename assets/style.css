@@ -5131,7 +5131,7 @@ div:is(.header__wrapper) {
 
 	.shop__title {
 		/* margin-bottom: 24px; */
-		margin-bottom: 35px;
+		margin-bottom: 30px;
 	}
 
 	.cards__item .cards__cart-count {
@@ -5251,11 +5251,12 @@ div:is(.header__wrapper) {
 	}
 
 	.footer {
-		padding: 40px 15px 40px 15px
+		padding: 40px 15px 43px 15px;
 	}
 
 	.footer__bottom {
-		row-gap: 20px
+		/* row-gap: 20px; */
+		row-gap: 17px;
 	}
 
 	.payment-icons__item img {
